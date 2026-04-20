@@ -1,0 +1,73 @@
+ENGINE FAILURE AFTER TAKEOFF (EFATO)
+
+Source: Based on FAA Airplane Flying Handbook concepts for single-engine aircraft
+
+Overview:
+Engine failure immediately after takeoff is one of the most critical emergencies a pilot can face. The low altitude and airspeed leave little time for decision-making. The pilot must act immediately and correctly.
+
+Trigger Condition:
+Engine failure occurring after liftoff and before reaching a safe maneuvering altitude, typically below 1,000 feet AGL.
+
+Immediate Actions:
+
+Step 1 - Lower the nose immediately to maintain best glide speed.
+For a typical single-engine trainer, this is approximately 65 KIAS (knots indicated airspeed). Do not attempt to maintain altitude by raising the nose — this will cause the aircraft to stall.
+
+Step 2 - Do NOT attempt to return to the runway.
+If below 1,000 feet AGL, a turn back to the runway is almost always fatal. The aircraft does not have enough altitude to complete the turn and land safely.
+
+Step 3 - Identify a suitable landing area directly ahead or within a shallow turn.
+Look for open fields, roads, or flat terrain within gliding distance. Minimize turns.
+
+Step 4 - Set fuel selector valve to OFF.
+This reduces fire risk after landing.
+
+Step 5 - Set mixture control to IDLE CUTOFF.
+This shuts off fuel flow to the engine.
+
+Step 6 - Set ignition switch to OFF.
+This prevents fire from residual fuel.
+
+Step 7 - Unlock the cabin door before touchdown.
+Impact can jam doors shut. Unlocking now ensures the door can be opened after landing.
+
+Step 8 - Transmit MAYDAY on 121.5 MHz if time permits.
+State aircraft type, location, and intentions. This helps rescue services find you.
+
+Step 9 - Touch down at minimum safe airspeed.
+Maintain controlled flight all the way to touchdown. A controlled landing in a field is survivable. A stall at low altitude is not.
+
+WARNINGS:
+
+WARNING 1: Attempting to turn back to the runway when below 1,000 feet AGL is the most common cause of fatal EFATO accidents. Pilots consistently underestimate the altitude needed to complete the maneuver. Do not attempt it.
+
+WARNING 2: Maintaining aircraft control is always the first priority. Do not become distracted by attempting to restart the engine or communicate while the aircraft is not under control.
+
+WARNING 3: Never sacrifice airspeed for altitude. A stall at low altitude is not recoverable.
+
+---
+
+ENGINE FAILURE IN CRUISE FLIGHT
+
+Trigger Condition:
+Engine failure or significant power loss during cruise flight at altitude, typically above 1,000 feet AGL.
+
+Step 1 - Establish best glide speed immediately.
+This maximizes the distance the aircraft can travel without engine power.
+
+Step 2 - Attempt engine restart.
+Check fuel selector (switch tanks), mixture (full rich), carburetor heat (ON), ignition (both), and primer (in and locked).
+
+Step 3 - Declare emergency on current ATC frequency or 121.5 MHz.
+Squawk 7700 on transponder.
+
+Step 4 - Identify nearest airport or landing area.
+Use GPS, chart, or ATC assistance to find the nearest suitable landing spot.
+
+Step 5 - Plan approach for the selected landing area.
+Manage altitude and position for a normal approach as much as possible.
+
+Step 6 - Complete power-off landing checklist before touchdown.
+Fuel OFF, mixture CUTOFF, ignition OFF, doors unlocked.
+
+WARNING: Do not fixate on engine restart at the expense of aircraft control and planning the landing. A safe landing with a dead engine is the goal.

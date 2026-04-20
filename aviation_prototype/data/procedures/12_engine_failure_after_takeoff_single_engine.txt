@@ -1,0 +1,48 @@
+Engine Failure After Takeoff (Single-Engine)
+============================================
+
+A number of variables and pilot actions factor into a successful emergency landing shortly after takeoff. When an engine failure
+occurs during the initial climb, the pilot should lower the nose of the airplane and establish the proper glide attitude. What happens
+next if the engine does not restart? Does the pilot select a field directly ahead (or slightly to the side of the takeoff path) or should the
+pilot turn back toward the point of departure? There's not much time to decide and a lot to consider.
+Continuing straight ahead or making a slight turn gives the pilot time to establish a safe landing attitude, and the landing occurs under
+control and as slowly as possible (assuming a takeoff made into a headwind). This minimizes the risk of injury and usually represents
+the option with the lowest risk—i.e. the safest option. Turning back requires a more complex analysis and consideration of risk. At
+some urban airports, there may be numerous hazards in the departure path. In that case, the pilot might turn back, but only if certain
+the airplane can reach the field from its current position and the pilot has trained and practiced the turn back maneuver.
+Turning back to an airport after a low-altitude engine failure, also known as “the impossible turn,” presents many challenges, and a
+pilot who attempts to turn back without due consideration and training will need considerable luck to prevent disaster. If the airplane
+strikes the ground during the turn, cartwheeling could occur. If the pilot does not lower the nose sufficiently during the turn, an
+accelerated stall and fatal crash may occur. Even after executing a successful turn, a return to the airport often results in a downwind
+approach. The increased groundspeed could rush a pilot not properly trained for landing downwind. The increased groundspeed and
+associated increase in kinetic energy also raise the likelihood of serious injury if unable to make the field.
+If considering a turn back to the runway following an engine failure on takeoff, the pilot should know the expected altitude loss
+during the turn for the specific make and model airplane as well as whether the airplane can physically glide back to the field after
+executing the turn. Traditionally, the FAA has given the following example. An airplane has taken off and climbed to an altitude of
+300 feet above ground level (AGL) when the engine fails. [Figure 18-5] After a typical 4-second reaction time, the pilot elects to
+turn back to the runway. Using a standard rate (3° change in direction per second) turn, it takes 1 minute to turn 180°. At a glide
+speed of 65 knots, the radius of the turn is 2,100 feet, so at the completion of the turn, the airplane is 4,200 feet to one side of the
+runway. The pilot needs to turn another 45° to head the airplane toward the runway. By this time, the total change in direction
+is 225° equating to 75 seconds plus the 4-second reaction time. If the airplane in a power-off glide descends at approximately 1,000
+fpm, it has descended 1,316, feet placing it 1,016 feet below the runway.
+The preceding example illustrates why a turn back, if attempted, requires a turn with a higher bank angle. A standard rate or
+shallow turn consumes too much time, requires too much distance, and generates an unacceptable solution.
+Training for a turn back includes practicing turns in both directions at a safe altitude in the make and model flown after simulating an
+engine failure from a climb. Practice should result in consistent altitude loss and the ability to avoid an accelerated stall when
+executing a gliding steep turn. Pilots should be alert for and respond appropriately to any stall warning and reduce wing loading
+during the turn as necessary. There will be some observed variation in altitude loss during training. The pilot should anticipate that
+during an actual emergency, the expected altitude loss could end up at the high end of the range observed while practicing. Success in
+training involves the demonstrated ability to evaluate the effect of climb performance of the airplane, determine the better direction to
+turn back (usually into a crosswind), predict the altitude above ground after the turn, know the distance to the landing zone, and know
+if the glide performance of the airplane will allow the pilot to make the field. Some airplanes cannot usually make the return
+successfully, some can make the return under certain conditions, and some can usually return. The pilot should not attempt a turn back
+unless a successful turn back will result.
+
+Figure 18-5. Turning back to the runway after engine failure.
+A turn back to the departure runway may require more than a 180° change in direction. There could also be cases where turning back
+results in overshooting the runway, and the pilot needs to sense the aiming point within seconds after completing a turn back and make
+any necessary adjustments to achieve the best possible outcome. A turn back at low altitudes presents an unacceptable risk for student
+pilots, low-time pilots, untrained pilots, pilots without adequate proficiency, and pilots flying airplanes with insufficient glide
+performance to return to the field. However, experienced pilots interested in knowing when and how to make an emergency turn back
+after takeoff should use the services of an authorized flight instructor who can explain and demonstrate the practicality (or
+impracticality) of “the impossible turn” in the specific make and model used during training.

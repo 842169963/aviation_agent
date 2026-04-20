@@ -1,0 +1,203 @@
+Water (Ditching) and Snow
+=========================
+
+A well-executed water landing normally involves less deceleration violence than a poor tree landing or a touchdown on extremely
+rough terrain. Also, an airplane that is ditched at minimum speed and in a normal landing attitude does not immediately sink upon
+touchdown. Intact wings and fuel tanks (especially when empty) provide floatation for at least several minutes, even if the cabin may
+be just below the water line in a high-wing airplane.
+Loss of depth perception may occur when landing on a wide expanse of smooth water with the risk of flying into the water or stalling
+in from excessive altitude. To avoid this hazard, the airplane should be “dragged in” when possible. Use no more than intermediate
+flaps on low-wing airplanes. The water resistance of fully extended flaps may result in asymmetrical flap failure and slowing of the
+airplane. Keep a retractable gear up unless the AFM/POH advises otherwise.
+A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception
+(white out) in reduced visibility and on wide-open terrain.
+Engine Failure After Takeoff (Single-Engine)
+A number of variables and pilot actions factor into a successful emergency landing shortly after takeoff. When an engine failure
+occurs during the initial climb, the pilot should lower the nose of the airplane and establish the proper glide attitude. What happens
+next if the engine does not restart? Does the pilot select a field directly ahead (or slightly to the side of the takeoff path) or should the
+pilot turn back toward the point of departure? There's not much time to decide and a lot to consider.
+Continuing straight ahead or making a slight turn gives the pilot time to establish a safe landing attitude, and the landing occurs under
+control and as slowly as possible (assuming a takeoff made into a headwind). This minimizes the risk of injury and usually represents
+the option with the lowest risk—i.e. the safest option. Turning back requires a more complex analysis and consideration of risk. At
+some urban airports, there may be numerous hazards in the departure path. In that case, the pilot might turn back, but only if certain
+the airplane can reach the field from its current position and the pilot has trained and practiced the turn back maneuver.
+Turning back to an airport after a low-altitude engine failure, also known as “the impossible turn,” presents many challenges, and a
+pilot who attempts to turn back without due consideration and training will need considerable luck to prevent disaster. If the airplane
+strikes the ground during the turn, cartwheeling could occur. If the pilot does not lower the nose sufficiently during the turn, an
+accelerated stall and fatal crash may occur. Even after executing a successful turn, a return to the airport often results in a downwind
+approach. The increased groundspeed could rush a pilot not properly trained for landing downwind. The increased groundspeed and
+associated increase in kinetic energy also raise the likelihood of serious injury if unable to make the field.
+If considering a turn back to the runway following an engine failure on takeoff, the pilot should know the expected altitude loss
+during the turn for the specific make and model airplane as well as whether the airplane can physically glide back to the field after
+executing the turn. Traditionally, the FAA has given the following example. An airplane has taken off and climbed to an altitude of
+300 feet above ground level (AGL) when the engine fails. [Figure 18-5] After a typical 4-second reaction time, the pilot elects to
+turn back to the runway. Using a standard rate (3° change in direction per second) turn, it takes 1 minute to turn 180°. At a glide
+speed of 65 knots, the radius of the turn is 2,100 feet, so at the completion of the turn, the airplane is 4,200 feet to one side of the
+runway. The pilot needs to turn another 45° to head the airplane toward the runway. By this time, the total change in direction
+is 225° equating to 75 seconds plus the 4-second reaction time. If the airplane in a power-off glide descends at approximately 1,000
+fpm, it has descended 1,316, feet placing it 1,016 feet below the runway.
+The preceding example illustrates why a turn back, if attempted, requires a turn with a higher bank angle. A standard rate or
+shallow turn consumes too much time, requires too much distance, and generates an unacceptable solution.
+Training for a turn back includes practicing turns in both directions at a safe altitude in the make and model flown after simulating an
+engine failure from a climb. Practice should result in consistent altitude loss and the ability to avoid an accelerated stall when
+executing a gliding steep turn. Pilots should be alert for and respond appropriately to any stall warning and reduce wing loading
+during the turn as necessary. There will be some observed variation in altitude loss during training. The pilot should anticipate that
+during an actual emergency, the expected altitude loss could end up at the high end of the range observed while practicing. Success in
+training involves the demonstrated ability to evaluate the effect of climb performance of the airplane, determine the better direction to
+turn back (usually into a crosswind), predict the altitude above ground after the turn, know the distance to the landing zone, and know
+if the glide performance of the airplane will allow the pilot to make the field. Some airplanes cannot usually make the return
+successfully, some can make the return under certain conditions, and some can usually return. The pilot should not attempt a turn back
+unless a successful turn back will result.
+
+Figure 18-5. Turning back to the runway after engine failure.
+A turn back to the departure runway may require more than a 180° change in direction. There could also be cases where turning back
+results in overshooting the runway, and the pilot needs to sense the aiming point within seconds after completing a turn back and make
+any necessary adjustments to achieve the best possible outcome. A turn back at low altitudes presents an unacceptable risk for student
+pilots, low-time pilots, untrained pilots, pilots without adequate proficiency, and pilots flying airplanes with insufficient glide
+performance to return to the field. However, experienced pilots interested in knowing when and how to make an emergency turn back
+after takeoff should use the services of an authorized flight instructor who can explain and demonstrate the practicality (or
+impracticality) of “the impossible turn” in the specific make and model used during training.
+Emergency Descents
+An emergency descent is a maneuver for descending as rapidly as possible to a lower altitude or to the ground for an emergency
+landing. [Figure 18-6] The need for this maneuver may result from an uncontrollable fire, a sudden loss of cabin pressurization, or
+any other situation demanding an immediate and rapid descent. The objective is to descend the airplane as soon and as rapidly as
+possible while not exceeding any structural limitations of the airplane. Simulated emergency descents should be made in a turn to
+check for other air traffic below and to look around for a possible emergency landing area. A radio call announcing descent
+intentions may be appropriate to alert other aircraft in the area. When initiating the descent, a bank of approximately 30 to 45°
+should be established to maintain positive load factors (G forces) on the airplane.
+Emergency descent training should be performed as recommended by the manufacturer, including the configuration and airspeeds.
+Except when prohibited by the manufacturer, the power should be reduced to idle, and the propeller control (if equipped) should
+be placed in the low pitch (or high revolutions per minute (rpm)) position. This allows the propeller to act as an aerodynamic brake
+to help prevent an excessive airspeed buildup during the descent. The landing gear and flaps should be extended as recommended by
+the manufacturer. This provides maximum drag so that the descent can be made as rapidly as possible, without excessive airspeed.
+The pilot should not allow the airplane’s airspeed to pass the never-exceed speed (V ), the maximum landing gear extended
+NE
+speed (V ), or the maximum flap extended speed (V ), as applicable. In the case of an engine fire, a high airspeed descent could
+LE FE
+blow out the fire. However, the weakening of the airplane structure is a major concern and descent at low airspeed would place less
+stress on the airplane. If the descent is conducted in turbulent conditions, the pilot also needs to comply with the design
+maneuvering speed (V ) limitations. The descent should be made at the maximum allowable airspeed consistent with the procedure
+A
+used. This provides increased drag and a high rate of descent. The recovery from an emergency descent should be initiated at a
+high enough altitude to ensure a safe recovery back to level flight or a precautionary landing.
+
+Figure 18-6. Emergency descent.
+When the descent is established and stabilized during training and practice, the descent should be terminated. In airplanes with piston
+engines, prolonged practice of emergency descents should be avoided to prevent excessive cooling of the engine cylinders.
+In-Flight Fire
+A fire in-flight demands immediate and decisive action. The pilot should be familiar with the procedures outlined to meet this
+emergency contained in the AFM/POH for the particular airplane. For the purposes of this handbook, in-flight fires are classified as
+in-flight engine fires, electrical fires, and cabin fires.
+Engine Fire
+An in-flight engine compartment fire is usually caused by a failure that allows a flammable substance, such as fuel, oil, or hydraulic
+fluid, to come in contact with a hot surface. This may be caused by a mechanical failure of the engine itself, an engine-driven
+accessory, a defective induction or exhaust system, or a broken line. Engine compartment fires may also result from maintenance
+errors, such as improperly installed/fastened lines and/or fittings resulting in leaks.
+Engine compartment fires can be indicated by smoke and/or flames coming from the engine cowling area. They can also be indicated
+by discoloration, bubbling, and/or melting of the engine cowling skin in cases where flames and/or smoke are not visible to the pilot.
+By the time a pilot becomes aware of an in-flight engine compartment fire, it usually is well developed. Unless the airplane
+manufacturer directs otherwise in the AFM/POH, the first step on discovering a fire should be to shut off the fuel supply to the engine
+by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position. The ignition switch
+should be left ON in order to use up the fuel that remains in the fuel lines and components between the fuel selector/shutoff valve and
+the engine. This procedure may starve the engine compartment of fuel and cause the fire to die naturally. If the flames are snuffed out,
+no attempt should be made to restart the engine.
+If the engine compartment fire is oil-fed, as evidenced by thick black smoke, as opposed to a fuel-fed fire, which produces bright
+orange flames, the pilot should consider stopping the propeller rotation by feathering or other means, such as (with constant-speed
+propellers) placing the pitch control lever to the minimum rpm position and raising the nose to reduce airspeed until the propeller
+stops rotating. This procedure stops an engine-driven oil (or hydraulic) pump from continuing to pump the flammable fluid that is
+feeding the fire.
+Some light airplane emergency checklists direct the pilot to shut off the electrical master switch. However, the pilot should consider
+that unless the fire is electrical in nature, or a crash landing is imminent, deactivating the electrical system prevents the use of panel
+radios for transmitting distress messages and also causes air traffic control (ATC) to lose transponder returns.
+
+Pilots of powerless single-engine airplanes are left with no choice but to make a forced landing. Pilots of twin-engine airplanes may
+elect to continue the flight to the nearest airport. However, consideration should be given to the possibility that a wing could be
+seriously impaired and lead to structural failure. Even a brief but intense fire could cause dangerous structural damage. In some cases,
+the fire could continue to burn under the wing (or engine cowling in the case of a single- engine airplane) out of view of the pilot.
+Engine compartment fires that appear to have been extinguished have been known to rekindle with changes in airflow pattern and
+airspeed.
+The pilot should be familiar with the airplane’s emergency descent procedures. The pilot should also bear in mind the following:
+⦁ The airplane may be severely structurally damaged to the point that its ability to remain under control could
+be lost at any moment.
+⦁ The airplane may still be on fire and susceptible to explosion.
+⦁ The airplane is expendable and the only thing that matters is the safety of those on board.
+Electrical Fires
+The initial indication of an electrical fire is usually the distinct odor of burning insulation. Once an electrical fire is detected, the pilot
+should attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights. If the faulty circuit cannot
+be readily detected and isolated, and flight conditions permit, the battery master switch and alternator/generator switches should be
+turned off to remove the possible source of the fire. However, any materials that have been ignited may continue to burn.
+If electrical power is absolutely essential for the flight, an attempt may be made to identify and isolate the faulty circuit by:
+1. Turning the electrical master switch OFF.
+2. Turning all individual electrical switches OFF.
+3. Turning the master switch back ON.
+4. Selecting electrical switches that were ON before the fire indication one at a time, permitting a short time
+lapse after each switch is turned on to check for signs of odor, smoke, or sparks.
+This procedure, however, has the effect of recreating the original problem. The most prudent course of action is to land as soon as
+possible.
+Cabin Fire
+Cabin fires generally result from one of three sources: (1) careless smoking on the part of the pilot and/or passengers; (2) electrical
+system malfunctions; or (3) heating system malfunctions. A fire in the cabin presents the pilot with two immediate demands: attacking
+the fire and getting the airplane safely on the ground as quickly as possible. A fire or smoke in the cabin should be controlled by
+identifying and shutting down the faulty system. In many cases, smoke may be removed from the cabin by opening the cabin air vents.
+This should be done only after the fire extinguisher (if available) is used. Then the cabin air control can be opened to purge the cabin
+of both smoke and fumes. If smoke increases in intensity when the cabin air vents are opened, they should be immediately closed.
+This indicates a possible fire in the heating system, nose compartment baggage area (if so equipped), or that the increase in airflow is
+feeding the fire.
+On pressurized airplanes, the pressurization air system removes smoke from the cabin; however, if the smoke is intense, it may be
+necessary to either depressurize at altitude, if oxygen is available for all occupants, or execute an emergency descent.
+In unpressurized single-engine and light twin-engine airplanes, the pilot can attempt to expel the smoke from the cabin by opening the
+foul weather windows. These windows should be closed immediately if the fire becomes more intense. If the smoke is severe, the
+passengers and crew should use oxygen masks if available, and the pilot should initiate an immediate descent. The pilot should also
+be aware that on some airplanes, lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem.
+Flight Control Malfunction/Failure
+Total Flap Failure
+The inability to extend the wing flaps necessitates a no-flap approach and landing. In light airplanes, a no-flap approach and landing
+is not particularly difficult or dangerous. However, there are certain factors that should be considered in the execution of this
+maneuver. A no-flap landing requires substantially more runway than normal. The increase in required landing distance could be as
+much as 50 percent.
+
+When flying in the traffic pattern with the wing flaps retracted, the airplane should be flown in a relatively nose-high attitude to
+maintain altitude, as compared to flight with flaps extended. Losing altitude can be more of a problem without the benefit of the drag
+normally provided by flaps. A wider, longer traffic pattern may be required in order to avoid the necessity of diving to lose altitude
+and consequently building up excessive airspeed.
+On final approach, a nose-high attitude can make it difficult to see the runway. This situation, if not anticipated, can result in serious
+errors in judgment of height and distance. Approaching the runway in a relatively nose-high attitude can also cause the perception that
+the airplane is close to a stall. This may cause the pilot to lower the nose abruptly and risk touching down on the nose-wheel.
+With the flaps retracted and the power reduced for landing, the airplane is slightly less stable in the pitch and roll axes. Without flaps,
+the airplane tends to float considerably during roundout. The pilot should avoid the temptation to force the airplane onto the runway
+at an excessively high speed. Neither should the pilot flare excessively because without flaps, this might cause the tail to strike the
+runway.
+Asymmetric (Split) Flap
+An asymmetric “split” flap situation is one in which one flap deploys or retracts while the other remains in position. The problem is
+indicated by a pronounced roll toward the wing with the least flap deflection when wing flaps are extended/retracted.
+The roll encountered in a split flap situation is countered with opposite aileron. The yaw caused by the additional drag created by the
+extended flap requires substantial opposite rudder resulting in a cross-control condition. Almost full aileron may be required to
+maintain a wings-level attitude, especially at the reduced airspeed necessary for approach and landing. The pilot should not attempt to
+land with a crosswind from the side of the deployed flap because the additional roll control required to counteract the crosswind may
+not be available.
+The approach to landing with a split flap condition should be flown at a higher than normal airspeed. The pilot should not risk an
+asymmetric stall and subsequent loss of control by flaring excessively. Rather, the airplane should be flown onto the runway so that
+the touchdown occurs at an airspeed consistent with a safe margin above flaps-up stall speed.
+Loss of Elevator Control
+In many airplanes, the elevator is controlled by two cables: a “down” cable and an “up” cable. Normally, a break or disconnect in
+only one of these cables does not result in a total loss of elevator control. In most airplanes, a failed cable results in a partial loss of
+pitch control. In the failure of the “up” elevator cable (the “down” elevator being intact and functional), the control yoke moves aft
+easily but produces no response. Forward yoke movement, however, beyond the neutral position produces a nose-down attitude.
+Conversely, a failure of the “down” elevator cable, forward movement of the control yoke produces no effect. The pilot, however, has
+partial control of pitch attitude with aft movement.
+When experiencing a loss of up-elevator control, the pilot can retain pitch control by:
+⦁ Applying considerable nose-up trim
+⦁ Pushing the control yoke forward to attain and maintain desired attitude
+⦁ Increasing forward pressure to lower the nose and relaxing forward pressure to raise the nose
+⦁ Releasing forward pressure to flare for landing
+When experiencing a loss of down-elevator control, the pilot can retain pitch control by:
+⦁ Applying considerable nose-down trim
+⦁ Pulling the control yoke aft to attain and maintain attitude
+⦁ Releasing back pressure to lower the nose and increasing back pressure to raise the nose
+⦁ Increasing back pressure to flare for landing
+Trim mechanisms can be useful in the event of an in-flight primary control failure. For example, if the linkage between the cabin and
+the elevator fails in flight, leaving the elevator free to weathervane in the wind, the trim tab can be used to raise or lower the elevator
+within limits. The trim tabs are not as effective as normal linkage control in conditions such as low airspeed, but they do have some
+positive effect—usually enough to bring about a safe landing.
+If an elevator becomes jammed, resulting in a total loss of elevator control movement, various combinations of power and flap
+extension offer a limited amount of pitch control. A successful landing under these conditions, however, can be problematic.

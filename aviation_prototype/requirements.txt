@@ -1,0 +1,6 @@
+openai>=1.0.0
+rdflib>=6.3.0
+pyshacl>=0.23.0
+pdfplumber>=0.10.0
+python-dotenv>=1.0.0
+pyyaml>=6.0

@@ -1,0 +1,7 @@
+Abnormal Engine Instrument Indication
+=====================================
+
+The AFM/POH for the specific airplane contains information that should be followed in the event of any abnormal engine instrument
+indications. The table shown in Figure 18-11 offers generic information on some of the more commonly experienced in-flight
+abnormal engine instrument indications, their possible causes, and corrective actions.
+Figure 18-11. Commonly experienced in-flight abnormal engine instrument indications, their possible causes, and corrective actions.

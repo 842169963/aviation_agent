@@ -1,0 +1,122 @@
+# SHACL Shapes — Aviation Emergency Procedure Validation
+# 这些"形状"定义了知识图谱中每条数据必须满足的约束
+# 任何不符合约束的数据会被标记为错误，阻止进入 AI advisor
+
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix av:   <https://example.org/aviation/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# ── Shape 1: EmergencyProcedure ─────────────────────────────────
+# 每个紧急程序必须有名称，且至少包含一个步骤
+
+av:ProcedureShape
+    a sh:NodeShape ;
+    sh:targetClass av:EmergencyProcedure ;
+
+    # 必须有名称
+    sh:property [
+        sh:path av:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every emergency procedure must have a name (string, min 3 chars)"
+    ] ;
+
+    # 必须有至少一个步骤
+    sh:property [
+        sh:path av:hasStep ;
+        sh:minCount 1 ;
+        sh:message "Every emergency procedure must have at least one step"
+    ] ;
+
+    # trigger_condition 是可选的，但如果有必须是字符串
+    sh:property [
+        sh:path av:trigger_condition ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "trigger_condition must be a string if present"
+    ] ;
+
+    # 必须有来源文件
+    sh:property [
+        sh:path av:source_file ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every emergency procedure must have a source_file"
+    ] ;
+
+    # source_section 可选
+    sh:property [
+        sh:path av:source_section ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:message "source_section must be a string if present"
+    ] ;
+
+    # source_excerpt 可选但如果有必须是字符串
+    sh:property [
+        sh:path av:source_excerpt ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 10 ;
+        sh:message "source_excerpt must be a string with useful content if present"
+    ] .
+
+
+# ── Shape 2: ProcedureStep ──────────────────────────────────────
+# 每个步骤必须有动作描述和步骤编号
+
+av:StepShape
+    a sh:NodeShape ;
+    sh:targetClass av:ProcedureStep ;
+
+    # 必须有动作
+    sh:property [
+        sh:path av:action ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 5 ;
+        sh:message "Every step must have an action description (min 5 chars)"
+    ] ;
+
+    # 必须有步骤编号
+    sh:property [
+        sh:path av:step_number ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:message "Every step must have a positive integer step_number"
+    ] ;
+
+    # 每个步骤必须带来源摘录
+    sh:property [
+        sh:path av:source_excerpt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 10 ;
+        sh:message "Every step must have a source_excerpt for provenance"
+    ] .
+
+
+# ── Shape 3: Warning ────────────────────────────────────────────
+# 每个警告必须有描述文本
+
+av:WarningShape
+    a sh:NodeShape ;
+    sh:targetClass av:Warning ;
+
+    sh:property [
+        sh:path av:description ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 10 ;
+        sh:message "Every warning must have a description (min 10 chars)"
+    ] .

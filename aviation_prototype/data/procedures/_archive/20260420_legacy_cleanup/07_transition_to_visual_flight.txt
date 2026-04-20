@@ -1,0 +1,65 @@
+Transition to Visual Flight
+===========================
+
+One of the most difficult tasks a trained and qualified instrument pilot contends with is the transition from instrument to visual flight
+prior to landing. For the untrained instrument pilot, these difficulties are magnified.
+The difficulties center around acclimatization and orientation. On an instrument approach, the trained instrument pilot prepares in
+advance for the transition to visual flight. The pilot has a mental picture of what to expect when the transition to visual flight is made
+and will quickly acclimate to the new environment. Geographical orientation also begins before the transition, as the pilot visualizes
+where the airplane is in relation to the airport/runway.
+In an ideal situation, the transition to visual flight is made with ample time, at a sufficient altitude above terrain, and to visibility
+conditions sufficient to accommodate acclimatization and geographical orientation. This, however, is not always the case. The
+untrained instrument pilot may find the visibility still limited, the terrain completely unfamiliar, and altitude above terrain such that a
+“normal” airport traffic pattern and landing approach is not possible. Additionally, the pilot is most likely under considerable selfinduced psychological pressure to get the airplane on the ground. The pilot should take this into account and, if possible, allow time
+to become acclimatized and geographically oriented before attempting an approach and landing, even if it means flying straight and
+level for a time or circling the airport. This is especially true at night.
+Emergency Response Systems
+Airplanes may have installed systems that provide alternatives in certain emergency situations. For example, ballistic parachute
+systems, if installed, may be deployed in an emergency allowing an airplane to descend slowly enough toward the ground such that
+occupants usually survive the resulting impact with minor or no injuries. Airplanes may also have an Emergency Autoland (EAL)
+system, which can take over control of the aircraft when necessary for a safe outcome.
+Ballistic Parachutes
+Deployment of an airplane ballistic parachute system results in the loss of the airframe, but deploying such systems within an
+acceptable flight regime prevents injuries and saves lives. Pilots need to understand and follow the procedures for arming and
+disarming these systems before and after flight, and understand the conditions under which the system would be deployed. For
+example, a catastrophic loss of controllability due to a collision or mechanical failure, actual loss of control, or pilot incapacitation
+would qualify. Pilots should brief passengers with access to any deployment mechanism regarding the conditions for a safe
+deployment. Generally, the passenger would deploy the system only if the pilot were incapacitated. At a minimum, the pilot should
+also brief the passengers regarding the basic sequence of steps for deployment. Pilots should study the information provided by
+manufacturers and suppliers of these systems and follow the guidance provided.
+The system design may include airplane components designed to absorb the forces of vertical impact. The design of landing gear and
+seats maximize the protection afforded to the occupants and extend the time over which impact forces are absorbed. Once on the
+ground, there are hazards associated with a deployed parachute and the effect of surface winds, and the occupants should know the
+procedures for evacuation.
+Autoland
+If the EAL senses erratic flying, it stabilizes the aircraft, and checks for pilot responsiveness. Without further input, the EAL initiates
+an emergency descent. Without pilot responsiveness after an emergency descent, EAL initiates the process for an automated landing.
+The system also allows for manual activation by a pilot or a passenger.
+Once activated, the EAL system transmits automated radio broadcasts on the aircraft’s last selected frequency and on Guard (121.5
+MHz) to alert controllers or pilots in the area of the EAL aircraft’s imminent arrival to the selected runway. The system repeatedly
+transmits the call sign and intention to divert to a particular airport and runway using a recognizable non-human synthesized voice.
+Additionally, EAL sets the transponder to squawk 7700 to indicate an emergency. After the initial broadcast, the system pauses for 25
+seconds to allow air traffic control (ATC) to communicate with potential conflicting traffic. Once the EAL aircraft is within 12 miles
+of the selected runway and at or below 12,000 feet MSL, it broadcasts on the tower frequency or Common Traffic Advisory
+Frequency (CTAF), and continues to broadcast its position via ADS-B. It announces its call sign,“pilot incapacitation,” its position
+relative to the destination airport, gives the airport and airport identifier, and the time to landing on a specific runway at that airport.
+The system makes a similar “one-minute out” broadcast prior to landing.
+The EAL system selects a suitable landing airfield based on several factors. These factors include weather, wind, runway length, and
+towered/non-towered airport status. EAL only considers airports with an area navigation (RNAV) or Global Positioning System
+(GPS) approach, selects towered airports over non-towered airports where possible, and uses runway requirements that depend on the
+aircraft type. EAL systems also utilize obstacle and a terrain databases. If the system loses GPS coverage, the airplane continues
+straight flight without attempting to land until GPS coverage resumes.
+
+Currently EAL system capabilities do not include detecting and avoiding other aircraft; receiving or reacting to ATC instructions or
+Notices to Airmen (NOTAMs); avoiding military operations areas (MOAs), special use airspace (SUA), Restricted Areas, or
+Temporary Flight Restrictions (TFRs); or turning on aircraft lights.
+Chapter Summary
+This chapter provided general guidance and recommended procedures that may apply to light single-engine airplanes involved in
+certain emergency situations. The information presented is intended to enhance the general knowledge of emergency operations with
+the clear understanding that the manufacturer’s recommended emergency procedures take precedence.
+Information was provided concerning failure of the pitot-static system in aircraft with EFIS. The redundancy of backup systems for
+IFR flight may be less than desired if both the primary and backup instrumentation may receive signal data input from the same pitotstatic source. The failure indications of EFIS may be entirely different from conventional instruments making recognition of system
+malfunction much more difficult for the pilot. Lack of system standardization compounds the problem making equipment specific
+information and knowledge an important asset when analyzing electronic display malfunctions. The inability to simulate certain
+failure modes during training and evaluation could make the pilot less prepared for an actual emergency. As electronic avionics
+become more advanced, the training and proficiency needed to safely operate these systems should receive careful analysis.

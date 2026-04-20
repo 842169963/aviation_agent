@@ -1,0 +1,94 @@
+Airplane Flying Handbook (FAA-H-8083-3C)
+========================================
+
+Chapter 18: Emergency Procedures
+Introduction
+This chapter describes certain abnormal and emergency situations that may occur in flight. The key to successful management of an
+emergency situation, and/or preventing an abnormal situation from progressing into a true emergency, is a thorough familiarity with,
+and adherence to, the procedures developed by the airplane manufacturer. The following guidelines are generic and are not meant to
+replace the airplane manufacturer’s recommended procedures contained in the Federal Aviation Administration (FAA) approved
+Airplane Flight Manual and/or Pilot’s Operating Handbook (AFM/POH). Rather, they are meant to enhance the pilot’s general
+knowledge in the area of abnormal and emergency operations. If any of the guidance in this chapter conflicts in any way with the
+manufacturer’s recommended procedures for a particular make and model airplane, the manufacturer’s recommended procedures take
+precedence.
+Emergency Landings
+This section contains information on emergency landing techniques in small fixed-wing airplanes. The guidelines that are presented
+apply to the more adverse terrain conditions for which no practical training is possible. The objective is to instill in the pilot the
+knowledge that almost any terrain can be considered “suitable” for a survivable crash landing if the pilot knows how to use the
+airplane structure for self-protection and the protection of passengers.
+Types of Emergency Landings
+The different types of emergency landings are defined as follows:
+⦁ Forced landing—an immediate landing, on or off an airport, necessitated by the inability to continue further
+flight. A typical example of which is an airplane forced down by engine failure.
+⦁ Precautionary landing—a premeditated landing, on or off an airport, when further flight is possible but
+inadvisable. Examples of conditions that may call for a precautionary landing include deteriorating weather,
+being lost, fuel shortage, and gradually developing engine trouble.
+⦁ Ditching—a forced or precautionary landing on water.
+A precautionary landing, generally, is less hazardous than a forced landing because the pilot has more time for terrain selection and
+the planning of the approach. In addition, the pilot can use power to compensate for errors in judgment or technique. The pilot should
+be aware that too many situations calling for a precautionary landing are allowed to develop into immediate forced landings, when the
+pilot uses wishful thinking instead of reason, especially when dealing with a self-inflicted predicament. The non-instrument-rated
+pilot trapped by weather, or the pilot facing imminent fuel exhaustion who does not give any thought to the feasibility of a
+precautionary landing, accepts an extremely hazardous alternative.
+Psychological Hazards
+There are several factors that may interfere with a pilot’s ability to act promptly and properly when faced with an emergency. Some of
+these factors are listed below.
+⦁ Reluctance to accept the emergency situation—a pilot who allows the mind to become paralyzed at the
+thought that the airplane will be on the ground in a very short time, regardless of the pilot’s actions or
+hopes, is severely handicapped in the handling of the emergency. An unconscious desire to delay the
+dreaded moment may lead to such errors as: failure to lower the nose to maintain flying speed, delay in the
+selection of the most suitable landing area within reach, and indecision in general. Desperate attempts to
+correct whatever went wrong at the expense of airplane control fall into the same category.
+⦁ Undue concern about getting hurt—fear is a vital part of the self-preservation mechanism. However, when
+fear leads to panic, we invite that which we want most to avoid. The survival records favor pilots who
+maintain their composure and know how to apply the general concepts and procedures that have been
+developed through the years. The success of an emergency landing is as much a matter of the mind as of
+skills.
+
+⦁ Desire to save the airplane—the pilot who has been conditioned during training to expect to find a relatively
+safe landing area, whenever the flight instructor closed the throttle for a simulated forced landing, may
+ignore all basic rules of airmanship to avoid a touchdown in terrain where airplane damage is unavoidable.
+Typical consequences are: making a 180° turn back to the runway when available altitude is insufficient;
+stretching the glide without regard for minimum control speed in order to reach a more appealing field; and
+accepting an approach and touchdown situation that leaves no margin for error. The desire to save the
+airplane, regardless of the risks involved, may be influenced by two other factors: the pilot’s financial stake
+in the airplane and the certainty that an undamaged airplane implies no bodily harm. There are times,
+however, when a pilot should be more interested in sacrificing the airplane so that the occupants can safely
+walk away from it.
+Basic Safety Concepts
+General
+A pilot who is faced with an emergency landing in terrain that makes extensive airplane damage inevitable should keep in mind that
+the avoidance of crash injuries is largely a matter of: (1) keeping the vital structure (cabin area) relatively intact by using dispensable
+structure (i.e., wings, landing gear, fuselage bottom) to absorb the violence of the stopping process before it affects the occupants and
+(2) avoiding forceful bodily contact with interior structure. Avoiding forcible contact with interior structure is a matter of seat and
+body security. Unless the occupant decelerates at the same rate as the surrounding structure, no benefit is realized from its relative
+intactness. The occupant is brought to a stop violently in the form of a secondary collision.
+The advantage of sacrificing dispensable structure is demonstrated daily on the highways. A head-on car impact against a tree at 20
+miles per hour (mph) is less hazardous for a properly restrained driver than a similar impact against the driver’s door. Accident
+experience shows that the extent of crushable structure between the occupants and the principal point of impact on the airplane has a
+direct bearing on the severity of the transmitted crash forces and, therefore, on survivability.
+Dispensable airplane structure is not the only available energy absorbing medium in an emergency situation. Vegetation, trees, and
+even manmade structures may be used for this purpose. Cultivated fields with dense crops, such as mature corn and grain, are almost
+as effective in bringing an airplane to a stop with repairable damage as an emergency arresting device on a runway. [Figure 18-1]
+Brush and small trees provide considerable cushioning and braking effect without destroying the airplane. When dealing with natural
+and manmade obstacles with greater strength than the dispensable airplane structure, the pilot should plan the touchdown in such a
+manner that only nonessential structure is “used up” in the principal slowing-down process.
+Figure 18-1. Using vegetation to absorb energy.
+
+The overall severity of a deceleration process is governed by speed (groundspeed) and stopping distance. The most critical of these is
+speed; doubling the groundspeed means quadrupling the total destructive energy and vice versa. Even a small change in groundspeed
+at touchdown—be it as a result of wind or pilot technique—affects the outcome of a controlled crash. It is important that the actual
+touchdown during an emergency landing be made at the lowest possible controllable airspeed, using all available aerodynamic
+devices.
+Most pilots instinctively—and correctly—look for the largest available flat and open field for an emergency landing. Actually, very
+little stopping distance is required if the speed can be dissipated uniformly; that is, if the deceleration forces can be spread evenly
+over the available distance. This concept is designed into the arresting gear of aircraft carriers that provides a nearly constant stopping
+force from the moment of hookup.
+The typical light airplane is designed to provide protection in crash landings that expose the occupants to nine times the acceleration
+of gravity (9G) in a forward direction. Assuming a uniform 9G deceleration, at 50 mph the required stopping distance is about 9.4
+feet. While at 100 mph, the stopping distance is about 37.6 feet—about four times as great. [Figure 18-2] Although these figures are
+based on an ideal deceleration process, it is interesting to note what can be accomplished in an effectively used short stopping
+distance. Understanding the need for a firm but uniform deceleration process in very poor terrain enables the pilot to select
+touchdown conditions that spread the breakup of dispensable structure over a short distance, thereby reducing the peak deceleration
+of the cabin area.
+Figure 18-2. Stopping distance vs. groundspeed.

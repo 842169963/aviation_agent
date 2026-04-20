@@ -1,0 +1,680 @@
+@prefix av: <https://example.org/aviation/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+av:proc_0_tree_landing a av:EmergencyProcedure ;
+    av:aircraft_phase "landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Use the normal landing configuration with full flaps and gear down"^^xsd:string ;
+            av:expected_result "Aircraft prepared for landing in a controllable manner"^^xsd:string ;
+            av:source_excerpt "Use the normal landing configuration (full flaps, gear down)."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Make contact at minimum indicated airspeed, but not below stall speed"^^xsd:string ;
+            av:expected_result "Aircraft hangs in the tree branches avoiding hard impact"^^xsd:string ;
+            av:source_excerpt "Make contact at minimum indicated airspeed, but not below stall speed, and “hang” the airplane in the tree branches in a nose-high landing attitude."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Involve the underside of the fuselage and both wings in the initial tree contact"^^xsd:string ;
+            av:expected_result "More even and positive cushioning effect on impact"^^xsd:string ;
+            av:source_excerpt "Involving the underside of the fuselage and both wings in the initial tree contact provides a more even and positive cushioning effect, while preventing penetration of the windshield."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Ensure initial tree contact is symmetrical with both wings meeting equal resistance"^^xsd:string ;
+            av:expected_result "Maintains proper airplane attitude and reduces chance of wing loss"^^xsd:string ;
+            av:source_excerpt "Ideally, initial tree contact should be symmetrical; that is, both wings should meet equal resistance in the tree branches."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"^^xsd:string ;
+            av:expected_result "Best results in minimizing damage upon ground contact"^^xsd:string ;
+            av:source_excerpt "If heavy tree trunk contact is unavoidable once the airplane is on the ground, it is best to involve both wings simultaneously by directing the airplane between two properly spaced trees."^^xsd:string ;
+            av:step_number 7 ],
+        [ a av:ProcedureStep ;
+            av:action "Head into the wind to keep the groundspeed low"^^xsd:string ;
+            av:expected_result "Reduced impact speed during tree landing"^^xsd:string ;
+            av:source_excerpt "Keep the groundspeed low by heading into the wind."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Avoid direct contact of the fuselage with heavy tree trunks"^^xsd:string ;
+            av:expected_result "Reduced risk of fuselage damage or injury"^^xsd:string ;
+            av:source_excerpt "Avoid direct contact of the fuselage with heavy tree trunks."^^xsd:string ;
+            av:step_number 5 ] ;
+    av:name "Tree Landing"^^xsd:string ;
+    av:source_excerpt "Although a tree landing is not an attractive prospect, the following general guidelines help to make the experience survivable."^^xsd:string ;
+    av:source_file "10_trees_forest.txt"^^xsd:string ;
+    av:source_section "Trees (Forest)"^^xsd:string ;
+    av:trigger_condition "Emergency landing in forested area"^^xsd:string .
+
+av:proc_10_landing_gear_malfunc a av:EmergencyProcedure ;
+    av:aircraft_phase "Landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Land with one main gear retracted if necessary"^^xsd:string ;
+            av:expected_result "Controlled landing despite malfunction"^^xsd:string ;
+            av:source_excerpt "If the pilot elects to land with one main gear retracted..."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Select an airport with crash and rescue facilities"^^xsd:string ;
+            av:expected_result "Emergency equipment is standing by for landing"^^xsd:string ;
+            av:source_excerpt "The pilot should select an airport with crash and rescue facilities, if possible."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Burn off excess fuel if applicable"^^xsd:string ;
+            av:expected_result "Reduced landing speed and fire potential"^^xsd:string ;
+            av:source_excerpt "The pilot should consider burning off excess fuel."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Request that the runway surface be foamed if available"^^xsd:string ;
+            av:expected_result "Reduction of fire potential upon landing"^^xsd:string ;
+            av:source_excerpt "If the airport is so equipped, the pilot can request that the runway surface be foamed."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Use full opposite rudder and aggressive braking if yaw occurs"^^xsd:string ;
+            av:expected_result "Maintain directional control after touchdown"^^xsd:string ;
+            av:source_excerpt "The pilot should be prepared to use full opposite rudder and aggressive braking to maintain some degree of directional control."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Maintain a nose-high attitude with wings level during landing"^^xsd:string ;
+            av:expected_result "Keep unsupported wing airborne as long as possible"^^xsd:string ;
+            av:source_excerpt "the landing should be made in a nose-high attitude with the wings level."^^xsd:string ;
+            av:step_number 5 ] ;
+    av:name "Landing Gear Malfunction"^^xsd:string ;
+    av:source_excerpt "Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond..."^^xsd:string ;
+    av:source_file "20_landing_gear_malfunction.txt"^^xsd:string ;
+    av:source_section "Landing Gear Malfunction"^^xsd:string ;
+    av:trigger_condition "Landing gear refuses to respond to extension methods"^^xsd:string .
+
+av:proc_11_electrical_system_fa a av:EmergencyProcedure ;
+    av:aircraft_phase "Cruise"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Plan to land at the nearest suitable airport"^^xsd:string ;
+            av:expected_result "Prepare for emergency landing"^^xsd:string ;
+            av:source_excerpt "plan to land at the nearest suitable airport."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Expect to make a no-flap landing if applicable"^^xsd:string ;
+            av:expected_result "Prepare for manual landing techniques"^^xsd:string ;
+            av:source_excerpt "Expect to make a no-flap landing..."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Shed all but the most necessary electrically-driven equipment"^^xsd:string ;
+            av:expected_result "Maximize remaining battery life"^^xsd:string ;
+            av:source_excerpt "the pilot immediately shed non-essential loads when the generating source fails."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Notify ATC of the situation immediately"^^xsd:string ;
+            av:expected_result "ATC is aware of the emergency for assistance"^^xsd:string ;
+            av:source_excerpt "Notify ATC of the situation immediately."^^xsd:string ;
+            av:step_number 2 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Any loss of electrical power is critical in a small airplane."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Landing gear and flap motors use power at rates much greater than most other types of electrical equipment."^^xsd:string ] ;
+    av:name "Electrical System Failure"^^xsd:string ;
+    av:source_excerpt "The loss of electrical power can deprive the pilot of numerous critical systems..."^^xsd:string ;
+    av:source_file "20_landing_gear_malfunction.txt"^^xsd:string ;
+    av:source_section "Electrical System"^^xsd:string ;
+    av:trigger_condition "Loss of electrical power in flight"^^xsd:string .
+
+av:proc_12_inadvertent_door_ope a av:EmergencyProcedure ;
+    av:aircraft_phase "flight"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Land as soon as practicable and close the door once safely on the ground"^^xsd:string ;
+            av:expected_result "Complete landing and secure the door"^^xsd:string ;
+            av:source_excerpt "Land as soon as practicable, and close the door once safely on the ground."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Ignore the unfamiliar noise and vibration"^^xsd:string ;
+            av:expected_result "Maintain focus on flying the airplane"^^xsd:string ;
+            av:source_excerpt "Do not panic. Try to ignore the unfamiliar noise and vibration."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Leave the door alone"^^xsd:string ;
+            av:expected_result "Avoid distractions and maintain control"^^xsd:string ;
+            av:source_excerpt "Do not release the seat belt and shoulder harness in an attempt to reach the door. Leave the door alone."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Climb to normal traffic pattern altitude"^^xsd:string ;
+            av:expected_result "Establish a safe altitude for landing"^^xsd:string ;
+            av:source_excerpt "If the door opens after lift-off, do not rush to land. Climb to normal traffic pattern altitude."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Concentrate on flying the airplane"^^xsd:string ;
+            av:expected_result "Maintain control of the airplane"^^xsd:string ;
+            av:source_excerpt "Concentrate on flying the airplane."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Fly a normal traffic pattern and make a normal landing"^^xsd:string ;
+            av:expected_result "Complete landing procedures safely"^^xsd:string ;
+            av:source_excerpt "Fly a normal traffic pattern, and make a normal landing."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Complete all items on the landing checklist"^^xsd:string ;
+            av:expected_result "Ensure all safety checks are performed"^^xsd:string ;
+            av:source_excerpt "Complete all items on the landing checklist."^^xsd:string ;
+            av:step_number 7 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Accidents are almost never caused by an open door; an open door accident is caused by the pilot’s distraction or failure to maintain control of the airplane."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Do not rush. Attempting to get the airplane on the ground as quickly as possible may result in steep turns at low altitude."^^xsd:string ] ;
+    av:name "Inadvertent Door Opening In-Flight"^^xsd:string ;
+    av:source_excerpt "In the event of an inadvertent door opening in flight or on takeoff, the pilot should adhere to the following:"^^xsd:string ;
+    av:source_file "23_door_opening_in_flight.txt"^^xsd:string ;
+    av:source_section "Door Opening In-Flight"^^xsd:string ;
+    av:trigger_condition "Inadvertent door opening during flight or takeoff"^^xsd:string .
+
+av:proc_13_emergency_autoland a av:EmergencyProcedure ;
+    av:aircraft_phase "landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Activate the EAL system manually if necessary"^^xsd:string ;
+            av:expected_result "EAL system begins automated landing procedures"^^xsd:string ;
+            av:source_excerpt "The system also allows for manual activation by a pilot or a passenger."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Set transponder to squawk 7700"^^xsd:string ;
+            av:expected_result "Transponder indicates an emergency situation"^^xsd:string ;
+            av:source_excerpt "EAL sets the transponder to squawk 7700 to indicate an emergency."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Initiate emergency descent if no pilot responsiveness is detected"^^xsd:string ;
+            av:expected_result "Aircraft begins emergency descent"^^xsd:string ;
+            av:source_excerpt "Without pilot responsiveness after an emergency descent, EAL initiates the process for an automated landing."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Broadcast position and intention once within 12 miles of chosen runway"^^xsd:string ;
+            av:expected_result "Continuous broadcasting of position and intentions occurs"^^xsd:string ;
+            av:source_excerpt "Once the EAL aircraft is within 12 miles of the selected runway and at or below 12,000 feet MSL, it broadcasts on the tower frequency..."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Transmits automated radio broadcasts on last selected frequency and Guard (121.5 MHz)"^^xsd:string ;
+            av:expected_result "Controllers and pilots in the area are alerted"^^xsd:string ;
+            av:source_excerpt "Once activated, the EAL system transmits automated radio broadcasts on the aircraft’s last selected frequency and on Guard (121.5 MHz)..."^^xsd:string ;
+            av:step_number 3 ] ;
+    av:name "Emergency Autoland"^^xsd:string ;
+    av:source_excerpt "If the EAL senses erratic flying, it stabilizes the aircraft, and checks for pilot responsiveness."^^xsd:string ;
+    av:source_file "34_autoland.txt"^^xsd:string ;
+    av:source_section "Autoland"^^xsd:string ;
+    av:trigger_condition "EAL senses erratic flying or pilot incapacitation"^^xsd:string .
+
+av:proc_14_inadvertent_vfr_flig a av:EmergencyProcedure ;
+    av:aircraft_phase "All phases of flight"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Avoid over-controlling the airplane during maneuvers."^^xsd:string ;
+            av:expected_result "Preventing potential spatial disorientation."^^xsd:string ;
+            av:source_excerpt "The most important point to be stressed is that the pilot should not panic... However, the pilot should make a conscious effort to relax."^^xsd:string ;
+            av:step_number 7 ],
+        [ a av:ProcedureStep ;
+            av:action "Recognize and accept the seriousness of the situation and the need for immediate remedial action."^^xsd:string ;
+            av:expected_result "A clear acknowledgment of the emergency and urgent need for control."^^xsd:string ;
+            av:source_excerpt "The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows: Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Execute a climb by raising the miniature airplane on the attitude indicator no more than one bar width and applying power."^^xsd:string ;
+            av:expected_result "Achieving a gentle climb without rapid attitude changes."^^xsd:string ;
+            av:source_excerpt "If a climb is necessary, the pilot should raise the miniature airplane on the attitude indicator no more than one bar width and apply power."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Trim the airplane with the elevator trim to maintain hands-off level flight at cruise airspeed."^^xsd:string ;
+            av:expected_result "The airplane maintains level flight without continuous control input."^^xsd:string ;
+            av:source_excerpt "Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Make all attitude changes smooth and small, with positive pressure."^^xsd:string ;
+            av:expected_result "The airplane maintains its equilibrium and desired flight attitude."^^xsd:string ;
+            av:source_excerpt "Make all attitude changes smooth and small, yet with positive pressure."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Request ATC assistance if necessary to get the airplane safely on the ground."^^xsd:string ;
+            av:expected_result "Guidance and support from air traffic control for a safe landing."^^xsd:string ;
+            av:source_excerpt "When being assisted by ATC, the pilot may detect a sense of urgency while being directed to change heading and/or altitude."^^xsd:string ;
+            av:step_number 8 ],
+        [ a av:ProcedureStep ;
+            av:action "Maintain control of the airplane using flight instruments."^^xsd:string ;
+            av:expected_result "Stability and control of the airplane without reliance on visual references."^^xsd:string ;
+            av:source_excerpt "The only way to control the airplane safely is by using and trusting the flight instruments."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Keep the wings level with fingertip pressure on the control wheel."^^xsd:string ;
+            av:expected_result "The airplane remains in a stable flight attitude."^^xsd:string ;
+            av:source_excerpt "Straight flight is maintained by keeping the wings level using 'fingertip pressure' on the control wheel."^^xsd:string ;
+            av:step_number 4 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "A tight grip on the controls can lead to a lack of control pressures, making it difficult to manage the airplane effectively."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation of the information provided by those instruments results in inadequate airplane control."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Combined maneuvers should be avoided, as they compound the problems encountered and increase the risk of control loss."^^xsd:string ] ;
+    av:name "Inadvertent VFR Flight Into IMC"^^xsd:string ;
+    av:source_excerpt "Accident statistics show that the pilot who has not been trained in attitude instrument flying... the pilot is, in effect, in IMC if unable to navigate or establish geographical position by visual reference to landmarks on the surface."^^xsd:string ;
+    av:source_file "24_inadvertent_vfr_flight_into_imc.txt | 25_maintaining_airplane_control.txt | 26_attitude_control.txt | 27_turns.txt | 28_climbs.txt | 29_descents.txt | 30_combined_maneuvers.txt | 31_transition_to_visual_flight.txt"^^xsd:string ;
+    av:source_section "Inadvertent VFR Flight Into IMC"^^xsd:string ;
+    av:trigger_condition "Encountering instrument meteorological conditions (IMC) unintentionally"^^xsd:string .
+
+av:proc_15_water_ditching a av:EmergencyProcedure ;
+    av:aircraft_phase "landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Keep retractable gear up unless advised otherwise by AFM/POH."^^xsd:string ;
+            av:expected_result "Ensure proper aircraft configuration and safety during landing."^^xsd:string ;
+            av:source_excerpt "Keep a retractable gear up unless the AFM/POH advises otherwise."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Keep intact wings and empty fuel tanks for buoyancy."^^xsd:string ;
+            av:expected_result "The airplane provides floatation for at least several minutes after landing."^^xsd:string ;
+            av:source_excerpt "Intact wings and fuel tanks (especially when empty) provide floatation for at least several minutes."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Execute the landing at minimum speed and in a normal landing attitude."^^xsd:string ;
+            av:expected_result "The airplane does not immediately sink upon touchdown."^^xsd:string ;
+            av:source_excerpt "Also, an airplane that is ditched at minimum speed and in a normal landing attitude does not immediately sink upon touchdown."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Drag the airplane in when landing on smooth water."^^xsd:string ;
+            av:expected_result "Minimize the risk of flying into the water or stalling."^^xsd:string ;
+            av:source_excerpt "To avoid this hazard, the airplane should be “dragged in” when possible."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Use no more than intermediate flaps on low-wing airplanes."^^xsd:string ;
+            av:expected_result "Prevent asymmetrical flap failure and slowing of the airplane."^^xsd:string ;
+            av:source_excerpt "The water resistance of fully extended flaps may result in asymmetrical flap failure and slowing of the airplane."^^xsd:string ;
+            av:step_number 4 ] ;
+    av:name "Water Ditching"^^xsd:string ;
+    av:source_excerpt "A well-executed water landing normally involves less deceleration violence than a poor tree landing or a touchdown on extremely rough terrain."^^xsd:string ;
+    av:source_file "11_water_ditching_and_snow.txt"^^xsd:string ;
+    av:source_section "Water (Ditching) and Snow"^^xsd:string ;
+    av:trigger_condition "Performing a water landing"^^xsd:string .
+
+av:proc_16_snow_landing a av:EmergencyProcedure ;
+    av:aircraft_phase "landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Use the same aircraft configuration as for water landing."^^xsd:string ;
+            av:expected_result "Ensure proper settings for a safe landing."^^xsd:string ;
+            av:source_excerpt "in the same configuration"^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Consider loss of depth perception (white out) in reduced visibility."^^xsd:string ;
+            av:expected_result "Avoid potential hazards during landing."^^xsd:string ;
+            av:source_excerpt "with the same regard for loss of depth perception (white out) in reduced visibility"^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Execute the snow landing like a water ditching."^^xsd:string ;
+            av:expected_result "Maintain control during landing."^^xsd:string ;
+            av:source_excerpt "A landing in snow should be executed like a ditching."^^xsd:string ;
+            av:step_number 1 ] ;
+    av:name "Snow Landing"^^xsd:string ;
+    av:source_excerpt "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception (white out) in reduced visibility and on wide-open terrain."^^xsd:string ;
+    av:source_file "11_water_ditching_and_snow.txt"^^xsd:string ;
+    av:source_section "Water (Ditching) and Snow"^^xsd:string ;
+    av:trigger_condition "Performing a snow landing"^^xsd:string .
+
+av:proc_17_ballistic_parachute_ a av:EmergencyProcedure ;
+    av:aircraft_phase "emergency"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Instruct passengers on the sequence of steps for deployment"^^xsd:string ;
+            av:expected_result "Passengers are prepared to follow the proper deployment steps"^^xsd:string ;
+            av:source_excerpt "At a minimum, the pilot should also brief the passengers regarding the basic sequence of steps for deployment."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Brief passengers regarding conditions for safe deployment"^^xsd:string ;
+            av:expected_result "Passengers understand when to deploy the system"^^xsd:string ;
+            av:source_excerpt "Pilots should brief passengers with access to any deployment mechanism regarding the conditions for a safe deployment."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Know the evacuation procedures once on the ground"^^xsd:string ;
+            av:expected_result "Occupants are aware of how to safely evacuate the aircraft"^^xsd:string ;
+            av:source_excerpt "Once on the ground, there are hazards associated with a deployed parachute and the effect of surface winds, and the occupants should know the procedures for evacuation."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Follow manufacturer and supplier guidance for deployment"^^xsd:string ;
+            av:expected_result "Deployment adheres to best practices established by manufacturers"^^xsd:string ;
+            av:source_excerpt "Pilots should study the information provided by manufacturers and suppliers of these systems and follow the guidance provided."^^xsd:string ;
+            av:step_number 3 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Deployment of an airplane ballistic parachute system results in the loss of the airframe but prevents injuries and saves lives."^^xsd:string ] ;
+    av:name "Ballistic Parachute Deployment"^^xsd:string ;
+    av:source_excerpt "conduct…deploy the system only if the pilot were incapacitated"^^xsd:string ;
+    av:source_file "33_ballistic_parachutes.txt"^^xsd:string ;
+    av:source_section "Ballistic Parachutes"^^xsd:string ;
+    av:trigger_condition "Catastrophic loss of controllability, actual loss of control, or pilot incapacitation"^^xsd:string .
+
+av:proc_1_engine_failure_after a av:EmergencyProcedure ;
+    av:aircraft_phase "takeoff"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Respond appropriately to stall warnings and reduce wing loading during the turn"^^xsd:string ;
+            av:expected_result "Maintain control of the airplane"^^xsd:string ;
+            av:source_excerpt "Pilots should be alert for and respond appropriately to any stall warning and reduce wing loading during the turn as necessary."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Consider turning back toward the point of departure if safe"^^xsd:string ;
+            av:expected_result "Evaluate risks and determine if a turn back is feasible"^^xsd:string ;
+            av:source_excerpt "the pilot might turn back, but only if certain the airplane can reach the field from its current position."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Practice turns in both directions at a safe altitude"^^xsd:string ;
+            av:expected_result "Achieve consistent altitude loss and avoid accelerated stall"^^xsd:string ;
+            av:source_excerpt "Training for a turn back includes practicing turns in both directions at a safe altitude."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Select a field directly ahead or slightly to the side of the takeoff path"^^xsd:string ;
+            av:expected_result "Prepare for a controlled landing"^^xsd:string ;
+            av:source_excerpt "the pilot should select a field directly ahead (or slightly to the side of the takeoff path)."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Plan the turn back with the expected altitude loss in mind"^^xsd:string ;
+            av:expected_result "Ensure the airplane can glide back to the field after the turn"^^xsd:string ;
+            av:source_excerpt "the pilot should know the expected altitude loss during the turn for the specific make and model airplane."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Lower the nose of the airplane"^^xsd:string ;
+            av:expected_result "Establish the proper glide attitude"^^xsd:string ;
+            av:source_excerpt "the pilot should lower the nose of the airplane and establish the proper glide attitude."^^xsd:string ;
+            av:step_number 1 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Turning back after an engine failure requires considerable training and can result in a fatal crash if not executed correctly."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Attempting a turn back presents an unacceptable risk for student pilots and pilots without adequate proficiency."^^xsd:string ] ;
+    av:name "Engine Failure After Takeoff (Single-Engine)"^^xsd:string ;
+    av:source_excerpt "A number of variables and pilot actions factor into a successful emergency landing shortly after takeoff."^^xsd:string ;
+    av:source_file "12_engine_failure_after_takeoff_single_engine.txt"^^xsd:string ;
+    av:source_section "Engine Failure After Takeoff (Single-Engine)"^^xsd:string ;
+    av:trigger_condition "Engine failure during initial climb"^^xsd:string .
+
+av:proc_2_emergency_descent a av:EmergencyProcedure ;
+    av:aircraft_phase "Descent"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Reduce power to idle"^^xsd:string ;
+            av:expected_result "Allow the propeller to act as an aerodynamic brake"^^xsd:string ;
+            av:source_excerpt "Except when prohibited by the manufacturer, the power should be reduced to idle, and the propeller control (if equipped) should be placed in the low pitch (or high revolutions per minute (rpm)) position."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Extend landing gear and flaps as recommended"^^xsd:string ;
+            av:expected_result "Provide maximum drag for rapid descent without excessive airspeed"^^xsd:string ;
+            av:source_excerpt "The landing gear and flaps should be extended as recommended by the manufacturer. This provides maximum drag so that the descent can be made as rapidly as possible, without excessive airspeed."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Ensure descent is conducted within design maneuvering speed (VA) limits in turbulence"^^xsd:string ;
+            av:expected_result "Maintain structural integrity during descent"^^xsd:string ;
+            av:source_excerpt "If the descent is conducted in turbulent conditions, the pilot also needs to comply with the design maneuvering speed (VA) limitations."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Establish a bank of approximately 30 to 45°"^^xsd:string ;
+            av:expected_result "Maintain positive load factors (G forces) on the airplane"^^xsd:string ;
+            av:source_excerpt "When initiating the descent, a bank of approximately 30 to 45° should be established to maintain positive load factors (G forces) on the airplane."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Monitor airspeed to not exceed VNE, VLE, or VFE"^^xsd:string ;
+            av:expected_result "Prevent structural damage and maintain safe descent"^^xsd:string ;
+            av:source_excerpt "The pilot should not allow the airplane’s airspeed to pass the never-exceed speed (VNE), the maximum landing gear extended speed (VLE), or the maximum flap extended speed (VFE), as applicable."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Initiate recovery at a high enough altitude for safe recovery"^^xsd:string ;
+            av:expected_result "Safely return to level flight or perform a precautionary landing"^^xsd:string ;
+            av:source_excerpt "The recovery from an emergency descent should be initiated at a high enough altitude to ensure a safe recovery back to level flight or a precautionary landing."^^xsd:string ;
+            av:step_number 6 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Prolonged practice of emergency descents should be avoided to prevent excessive cooling of the engine cylinders."^^xsd:string ] ;
+    av:name "Emergency Descent"^^xsd:string ;
+    av:source_excerpt "An emergency descent is a maneuver for descending as rapidly as possible to a lower altitude or to the ground for an emergency landing."^^xsd:string ;
+    av:source_file "13_emergency_descents.txt"^^xsd:string ;
+    av:source_section "Emergency Descents"^^xsd:string ;
+    av:trigger_condition "Uncontrollable fire, sudden loss of cabin pressurization, or any situation demanding immediate rapid descent"^^xsd:string .
+
+av:proc_3_engine_fire a av:EmergencyProcedure ;
+    av:aircraft_phase "cruise"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Raise the nose to reduce airspeed until the propeller stops rotating"^^xsd:string ;
+            av:expected_result "Airspeed is lowered, aiding in stopping the propeller rotation."^^xsd:string ;
+            av:source_excerpt "Raising the nose to reduce airspeed until the propeller stops rotating."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Shut off the fuel supply to the engine"^^xsd:string ;
+            av:expected_result "Fuel supply is stopped to the engine, potentially extinguishing the fire."^^xsd:string ;
+            av:source_excerpt "The first step on discovering a fire should be to shut off the fuel supply to the engine."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Prepare for a forced landing if necessary"^^xsd:string ;
+            av:expected_result "Pilot is ready to execute a forced landing to ensure safety."^^xsd:string ;
+            av:source_excerpt "Pilots of powerless single-engine airplanes are left with no choice but to make a forced landing."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Feather the propeller or set the pitch control to minimum rpm"^^xsd:string ;
+            av:expected_result "Propeller stops rotating, preventing the oil from feeding the fire."^^xsd:string ;
+            av:source_excerpt "The pilot should consider stopping the propeller rotation by feathering or other means."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Leave the ignition switch ON"^^xsd:string ;
+            av:expected_result "Fuel in the lines and components is used up to minimize fire risk."^^xsd:string ;
+            av:source_excerpt "The ignition switch should be left ON in order to use up the fuel that remains in the fuel lines and components."^^xsd:string ;
+            av:step_number 2 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "The airplane is expendable and the only thing that matters is the safety of those on board."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Engine compartment fires that appear to have been extinguished have been known to rekindle with changes in airflow pattern and airspeed."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "The airplane may still be on fire and susceptible to explosion."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "The airplane may be severely structurally damaged to the point that its ability to remain under control could be lost at any moment."^^xsd:string ] ;
+    av:name "Engine Fire"^^xsd:string ;
+    av:source_excerpt "The first step on discovering a fire should be to shut off the fuel supply to the engine by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position."^^xsd:string ;
+    av:source_file "15_engine_fire.txt"^^xsd:string ;
+    av:source_section "Engine Fire"^^xsd:string ;
+    av:trigger_condition "In-flight engine compartment fire"^^xsd:string .
+
+av:proc_4_electrical_fire a av:EmergencyProcedure ;
+    av:aircraft_phase "All phases"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Turn the electrical master switch OFF."^^xsd:string ;
+            av:expected_result "Electrical power is removed."^^xsd:string ;
+            av:source_excerpt "an attempt may be made to identify and isolate the faulty circuit by: 1. Turning the electrical master switch OFF."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Turn all individual electrical switches OFF."^^xsd:string ;
+            av:expected_result "All electrical power is removed."^^xsd:string ;
+            av:source_excerpt "2. Turning all individual electrical switches OFF."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Select electrical switches that were ON before the fire indication one at a time."^^xsd:string ;
+            av:expected_result "Signs of odor, smoke, or sparks are checked."^^xsd:string ;
+            av:source_excerpt "4. Selecting electrical switches that were ON before the fire indication one at a time."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Turn off the battery master switch and alternator/generator switches if flight conditions permit."^^xsd:string ;
+            av:expected_result "Possible source of the fire is removed."^^xsd:string ;
+            av:source_excerpt "the battery master switch and alternator/generator switches should be turned off to remove the possible source of the fire."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Turn the master switch back ON."^^xsd:string ;
+            av:expected_result "Electrical system is reactivated."^^xsd:string ;
+            av:source_excerpt "3. Turning the master switch back ON."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights."^^xsd:string ;
+            av:expected_result "Faulty circuit is identified."^^xsd:string ;
+            av:source_excerpt "the pilot should attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights."^^xsd:string ;
+            av:step_number 1 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "The most prudent course of action is to land as soon as possible."^^xsd:string ] ;
+    av:name "Electrical Fire"^^xsd:string ;
+    av:source_excerpt "The initial indication of an electrical fire is usually the distinct odor of burning insulation."^^xsd:string ;
+    av:source_file "16_electrical_fires.txt"^^xsd:string ;
+    av:source_section "Electrical Fires"^^xsd:string ;
+    av:trigger_condition "The distinct odor of burning insulation is detected."^^xsd:string .
+
+av:proc_5_cabin_fire a av:EmergencyProcedure ;
+    av:aircraft_phase "any"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Initiate an emergency descent if smoke is intense"^^xsd:string ;
+            av:expected_result "Rapid descent to safe altitude"^^xsd:string ;
+            av:source_excerpt "or execute an emergency descent."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Use the fire extinguisher if available"^^xsd:string ;
+            av:expected_result "Immediate fire suppression"^^xsd:string ;
+            av:source_excerpt "This should be done only after the fire extinguisher (if available) is used."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Use oxygen masks if available for passengers and crew"^^xsd:string ;
+            av:expected_result "Ensure safety of occupants"^^xsd:string ;
+            av:source_excerpt "the passengers and crew should use oxygen masks if available."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Shut down the faulty system"^^xsd:string ;
+            av:expected_result "Reduce the source of the fire"^^xsd:string ;
+            av:source_excerpt "A fire or smoke in the cabin should be controlled by identifying and shutting down the faulty system."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Open cabin air vents to remove smoke"^^xsd:string ;
+            av:expected_result "Improved visibility and air quality in the cabin"^^xsd:string ;
+            av:source_excerpt "In many cases, smoke may be removed from the cabin by opening the cabin air vents."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Close cabin air vents if smoke increases"^^xsd:string ;
+            av:expected_result "Prevent further feeding of the fire"^^xsd:string ;
+            av:source_excerpt "If smoke increases in intensity when the cabin air vents are opened, they should be immediately closed."^^xsd:string ;
+            av:step_number 4 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "On some airplanes, lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem."^^xsd:string ] ;
+    av:name "Cabin Fire"^^xsd:string ;
+    av:source_excerpt "A fire in the cabin presents the pilot with two immediate demands: attacking the fire and getting the airplane safely on the ground as quickly as possible."^^xsd:string ;
+    av:source_file "17_cabin_fire.txt"^^xsd:string ;
+    av:source_section "Cabin Fire"^^xsd:string ;
+    av:trigger_condition "Smoke or fire detected in the cabin"^^xsd:string .
+
+av:proc_6_total_flap_failure a av:EmergencyProcedure ;
+    av:aircraft_phase "approach and landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Avoid forcing the airplane onto the runway at high speed"^^xsd:string ;
+            av:expected_result "Prevent excessive impact during landing"^^xsd:string ;
+            av:source_excerpt "the pilot should avoid the temptation to force the airplane onto the runway at an excessively high speed."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Do not flare excessively to avoid tail strike"^^xsd:string ;
+            av:expected_result "Safe touchdown without damage to the aircraft"^^xsd:string ;
+            av:source_excerpt "this might cause the tail to strike the runway."^^xsd:string ;
+            av:step_number 6 ],
+        [ a av:ProcedureStep ;
+            av:action "Anticipate difficulty seeing the runway on final approach"^^xsd:string ;
+            av:expected_result "Maintain proper judgment of height and distance"^^xsd:string ;
+            av:source_excerpt "this situation, if not anticipated, can result in serious errors in judgment of height and distance."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Plan for a longer landing distance"^^xsd:string ;
+            av:expected_result "Successful landing without exceeding runway limits"^^xsd:string ;
+            av:source_excerpt "A no-flap landing requires substantially more runway than normal."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Fly in a nose-high attitude to maintain altitude"^^xsd:string ;
+            av:expected_result "Avoid loss of altitude"^^xsd:string ;
+            av:source_excerpt "the airplane should be flown in a relatively nose-high attitude to maintain altitude."^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Avoid diving to lose altitude"^^xsd:string ;
+            av:expected_result "Maintain controlled descent speed"^^xsd:string ;
+            av:source_excerpt "A wider, longer traffic pattern may be required in order to avoid the necessity of diving to lose altitude."^^xsd:string ;
+            av:step_number 3 ] ;
+    av:name "Total Flap Failure"^^xsd:string ;
+    av:source_excerpt "The inability to extend the wing flaps necessitates a no-flap approach and landing."^^xsd:string ;
+    av:source_file "17_cabin_fire.txt"^^xsd:string ;
+    av:source_section "Flight Control Malfunction/Failure"^^xsd:string ;
+    av:trigger_condition "Inability to extend the wing flaps"^^xsd:string .
+
+av:proc_7_asymmetric_split_fla a av:EmergencyProcedure ;
+    av:aircraft_phase "landing"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Land with touchdown at safe airspeed above flaps-up stall speed"^^xsd:string ;
+            av:expected_result "Safely touch down"^^xsd:string ;
+            av:source_excerpt "Rather, the airplane should be flown onto the runway so that the touchdown occurs at an airspeed consistent with a safe margin above flaps-up stall speed."^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Apply substantial opposite rudder"^^xsd:string ;
+            av:expected_result "Mitigate yaw caused by additional drag"^^xsd:string ;
+            av:source_excerpt "The yaw caused by the additional drag created by the extended flap requires substantial opposite rudder."^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Fly approach at higher than normal airspeed"^^xsd:string ;
+            av:expected_result "Avoid asymmetric stall and maintain control"^^xsd:string ;
+            av:source_excerpt "The approach to landing with a split flap condition should be flown at a higher than normal airspeed."^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Avoid excessive flaring"^^xsd:string ;
+            av:expected_result "Prevent stall and loss of control"^^xsd:string ;
+            av:source_excerpt "The pilot should not risk an asymmetric stall and subsequent loss of control by flaring excessively."^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Counter roll with opposite aileron"^^xsd:string ;
+            av:expected_result "Maintain wings-level attitude"^^xsd:string ;
+            av:source_excerpt "The roll encountered in a split flap situation is countered with opposite aileron."^^xsd:string ;
+            av:step_number 1 ] ;
+    av:hasWarning [ a av:Warning ;
+            av:description "Additional roll control required to counteract the crosswind may not be available."^^xsd:string ],
+        [ a av:Warning ;
+            av:description "Do not attempt to land with a crosswind from the side of the deployed flap."^^xsd:string ] ;
+    av:name "Asymmetric Split Flap"^^xsd:string ;
+    av:source_excerpt "The roll encountered in a split flap situation is countered with opposite aileron."^^xsd:string ;
+    av:source_file "18_asymmetric_split_flap.txt"^^xsd:string ;
+    av:source_section "Asymmetric (Split) Flap"^^xsd:string ;
+    av:trigger_condition "One flap deploys or retracts while the other remains in position"^^xsd:string .
+
+av:proc_8_loss_of_elevator_con a av:EmergencyProcedure ;
+    av:aircraft_phase "flight"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Increase forward pressure"^^xsd:string ;
+            av:expected_result "Lower the nose"^^xsd:string ;
+            av:source_excerpt "Increasing forward pressure to lower the nose"^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Relax forward pressure"^^xsd:string ;
+            av:expected_result "Raise the nose"^^xsd:string ;
+            av:source_excerpt "Relaxing forward pressure to raise the nose"^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Apply considerable nose-up trim"^^xsd:string ;
+            av:expected_result "Maintain desired pitch attitude"^^xsd:string ;
+            av:source_excerpt "Applying considerable nose-up trim"^^xsd:string ;
+            av:step_number 1 ],
+        [ a av:ProcedureStep ;
+            av:action "Release forward pressure to flare for landing"^^xsd:string ;
+            av:expected_result "Successfully flare for landing"^^xsd:string ;
+            av:source_excerpt "Releasing forward pressure to flare for landing"^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Push the control yoke forward"^^xsd:string ;
+            av:expected_result "Attain and maintain desired attitude"^^xsd:string ;
+            av:source_excerpt "Pushing the control yoke forward to attain and maintain desired attitude"^^xsd:string ;
+            av:step_number 2 ] ;
+    av:name "Loss of Elevator Control - Up Cable Failure"^^xsd:string ;
+    av:source_excerpt "When experiencing a loss of up-elevator control, the pilot can retain pitch control by:"^^xsd:string ;
+    av:source_file "19_loss_of_elevator_control.txt"^^xsd:string ;
+    av:source_section "Loss of Elevator Control"^^xsd:string ;
+    av:trigger_condition "Failure of the 'up' elevator cable"^^xsd:string .
+
+av:proc_9_loss_of_elevator_con a av:EmergencyProcedure ;
+    av:aircraft_phase "flight"^^xsd:string ;
+    av:hasStep [ a av:ProcedureStep ;
+            av:action "Increase back pressure to flare for landing"^^xsd:string ;
+            av:expected_result "Successfully flare for landing"^^xsd:string ;
+            av:source_excerpt "Increasing back pressure to flare for landing"^^xsd:string ;
+            av:step_number 5 ],
+        [ a av:ProcedureStep ;
+            av:action "Release back pressure"^^xsd:string ;
+            av:expected_result "Lower the nose"^^xsd:string ;
+            av:source_excerpt "Releasing back pressure to lower the nose"^^xsd:string ;
+            av:step_number 3 ],
+        [ a av:ProcedureStep ;
+            av:action "Pull the control yoke aft"^^xsd:string ;
+            av:expected_result "Attain and maintain desired attitude"^^xsd:string ;
+            av:source_excerpt "Pulling the control yoke aft to attain and maintain attitude"^^xsd:string ;
+            av:step_number 2 ],
+        [ a av:ProcedureStep ;
+            av:action "Increase back pressure"^^xsd:string ;
+            av:expected_result "Raise the nose"^^xsd:string ;
+            av:source_excerpt "Increasing back pressure to raise the nose"^^xsd:string ;
+            av:step_number 4 ],
+        [ a av:ProcedureStep ;
+            av:action "Apply considerable nose-down trim"^^xsd:string ;
+            av:expected_result "Maintain desired pitch attitude"^^xsd:string ;
+            av:source_excerpt "Applying considerable nose-down trim"^^xsd:string ;
+            av:step_number 1 ] ;
+    av:name "Loss of Elevator Control - Down Cable Failure"^^xsd:string ;
+    av:source_excerpt "When experiencing a loss of down-elevator control, the pilot can retain pitch control by:"^^xsd:string ;
+    av:source_file "19_loss_of_elevator_control.txt"^^xsd:string ;
+    av:source_section "Loss of Elevator Control"^^xsd:string ;
+    av:trigger_condition "Failure of the 'down' elevator cable"^^xsd:string .
+

@@ -1,0 +1,35 @@
+Engine Fire
+===========
+
+An in-flight engine compartment fire is usually caused by a failure that allows a flammable substance, such as fuel, oil, or hydraulic
+fluid, to come in contact with a hot surface. This may be caused by a mechanical failure of the engine itself, an engine-driven
+accessory, a defective induction or exhaust system, or a broken line. Engine compartment fires may also result from maintenance
+errors, such as improperly installed/fastened lines and/or fittings resulting in leaks.
+Engine compartment fires can be indicated by smoke and/or flames coming from the engine cowling area. They can also be indicated
+by discoloration, bubbling, and/or melting of the engine cowling skin in cases where flames and/or smoke are not visible to the pilot.
+By the time a pilot becomes aware of an in-flight engine compartment fire, it usually is well developed. Unless the airplane
+manufacturer directs otherwise in the AFM/POH, the first step on discovering a fire should be to shut off the fuel supply to the engine
+by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position. The ignition switch
+should be left ON in order to use up the fuel that remains in the fuel lines and components between the fuel selector/shutoff valve and
+the engine. This procedure may starve the engine compartment of fuel and cause the fire to die naturally. If the flames are snuffed out,
+no attempt should be made to restart the engine.
+If the engine compartment fire is oil-fed, as evidenced by thick black smoke, as opposed to a fuel-fed fire, which produces bright
+orange flames, the pilot should consider stopping the propeller rotation by feathering or other means, such as (with constant-speed
+propellers) placing the pitch control lever to the minimum rpm position and raising the nose to reduce airspeed until the propeller
+stops rotating. This procedure stops an engine-driven oil (or hydraulic) pump from continuing to pump the flammable fluid that is
+feeding the fire.
+Some light airplane emergency checklists direct the pilot to shut off the electrical master switch. However, the pilot should consider
+that unless the fire is electrical in nature, or a crash landing is imminent, deactivating the electrical system prevents the use of panel
+radios for transmitting distress messages and also causes air traffic control (ATC) to lose transponder returns.
+
+Pilots of powerless single-engine airplanes are left with no choice but to make a forced landing. Pilots of twin-engine airplanes may
+elect to continue the flight to the nearest airport. However, consideration should be given to the possibility that a wing could be
+seriously impaired and lead to structural failure. Even a brief but intense fire could cause dangerous structural damage. In some cases,
+the fire could continue to burn under the wing (or engine cowling in the case of a single- engine airplane) out of view of the pilot.
+Engine compartment fires that appear to have been extinguished have been known to rekindle with changes in airflow pattern and
+airspeed.
+The pilot should be familiar with the airplane’s emergency descent procedures. The pilot should also bear in mind the following:
+⦁ The airplane may be severely structurally damaged to the point that its ability to remain under control could
+be lost at any moment.
+⦁ The airplane may still be on fire and susceptible to explosion.
+⦁ The airplane is expendable and the only thing that matters is the safety of those on board.

@@ -1,0 +1,35 @@
+Cabin Fire
+==========
+
+Cabin fires generally result from one of three sources: (1) careless smoking on the part of the pilot and/or passengers; (2) electrical
+system malfunctions; or (3) heating system malfunctions. A fire in the cabin presents the pilot with two immediate demands: attacking
+the fire and getting the airplane safely on the ground as quickly as possible. A fire or smoke in the cabin should be controlled by
+identifying and shutting down the faulty system. In many cases, smoke may be removed from the cabin by opening the cabin air vents.
+This should be done only after the fire extinguisher (if available) is used. Then the cabin air control can be opened to purge the cabin
+of both smoke and fumes. If smoke increases in intensity when the cabin air vents are opened, they should be immediately closed.
+This indicates a possible fire in the heating system, nose compartment baggage area (if so equipped), or that the increase in airflow is
+feeding the fire.
+On pressurized airplanes, the pressurization air system removes smoke from the cabin; however, if the smoke is intense, it may be
+necessary to either depressurize at altitude, if oxygen is available for all occupants, or execute an emergency descent.
+In unpressurized single-engine and light twin-engine airplanes, the pilot can attempt to expel the smoke from the cabin by opening the
+foul weather windows. These windows should be closed immediately if the fire becomes more intense. If the smoke is severe, the
+passengers and crew should use oxygen masks if available, and the pilot should initiate an immediate descent. The pilot should also
+be aware that on some airplanes, lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem.
+Flight Control Malfunction/Failure
+Total Flap Failure
+The inability to extend the wing flaps necessitates a no-flap approach and landing. In light airplanes, a no-flap approach and landing
+is not particularly difficult or dangerous. However, there are certain factors that should be considered in the execution of this
+maneuver. A no-flap landing requires substantially more runway than normal. The increase in required landing distance could be as
+much as 50 percent.
+
+When flying in the traffic pattern with the wing flaps retracted, the airplane should be flown in a relatively nose-high attitude to
+maintain altitude, as compared to flight with flaps extended. Losing altitude can be more of a problem without the benefit of the drag
+normally provided by flaps. A wider, longer traffic pattern may be required in order to avoid the necessity of diving to lose altitude
+and consequently building up excessive airspeed.
+On final approach, a nose-high attitude can make it difficult to see the runway. This situation, if not anticipated, can result in serious
+errors in judgment of height and distance. Approaching the runway in a relatively nose-high attitude can also cause the perception that
+the airplane is close to a stall. This may cause the pilot to lower the nose abruptly and risk touching down on the nose-wheel.
+With the flaps retracted and the power reduced for landing, the airplane is slightly less stable in the pitch and roll axes. Without flaps,
+the airplane tends to float considerably during roundout. The pilot should avoid the temptation to force the airplane onto the runway
+at an excessively high speed. Neither should the pilot flare excessively because without flaps, this might cause the tail to strike the
+runway.

@@ -1,0 +1,20 @@
+# Local secrets
+aviation_prototype/.env
+.env
+
+# Local Python environments and caches
+aviation_prototype/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Local tool state
+.claude/
+
+# OS/editor noise
+Thumbs.db
+.DS_Store

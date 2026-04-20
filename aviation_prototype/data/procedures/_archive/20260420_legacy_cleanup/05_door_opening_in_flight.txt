@@ -1,0 +1,101 @@
+Door Opening In-Flight
+======================
+
+In most instances, the occurrence of an inadvertent door opening is not of great concern to the safety of a flight, but rather, the pilot’s
+reaction at the moment the incident happens. A door opening in flight may be accompanied by a sudden loud noise, sustained noise
+level, and possible vibration or buffeting. If a pilot allows himself or herself to become distracted to the point where attention is
+focused on the open door rather than maintaining control of the airplane, loss of control may result even though disruption of airflow
+by the door is minimal.
+In the event of an inadvertent door opening in flight or on takeoff, the pilot should adhere to the following:
+⦁ Concentrate on flying the airplane. Particularly in light single and twin-engine airplanes; a cabin door that
+opens in flight seldom if ever compromises the airplane’s ability to fly. There may be some handling
+effects, such as roll and/or yaw, but in most instances these can be easily overcome.
+⦁ If the door opens after lift-off, do not rush to land. Climb to normal traffic pattern altitude, fly a normal
+traffic pattern, and make a normal landing.
+⦁ Do not release the seat belt and shoulder harness in an attempt to reach the door. Leave the door alone.
+Land as soon as practicable, and close the door once safely on the ground.
+⦁ Remember that most doors do not stay wide open. They usually bang open and then settle partly closed. A
+slip towards the door may cause it to open wider; a slip away from the door may push it closed.
+⦁ Do not panic. Try to ignore the unfamiliar noise and vibration. Also, do not rush. Attempting to get the
+airplane on the ground as quickly as possible may result in steep turns at low altitude.
+⦁ Complete all items on the landing checklist.
+⦁ Remember that accidents are almost never caused by an open door. Rather, an open door accident is caused
+by the pilot’s distraction or failure to maintain control of the airplane.
+Inadvertent VFR Flight Into IMC
+It is beyond the scope of this handbook to incorporate a course of training in basic attitude instrument flying. This information is
+contained in the Instrument Flying Handbook (FAA-H-8083-15). Certain pilot certificates and/or associated ratings require training in
+instrument flying and a demonstration of specific instrument flying tasks on the practical test.
+Pilots and flight instructors should refer to the Instrument Flying Handbook (FAA-H-8083-15) for guidance in the performance of
+these tasks and to the appropriate airman certification standards (ACS) for information on the evaluation of tasks performed for the
+particular certificate level and/or rating. The pilot should remember, however, that unless these tasks are practiced on a continuing
+and regular basis, skill erosion begins almost immediately. In a very short time, the pilot’s assumed level of confidence is much
+higher than the performance he or she is actually able to demonstrate should the need arise.
+Accident statistics show that the pilot who has not been trained in attitude instrument flying, or one whose instrument skills have
+eroded, lose control of the airplane in about 10 minutes once forced to rely solely on instrument references. The purpose of this
+section is to provide guidance on practical emergency measures to maintain airplane control for a limited period of time in the event a
+VFR pilot encounters instrument meteorological conditions (IMC). The main goal is not precision instrument flying; rather, it is to
+help the VFR pilot keep the airplane under adequate control until suitable visual references are regained.
+The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows:
+⦁ Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action
+⦁ Maintaining control of the airplane
+⦁ Obtaining the appropriate assistance to get the airplane safely on the ground
+Recognition
+Anytime a VFR pilot is unable to maintain airplane attitude control by reference to the natural horizon, the condition is considered to
+be IMC regardless of the circumstances or the prevailing weather conditions. Whether the cause is inadventent or intentional, the
+VFR pilot is, in effect, in IMC if unable to navigate or establish geographical position by visual reference to landmarks on the
+surface. These situations should be accepted by the pilot involved as a genuine emergency requiring appropriate action.
+
+Pilots should understand that unless they are trained, qualified, and current in the control of an airplane solely by reference to flight
+instruments, they will be unable to do so for any length of time. Many hours of VFR flying using the attitude indicator as a reference
+for airplane control may lull pilots into a false sense of security based on an overestimation of their personal ability to control the
+airplane solely by instrument references. In VFR conditions, even though the pilot believes the instrument references will be easy to
+use, the pilot also receives an overview of the natural horizon and may subconsciously rely on it more than the attitude indicator. If
+the natural horizon were to suddenly disappear, the untrained instrument pilot would be subject to vertigo, spatial disorientation, and
+inevitable control loss.
+Maintaining Airplane Control
+Once the pilot recognizes and accepts the situation, he or she should understand that the only way to control the airplane safely is by
+using and trusting the flight instruments. Attempts to control the airplane partially by reference to flight instruments while searching
+outside of the airplane for visual confirmation of the information provided by those instruments results in inadequate airplane control.
+This may be followed by spatial disorientation and complete control loss.
+The most important point to be stressed is that the pilot should not panic. The task at hand may seem overwhelming, and the situation
+may be compounded by extreme apprehension. However, the pilot should make a conscious effort to relax. The pilot needs to
+understand the most important concern—in fact the only concern at this point—is to keep the wings level. An uncontrolled turn or
+bank usually leads to difficulty in achieving the objectives of any desired flight condition, but good bank control has the effect of
+making pitch control much easier.
+The pilot should remember that a person cannot feel control pressures with a tight grip on the controls. Relaxing and learning to
+“control with the eyes and the brain,” instead of only the muscles usually takes considerable conscious effort.
+The pilot needs to believe what the flight instruments show about the airplane’s attitude regardless of what the natural senses tell. The
+vestibular sense (motion sensing by the inner ear) can and will confuse the pilot. Because of inertia, the sensory areas of the inner ear
+cannot detect slight changes in airplane attitude, nor can they accurately sense attitude changes that occur at a uniform rate over a
+period of time. On the other hand, false sensations are often generated, leading the pilot to believe the attitude of the airplane has
+changed when, in fact, it has not. These false sensations result in the pilot experiencing spatial disorientation.
+Attitude Control
+An airplane is, by design, an inherently stable platform and, except in turbulent air, maintains approximately straight-and-level flight
+if properly trimmed and left alone. It is designed to maintain a state of equilibrium in pitch, roll, and yaw. The pilot should be aware,
+however, that a change about one axis affects the stability of the others. The typical light airplane exhibits a good deal of stability in
+the yaw axis, slightly less in the pitch axis, and even lesser still in the roll axis. The key to emergency airplane attitude control,
+therefore, is to:
+⦁ Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed.
+⦁ Resist the tendency to over-control the airplane. Fly the attitude indicator with fingertip control. No attitude
+changes should be made unless the flight instruments indicate a definite need for a change.
+⦁ Make all attitude changes smooth and small, yet with positive pressure. Remember that a small change as
+indicated on the horizon bar corresponds to a proportionately much larger change in actual airplane
+attitude.
+⦁ Make use of any available aid in attitude control, such as autopilot or wing leveler.
+The primary instrument for attitude control is the attitude indicator. [Figure 18-12] Once the airplane is trimmed so that it maintains
+hands-off level flight at cruise airspeed, that airspeed need not vary until the airplane is slowed for landing. All turns, climbs, and
+descents can and should be made at this airspeed. Straight flight is maintained by keeping the wings level using “fingertip pressure”
+on the control wheel. Any pitch attitude change should be made by using no more than one bar width up or down.
+
+Figure 18-12. Attitude indicator.
+Turns
+Turns are perhaps the most potentially dangerous maneuver for the untrained instrument pilot for two reasons:
+⦁ The normal tendency of the pilot to over-control, leading to steep banks and the possibility of a “graveyard
+spiral.”
+⦁ The inability of the pilot to cope with the instability resulting from the turn.
+When a turn is to be made, the pilot should anticipate and cope with the relative instability of the roll axis. The smallest practical
+bank angle should be used—in any case no more than 10° bank angle. [Figure 18-13] A shallow bank takes very little vertical lift
+from the wings resulting in little if any deviation in altitude. It may be helpful to turn a few degrees and then return to level flight if a
+large change in heading is necessary. Repeat the process until the desired heading is reached. This process may relieve the
+progressive overbanking that often results from prolonged turns.
+Figure 18-13. Level turn.

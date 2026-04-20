@@ -1,0 +1,86 @@
+# LinkML Schema — Aviation Emergency Procedures
+# 这个 schema 定义了知识图谱的"蓝图"
+# OntoGPT 和我们的提取脚本都用这个结构
+
+id: https://example.org/aviation/emergency
+name: AviationEmergencySchema
+description: Schema for extracting aviation emergency procedures from FAA manuals
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  av: https://example.org/aviation/
+
+default_range: string
+default_prefix: av
+
+imports:
+  - linkml:types
+
+classes:
+
+  # 根容器：一份文档中可能有多个紧急程序
+  ExtractionResult:
+    tree_root: true
+    description: Top-level container for all extracted procedures
+    attributes:
+      procedures:
+        range: EmergencyProcedure
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  # 核心类：一个完整的紧急程序
+  EmergencyProcedure:
+    description: A complete emergency or abnormal procedure for pilots
+    attributes:
+      name:
+        description: Short name of this procedure (e.g. Engine Failure After Takeoff)
+        required: true
+      trigger_condition:
+        description: The condition or event that activates this procedure
+      aircraft_phase:
+        description: Phase of flight when this procedure applies (e.g. takeoff, cruise, landing)
+      source_file:
+        required: true
+        description: Source text file that this procedure was extracted from
+      source_section:
+        description: Source section or heading in the original document
+      source_excerpt:
+        description: Short excerpt from the source supporting this procedure
+      steps:
+        description: Ordered list of pilot actions
+        range: ProcedureStep
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      warnings:
+        description: Safety warnings associated with this procedure
+        range: Warning
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  # 每一个检查单步骤
+  ProcedureStep:
+    description: A single ordered pilot action within a procedure
+    attributes:
+      step_number:
+        range: integer
+        required: true
+        description: Position of this step (1, 2, 3, ...)
+      action:
+        required: true
+        description: What the pilot must do (imperative sentence)
+      expected_result:
+        description: What should happen after completing this action
+      source_excerpt:
+        required: true
+        description: Short excerpt from the source supporting this specific step
+
+  # 警告信息
+  Warning:
+    description: A safety-critical warning related to this procedure
+    attributes:
+      description:
+        required: true
+        description: Full text of the warning

@@ -1,0 +1,694 @@
+EMERGENCY PROCEDURES
+====================
+
+Airplane Flying Handbook (FAA-H-8083-3C)
+Chapter 18: Emergency Procedures
+Introduction
+This chapter describes certain abnormal and emergency situations that may occur in flight. The key to successful management of an
+emergency situation, and/or preventing an abnormal situation from progressing into a true emergency, is a thorough familiarity with,
+and adherence to, the procedures developed by the airplane manufacturer. The following guidelines are generic and are not meant to
+replace the airplane manufacturer’s recommended procedures contained in the Federal Aviation Administration (FAA) approved
+Airplane Flight Manual and/or Pilot’s Operating Handbook (AFM/POH). Rather, they are meant to enhance the pilot’s general
+knowledge in the area of abnormal and emergency operations. If any of the guidance in this chapter conflicts in any way with the
+manufacturer’s recommended procedures for a particular make and model airplane, the manufacturer’s recommended procedures take
+precedence.
+Emergency Landings
+This section contains information on emergency landing techniques in small fixed-wing airplanes. The guidelines that are presented
+apply to the more adverse terrain conditions for which no practical training is possible. The objective is to instill in the pilot the
+knowledge that almost any terrain can be considered “suitable” for a survivable crash landing if the pilot knows how to use the
+airplane structure for self-protection and the protection of passengers.
+Types of Emergency Landings
+The different types of emergency landings are defined as follows:
+⦁ Forced landing—an immediate landing, on or off an airport, necessitated by the inability to continue further
+flight. A typical example of which is an airplane forced down by engine failure.
+⦁ Precautionary landing—a premeditated landing, on or off an airport, when further flight is possible but
+inadvisable. Examples of conditions that may call for a precautionary landing include deteriorating weather,
+being lost, fuel shortage, and gradually developing engine trouble.
+⦁ Ditching—a forced or precautionary landing on water.
+A precautionary landing, generally, is less hazardous than a forced landing because the pilot has more time for terrain selection and
+the planning of the approach. In addition, the pilot can use power to compensate for errors in judgment or technique. The pilot should
+be aware that too many situations calling for a precautionary landing are allowed to develop into immediate forced landings, when the
+pilot uses wishful thinking instead of reason, especially when dealing with a self-inflicted predicament. The non-instrument-rated
+pilot trapped by weather, or the pilot facing imminent fuel exhaustion who does not give any thought to the feasibility of a
+precautionary landing, accepts an extremely hazardous alternative.
+Psychological Hazards
+There are several factors that may interfere with a pilot’s ability to act promptly and properly when faced with an emergency. Some of
+these factors are listed below.
+⦁ Reluctance to accept the emergency situation—a pilot who allows the mind to become paralyzed at the
+thought that the airplane will be on the ground in a very short time, regardless of the pilot’s actions or
+hopes, is severely handicapped in the handling of the emergency. An unconscious desire to delay the
+dreaded moment may lead to such errors as: failure to lower the nose to maintain flying speed, delay in the
+selection of the most suitable landing area within reach, and indecision in general. Desperate attempts to
+correct whatever went wrong at the expense of airplane control fall into the same category.
+⦁ Undue concern about getting hurt—fear is a vital part of the self-preservation mechanism. However, when
+fear leads to panic, we invite that which we want most to avoid. The survival records favor pilots who
+maintain their composure and know how to apply the general concepts and procedures that have been
+developed through the years. The success of an emergency landing is as much a matter of the mind as of
+skills.
+
+⦁ Desire to save the airplane—the pilot who has been conditioned during training to expect to find a relatively
+safe landing area, whenever the flight instructor closed the throttle for a simulated forced landing, may
+ignore all basic rules of airmanship to avoid a touchdown in terrain where airplane damage is unavoidable.
+Typical consequences are: making a 180° turn back to the runway when available altitude is insufficient;
+stretching the glide without regard for minimum control speed in order to reach a more appealing field; and
+accepting an approach and touchdown situation that leaves no margin for error. The desire to save the
+airplane, regardless of the risks involved, may be influenced by two other factors: the pilot’s financial stake
+in the airplane and the certainty that an undamaged airplane implies no bodily harm. There are times,
+however, when a pilot should be more interested in sacrificing the airplane so that the occupants can safely
+walk away from it.
+Basic Safety Concepts
+General
+A pilot who is faced with an emergency landing in terrain that makes extensive airplane damage inevitable should keep in mind that
+the avoidance of crash injuries is largely a matter of: (1) keeping the vital structure (cabin area) relatively intact by using dispensable
+structure (i.e., wings, landing gear, fuselage bottom) to absorb the violence of the stopping process before it affects the occupants and
+(2) avoiding forceful bodily contact with interior structure. Avoiding forcible contact with interior structure is a matter of seat and
+body security. Unless the occupant decelerates at the same rate as the surrounding structure, no benefit is realized from its relative
+intactness. The occupant is brought to a stop violently in the form of a secondary collision.
+The advantage of sacrificing dispensable structure is demonstrated daily on the highways. A head-on car impact against a tree at 20
+miles per hour (mph) is less hazardous for a properly restrained driver than a similar impact against the driver’s door. Accident
+experience shows that the extent of crushable structure between the occupants and the principal point of impact on the airplane has a
+direct bearing on the severity of the transmitted crash forces and, therefore, on survivability.
+Dispensable airplane structure is not the only available energy absorbing medium in an emergency situation. Vegetation, trees, and
+even manmade structures may be used for this purpose. Cultivated fields with dense crops, such as mature corn and grain, are almost
+as effective in bringing an airplane to a stop with repairable damage as an emergency arresting device on a runway. [Figure 18-1]
+Brush and small trees provide considerable cushioning and braking effect without destroying the airplane. When dealing with natural
+and manmade obstacles with greater strength than the dispensable airplane structure, the pilot should plan the touchdown in such a
+manner that only nonessential structure is “used up” in the principal slowing-down process.
+Figure 18-1. Using vegetation to absorb energy.
+
+The overall severity of a deceleration process is governed by speed (groundspeed) and stopping distance. The most critical of these is
+speed; doubling the groundspeed means quadrupling the total destructive energy and vice versa. Even a small change in groundspeed
+at touchdown—be it as a result of wind or pilot technique—affects the outcome of a controlled crash. It is important that the actual
+touchdown during an emergency landing be made at the lowest possible controllable airspeed, using all available aerodynamic
+devices.
+Most pilots instinctively—and correctly—look for the largest available flat and open field for an emergency landing. Actually, very
+little stopping distance is required if the speed can be dissipated uniformly; that is, if the deceleration forces can be spread evenly
+over the available distance. This concept is designed into the arresting gear of aircraft carriers that provides a nearly constant stopping
+force from the moment of hookup.
+The typical light airplane is designed to provide protection in crash landings that expose the occupants to nine times the acceleration
+of gravity (9G) in a forward direction. Assuming a uniform 9G deceleration, at 50 mph the required stopping distance is about 9.4
+feet. While at 100 mph, the stopping distance is about 37.6 feet—about four times as great. [Figure 18-2] Although these figures are
+based on an ideal deceleration process, it is interesting to note what can be accomplished in an effectively used short stopping
+distance. Understanding the need for a firm but uniform deceleration process in very poor terrain enables the pilot to select
+touchdown conditions that spread the breakup of dispensable structure over a short distance, thereby reducing the peak deceleration
+of the cabin area.
+Figure 18-2. Stopping distance vs. groundspeed.
+
+Attitude and Sink Rate Control
+The most critical and often the most inexcusable error that can be made in the planning and execution of an emergency landing, even
+in ideal terrain, is the loss of initiative over the airplane’s attitude and sink rate at touchdown. When the touchdown is made on flat,
+open terrain, an excessive nose-low pitch attitude brings the risk of “sticking” the nose in the ground. Steep bank angles just before
+touchdown should also be avoided, as they increase the stalling speed and the likelihood of a wingtip strike.
+Since the airplane’s vertical component of velocity is immediately reduced to zero upon ground contact, it should be kept well under
+control. A flat touchdown at a high sink rate (well in excess of 500 feet per minute (fpm)) on a hard surface can be injurious without
+destroying the cabin structure, especially during gear-up landings in low-wing airplanes. A rigid bottom construction of these
+airplanes may preclude adequate cushioning by structural deformation. Similar impact conditions may cause structural collapse of the
+overhead structure in high-wing airplanes. On soft terrain, an excessive sink rate may cause digging in of the lower nose structure and
+severe forward deceleration.
+Terrain Selection
+A pilot’s choice of emergency landing sites is governed by:
+⦁ The route selected during preflight planning
+⦁ The height above the ground when the emergency occurs
+⦁ Excess airspeed (excess airspeed can be converted into distance and/or altitude)
+The only time the pilot has a very limited choice is during the low and slow portion of the takeoff. However, even under these
+conditions, the ability to change the impact heading only a few degrees may ensure a survivable crash.
+If beyond gliding distance of a suitable open area, the pilot should judge the available terrain for its energy absorbing capability. If
+the emergency starts at a considerable height above the ground, the pilot should be more concerned about first selecting the desired
+general area than a specific spot. Terrain appearances from altitude can be very misleading and considerable altitude may be lost
+before the best spot can be pinpointed. For this reason, the pilot should not hesitate to discard the original plan for one that is
+obviously better. However, as a general rule, the pilot should not change his or her mind more than once; a well-executed crash
+landing in poor terrain can be less hazardous than an uncontrolled touchdown on an established field.
+Airplane Configuration
+Since flaps improve maneuverability at slow speed, and lower the stalling speed, their use during final approach is recommended
+when time and circumstances permit. However, the associated increase in drag and decrease in gliding distance call for caution in the
+timing and the extent of their application; premature use of flap and dissipation of altitude may jeopardize an otherwise sound plan.
+A hard and fast rule concerning the position of a retractable landing gear at touchdown cannot be given. In rugged terrain and trees,
+or during impacts at high sink rate, an extended gear would definitely have a protective effect on the cabin area. However, this
+advantage has to be weighed against the possible side effects of a collapsing gear, such as a ruptured fuel tank. As always, the
+manufacturer’s recommendations as outlined in the AFM/POH should be followed.
+When a normal touchdown is assured, and ample stopping distance is available, a gear-up landing on level, but soft terrain or across a
+plowed field may result in less airplane damage than a gear-down landing. [Figure 18-3] Deactivation of the airplane’s electrical
+system before touchdown reduces the likelihood of a post-crash fire.
+However, the battery master switch should not be turned off until the pilot no longer has any need for electrical power to operate vital
+airplane systems. Positive airplane control during the final part of the approach has priority over all other considerations, including
+airplane configuration and checklist tasks. The pilot should attempt to exploit the power available from an irregularly running engine;
+however, it is generally better to switch the engine and fuel off just before touchdown. This not only ensures the pilot’s initiative over
+the situation, but a cooled-down engine reduces the fire hazard considerably.
+Approach
+When the pilot has time to maneuver, the planning of the approach should be governed by the following three factors:
+⦁ Wind direction and velocity
+⦁ Dimensions and slope of the chosen field
+⦁ Obstacles in the final approach path
+
+Figure 18-3. Intentional gear-up landing.
+These three factors are seldom compatible. When compromises have to be made, the pilot should aim for a wind/obstacle/terrain
+combination that permits a final approach with some margin for error in judgment or technique. A pilot who overestimates the gliding
+range may be tempted to stretch the glide across obstacles in the approach path. For this reason, it is sometimes better to plan the
+approach over an unobstructed area, regardless of wind direction. Experience shows that a collision with obstacles at the end of a
+ground roll or slide is much less hazardous than striking an obstacle at flying speed before the touchdown point is reached.
+Terrain Types
+Since an emergency landing on suitable terrain resembles a situation in which the pilot should be familiar through training, only the
+more unusual situations are discussed.
+Confined Areas
+The natural preference to set the airplane down on the ground should not lead to the selection of an open spot between trees or
+obstacles where the ground cannot be reached without making a steep descent.
+Once the intended touchdown point is reached, and the remaining open and unobstructed space is very limited, it may be better to
+force the airplane down on the ground than to delay touchdown until it stalls (settles). An airplane decelerates faster after it is on the
+ground than while airborne. Thought may also be given to the desirability of ground-looping or retracting the landing gear in certain
+conditions.
+A river or creek can be an inviting alternative in otherwise rugged terrain. The pilot should ensure that the water or creek bed can be
+reached without snagging the wings. The same concept applies to road landings with one additional reason for caution: manmade
+obstacles on either side of a road may not be visible until the final portion of the approach.
+When planning the approach across a road, it should be remembered that most highways and even rural dirt roads are paralleled by
+power or telephone lines. Only a sharp lookout for the supporting structures or poles may provide timely warning.
+Trees (Forest)
+Although a tree landing is not an attractive prospect, the following general guidelines help to make the experience survivable.
+
+⦁ Use the normal landing configuration (full flaps, gear down).
+⦁ Keep the groundspeed low by heading into the wind.
+⦁ Make contact at minimum indicated airspeed, but not below stall speed, and “hang” the airplane in the tree
+branches in a nose-high landing attitude. Involving the underside of the fuselage and both wings in the initial
+tree contact provides a more even and positive cushioning effect, while preventing penetration of the
+windshield. [Figure 18-4]
+⦁ Avoid direct contact of the fuselage with heavy tree trunks.
+⦁ Low, closely spaced trees with wide, dense crowns (branches) close to the ground are much better than tall
+trees with thin tops; the latter allow too much free fall height (a free fall from 75 feet results in an impact speed
+of about 40 knots, or about 4,000 fpm).
+⦁ Ideally, initial tree contact should be symmetrical; that is, both wings should meet equal resistance in the tree
+branches. This distribution of the load helps to maintain proper airplane attitude. It may also preclude the loss
+of one wing, which invariably leads to a more rapid and less predictable descent to the ground.
+⦁ If heavy tree trunk contact is unavoidable once the airplane is on the ground, it is best to involve both wings
+simultaneously by directing the airplane between two properly spaced trees. Do not attempt this maneuver,
+however, while still airborne.
+Figure 18-4. Tree landing.
+
+Water (Ditching) and Snow
+A well-executed water landing normally involves less deceleration violence than a poor tree landing or a touchdown on extremely
+rough terrain. Also, an airplane that is ditched at minimum speed and in a normal landing attitude does not immediately sink upon
+touchdown. Intact wings and fuel tanks (especially when empty) provide floatation for at least several minutes, even if the cabin may
+be just below the water line in a high-wing airplane.
+Loss of depth perception may occur when landing on a wide expanse of smooth water with the risk of flying into the water or stalling
+in from excessive altitude. To avoid this hazard, the airplane should be “dragged in” when possible. Use no more than intermediate
+flaps on low-wing airplanes. The water resistance of fully extended flaps may result in asymmetrical flap failure and slowing of the
+airplane. Keep a retractable gear up unless the AFM/POH advises otherwise.
+A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception
+(white out) in reduced visibility and on wide-open terrain.
+Engine Failure After Takeoff (Single-Engine)
+A number of variables and pilot actions factor into a successful emergency landing shortly after takeoff. When an engine failure
+occurs during the initial climb, the pilot should lower the nose of the airplane and establish the proper glide attitude. What happens
+next if the engine does not restart? Does the pilot select a field directly ahead (or slightly to the side of the takeoff path) or should the
+pilot turn back toward the point of departure? There's not much time to decide and a lot to consider.
+Continuing straight ahead or making a slight turn gives the pilot time to establish a safe landing attitude, and the landing occurs under
+control and as slowly as possible (assuming a takeoff made into a headwind). This minimizes the risk of injury and usually represents
+the option with the lowest risk—i.e. the safest option. Turning back requires a more complex analysis and consideration of risk. At
+some urban airports, there may be numerous hazards in the departure path. In that case, the pilot might turn back, but only if certain
+the airplane can reach the field from its current position and the pilot has trained and practiced the turn back maneuver.
+Turning back to an airport after a low-altitude engine failure, also known as “the impossible turn,” presents many challenges, and a
+pilot who attempts to turn back without due consideration and training will need considerable luck to prevent disaster. If the airplane
+strikes the ground during the turn, cartwheeling could occur. If the pilot does not lower the nose sufficiently during the turn, an
+accelerated stall and fatal crash may occur. Even after executing a successful turn, a return to the airport often results in a downwind
+approach. The increased groundspeed could rush a pilot not properly trained for landing downwind. The increased groundspeed and
+associated increase in kinetic energy also raise the likelihood of serious injury if unable to make the field.
+If considering a turn back to the runway following an engine failure on takeoff, the pilot should know the expected altitude loss
+during the turn for the specific make and model airplane as well as whether the airplane can physically glide back to the field after
+executing the turn. Traditionally, the FAA has given the following example. An airplane has taken off and climbed to an altitude of
+300 feet above ground level (AGL) when the engine fails. [Figure 18-5] After a typical 4-second reaction time, the pilot elects to
+turn back to the runway. Using a standard rate (3° change in direction per second) turn, it takes 1 minute to turn 180°. At a glide
+speed of 65 knots, the radius of the turn is 2,100 feet, so at the completion of the turn, the airplane is 4,200 feet to one side of the
+runway. The pilot needs to turn another 45° to head the airplane toward the runway. By this time, the total change in direction
+is 225° equating to 75 seconds plus the 4-second reaction time. If the airplane in a power-off glide descends at approximately 1,000
+fpm, it has descended 1,316, feet placing it 1,016 feet below the runway.
+The preceding example illustrates why a turn back, if attempted, requires a turn with a higher bank angle. A standard rate or
+shallow turn consumes too much time, requires too much distance, and generates an unacceptable solution.
+Training for a turn back includes practicing turns in both directions at a safe altitude in the make and model flown after simulating an
+engine failure from a climb. Practice should result in consistent altitude loss and the ability to avoid an accelerated stall when
+executing a gliding steep turn. Pilots should be alert for and respond appropriately to any stall warning and reduce wing loading
+during the turn as necessary. There will be some observed variation in altitude loss during training. The pilot should anticipate that
+during an actual emergency, the expected altitude loss could end up at the high end of the range observed while practicing. Success in
+training involves the demonstrated ability to evaluate the effect of climb performance of the airplane, determine the better direction to
+turn back (usually into a crosswind), predict the altitude above ground after the turn, know the distance to the landing zone, and know
+if the glide performance of the airplane will allow the pilot to make the field. Some airplanes cannot usually make the return
+successfully, some can make the return under certain conditions, and some can usually return. The pilot should not attempt a turn back
+unless a successful turn back will result.
+
+Figure 18-5. Turning back to the runway after engine failure.
+A turn back to the departure runway may require more than a 180° change in direction. There could also be cases where turning back
+results in overshooting the runway, and the pilot needs to sense the aiming point within seconds after completing a turn back and make
+any necessary adjustments to achieve the best possible outcome. A turn back at low altitudes presents an unacceptable risk for student
+pilots, low-time pilots, untrained pilots, pilots without adequate proficiency, and pilots flying airplanes with insufficient glide
+performance to return to the field. However, experienced pilots interested in knowing when and how to make an emergency turn back
+after takeoff should use the services of an authorized flight instructor who can explain and demonstrate the practicality (or
+impracticality) of “the impossible turn” in the specific make and model used during training.
+Emergency Descents
+An emergency descent is a maneuver for descending as rapidly as possible to a lower altitude or to the ground for an emergency
+landing. [Figure 18-6] The need for this maneuver may result from an uncontrollable fire, a sudden loss of cabin pressurization, or
+any other situation demanding an immediate and rapid descent. The objective is to descend the airplane as soon and as rapidly as
+possible while not exceeding any structural limitations of the airplane. Simulated emergency descents should be made in a turn to
+check for other air traffic below and to look around for a possible emergency landing area. A radio call announcing descent
+intentions may be appropriate to alert other aircraft in the area. When initiating the descent, a bank of approximately 30 to 45°
+should be established to maintain positive load factors (G forces) on the airplane.
+Emergency descent training should be performed as recommended by the manufacturer, including the configuration and airspeeds.
+Except when prohibited by the manufacturer, the power should be reduced to idle, and the propeller control (if equipped) should
+be placed in the low pitch (or high revolutions per minute (rpm)) position. This allows the propeller to act as an aerodynamic brake
+to help prevent an excessive airspeed buildup during the descent. The landing gear and flaps should be extended as recommended by
+the manufacturer. This provides maximum drag so that the descent can be made as rapidly as possible, without excessive airspeed.
+The pilot should not allow the airplane’s airspeed to pass the never-exceed speed (V ), the maximum landing gear extended
+NE
+speed (V ), or the maximum flap extended speed (V ), as applicable. In the case of an engine fire, a high airspeed descent could
+LE FE
+blow out the fire. However, the weakening of the airplane structure is a major concern and descent at low airspeed would place less
+stress on the airplane. If the descent is conducted in turbulent conditions, the pilot also needs to comply with the design
+maneuvering speed (V ) limitations. The descent should be made at the maximum allowable airspeed consistent with the procedure
+A
+used. This provides increased drag and a high rate of descent. The recovery from an emergency descent should be initiated at a
+high enough altitude to ensure a safe recovery back to level flight or a precautionary landing.
+
+Figure 18-6. Emergency descent.
+When the descent is established and stabilized during training and practice, the descent should be terminated. In airplanes with piston
+engines, prolonged practice of emergency descents should be avoided to prevent excessive cooling of the engine cylinders.
+In-Flight Fire
+A fire in-flight demands immediate and decisive action. The pilot should be familiar with the procedures outlined to meet this
+emergency contained in the AFM/POH for the particular airplane. For the purposes of this handbook, in-flight fires are classified as
+in-flight engine fires, electrical fires, and cabin fires.
+Engine Fire
+An in-flight engine compartment fire is usually caused by a failure that allows a flammable substance, such as fuel, oil, or hydraulic
+fluid, to come in contact with a hot surface. This may be caused by a mechanical failure of the engine itself, an engine-driven
+accessory, a defective induction or exhaust system, or a broken line. Engine compartment fires may also result from maintenance
+errors, such as improperly installed/fastened lines and/or fittings resulting in leaks.
+Engine compartment fires can be indicated by smoke and/or flames coming from the engine cowling area. They can also be indicated
+by discoloration, bubbling, and/or melting of the engine cowling skin in cases where flames and/or smoke are not visible to the pilot.
+By the time a pilot becomes aware of an in-flight engine compartment fire, it usually is well developed. Unless the airplane
+manufacturer directs otherwise in the AFM/POH, the first step on discovering a fire should be to shut off the fuel supply to the engine
+by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position. The ignition switch
+should be left ON in order to use up the fuel that remains in the fuel lines and components between the fuel selector/shutoff valve and
+the engine. This procedure may starve the engine compartment of fuel and cause the fire to die naturally. If the flames are snuffed out,
+no attempt should be made to restart the engine.
+If the engine compartment fire is oil-fed, as evidenced by thick black smoke, as opposed to a fuel-fed fire, which produces bright
+orange flames, the pilot should consider stopping the propeller rotation by feathering or other means, such as (with constant-speed
+propellers) placing the pitch control lever to the minimum rpm position and raising the nose to reduce airspeed until the propeller
+stops rotating. This procedure stops an engine-driven oil (or hydraulic) pump from continuing to pump the flammable fluid that is
+feeding the fire.
+Some light airplane emergency checklists direct the pilot to shut off the electrical master switch. However, the pilot should consider
+that unless the fire is electrical in nature, or a crash landing is imminent, deactivating the electrical system prevents the use of panel
+radios for transmitting distress messages and also causes air traffic control (ATC) to lose transponder returns.
+
+Pilots of powerless single-engine airplanes are left with no choice but to make a forced landing. Pilots of twin-engine airplanes may
+elect to continue the flight to the nearest airport. However, consideration should be given to the possibility that a wing could be
+seriously impaired and lead to structural failure. Even a brief but intense fire could cause dangerous structural damage. In some cases,
+the fire could continue to burn under the wing (or engine cowling in the case of a single- engine airplane) out of view of the pilot.
+Engine compartment fires that appear to have been extinguished have been known to rekindle with changes in airflow pattern and
+airspeed.
+The pilot should be familiar with the airplane’s emergency descent procedures. The pilot should also bear in mind the following:
+⦁ The airplane may be severely structurally damaged to the point that its ability to remain under control could
+be lost at any moment.
+⦁ The airplane may still be on fire and susceptible to explosion.
+⦁ The airplane is expendable and the only thing that matters is the safety of those on board.
+Electrical Fires
+The initial indication of an electrical fire is usually the distinct odor of burning insulation. Once an electrical fire is detected, the pilot
+should attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights. If the faulty circuit cannot
+be readily detected and isolated, and flight conditions permit, the battery master switch and alternator/generator switches should be
+turned off to remove the possible source of the fire. However, any materials that have been ignited may continue to burn.
+If electrical power is absolutely essential for the flight, an attempt may be made to identify and isolate the faulty circuit by:
+1. Turning the electrical master switch OFF.
+2. Turning all individual electrical switches OFF.
+3. Turning the master switch back ON.
+4. Selecting electrical switches that were ON before the fire indication one at a time, permitting a short time
+lapse after each switch is turned on to check for signs of odor, smoke, or sparks.
+This procedure, however, has the effect of recreating the original problem. The most prudent course of action is to land as soon as
+possible.
+Cabin Fire
+Cabin fires generally result from one of three sources: (1) careless smoking on the part of the pilot and/or passengers; (2) electrical
+system malfunctions; or (3) heating system malfunctions. A fire in the cabin presents the pilot with two immediate demands: attacking
+the fire and getting the airplane safely on the ground as quickly as possible. A fire or smoke in the cabin should be controlled by
+identifying and shutting down the faulty system. In many cases, smoke may be removed from the cabin by opening the cabin air vents.
+This should be done only after the fire extinguisher (if available) is used. Then the cabin air control can be opened to purge the cabin
+of both smoke and fumes. If smoke increases in intensity when the cabin air vents are opened, they should be immediately closed.
+This indicates a possible fire in the heating system, nose compartment baggage area (if so equipped), or that the increase in airflow is
+feeding the fire.
+On pressurized airplanes, the pressurization air system removes smoke from the cabin; however, if the smoke is intense, it may be
+necessary to either depressurize at altitude, if oxygen is available for all occupants, or execute an emergency descent.
+In unpressurized single-engine and light twin-engine airplanes, the pilot can attempt to expel the smoke from the cabin by opening the
+foul weather windows. These windows should be closed immediately if the fire becomes more intense. If the smoke is severe, the
+passengers and crew should use oxygen masks if available, and the pilot should initiate an immediate descent. The pilot should also
+be aware that on some airplanes, lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem.
+Flight Control Malfunction/Failure
+Total Flap Failure
+The inability to extend the wing flaps necessitates a no-flap approach and landing. In light airplanes, a no-flap approach and landing
+is not particularly difficult or dangerous. However, there are certain factors that should be considered in the execution of this
+maneuver. A no-flap landing requires substantially more runway than normal. The increase in required landing distance could be as
+much as 50 percent.
+
+When flying in the traffic pattern with the wing flaps retracted, the airplane should be flown in a relatively nose-high attitude to
+maintain altitude, as compared to flight with flaps extended. Losing altitude can be more of a problem without the benefit of the drag
+normally provided by flaps. A wider, longer traffic pattern may be required in order to avoid the necessity of diving to lose altitude
+and consequently building up excessive airspeed.
+On final approach, a nose-high attitude can make it difficult to see the runway. This situation, if not anticipated, can result in serious
+errors in judgment of height and distance. Approaching the runway in a relatively nose-high attitude can also cause the perception that
+the airplane is close to a stall. This may cause the pilot to lower the nose abruptly and risk touching down on the nose-wheel.
+With the flaps retracted and the power reduced for landing, the airplane is slightly less stable in the pitch and roll axes. Without flaps,
+the airplane tends to float considerably during roundout. The pilot should avoid the temptation to force the airplane onto the runway
+at an excessively high speed. Neither should the pilot flare excessively because without flaps, this might cause the tail to strike the
+runway.
+Asymmetric (Split) Flap
+An asymmetric “split” flap situation is one in which one flap deploys or retracts while the other remains in position. The problem is
+indicated by a pronounced roll toward the wing with the least flap deflection when wing flaps are extended/retracted.
+The roll encountered in a split flap situation is countered with opposite aileron. The yaw caused by the additional drag created by the
+extended flap requires substantial opposite rudder resulting in a cross-control condition. Almost full aileron may be required to
+maintain a wings-level attitude, especially at the reduced airspeed necessary for approach and landing. The pilot should not attempt to
+land with a crosswind from the side of the deployed flap because the additional roll control required to counteract the crosswind may
+not be available.
+The approach to landing with a split flap condition should be flown at a higher than normal airspeed. The pilot should not risk an
+asymmetric stall and subsequent loss of control by flaring excessively. Rather, the airplane should be flown onto the runway so that
+the touchdown occurs at an airspeed consistent with a safe margin above flaps-up stall speed.
+Loss of Elevator Control
+In many airplanes, the elevator is controlled by two cables: a “down” cable and an “up” cable. Normally, a break or disconnect in
+only one of these cables does not result in a total loss of elevator control. In most airplanes, a failed cable results in a partial loss of
+pitch control. In the failure of the “up” elevator cable (the “down” elevator being intact and functional), the control yoke moves aft
+easily but produces no response. Forward yoke movement, however, beyond the neutral position produces a nose-down attitude.
+Conversely, a failure of the “down” elevator cable, forward movement of the control yoke produces no effect. The pilot, however, has
+partial control of pitch attitude with aft movement.
+When experiencing a loss of up-elevator control, the pilot can retain pitch control by:
+⦁ Applying considerable nose-up trim
+⦁ Pushing the control yoke forward to attain and maintain desired attitude
+⦁ Increasing forward pressure to lower the nose and relaxing forward pressure to raise the nose
+⦁ Releasing forward pressure to flare for landing
+When experiencing a loss of down-elevator control, the pilot can retain pitch control by:
+⦁ Applying considerable nose-down trim
+⦁ Pulling the control yoke aft to attain and maintain attitude
+⦁ Releasing back pressure to lower the nose and increasing back pressure to raise the nose
+⦁ Increasing back pressure to flare for landing
+Trim mechanisms can be useful in the event of an in-flight primary control failure. For example, if the linkage between the cabin and
+the elevator fails in flight, leaving the elevator free to weathervane in the wind, the trim tab can be used to raise or lower the elevator
+within limits. The trim tabs are not as effective as normal linkage control in conditions such as low airspeed, but they do have some
+positive effect—usually enough to bring about a safe landing.
+If an elevator becomes jammed, resulting in a total loss of elevator control movement, various combinations of power and flap
+extension offer a limited amount of pitch control. A successful landing under these conditions, however, can be problematic.
+
+Landing Gear Malfunction
+Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond to the
+conventional or alternate methods of gear extension contained in the AFM/POH, a gear-up landing is considered inevitable. The pilot
+should select an airport with crash and rescue facilities, if possible. The pilot should not hesitate to request that emergency equipment
+is standing by.
+When selecting a landing surface, the pilot should consider that a smooth, hard-surface runway usually causes less damage than a
+rough, unimproved grass strip. A hard surface does, however, create sparks that can ignite fuel. If the airport is so equipped, the pilot
+can request that the runway surface be foamed. The pilot should consider burning off excess fuel. This reduces landing speed and fire
+potential.
+If the landing gear malfunction is limited to one main landing gear leg, the pilot should consume as much fuel from that side of the
+airplane as practicable, thereby reducing the weight of the wing on that side. The reduced weight makes it possible to delay the
+unsupported wing from contacting the surface during the landing roll until the last possible moment. Reduced impact speeds result in
+less damage.
+If only one landing gear leg fails to extend, the pilot has the option of landing on the available gear legs or landing with all the gear
+legs retracted. Landing on only one main gear usually causes the airplane to veer strongly in the direction of the faulty gear leg after
+touchdown. If the landing runway is narrow and/or ditches and obstacles line the runway edge, maximum directional control after
+touchdown is a necessity. In this situation, a landing with all three gear retracted may be the safest course of action.
+If the pilot elects to land with one main gear retracted (and the other main gear and nose gear down and locked), the landing should
+be made in a nose-high attitude with the wings level. As airspeed decays, the pilot should apply whatever aileron control is necessary
+to keep the unsupported wing airborne as long as possible. [Figure 18-7] Once the wing contacts the surface, the pilot can anticipate
+a strong yaw in that direction. The pilot should be prepared to use full opposite rudder and aggressive braking to maintain some
+degree of directional control.
+Figure 18-7. Landing with one main gear retracted.
+When landing with a retracted nose-wheel (and the main gear extended and locked), the pilot should hold the nose off the ground
+until almost full up-elevator has been applied. [Figure 18-8] The pilot should then release back pressure in such a manner that the
+nose settles slowly to the surface. Applying and holding full up-elevator results in the nose abruptly dropping to the surface as
+airspeed decays, possibly resulting in burrowing and/or additional damage. Brake pressure should not be applied during the landing
+roll unless absolutely necessary to avoid a collision with obstacles.
+
+Figure 18-8. Landing with nose-wheel retracted.
+If the landing occurs with only the nose gear extended, the initial contact should be made on the aft fuselage structure with a nosehigh attitude. This procedure helps prevent porpoising and/or wheelbarrowing. The pilot should then allow the nose-wheel to
+gradually touchdown, using nose-wheel steering as necessary for directional control.
+System Malfunctions
+Electrical System
+The loss of electrical power can deprive the pilot of numerous critical systems, and therefore should not be taken lightly even in
+day/visual flight rules (VFR) conditions. Most in-flight failures of the electrical system are located in the generator or alternator. Once
+the generator or alternator system goes off line, the electrical source in a typical light airplane is a battery. If a warning light or
+ammeter indicates the probability of an alternator or generator failure in an airplane with only one generating system, however, the
+pilot may have very little time available from the battery.
+The rating of the airplane battery provides a clue as to how long it may last. With batteries, the higher the amperage load, the faster
+any available stored energy gets consumed. Thus, a 25-amp hour battery could produce 5 amps per hour for 5 hours, but if the load
+were increased to 10 amps, it might last only 2 hours. A 40-amp load might discharge the battery fully in about 10 or 15 minutes.
+Much depends on the battery condition at the time of the system failure. If the battery has been in service for a few years, its power
+may be reduced substantially because of internal resistance. Or if the system failure was not detected immediately, much of the stored
+energy may have already been used. It is essential, therefore, that the pilot immediately shed non-essential loads when the generating
+source fails. [Figure 18-9] The pilot should then plan to land at the nearest suitable airport.
+What constitutes an “emergency” load following a generating system failure cannot be predetermined because the actual
+circumstances are always somewhat different—for example, whether the flight is VFR or instrument flight rules (IFR), conducted in
+day or at night, in clouds or in the clear. Distance to nearest suitable airport can also be a factor.
+The pilot should remember that the electrically-powered (or electrically-selected) landing gear and flaps do not function properly on
+the power left in a partially-depleted battery. Landing gear and flap motors use power at rates much greater than most other types of
+electrical equipment. The result of selecting these motors on a partially-depleted battery may well result in an immediate total loss of
+electrical power.
+
+Figure 18-9. Electrical load for light single.
+If the pilot expects an imminent and complete in-flight loss of electrical power, the following steps should be taken:
+⦁ Shed all but the most necessary electrically-driven equipment.
+⦁ Understand that any loss of electrical power is critical in a small airplane—notify ATC of the situation
+immediately. Request radar vectors for a landing at the nearest suitable airport.
+⦁ If landing gear or flaps are electrically controlled or operated, plan the arrival well ahead of time. Expect to
+make a no-flap landing and anticipate a manual landing gear extension.
+Pitot-Static System
+The source of the pressure for operating the airspeed indicator, the vertical speed indicator (VSI), and the altimeter is the pitot-static
+system. The major components of the pitot-static system are the impact pressure chamber and lines and the static pressure chamber
+and lines, each of which are subject to total or partial blockage by ice, dirt, and/or other foreign matter. Blockage of the pitot-static
+system adversely affects instrument operation. [Figure 18-10]
+Partial static system blockage is insidious in that it may go unrecognized until a critical phase of flight. During takeoff, climb, and
+level-off at cruise altitude the altimeter, airspeed indicator, and VSI may operate normally. No indication of malfunction may be
+present until the airplane begins a descent.
+
+Figure 18-10. Effects of blocked pitot-static sources.
+If the static reference system is severely restricted, but not entirely blocked, as the airplane descends, the static reference pressure at
+the instruments begins to lag behind the actual outside air pressure. While descending, the altimeter may indicate that the airplane is
+higher than actual because the obstruction slows the airflow from the static port to the altimeter. The VSI confirms the altimeter’s
+information regarding rate of change because the reference pressure is not changing at the same rate as the outside air pressure. The
+airspeed indicator, unable to tell whether it is experiencing more airspeed pitot pressure or less static reference pressure, indicates a
+higher airspeed than actual. To the pilot, the instruments indicate that the airplane is too high, too fast, and descending at a rate much
+lower than desired.
+If the pilot levels off and then begins a climb, the altitude indication may still lag. The VSI indicates that the airplane is not climbing
+as fast as actual. The indicated airspeed, however, may begin to decrease at an alarming rate. The least amount of pitch-up attitude
+may cause the airspeed needle to indicate dangerously near stall speed.
+Managing a static system malfunction requires that the pilot know and understand the airplane’s pitot-static system. If a system
+malfunction is suspected, the pilot should confirm it by opening the alternate static source. This should be done while the airplane is
+climbing or descending. If the instrument needles move significantly when this is done, a static pressure problem exists and the
+alternate source should be used during the remainder of the flight.
+Failure of the pitot-static system may also have serious consequences for Electronic Flight Instrument Systems (EFIS). To satisfy the
+requirements of Title 14 of the Code of Federal Regulations (14 CFR) part 23, section 23.2615(b)(2), information essential for
+continued safe flight and landing will be available to the flightcrew in a timely manner after any single failure or probable
+combination of failures. However, many of the light aircraft equipped with glass displays typically share the same pitot-static inputs
+for the backup instrumentation. Since both systems are receiving the same input signals, both could fail if affected by obstructed or
+blocked pitot tubes and static ports and create a difficult situation for a pilot flying in IMC. Some manufacturers combine both the air
+data computer (ADC) and the attitude and heading reference system (AHRS) functions so that a blockage of the input system may
+also affect the attitude display.
+With conventional instrumentation, the design and operation are similar regardless of aircraft or manufacturer. By
+comparing information between the six conventional instruments, pilots are able to diagnose common failure modes.
+Instrument failure indications of conventional instruments and electronic flight displays may be entirely different, and
+electronic systems failure indications are not standardized. With the wide diversity in system design of glass displays, the
+primary display and the backup display may respond differently to any interruption of data input, and both displays may
+function differently than conventional instruments under the same conditions.
+
+It is imperative for pilots to obtain equipment-specific information in reference to both the aircraft and the avionics that fully prepare
+them to interpret and properly respond to equipment malfunctions of electronic flight instrument displays. Rapidly changing
+equipment, complex systems, and the difficulty or inability to simulate failure modes and functions can impose training limitations.
+Pilots still should be able to respond to equipment malfunctions in a timely manner without impairing other critical flight tasks should
+the need arise.
+Abnormal Engine Instrument Indication
+The AFM/POH for the specific airplane contains information that should be followed in the event of any abnormal engine instrument
+indications. The table shown in Figure 18-11 offers generic information on some of the more commonly experienced in-flight
+abnormal engine instrument indications, their possible causes, and corrective actions.
+Figure 18-11. Commonly experienced in-flight abnormal engine instrument indications, their possible causes, and corrective actions.
+
+Door Opening In-Flight
+In most instances, the occurrence of an inadvertent door opening is not of great concern to the safety of a flight, but rather, the pilot’s
+reaction at the moment the incident happens. A door opening in flight may be accompanied by a sudden loud noise, sustained noise
+level, and possible vibration or buffeting. If a pilot allows himself or herself to become distracted to the point where attention is
+focused on the open door rather than maintaining control of the airplane, loss of control may result even though disruption of airflow
+by the door is minimal.
+In the event of an inadvertent door opening in flight or on takeoff, the pilot should adhere to the following:
+⦁ Concentrate on flying the airplane. Particularly in light single and twin-engine airplanes; a cabin door that
+opens in flight seldom if ever compromises the airplane’s ability to fly. There may be some handling
+effects, such as roll and/or yaw, but in most instances these can be easily overcome.
+⦁ If the door opens after lift-off, do not rush to land. Climb to normal traffic pattern altitude, fly a normal
+traffic pattern, and make a normal landing.
+⦁ Do not release the seat belt and shoulder harness in an attempt to reach the door. Leave the door alone.
+Land as soon as practicable, and close the door once safely on the ground.
+⦁ Remember that most doors do not stay wide open. They usually bang open and then settle partly closed. A
+slip towards the door may cause it to open wider; a slip away from the door may push it closed.
+⦁ Do not panic. Try to ignore the unfamiliar noise and vibration. Also, do not rush. Attempting to get the
+airplane on the ground as quickly as possible may result in steep turns at low altitude.
+⦁ Complete all items on the landing checklist.
+⦁ Remember that accidents are almost never caused by an open door. Rather, an open door accident is caused
+by the pilot’s distraction or failure to maintain control of the airplane.
+Inadvertent VFR Flight Into IMC
+It is beyond the scope of this handbook to incorporate a course of training in basic attitude instrument flying. This information is
+contained in the Instrument Flying Handbook (FAA-H-8083-15). Certain pilot certificates and/or associated ratings require training in
+instrument flying and a demonstration of specific instrument flying tasks on the practical test.
+Pilots and flight instructors should refer to the Instrument Flying Handbook (FAA-H-8083-15) for guidance in the performance of
+these tasks and to the appropriate airman certification standards (ACS) for information on the evaluation of tasks performed for the
+particular certificate level and/or rating. The pilot should remember, however, that unless these tasks are practiced on a continuing
+and regular basis, skill erosion begins almost immediately. In a very short time, the pilot’s assumed level of confidence is much
+higher than the performance he or she is actually able to demonstrate should the need arise.
+Accident statistics show that the pilot who has not been trained in attitude instrument flying, or one whose instrument skills have
+eroded, lose control of the airplane in about 10 minutes once forced to rely solely on instrument references. The purpose of this
+section is to provide guidance on practical emergency measures to maintain airplane control for a limited period of time in the event a
+VFR pilot encounters instrument meteorological conditions (IMC). The main goal is not precision instrument flying; rather, it is to
+help the VFR pilot keep the airplane under adequate control until suitable visual references are regained.
+The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows:
+⦁ Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action
+⦁ Maintaining control of the airplane
+⦁ Obtaining the appropriate assistance to get the airplane safely on the ground
+Recognition
+Anytime a VFR pilot is unable to maintain airplane attitude control by reference to the natural horizon, the condition is considered to
+be IMC regardless of the circumstances or the prevailing weather conditions. Whether the cause is inadventent or intentional, the
+VFR pilot is, in effect, in IMC if unable to navigate or establish geographical position by visual reference to landmarks on the
+surface. These situations should be accepted by the pilot involved as a genuine emergency requiring appropriate action.
+
+Pilots should understand that unless they are trained, qualified, and current in the control of an airplane solely by reference to flight
+instruments, they will be unable to do so for any length of time. Many hours of VFR flying using the attitude indicator as a reference
+for airplane control may lull pilots into a false sense of security based on an overestimation of their personal ability to control the
+airplane solely by instrument references. In VFR conditions, even though the pilot believes the instrument references will be easy to
+use, the pilot also receives an overview of the natural horizon and may subconsciously rely on it more than the attitude indicator. If
+the natural horizon were to suddenly disappear, the untrained instrument pilot would be subject to vertigo, spatial disorientation, and
+inevitable control loss.
+Maintaining Airplane Control
+Once the pilot recognizes and accepts the situation, he or she should understand that the only way to control the airplane safely is by
+using and trusting the flight instruments. Attempts to control the airplane partially by reference to flight instruments while searching
+outside of the airplane for visual confirmation of the information provided by those instruments results in inadequate airplane control.
+This may be followed by spatial disorientation and complete control loss.
+The most important point to be stressed is that the pilot should not panic. The task at hand may seem overwhelming, and the situation
+may be compounded by extreme apprehension. However, the pilot should make a conscious effort to relax. The pilot needs to
+understand the most important concern—in fact the only concern at this point—is to keep the wings level. An uncontrolled turn or
+bank usually leads to difficulty in achieving the objectives of any desired flight condition, but good bank control has the effect of
+making pitch control much easier.
+The pilot should remember that a person cannot feel control pressures with a tight grip on the controls. Relaxing and learning to
+“control with the eyes and the brain,” instead of only the muscles usually takes considerable conscious effort.
+The pilot needs to believe what the flight instruments show about the airplane’s attitude regardless of what the natural senses tell. The
+vestibular sense (motion sensing by the inner ear) can and will confuse the pilot. Because of inertia, the sensory areas of the inner ear
+cannot detect slight changes in airplane attitude, nor can they accurately sense attitude changes that occur at a uniform rate over a
+period of time. On the other hand, false sensations are often generated, leading the pilot to believe the attitude of the airplane has
+changed when, in fact, it has not. These false sensations result in the pilot experiencing spatial disorientation.
+Attitude Control
+An airplane is, by design, an inherently stable platform and, except in turbulent air, maintains approximately straight-and-level flight
+if properly trimmed and left alone. It is designed to maintain a state of equilibrium in pitch, roll, and yaw. The pilot should be aware,
+however, that a change about one axis affects the stability of the others. The typical light airplane exhibits a good deal of stability in
+the yaw axis, slightly less in the pitch axis, and even lesser still in the roll axis. The key to emergency airplane attitude control,
+therefore, is to:
+⦁ Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed.
+⦁ Resist the tendency to over-control the airplane. Fly the attitude indicator with fingertip control. No attitude
+changes should be made unless the flight instruments indicate a definite need for a change.
+⦁ Make all attitude changes smooth and small, yet with positive pressure. Remember that a small change as
+indicated on the horizon bar corresponds to a proportionately much larger change in actual airplane
+attitude.
+⦁ Make use of any available aid in attitude control, such as autopilot or wing leveler.
+The primary instrument for attitude control is the attitude indicator. [Figure 18-12] Once the airplane is trimmed so that it maintains
+hands-off level flight at cruise airspeed, that airspeed need not vary until the airplane is slowed for landing. All turns, climbs, and
+descents can and should be made at this airspeed. Straight flight is maintained by keeping the wings level using “fingertip pressure”
+on the control wheel. Any pitch attitude change should be made by using no more than one bar width up or down.
+
+Figure 18-12. Attitude indicator.
+Turns
+Turns are perhaps the most potentially dangerous maneuver for the untrained instrument pilot for two reasons:
+⦁ The normal tendency of the pilot to over-control, leading to steep banks and the possibility of a “graveyard
+spiral.”
+⦁ The inability of the pilot to cope with the instability resulting from the turn.
+When a turn is to be made, the pilot should anticipate and cope with the relative instability of the roll axis. The smallest practical
+bank angle should be used—in any case no more than 10° bank angle. [Figure 18-13] A shallow bank takes very little vertical lift
+from the wings resulting in little if any deviation in altitude. It may be helpful to turn a few degrees and then return to level flight if a
+large change in heading is necessary. Repeat the process until the desired heading is reached. This process may relieve the
+progressive overbanking that often results from prolonged turns.
+Figure 18-13. Level turn.
+
+Climbs
+If a climb is necessary, the pilot should raise the miniature airplane on the attitude indicator no more than one bar width and apply
+power. [Figure 18-14] The pilot should not attempt to attain a specific climb speed but accept whatever speed results. The objective
+is to deviate as little as possible from level flight attitude in order to disturb the airplane’s equilibrium as little as possible. If the
+airplane is properly trimmed, it assumes a nose-up attitude on its own commensurate with the amount of power applied. Torque and
+P-factor cause the airplane to have a tendency to bank and turn to the left. This should be anticipated and compensated for. If the
+initial power application results in an inadequate rate of climb, power should be increased in increments of 100 rpm or 1 inch of
+manifold pressure until the desired rate of climb is attained. Maximum available power is seldom necessary. The more power that is
+used, the more the airplane wants to bank and turn to the left. Resuming level flight is accomplished by first decreasing pitch attitude
+to level on the attitude indicator using slow but deliberate pressure, allowing airspeed to increase to near cruise value and then
+decreasing power.
+Figure 18-14. Level climb.
+Descents
+Descents are very much the opposite of the climb procedure if the airplane is properly trimmed for hands-off straight-and-level flight.
+In this configuration, the airplane requires a certain amount of thrust to maintain altitude. The pitch attitude is controlling the
+airspeed. The engine power, therefore, (translated into thrust by the propeller) is maintaining the selected altitude. Following a power
+reduction, however slight, there is an almost imperceptible decrease in airspeed. However, even a slight change in speed results in
+less down load on the tail, whereupon the designed nose heaviness of the airplane causes it to pitch down just enough to maintain the
+airspeed for which it was trimmed. The airplane then descends at a rate directly proportionate to the amount of thrust that has been
+removed. Power reductions should be made in increments of 100 rpm or 1 inch of manifold pressure and the resulting rate of descent
+should never exceed 500 fpm. The wings should be held level on the attitude indicator, and the pitch attitude should not exceed one
+bar width below level. [Figure 18-15]
+
+Figure 18-15. Level descent.
+Combined Maneuvers
+Combined maneuvers, such as climbing or descending turns, should be avoided if at all possible by an untrained instrument pilot.
+Combining maneuvers only compounds the problems encountered in individual maneuvers and increases the risk of control loss. The
+objective is to keep the airplane under control by maintaining as much of the airplane’s natural equilibrium as possible. Deviating as
+little as possible from straight-and-level flight attitude makes this much easier.
+When being assisted by ATC, the pilot may detect a sense of urgency while being directed to change heading and/or altitude. This
+sense of urgency reflects a normal concern for safety on the part of the controller. Nevertheless, the pilot should not let this prompting
+lead to rushing into a maneuver that could result in loss of control. It's reasonable to ask the controller to slow down, if this becomes
+an issue.
+
+Transition to Visual Flight
+One of the most difficult tasks a trained and qualified instrument pilot contends with is the transition from instrument to visual flight
+prior to landing. For the untrained instrument pilot, these difficulties are magnified.
+The difficulties center around acclimatization and orientation. On an instrument approach, the trained instrument pilot prepares in
+advance for the transition to visual flight. The pilot has a mental picture of what to expect when the transition to visual flight is made
+and will quickly acclimate to the new environment. Geographical orientation also begins before the transition, as the pilot visualizes
+where the airplane is in relation to the airport/runway.
+In an ideal situation, the transition to visual flight is made with ample time, at a sufficient altitude above terrain, and to visibility
+conditions sufficient to accommodate acclimatization and geographical orientation. This, however, is not always the case. The
+untrained instrument pilot may find the visibility still limited, the terrain completely unfamiliar, and altitude above terrain such that a
+“normal” airport traffic pattern and landing approach is not possible. Additionally, the pilot is most likely under considerable selfinduced psychological pressure to get the airplane on the ground. The pilot should take this into account and, if possible, allow time
+to become acclimatized and geographically oriented before attempting an approach and landing, even if it means flying straight and
+level for a time or circling the airport. This is especially true at night.
+Emergency Response Systems
+Airplanes may have installed systems that provide alternatives in certain emergency situations. For example, ballistic parachute
+systems, if installed, may be deployed in an emergency allowing an airplane to descend slowly enough toward the ground such that
+occupants usually survive the resulting impact with minor or no injuries. Airplanes may also have an Emergency Autoland (EAL)
+system, which can take over control of the aircraft when necessary for a safe outcome.
+Ballistic Parachutes
+Deployment of an airplane ballistic parachute system results in the loss of the airframe, but deploying such systems within an
+acceptable flight regime prevents injuries and saves lives. Pilots need to understand and follow the procedures for arming and
+disarming these systems before and after flight, and understand the conditions under which the system would be deployed. For
+example, a catastrophic loss of controllability due to a collision or mechanical failure, actual loss of control, or pilot incapacitation
+would qualify. Pilots should brief passengers with access to any deployment mechanism regarding the conditions for a safe
+deployment. Generally, the passenger would deploy the system only if the pilot were incapacitated. At a minimum, the pilot should
+also brief the passengers regarding the basic sequence of steps for deployment. Pilots should study the information provided by
+manufacturers and suppliers of these systems and follow the guidance provided.
+The system design may include airplane components designed to absorb the forces of vertical impact. The design of landing gear and
+seats maximize the protection afforded to the occupants and extend the time over which impact forces are absorbed. Once on the
+ground, there are hazards associated with a deployed parachute and the effect of surface winds, and the occupants should know the
+procedures for evacuation.
+Autoland
+If the EAL senses erratic flying, it stabilizes the aircraft, and checks for pilot responsiveness. Without further input, the EAL initiates
+an emergency descent. Without pilot responsiveness after an emergency descent, EAL initiates the process for an automated landing.
+The system also allows for manual activation by a pilot or a passenger.
+Once activated, the EAL system transmits automated radio broadcasts on the aircraft’s last selected frequency and on Guard (121.5
+MHz) to alert controllers or pilots in the area of the EAL aircraft’s imminent arrival to the selected runway. The system repeatedly
+transmits the call sign and intention to divert to a particular airport and runway using a recognizable non-human synthesized voice.
+Additionally, EAL sets the transponder to squawk 7700 to indicate an emergency. After the initial broadcast, the system pauses for 25
+seconds to allow air traffic control (ATC) to communicate with potential conflicting traffic. Once the EAL aircraft is within 12 miles
+of the selected runway and at or below 12,000 feet MSL, it broadcasts on the tower frequency or Common Traffic Advisory
+Frequency (CTAF), and continues to broadcast its position via ADS-B. It announces its call sign,“pilot incapacitation,” its position
+relative to the destination airport, gives the airport and airport identifier, and the time to landing on a specific runway at that airport.
+The system makes a similar “one-minute out” broadcast prior to landing.
+The EAL system selects a suitable landing airfield based on several factors. These factors include weather, wind, runway length, and
+towered/non-towered airport status. EAL only considers airports with an area navigation (RNAV) or Global Positioning System
+(GPS) approach, selects towered airports over non-towered airports where possible, and uses runway requirements that depend on the
+aircraft type. EAL systems also utilize obstacle and a terrain databases. If the system loses GPS coverage, the airplane continues
+straight flight without attempting to land until GPS coverage resumes.
+
+Currently EAL system capabilities do not include detecting and avoiding other aircraft; receiving or reacting to ATC instructions or
+Notices to Airmen (NOTAMs); avoiding military operations areas (MOAs), special use airspace (SUA), Restricted Areas, or
+Temporary Flight Restrictions (TFRs); or turning on aircraft lights.
+Chapter Summary
+This chapter provided general guidance and recommended procedures that may apply to light single-engine airplanes involved in
+certain emergency situations. The information presented is intended to enhance the general knowledge of emergency operations with
+the clear understanding that the manufacturer’s recommended emergency procedures take precedence.
+Information was provided concerning failure of the pitot-static system in aircraft with EFIS. The redundancy of backup systems for
+IFR flight may be less than desired if both the primary and backup instrumentation may receive signal data input from the same pitotstatic source. The failure indications of EFIS may be entirely different from conventional instruments making recognition of system
+malfunction much more difficult for the pilot. Lack of system standardization compounds the problem making equipment specific
+information and knowledge an important asset when analyzing electronic display malfunctions. The inability to simulate certain
+failure modes during training and evaluation could make the pilot less prepared for an actual emergency. As electronic avionics
+become more advanced, the training and proficiency needed to safely operate these systems should receive careful analysis.
