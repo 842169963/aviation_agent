@@ -7,9 +7,12 @@ Hybrid RAG v1 rule:
 - Vector search finds semantic candidate procedures.
 - KG search finds structured keyword candidates.
 - Final steps, warnings, and provenance are read from output/kg.ttl.
+- Optional LLM synthesis may rewrite retrieved KG content, but must not invent new steps.
 
 Usage:
     python scripts/06_hybrid_query.py --question "accidentally flew into clouds"
+    python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesize
+    python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesis-only
 """
 
 import argparse
@@ -35,6 +38,7 @@ KG_FILE = PROJECT_ROOT / "output" / "kg.ttl"
 VECTOR_DIR = PROJECT_ROOT / "output" / "vector_index"
 COLLECTION_NAME = "aviation_procedures"
 DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
+DEFAULT_SYNTHESIS_MODEL = "gpt-4o-mini"
 AV = Namespace("https://example.org/aviation/")
 
 
@@ -45,6 +49,28 @@ def load_embedding_client() -> tuple[OpenAI, str]:
     base_url = os.getenv("OPENAI_BASE_URL") or None
     api_key = os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")
     model = os.getenv("EMBEDDING_MODEL", DEFAULT_EMBEDDING_MODEL)
+
+    if provider == "gemini" and not base_url:
+        base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
+
+    if not api_key:
+        raise RuntimeError("No API key found. Set OPENAI_API_KEY or GEMINI_API_KEY in .env.")
+
+    return OpenAI(api_key=api_key, base_url=base_url), model
+
+
+def load_synthesis_client() -> tuple[OpenAI, str]:
+    """Load an OpenAI-compatible chat client for grounded answer synthesis."""
+    load_dotenv(dotenv_path=PROJECT_ROOT / ".env")
+
+    provider = os.getenv("LLM_PROVIDER", "openai").strip().lower()
+    base_url = os.getenv("OPENAI_BASE_URL") or None
+    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("GEMINI_API_KEY")
+    model = (
+        os.getenv("SYNTHESIS_MODEL")
+        or os.getenv("MODEL_NAME")
+        or DEFAULT_SYNTHESIS_MODEL
+    )
 
     if provider == "gemini" and not base_url:
         base_url = "https://generativelanguage.googleapis.com/v1beta/openai/"
@@ -352,7 +378,104 @@ def format_advisory(records: dict[str, dict], candidates: list[dict], question: 
     print("=" * 72)
 
 
-def run_query(question: str, top_k: int, vector_top_k: int, debug: bool) -> None:
+def build_synthesis_context(records: dict[str, dict], candidates: list[dict]) -> str:
+    """Build compact, auditable context for the synthesis model."""
+    sections = []
+
+    for candidate in candidates:
+        record = records.get(candidate["procedure_name"])
+        if not record:
+            continue
+
+        lines = [
+            f"Procedure: {record['name']}",
+            f"Retrieval score: final={candidate['final_score']} "
+            f"kg={candidate['kg_score']} vector={candidate['vector_score']}",
+            f"Trigger: {record['trigger']}",
+            f"Phase: {record['aircraft_phase']}",
+            f"Source file: {record['source_file']}",
+            f"Source section: {record['source_section']}",
+            f"Procedure evidence: {normalize_space(record['proc_excerpt'])}",
+            "Steps:",
+        ]
+
+        for step in record["steps"]:
+            lines.append(f"[{step['num']}] Action: {normalize_space(step['action'])}")
+            if step["result"]:
+                lines.append(f"    Expected result: {normalize_space(step['result'])}")
+            if step["source_excerpt"]:
+                lines.append(f"    Evidence: {normalize_space(step['source_excerpt'])}")
+
+        if record["warnings"]:
+            lines.append("Warnings:")
+            for warning in record["warnings"]:
+                lines.append(f"- {normalize_space(warning)}")
+
+        sections.append("\n".join(lines))
+
+    return "\n\n---\n\n".join(sections)
+
+
+def synthesize_answer(question: str, records: dict[str, dict], candidates: list[dict]) -> tuple[str, str]:
+    """Generate a grounded advisor response from retrieved KG context."""
+    if not candidates:
+        return "No retrieved procedure is available to synthesize from.", ""
+
+    client, model = load_synthesis_client()
+    context = build_synthesis_context(records, candidates)
+
+    system_prompt = (
+        "You are a cautious aviation emergency procedure response formatter. "
+        "Use only the retrieved KG context provided by the user. "
+        "Do not invent procedures, checklist steps, speeds, altitudes, frequencies, aircraft-specific limits, or causal claims. "
+        "If the retrieved context is insufficient, say what is missing. "
+        "Write in the same language as the user's question when possible. "
+        "Keep the answer concise, operational, and clearly grounded. "
+        "Always remind that aircraft POH/AFM, ATC instructions, and pilot judgment take priority."
+    )
+    user_prompt = (
+        f"User question:\n{question}\n\n"
+        "Retrieved KG context:\n"
+        f"{context}\n\n"
+        "Write a grounded advisor response with these sections:\n"
+        "1. Likely relevant procedure\n"
+        "2. Immediate actions from the KG\n"
+        "3. Warnings\n"
+        "4. Source/evidence note\n"
+        "Do not add any step that is not present in the KG context."
+    )
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": user_prompt},
+        ],
+        temperature=0.1,
+    )
+    answer = response.choices[0].message.content or ""
+    return answer.strip(), model
+
+
+def print_synthesis(answer: str, model: str) -> None:
+    print("\n" + "=" * 72)
+    print("GROUNDED LLM SYNTHESIS")
+    print("=" * 72)
+    if model:
+        print(f"Model: {model}")
+        print("-" * 72)
+    print(answer)
+    print("=" * 72)
+
+
+def run_query(
+    question: str,
+    top_k: int,
+    vector_top_k: int,
+    debug: bool,
+    synthesize: bool,
+    synthesis_only: bool,
+) -> None:
     graph = load_kg()
     records = load_procedure_records(graph)
 
@@ -360,10 +483,15 @@ def run_query(question: str, top_k: int, vector_top_k: int, debug: bool) -> None
     vector_hits = vector_retrieve(question, n_results=vector_top_k)
     candidates = merge_candidates(kg_hits, vector_hits, top_k=top_k)
 
-    if debug:
+    if debug and not synthesis_only:
         print_debug(candidates)
 
-    format_advisory(records, candidates, question)
+    if not synthesis_only:
+        format_advisory(records, candidates, question)
+
+    if synthesize or synthesis_only:
+        answer, model = synthesize_answer(question, records, candidates)
+        print_synthesis(answer, model)
 
 
 def main() -> None:
@@ -372,6 +500,8 @@ def main() -> None:
     parser.add_argument("--top-k", type=int, default=3, help="Number of final procedures to show")
     parser.add_argument("--vector-top-k", type=int, default=5, help="Number of vector candidates to retrieve")
     parser.add_argument("--no-debug", action="store_true", help="Hide retrieval candidate scores")
+    parser.add_argument("--synthesize", action="store_true", help="Generate a grounded LLM advisor response")
+    parser.add_argument("--synthesis-only", action="store_true", help="Only print the grounded LLM advisor response")
     args = parser.parse_args()
 
     run_query(
@@ -379,6 +509,8 @@ def main() -> None:
         top_k=args.top_k,
         vector_top_k=args.vector_top_k,
         debug=not args.no_debug,
+        synthesize=args.synthesize,
+        synthesis_only=args.synthesis_only,
     )
 
 

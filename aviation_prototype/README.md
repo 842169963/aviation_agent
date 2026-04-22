@@ -61,6 +61,10 @@ python scripts/05_build_vector_index.py
 # Step 6: KG + vector 双通道查询
 python scripts/06_hybrid_query.py --question "accidentally flew into clouds"
 python scripts/06_hybrid_query.py --question "pilot incapacitated parachute"
+
+# 可选：在 KG 检索结果上生成 grounded advisor 回复
+python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesize --top-k 1
+python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesis-only --top-k 1 --no-debug
 ```
 
 ## 文件结构
@@ -103,6 +107,7 @@ OPENAI_BASE_URL=https://api.chatanywhere.tech/v1
 MODEL_NAME=gpt-4o-mini
 MODEL_NAME=gemini-2.5-flash
 EMBEDDING_MODEL=text-embedding-3-small
+SYNTHESIS_MODEL=gpt-4o-mini
 ```
 
 ## 扩展方向
