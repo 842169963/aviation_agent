@@ -65,6 +65,10 @@ python scripts/06_hybrid_query.py --question "pilot incapacitated parachute"
 # 可选：在 KG 检索结果上生成 grounded advisor 回复
 python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesize --top-k 1
 python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesis-only --top-k 1 --no-debug
+
+# Step 7: 运行 Hybrid RAG 回归评估
+python scripts/07_eval_hybrid_rag.py
+python scripts/07_eval_hybrid_rag.py --include-synthesis
 ```
 
 ## 文件结构
@@ -82,11 +86,13 @@ aviation_prototype/
 │   ├── 02_validate.py          # 图谱构建 + SHACL 验证
 │   ├── 03_query.py             # 知识图谱查询
 │   ├── 05_build_vector_index.py # 构建 ChromaDB 向量索引
-│   └── 06_hybrid_query.py      # Hybrid RAG 查询
+│   ├── 06_hybrid_query.py      # Hybrid RAG 查询
+│   └── 07_eval_hybrid_rag.py   # Hybrid RAG 回归评估
 ├── output/                     # 运行后自动生成
 │   ├── extracted.json          # 提取结果
 │   ├── kg.ttl                  # RDF 知识图谱
 │   ├── validation_report.txt   # SHACL 验证报告
+│   ├── hybrid_eval_report.md   # Hybrid RAG 评估报告
 │   └── vector_index/           # 本地向量索引（不提交）
 └── requirements.txt
 ```
