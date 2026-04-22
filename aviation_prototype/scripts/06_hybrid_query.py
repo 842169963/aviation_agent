@@ -378,6 +378,37 @@ def format_advisory(records: dict[str, dict], candidates: list[dict], question: 
     print("=" * 72)
 
 
+def is_training_or_preparation_step(step: dict) -> bool:
+    """Heuristic split for synthesis only; KG schema does not yet encode step type."""
+    text = " ".join([
+        step.get("action", ""),
+        step.get("result", ""),
+        step.get("source_excerpt", ""),
+    ]).lower()
+    patterns = (
+        "practice",
+        "training",
+        "student pilot",
+        "brief passenger",
+        "brief passengers",
+        "instruct passengers",
+        "study the information",
+        "should know",
+        "know the evacuation",
+        "conditions for safe deployment",
+        "basic sequence of steps for deployment",
+    )
+    return any(pattern in text for pattern in patterns)
+
+
+def append_step_lines(lines: list[str], step: dict) -> None:
+    lines.append(f"[{step['num']}] Action: {normalize_space(step['action'])}")
+    if step["result"]:
+        lines.append(f"    Expected result: {normalize_space(step['result'])}")
+    if step["source_excerpt"]:
+        lines.append(f"    Evidence: {normalize_space(step['source_excerpt'])}")
+
+
 def build_synthesis_context(records: dict[str, dict], candidates: list[dict]) -> str:
     """Build compact, auditable context for the synthesis model."""
     sections = []
@@ -396,20 +427,36 @@ def build_synthesis_context(records: dict[str, dict], candidates: list[dict]) ->
             f"Source file: {record['source_file']}",
             f"Source section: {record['source_section']}",
             f"Procedure evidence: {normalize_space(record['proc_excerpt'])}",
-            "Steps:",
+            "Operational actions from KG:",
         ]
 
+        operational_steps = []
+        training_or_preparation_steps = []
         for step in record["steps"]:
-            lines.append(f"[{step['num']}] Action: {normalize_space(step['action'])}")
-            if step["result"]:
-                lines.append(f"    Expected result: {normalize_space(step['result'])}")
-            if step["source_excerpt"]:
-                lines.append(f"    Evidence: {normalize_space(step['source_excerpt'])}")
+            if is_training_or_preparation_step(step):
+                training_or_preparation_steps.append(step)
+            else:
+                operational_steps.append(step)
 
+        if operational_steps:
+            for step in operational_steps:
+                append_step_lines(lines, step)
+        else:
+            lines.append("NONE_EXPLICITLY_IDENTIFIED_IN_KG")
+
+        lines.append("Training/preparation/background notes from KG:")
+        if training_or_preparation_steps:
+            for step in training_or_preparation_steps:
+                append_step_lines(lines, step)
+        else:
+            lines.append("NONE_RETRIEVED")
+
+        lines.append("Procedure-specific KG warnings:")
         if record["warnings"]:
-            lines.append("Warnings:")
             for warning in record["warnings"]:
                 lines.append(f"- {normalize_space(warning)}")
+        else:
+            lines.append("NONE_RETRIEVED")
 
         sections.append("\n".join(lines))
 
@@ -429,6 +476,7 @@ def synthesize_answer(question: str, records: dict[str, dict], candidates: list[
         "Use only the retrieved KG context provided by the user. "
         "Do not invent procedures, checklist steps, speeds, altitudes, frequencies, aircraft-specific limits, or causal claims. "
         "If the retrieved context is insufficient, say what is missing. "
+        "Do not treat the general POH/AFM disclaimer as a procedure-specific warning. "
         "Write in the same language as the user's question when possible. "
         "Keep the answer concise, operational, and clearly grounded. "
         "Always remind that aircraft POH/AFM, ATC instructions, and pilot judgment take priority."
@@ -439,9 +487,13 @@ def synthesize_answer(question: str, records: dict[str, dict], candidates: list[
         f"{context}\n\n"
         "Write a grounded advisor response with these sections:\n"
         "1. Likely relevant procedure\n"
-        "2. Immediate actions from the KG\n"
-        "3. Warnings\n"
-        "4. Source/evidence note\n"
+        "2. Operational actions from the KG\n"
+        "3. Training/preparation/background notes from the KG\n"
+        "4. Procedure-specific warnings from the KG\n"
+        "5. Source/evidence note and safety disclaimer\n"
+        "Use only the items listed under the matching context headings. "
+        "If Procedure-specific KG warnings is NONE_RETRIEVED, say no procedure-specific warning was retrieved. "
+        "Never put the POH/AFM disclaimer in the warnings section. "
         "Do not add any step that is not present in the KG context."
     )
 
