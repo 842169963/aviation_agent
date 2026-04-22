@@ -151,6 +151,7 @@ def load_procedure_records(graph: Graph) -> dict[str, dict]:
                 number = 0
             steps.append({
                 "num": number,
+                "step_type": literal(graph, step, AV.step_type) or "immediate_action",
                 "action": literal(graph, step, AV.action),
                 "result": literal(graph, step, AV.expected_result),
                 "source_excerpt": literal(graph, step, AV.source_excerpt),
@@ -356,6 +357,8 @@ def format_advisory(records: dict[str, dict], candidates: list[dict], question: 
         print("\nSteps:")
         for step in record["steps"]:
             print(f"  [{step['num']}] {step['action']}")
+            if step.get("step_type"):
+                print(f"      Type: {step['step_type']}")
             if step["result"]:
                 print(f"      Expected result: {step['result']}")
             if step["source_excerpt"]:
@@ -379,7 +382,13 @@ def format_advisory(records: dict[str, dict], candidates: list[dict], question: 
 
 
 def is_training_or_preparation_step(step: dict) -> bool:
-    """Heuristic split for synthesis only; KG schema does not yet encode step type."""
+    """Split synthesis sections by KG step_type, with heuristic fallback for legacy graphs."""
+    step_type = step.get("step_type")
+    if step_type in {"training_note", "background"}:
+        return True
+    if step_type in {"immediate_action", "caution"}:
+        return False
+
     text = " ".join([
         step.get("action", ""),
         step.get("result", ""),
@@ -403,6 +412,8 @@ def is_training_or_preparation_step(step: dict) -> bool:
 
 def append_step_lines(lines: list[str], step: dict) -> None:
     lines.append(f"[{step['num']}] Action: {normalize_space(step['action'])}")
+    if step.get("step_type"):
+        lines.append(f"    Step type: {step['step_type']}")
     if step["result"]:
         lines.append(f"    Expected result: {normalize_space(step['result'])}")
     if step["source_excerpt"]:
@@ -492,7 +503,10 @@ def synthesize_answer(question: str, records: dict[str, dict], candidates: list[
         "4. Procedure-specific warnings from the KG\n"
         "5. Source/evidence note and safety disclaimer\n"
         "Use only the items listed under the matching context headings. "
+        "If Operational actions from KG is NONE_EXPLICITLY_IDENTIFIED_IN_KG, say no immediate operational action was explicitly identified in the retrieved KG. "
+        "If Training/preparation/background notes from KG is NONE_RETRIEVED, say no training or background note was retrieved. "
         "If Procedure-specific KG warnings is NONE_RETRIEVED, say no procedure-specific warning was retrieved. "
+        "Do not copy sentinel tokens such as NONE_RETRIEVED or NONE_EXPLICITLY_IDENTIFIED_IN_KG into the final answer. "
         "Never put the POH/AFM disclaimer in the warnings section. "
         "Do not add any step that is not present in the KG context."
     )

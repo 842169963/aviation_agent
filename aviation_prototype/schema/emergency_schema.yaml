@@ -68,6 +68,10 @@ classes:
         range: integer
         required: true
         description: Position of this step (1, 2, 3, ...)
+      step_type:
+        range: StepType
+        required: true
+        description: Classification of the step for advisor presentation
       action:
         required: true
         description: What the pilot must do (imperative sentence)
@@ -84,3 +88,17 @@ classes:
       description:
         required: true
         description: Full text of the warning
+
+enums:
+
+  StepType:
+    description: Presentation and operational category for a procedure step
+    permissible_values:
+      immediate_action:
+        description: Action intended to be performed during the emergency or abnormal situation
+      training_note:
+        description: Training, briefing, practice, or preflight preparation note
+      caution:
+        description: Cautionary step or negative instruction tied to risk management
+      background:
+        description: Context or explanatory information that supports the procedure but is not itself an immediate action

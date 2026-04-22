@@ -60,12 +60,13 @@ def get_procedure_steps(g: Graph, procedure_name_keyword: str):
     PREFIX av: <https://example.org/aviation/>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-    SELECT ?name ?trigger ?source_file ?source_section ?proc_excerpt ?step_num ?action ?expected_result ?step_excerpt WHERE {
+    SELECT ?name ?trigger ?source_file ?source_section ?proc_excerpt ?step_num ?step_type ?action ?expected_result ?step_excerpt WHERE {
         ?proc a av:EmergencyProcedure ;
               av:name ?name ;
               av:hasStep ?step .
         ?step av:step_number ?step_num ;
               av:action ?action .
+        OPTIONAL { ?step av:step_type ?step_type . }
         OPTIONAL { ?proc av:trigger_condition ?trigger . }
         OPTIONAL { ?proc av:source_file ?source_file . }
         OPTIONAL { ?proc av:source_section ?source_section . }
@@ -119,6 +120,7 @@ def format_advisory_response(steps_results, warnings_results, keyword: str):
             }
         step = {
             "num": int(row.step_num),
+            "step_type": str(row.step_type) if row.step_type else "immediate_action",
             "action": str(row.action),
             "result": str(row.expected_result) if row.expected_result else None,
             "source_excerpt": str(row.step_excerpt) if row.step_excerpt else None,
@@ -153,18 +155,40 @@ def format_advisory_response(steps_results, warnings_results, keyword: str):
         if data.get("proc_excerpt"):
             display = data["proc_excerpt"] if len(data["proc_excerpt"]) <= 140 else data["proc_excerpt"][:140] + "..."
             print(f"   程序依据: {display}")
-        print(f"\n   立即执行以下步骤:")
-        print("   " + "-"*40)
-
-        # 按步骤编号排序
         sorted_steps = sorted(data["steps"], key=lambda x: x["num"])
-        for step in sorted_steps:
+        operational_steps = [
+            step for step in sorted_steps
+            if step.get("step_type") in ("immediate_action", "caution")
+        ]
+        note_steps = [
+            step for step in sorted_steps
+            if step.get("step_type") in ("training_note", "background")
+        ]
+
+        print(f"\n   操作步骤:")
+        print("   " + "-"*40)
+        for step in operational_steps:
             print(f"\n   [{step['num']}] {step['action']}")
+            if step.get("step_type"):
+                print(f"       → 类型: {step['step_type']}")
             if step["result"]:
                 print(f"       → 预期结果: {step['result']}")
             if step.get("source_excerpt"):
                 display = step["source_excerpt"] if len(step["source_excerpt"]) <= 140 else step["source_excerpt"][:140] + "..."
                 print(f"       → 依据: {display}")
+
+        if note_steps:
+            print(f"\n   训练 / 准备 / 背景说明:")
+            print("   " + "-"*40)
+            for step in note_steps:
+                print(f"\n   [{step['num']}] {step['action']}")
+                if step.get("step_type"):
+                    print(f"       → 类型: {step['step_type']}")
+                if step["result"]:
+                    print(f"       → 预期结果: {step['result']}")
+                if step.get("source_excerpt"):
+                    display = step["source_excerpt"] if len(step["source_excerpt"]) <= 140 else step["source_excerpt"][:140] + "..."
+                    print(f"       → 依据: {display}")
 
         # 显示警告
         if proc_name in warnings and warnings[proc_name]:

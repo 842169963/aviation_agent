@@ -139,6 +139,7 @@ def build_targeted_prompt(
 4. 对于步骤，优先提取原文中明确的动作、目标动作、控制动作、注意事项对应的可执行 action。
 5. 每个 step 必须有：
    - step_number
+   - step_type（immediate_action / training_note / caution / background 之一）
    - action
    - source_excerpt
 6. 每个 procedure 必须有：

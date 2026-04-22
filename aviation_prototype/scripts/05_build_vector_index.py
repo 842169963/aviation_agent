@@ -16,7 +16,6 @@ import argparse
 import json
 import os
 import re
-import shutil
 import sys
 from pathlib import Path
 
@@ -76,10 +75,12 @@ def build_procedure_document(proc: dict) -> str:
 
     for step in proc.get("steps", []):
         number = step.get("step_number", "")
+        step_type = step.get("step_type", "")
         action = step.get("action", "")
         expected = step.get("expected_result", "")
         excerpt = step.get("source_excerpt", "")
-        lines.append(f"{number}. {action}")
+        type_suffix = f" [{step_type}]" if step_type else ""
+        lines.append(f"{number}. {action}{type_suffix}")
         if expected:
             lines.append(f"   Expected result: {expected}")
         if excerpt:
@@ -150,10 +151,13 @@ def build_index(reset: bool = True) -> None:
 
     print(f"embedding_dimensions={len(embeddings[0])}")
 
-    if reset and VECTOR_DIR.exists():
-        shutil.rmtree(VECTOR_DIR)
-
     chroma_client = chromadb.PersistentClient(path=str(VECTOR_DIR))
+    if reset:
+        try:
+            chroma_client.delete_collection(COLLECTION_NAME)
+        except Exception:
+            pass
+
     collection = chroma_client.get_or_create_collection(
         name=COLLECTION_NAME,
         metadata={"hnsw:space": "cosine"},

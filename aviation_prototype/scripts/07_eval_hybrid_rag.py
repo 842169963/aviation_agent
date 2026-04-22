@@ -198,6 +198,9 @@ def check_synthesis(answer: str, case: EvalCase) -> list[str]:
     if "poh/afm" not in lower_answer:
         issues.append("missing POH/AFM disclaimer")
 
+    if "none_retrieved" in lower_answer or "none_explicitly_identified_in_kg" in lower_answer:
+        issues.append("internal sentinel token leaked into synthesis")
+
     if case.expected_procedure and case.expected_procedure.lower() not in lower_answer:
         issues.append("expected procedure name missing from synthesis")
 

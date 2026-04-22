@@ -95,6 +95,21 @@ av:StepShape
         sh:message "Every step must have a positive integer step_number"
     ] ;
 
+    # 每个步骤必须标注展示/操作类型
+    sh:property [
+        sh:path av:step_type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in (
+            "immediate_action"^^xsd:string
+            "training_note"^^xsd:string
+            "caution"^^xsd:string
+            "background"^^xsd:string
+        ) ;
+        sh:message "Every step must have a valid step_type"
+    ] ;
+
     # 每个步骤必须带来源摘录
     sh:property [
         sh:path av:source_excerpt ;

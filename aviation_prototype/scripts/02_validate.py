@@ -34,6 +34,61 @@ REPORT_OUTPUT   = "output/validation_report.txt"
 # 定义命名空间（和 SHACL shapes 保持一致）
 AV = Namespace("https://example.org/aviation/")
 
+VALID_STEP_TYPES = {"immediate_action", "training_note", "caution", "background"}
+TRAINING_NOTE_PATTERNS = (
+    "practice",
+    "training",
+    "student pilot",
+    "brief passenger",
+    "brief passengers",
+    "instruct passengers",
+    "study the information",
+    "should know",
+    "know the evacuation",
+    "conditions for safe deployment",
+    "basic sequence of steps for deployment",
+)
+CAUTION_PATTERNS = (
+    "do not",
+    "should not",
+    "must not",
+    "warning",
+    "caution",
+    "hazard",
+    "risk",
+)
+
+
+def normalize_step_type(value: str | None) -> str:
+    """Normalize model output to the controlled StepType vocabulary."""
+    if not value:
+        return ""
+    normalized = str(value).strip().lower().replace("-", "_").replace(" ", "_")
+    return normalized if normalized in VALID_STEP_TYPES else ""
+
+
+def infer_step_type(step: dict) -> str:
+    """
+    Conservative fallback for legacy extracted.json files.
+
+    Most extracted steps are operational actions. Only classify as training_note
+    or caution when the text carries strong lexical evidence.
+    """
+    explicit = normalize_step_type(step.get("step_type"))
+    if explicit:
+        return explicit
+
+    text = " ".join(
+        str(step.get(field) or "")
+        for field in ("action", "expected_result", "source_excerpt")
+    ).lower()
+
+    if any(pattern in text for pattern in TRAINING_NOTE_PATTERNS):
+        return "training_note"
+    if any(pattern in text for pattern in CAUTION_PATTERNS):
+        return "caution"
+    return "immediate_action"
+
 
 def json_to_rdf(extracted: dict) -> Graph:
     """
@@ -99,6 +154,9 @@ def json_to_rdf(extracted: dict) -> Graph:
                 g.add((step_node, AV.step_number,
                        Literal(int(step["step_number"]), datatype=XSD.integer)))
 
+            g.add((step_node, AV.step_type,
+                   Literal(infer_step_type(step), datatype=XSD.string)))
+
             if step.get("action"):
                 g.add((step_node, AV.action,
                        Literal(step["action"], datatype=XSD.string)))
@@ -150,6 +208,10 @@ def print_validation_summary(kg: Graph, conforms: bool, results_text: str):
     n_steps      = len(list(kg.subjects(RDF.type, AV.ProcedureStep)))
     n_warnings   = len(list(kg.subjects(RDF.type, AV.Warning)))
     n_triples    = len(kg)
+    step_type_counts = {}
+    for step_type in kg.objects(None, AV.step_type):
+        label = str(step_type)
+        step_type_counts[label] = step_type_counts.get(label, 0) + 1
 
     print("\n" + "="*55)
     print("📊 知识图谱统计")
@@ -158,6 +220,10 @@ def print_validation_summary(kg: Graph, conforms: bool, results_text: str):
     print(f"  紧急程序数量:    {n_procedures}")
     print(f"  步骤总数:        {n_steps}")
     print(f"  警告总数:        {n_warnings}")
+    if step_type_counts:
+        print("  步骤类型:")
+        for label in sorted(step_type_counts):
+            print(f"    - {label}: {step_type_counts[label]}")
 
     print("\n" + "="*55)
     print("🔍 SHACL 验证结果")

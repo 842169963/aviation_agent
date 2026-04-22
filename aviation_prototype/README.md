@@ -71,6 +71,8 @@ python scripts/07_eval_hybrid_rag.py
 python scripts/07_eval_hybrid_rag.py --include-synthesis
 ```
 
+`ProcedureStep.step_type` 用于把步骤分成 `immediate_action`、`training_note`、`caution`、`background`，让 synthesis 能把立即动作、训练/准备说明和风险提示分开展示。
+
 ## 文件结构
 
 ```
