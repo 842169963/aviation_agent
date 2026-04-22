@@ -12,6 +12,13 @@ output/extracted.json
 output/kg.ttl  (已验证的知识图谱)
     ↓  [03_query.py]   SPARQL 查询 → 飞行员建议输出
 "发动机失效怎么办？" → 步骤 1、2、3...
+
+Hybrid RAG v1:
+output/extracted.json
+    ↓  [05_build_vector_index.py]  ChromaDB 向量索引
+output/vector_index/
+    ↓  [06_hybrid_query.py]        KG + vector 双通道召回
+"accidentally flew into clouds" → Inadvertent VFR Flight Into IMC
 ```
 
 ## 快速开始
@@ -45,6 +52,17 @@ python scripts/03_query.py --list
 python scripts/03_query.py --interactive
 ```
 
+### 4. 运行 Hybrid RAG v1
+
+```bash
+# Step 5: 从 extracted.json 构建本地 ChromaDB 向量索引
+python scripts/05_build_vector_index.py
+
+# Step 6: KG + vector 双通道查询
+python scripts/06_hybrid_query.py --question "accidentally flew into clouds"
+python scripts/06_hybrid_query.py --question "pilot incapacitated parachute"
+```
+
 ## 文件结构
 
 ```
@@ -58,11 +76,14 @@ aviation_prototype/
 ├── scripts/
 │   ├── 01_extract.py           # 知识提取
 │   ├── 02_validate.py          # 图谱构建 + SHACL 验证
-│   └── 03_query.py             # 知识图谱查询
+│   ├── 03_query.py             # 知识图谱查询
+│   ├── 05_build_vector_index.py # 构建 ChromaDB 向量索引
+│   └── 06_hybrid_query.py      # Hybrid RAG 查询
 ├── output/                     # 运行后自动生成
 │   ├── extracted.json          # 提取结果
 │   ├── kg.ttl                  # RDF 知识图谱
-│   └── validation_report.txt   # SHACL 验证报告
+│   ├── validation_report.txt   # SHACL 验证报告
+│   └── vector_index/           # 本地向量索引（不提交）
 └── requirements.txt
 ```
 
@@ -81,6 +102,7 @@ LLM_PROVIDER=openai   # 或 gemini
 OPENAI_BASE_URL=https://api.chatanywhere.tech/v1
 MODEL_NAME=gpt-4o-mini
 MODEL_NAME=gemini-2.5-flash
+EMBEDDING_MODEL=text-embedding-3-small
 ```
 
 ## 扩展方向
