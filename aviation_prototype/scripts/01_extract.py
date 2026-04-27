@@ -72,6 +72,17 @@ def load_schema_description(schema_path: str) -> str:
                 desc_lines.append(f"  - {attr_name}{req}{multi}: {desc}")
         desc_lines.append("")
 
+    enums = schema.get("enums", {})
+    if enums:
+        desc_lines.append("枚举值:")
+        for enum_name, enum_def in enums.items():
+            desc_lines.append(f"枚举 {enum_name}:")
+            values = (enum_def or {}).get("permissible_values", {})
+            for value, value_def in values.items():
+                desc = (value_def or {}).get("description", "")
+                desc_lines.append(f"  - {value}: {desc}")
+            desc_lines.append("")
+
     return "\n".join(desc_lines)
 
 
@@ -94,7 +105,12 @@ def build_prompt(text: str, schema_desc: str) -> str:
    - source_excerpt：支持该 procedure 的简短原文摘录
 8. 每个 step 必须包含 source_excerpt，表示这一步对应的原文依据
 9. source_excerpt 应尽量贴近原文，可做轻微清理，但不要编造
-10. 如果文本只是说明性介绍，没有明确可执行步骤，不要硬造 procedure
+10. 每个 step 必须包含 step_type，取值只能是：
+    - immediate_action：应急/异常处置中要执行的动作
+    - training_note：训练、乘客 brief、练习、预先学习或准备事项
+    - caution：风险控制、禁止事项或注意事项
+    - background：解释性背景，不是直接动作
+11. 如果文本只是说明性介绍，没有明确可执行步骤，不要硬造 procedure
 
 文本内容：
 ---
@@ -181,6 +197,56 @@ def clean_text(value: str | None) -> str:
     if not value:
         return ""
     return " ".join(str(value).split()).strip()
+
+
+VALID_STEP_TYPES = {"immediate_action", "training_note", "caution", "background"}
+TRAINING_NOTE_PATTERNS = (
+    "practice",
+    "training",
+    "student pilot",
+    "brief passenger",
+    "brief passengers",
+    "instruct passengers",
+    "study the information",
+    "should know",
+    "know the evacuation",
+    "conditions for safe deployment",
+    "basic sequence of steps for deployment",
+)
+CAUTION_PATTERNS = (
+    "do not",
+    "should not",
+    "must not",
+    "warning",
+    "caution",
+    "hazard",
+    "risk",
+)
+
+
+def normalize_step_type(value: str | None) -> str:
+    """Normalize model output to the controlled StepType vocabulary."""
+    if not value:
+        return ""
+    normalized = clean_text(value).lower().replace("-", "_").replace(" ", "_")
+    return normalized if normalized in VALID_STEP_TYPES else ""
+
+
+def infer_step_type(step: dict) -> str:
+    """Fallback classifier for extracted steps that lack step_type."""
+    explicit = normalize_step_type(step.get("step_type"))
+    if explicit:
+        return explicit
+
+    text = " ".join(
+        clean_text(step.get(field)).lower()
+        for field in ("action", "expected_result", "source_excerpt")
+    )
+    if any(pattern in text for pattern in TRAINING_NOTE_PATTERNS):
+        return "training_note"
+    if any(pattern in text for pattern in CAUTION_PATTERNS):
+        return "caution"
+    return "immediate_action"
 
 
 def clean_source_file(value: str | None) -> str:
@@ -391,6 +457,7 @@ def attach_provenance(procedures: list[dict], source_text_by_file: dict[str, str
         hydrated_steps = []
         for step in proc.get("steps", []) or []:
             step = dict(step)
+            step["step_type"] = infer_step_type(step)
             step["source_excerpt"] = clean_text(step.get("source_excerpt")) or best_matching_excerpt(
                 source_text,
                 step.get("action"),
@@ -416,6 +483,7 @@ def merge_steps(steps: list[dict]) -> list[dict]:
         key = canonical_text_key(action)
         expected_result = clean_text(step.get("expected_result"))
         source_excerpt = clean_text(step.get("source_excerpt"))
+        step_type = infer_step_type(step)
 
         if key in seen:
             existing = merged[seen[key]]
@@ -423,11 +491,14 @@ def merge_steps(steps: list[dict]) -> list[dict]:
                 existing["expected_result"] = expected_result
             if (not existing.get("source_excerpt")) or len(source_excerpt) > len(existing.get("source_excerpt") or ""):
                 existing["source_excerpt"] = source_excerpt
+            if existing.get("step_type") == "immediate_action" and step_type != "immediate_action":
+                existing["step_type"] = step_type
             continue
 
         merged.append(
             {
                 "step_number": len(merged) + 1,
+                "step_type": step_type,
                 "action": action,
                 "expected_result": expected_result or None,
                 "source_excerpt": source_excerpt,

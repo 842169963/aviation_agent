@@ -2,7 +2,7 @@
   "procedures": [
     {
       "name": "Tree Landing",
-      "trigger_condition": "Emergency landing in forested area",
+      "trigger_condition": "Emergency landing in a forested area",
       "aircraft_phase": "landing",
       "source_file": "10_trees_forest.txt",
       "source_section": "Trees (Forest)",
@@ -10,44 +10,58 @@
       "steps": [
         {
           "step_number": 1,
-          "action": "Use the normal landing configuration with full flaps and gear down",
-          "expected_result": "Aircraft prepared for landing in a controllable manner",
+          "step_type": "immediate_action",
+          "action": "Use the normal landing configuration (full flaps, gear down)",
+          "expected_result": "Aircraft is configured for landing",
           "source_excerpt": "Use the normal landing configuration (full flaps, gear down)."
         },
         {
           "step_number": 2,
-          "action": "Head into the wind to keep the groundspeed low",
-          "expected_result": "Reduced impact speed during tree landing",
+          "step_type": "immediate_action",
+          "action": "Head into the wind to keep groundspeed low",
+          "expected_result": "Reduced groundspeed upon landing",
           "source_excerpt": "Keep the groundspeed low by heading into the wind."
         },
         {
           "step_number": 3,
+          "step_type": "immediate_action",
           "action": "Make contact at minimum indicated airspeed, but not below stall speed",
-          "expected_result": "Aircraft hangs in the tree branches avoiding hard impact",
-          "source_excerpt": "Make contact at minimum indicated airspeed, but not below stall speed, and “hang” the airplane in the tree branches in a nose-high landing attitude."
+          "expected_result": "Controlled landing attitude in tree branches",
+          "source_excerpt": "Make contact at minimum indicated airspeed, but not below stall speed, and 'hang' the airplane in the tree branches in a nose-high landing attitude."
         },
         {
           "step_number": 4,
+          "step_type": "immediate_action",
           "action": "Involve the underside of the fuselage and both wings in the initial tree contact",
-          "expected_result": "More even and positive cushioning effect on impact",
-          "source_excerpt": "Involving the underside of the fuselage and both wings in the initial tree contact provides a more even and positive cushioning effect, while preventing penetration of the windshield."
+          "expected_result": "More even and positive cushioning effect",
+          "source_excerpt": "Involving the underside of the fuselage and both wings in the initial tree contact provides a more even and positive cushioning effect."
         },
         {
           "step_number": 5,
+          "step_type": "immediate_action",
           "action": "Avoid direct contact of the fuselage with heavy tree trunks",
-          "expected_result": "Reduced risk of fuselage damage or injury",
+          "expected_result": "Minimized risk of damage to the fuselage",
           "source_excerpt": "Avoid direct contact of the fuselage with heavy tree trunks."
         },
         {
           "step_number": 6,
-          "action": "Ensure initial tree contact is symmetrical with both wings meeting equal resistance",
-          "expected_result": "Maintains proper airplane attitude and reduces chance of wing loss",
-          "source_excerpt": "Ideally, initial tree contact should be symmetrical; that is, both wings should meet equal resistance in the tree branches."
+          "step_type": "immediate_action",
+          "action": "Aim for low, closely spaced trees with wide, dense crowns",
+          "expected_result": "Safer landing environment",
+          "source_excerpt": "Low, closely spaced trees with wide, dense crowns (branches) close to the ground are much better than tall trees with thin tops."
         },
         {
           "step_number": 7,
+          "step_type": "immediate_action",
+          "action": "Ensure initial tree contact is symmetrical",
+          "expected_result": "Maintained proper airplane attitude",
+          "source_excerpt": "Ideally, initial tree contact should be symmetrical; that is, both wings should meet equal resistance in the tree branches."
+        },
+        {
+          "step_number": 8,
+          "step_type": "immediate_action",
           "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable",
-          "expected_result": "Best results in minimizing damage upon ground contact",
+          "expected_result": "Simultaneous wing contact to minimize damage",
           "source_excerpt": "If heavy tree trunk contact is unavoidable once the airplane is on the ground, it is best to involve both wings simultaneously by directing the airplane between two properly spaced trees."
         }
       ],
@@ -55,61 +69,63 @@
     },
     {
       "name": "Engine Failure After Takeoff (Single-Engine)",
-      "trigger_condition": "Engine failure during initial climb",
+      "trigger_condition": "Engine failure occurs during the initial climb",
       "aircraft_phase": "takeoff",
       "source_file": "12_engine_failure_after_takeoff_single_engine.txt",
       "source_section": "Engine Failure After Takeoff (Single-Engine)",
-      "source_excerpt": "A number of variables and pilot actions factor into a successful emergency landing shortly after takeoff.",
+      "source_excerpt": "When an engine failure occurs during the initial climb, the pilot should lower the nose of the airplane and establish the proper glide attitude.",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Lower the nose of the airplane",
           "expected_result": "Establish the proper glide attitude",
           "source_excerpt": "the pilot should lower the nose of the airplane and establish the proper glide attitude."
         },
         {
           "step_number": 2,
+          "step_type": "immediate_action",
           "action": "Select a field directly ahead or slightly to the side of the takeoff path",
           "expected_result": "Prepare for a controlled landing",
-          "source_excerpt": "the pilot should select a field directly ahead (or slightly to the side of the takeoff path)."
+          "source_excerpt": "the pilot should select a field directly ahead (or slightly to the side of the takeoff path)"
         },
         {
           "step_number": 3,
-          "action": "Consider turning back toward the point of departure if safe",
-          "expected_result": "Evaluate risks and determine if a turn back is feasible",
-          "source_excerpt": "the pilot might turn back, but only if certain the airplane can reach the field from its current position."
+          "step_type": "immediate_action",
+          "action": "Consider turning back toward the point of departure if conditions allow",
+          "expected_result": "Evaluate the feasibility of a turn back",
+          "source_excerpt": "the pilot might turn back, but only if certain the airplane can reach the field from its current position"
         },
         {
           "step_number": 4,
-          "action": "Plan the turn back with the expected altitude loss in mind",
-          "expected_result": "Ensure the airplane can glide back to the field after the turn",
-          "source_excerpt": "the pilot should know the expected altitude loss during the turn for the specific make and model airplane."
+          "step_type": "training_note",
+          "action": "Practice turns in both directions at a safe altitude",
+          "expected_result": "Gain proficiency in executing a turn back maneuver",
+          "source_excerpt": "Training for a turn back includes practicing turns in both directions at a safe altitude"
         },
         {
           "step_number": 5,
-          "action": "Practice turns in both directions at a safe altitude",
-          "expected_result": "Achieve consistent altitude loss and avoid accelerated stall",
-          "source_excerpt": "Training for a turn back includes practicing turns in both directions at a safe altitude."
-        },
-        {
-          "step_number": 6,
-          "action": "Respond appropriately to stall warnings and reduce wing loading during the turn",
-          "expected_result": "Maintain control of the airplane",
-          "source_excerpt": "Pilots should be alert for and respond appropriately to any stall warning and reduce wing loading during the turn as necessary."
+          "step_type": "caution",
+          "action": "Do not attempt a turn back unless a successful turn back will result",
+          "expected_result": "Avoid unnecessary risk during an emergency",
+          "source_excerpt": "The pilot should not attempt a turn back unless a successful turn back will result."
         }
       ],
       "warnings": [
         {
-          "description": "Turning back after an engine failure requires considerable training and can result in a fatal crash if not executed correctly."
+          "description": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
         },
         {
-          "description": "Attempting a turn back presents an unacceptable risk for student pilots and pilots without adequate proficiency."
+          "description": "If the airplane strikes the ground during the turn, cartwheeling could occur."
+        },
+        {
+          "description": "If the pilot does not lower the nose sufficiently during the turn, an accelerated stall and fatal crash may occur."
         }
       ]
     },
     {
       "name": "Emergency Descent",
-      "trigger_condition": "Uncontrollable fire, sudden loss of cabin pressurization, or any situation demanding immediate rapid descent",
+      "trigger_condition": "Uncontrollable fire, sudden loss of cabin pressurization, or any situation demanding an immediate and rapid descent",
       "aircraft_phase": "Descent",
       "source_file": "13_emergency_descents.txt",
       "source_section": "Emergency Descents",
@@ -117,38 +133,44 @@
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Establish a bank of approximately 30 to 45°",
           "expected_result": "Maintain positive load factors (G forces) on the airplane",
           "source_excerpt": "When initiating the descent, a bank of approximately 30 to 45° should be established to maintain positive load factors (G forces) on the airplane."
         },
         {
           "step_number": 2,
+          "step_type": "immediate_action",
           "action": "Reduce power to idle",
           "expected_result": "Allow the propeller to act as an aerodynamic brake",
           "source_excerpt": "Except when prohibited by the manufacturer, the power should be reduced to idle, and the propeller control (if equipped) should be placed in the low pitch (or high revolutions per minute (rpm)) position."
         },
         {
           "step_number": 3,
-          "action": "Extend landing gear and flaps as recommended",
+          "step_type": "immediate_action",
+          "action": "Extend landing gear and flaps as recommended by the manufacturer",
           "expected_result": "Provide maximum drag for rapid descent without excessive airspeed",
           "source_excerpt": "The landing gear and flaps should be extended as recommended by the manufacturer. This provides maximum drag so that the descent can be made as rapidly as possible, without excessive airspeed."
         },
         {
           "step_number": 4,
-          "action": "Monitor airspeed to not exceed VNE, VLE, or VFE",
-          "expected_result": "Prevent structural damage and maintain safe descent",
-          "source_excerpt": "The pilot should not allow the airplane’s airspeed to pass the never-exceed speed (VNE), the maximum landing gear extended speed (VLE), or the maximum flap extended speed (VFE), as applicable."
+          "step_type": "immediate_action",
+          "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed",
+          "expected_result": "Prevent structural damage to the airplane",
+          "source_excerpt": "The pilot should not allow the airplane’s airspeed to pass the never-exceed speed (V NE), the maximum landing gear extended speed (V LE), or the maximum flap extended speed (V FE), as applicable."
         },
         {
           "step_number": 5,
-          "action": "Ensure descent is conducted within design maneuvering speed (VA) limits in turbulence",
-          "expected_result": "Maintain structural integrity during descent",
-          "source_excerpt": "If the descent is conducted in turbulent conditions, the pilot also needs to comply with the design maneuvering speed (VA) limitations."
+          "step_type": "immediate_action",
+          "action": "Comply with design maneuvering speed (V A) limitations if in turbulent conditions",
+          "expected_result": "Ensure safe descent without structural stress",
+          "source_excerpt": "If the descent is conducted in turbulent conditions, the pilot also needs to comply with the design maneuvering speed (V A) limitations."
         },
         {
           "step_number": 6,
-          "action": "Initiate recovery at a high enough altitude for safe recovery",
-          "expected_result": "Safely return to level flight or perform a precautionary landing",
+          "step_type": "immediate_action",
+          "action": "Initiate recovery from the emergency descent at a high enough altitude",
+          "expected_result": "Ensure a safe recovery back to level flight or a precautionary landing",
           "source_excerpt": "The recovery from an emergency descent should be initiated at a high enough altitude to ensure a safe recovery back to level flight or a precautionary landing."
         }
       ],
@@ -160,41 +182,39 @@
     },
     {
       "name": "Engine Fire",
-      "trigger_condition": "In-flight engine compartment fire",
+      "trigger_condition": "In-flight engine compartment fire indicated by smoke or flames",
       "aircraft_phase": "cruise",
       "source_file": "15_engine_fire.txt",
       "source_section": "Engine Fire",
-      "source_excerpt": "The first step on discovering a fire should be to shut off the fuel supply to the engine by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position.",
+      "source_excerpt": "By the time a pilot becomes aware of an in-flight engine compartment fire, it usually is well developed.",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Shut off the fuel supply to the engine",
-          "expected_result": "Fuel supply is stopped to the engine, potentially extinguishing the fire.",
-          "source_excerpt": "The first step on discovering a fire should be to shut off the fuel supply to the engine."
+          "expected_result": "Fuel supply is cut off, potentially extinguishing the fire",
+          "source_excerpt": "the first step on discovering a fire should be to shut off the fuel supply to the engine by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position."
         },
         {
           "step_number": 2,
+          "step_type": "immediate_action",
           "action": "Leave the ignition switch ON",
-          "expected_result": "Fuel in the lines and components is used up to minimize fire risk.",
+          "expected_result": "Fuel in the lines is used up, preventing further fuel supply to the fire",
           "source_excerpt": "The ignition switch should be left ON in order to use up the fuel that remains in the fuel lines and components."
         },
         {
           "step_number": 3,
-          "action": "Feather the propeller or set the pitch control to minimum rpm",
-          "expected_result": "Propeller stops rotating, preventing the oil from feeding the fire.",
-          "source_excerpt": "The pilot should consider stopping the propeller rotation by feathering or other means."
+          "step_type": "immediate_action",
+          "action": "Consider stopping the propeller rotation",
+          "expected_result": "Stops the engine-driven oil pump from feeding the fire",
+          "source_excerpt": "the pilot should consider stopping the propeller rotation by feathering or other means."
         },
         {
           "step_number": 4,
-          "action": "Raise the nose to reduce airspeed until the propeller stops rotating",
-          "expected_result": "Airspeed is lowered, aiding in stopping the propeller rotation.",
-          "source_excerpt": "Raising the nose to reduce airspeed until the propeller stops rotating."
-        },
-        {
-          "step_number": 5,
-          "action": "Prepare for a forced landing if necessary",
-          "expected_result": "Pilot is ready to execute a forced landing to ensure safety.",
-          "source_excerpt": "Pilots of powerless single-engine airplanes are left with no choice but to make a forced landing."
+          "step_type": "caution",
+          "action": "Do not shut off the electrical master switch unless necessary",
+          "expected_result": "Retain the ability to communicate and navigate",
+          "source_excerpt": "the pilot should consider that unless the fire is electrical in nature, or a crash landing is imminent, deactivating the electrical system prevents the use of panel radios."
         }
       ],
       "warnings": [
@@ -214,58 +234,67 @@
     },
     {
       "name": "Electrical Fire",
-      "trigger_condition": "The distinct odor of burning insulation is detected.",
-      "aircraft_phase": "All phases",
+      "trigger_condition": "Detection of an electrical fire indicated by the odor of burning insulation",
+      "aircraft_phase": "in-flight",
       "source_file": "16_electrical_fires.txt",
       "source_section": "Electrical Fires",
       "source_excerpt": "The initial indication of an electrical fire is usually the distinct odor of burning insulation.",
       "steps": [
         {
           "step_number": 1,
-          "action": "Attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights.",
-          "expected_result": "Faulty circuit is identified.",
+          "step_type": "immediate_action",
+          "action": "Check circuit breakers, instruments, avionics, and lights",
+          "expected_result": "Identify the faulty circuit",
           "source_excerpt": "the pilot should attempt to identify the faulty circuit by checking circuit breakers, instruments, avionics, and lights."
         },
         {
           "step_number": 2,
-          "action": "Turn off the battery master switch and alternator/generator switches if flight conditions permit.",
-          "expected_result": "Possible source of the fire is removed.",
+          "step_type": "immediate_action",
+          "action": "Turn off the battery master switch and alternator/generator switches",
+          "expected_result": "Remove the possible source of the fire",
           "source_excerpt": "the battery master switch and alternator/generator switches should be turned off to remove the possible source of the fire."
         },
         {
           "step_number": 3,
-          "action": "Turn the electrical master switch OFF.",
-          "expected_result": "Electrical power is removed.",
-          "source_excerpt": "an attempt may be made to identify and isolate the faulty circuit by: 1. Turning the electrical master switch OFF."
+          "step_type": "immediate_action",
+          "action": "Turn the electrical master switch OFF",
+          "expected_result": "Attempt to isolate the faulty circuit",
+          "source_excerpt": "Turning the electrical master switch OFF."
         },
         {
           "step_number": 4,
-          "action": "Turn all individual electrical switches OFF.",
-          "expected_result": "All electrical power is removed.",
-          "source_excerpt": "2. Turning all individual electrical switches OFF."
+          "step_type": "immediate_action",
+          "action": "Turn all individual electrical switches OFF",
+          "expected_result": "Isolate the faulty circuit",
+          "source_excerpt": "Turning all individual electrical switches OFF."
         },
         {
           "step_number": 5,
-          "action": "Turn the master switch back ON.",
-          "expected_result": "Electrical system is reactivated.",
-          "source_excerpt": "3. Turning the master switch back ON."
+          "step_type": "immediate_action",
+          "action": "Turn the master switch back ON",
+          "expected_result": "Prepare to check for faulty circuits",
+          "source_excerpt": "Turning the master switch back ON."
         },
         {
           "step_number": 6,
-          "action": "Select electrical switches that were ON before the fire indication one at a time.",
-          "expected_result": "Signs of odor, smoke, or sparks are checked.",
-          "source_excerpt": "4. Selecting electrical switches that were ON before the fire indication one at a time."
+          "step_type": "immediate_action",
+          "action": "Select electrical switches that were ON before the fire indication one at a time",
+          "expected_result": "Check for signs of odor, smoke, or sparks",
+          "source_excerpt": "Selecting electrical switches that were ON before the fire indication one at a time."
         }
       ],
       "warnings": [
         {
-          "description": "The most prudent course of action is to land as soon as possible."
+          "description": "Any materials that have been ignited may continue to burn."
+        },
+        {
+          "description": "This procedure recreates the original problem; the most prudent course of action is to land as soon as possible."
         }
       ]
     },
     {
       "name": "Cabin Fire",
-      "trigger_condition": "Smoke or fire detected in the cabin",
+      "trigger_condition": "Fire or smoke detected in the cabin",
       "aircraft_phase": "any",
       "source_file": "17_cabin_fire.txt",
       "source_section": "Cabin Fire",
@@ -273,50 +302,56 @@
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Use the fire extinguisher if available",
-          "expected_result": "Immediate fire suppression",
+          "expected_result": "Fire is suppressed or extinguished",
           "source_excerpt": "This should be done only after the fire extinguisher (if available) is used."
         },
         {
           "step_number": 2,
-          "action": "Shut down the faulty system",
-          "expected_result": "Reduce the source of the fire",
+          "step_type": "immediate_action",
+          "action": "Identify and shut down the faulty system",
+          "expected_result": "Source of fire is controlled",
           "source_excerpt": "A fire or smoke in the cabin should be controlled by identifying and shutting down the faulty system."
         },
         {
           "step_number": 3,
-          "action": "Open cabin air vents to remove smoke",
-          "expected_result": "Improved visibility and air quality in the cabin",
-          "source_excerpt": "In many cases, smoke may be removed from the cabin by opening the cabin air vents."
+          "step_type": "immediate_action",
+          "action": "Open cabin air vents to purge smoke and fumes",
+          "expected_result": "Smoke is removed from the cabin",
+          "source_excerpt": "Then the cabin air control can be opened to purge the cabin of both smoke and fumes."
         },
         {
           "step_number": 4,
+          "step_type": "immediate_action",
           "action": "Close cabin air vents if smoke increases",
           "expected_result": "Prevent further feeding of the fire",
           "source_excerpt": "If smoke increases in intensity when the cabin air vents are opened, they should be immediately closed."
         },
         {
           "step_number": 5,
+          "step_type": "immediate_action",
           "action": "Initiate an emergency descent if smoke is intense",
-          "expected_result": "Rapid descent to safe altitude",
-          "source_excerpt": "or execute an emergency descent."
+          "expected_result": "Aircraft descends to a safer altitude",
+          "source_excerpt": "It may be necessary to either depressurize at altitude, if oxygen is available for all occupants, or execute an emergency descent."
         },
         {
           "step_number": 6,
-          "action": "Use oxygen masks if available for passengers and crew",
-          "expected_result": "Ensure safety of occupants",
-          "source_excerpt": "the passengers and crew should use oxygen masks if available."
+          "step_type": "immediate_action",
+          "action": "Use oxygen masks if smoke is severe",
+          "expected_result": "Crew and passengers are protected from smoke inhalation",
+          "source_excerpt": "If the smoke is severe, the passengers and crew should use oxygen masks if available."
         }
       ],
       "warnings": [
         {
-          "description": "On some airplanes, lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem."
+          "description": "Lowering the landing gear and/or wing flaps can aggravate a cabin smoke problem."
         }
       ]
     },
     {
       "name": "Total Flap Failure",
-      "trigger_condition": "Inability to extend the wing flaps",
+      "trigger_condition": "Inability to extend wing flaps",
       "aircraft_phase": "approach and landing",
       "source_file": "17_cabin_fire.txt",
       "source_section": "Flight Control Malfunction/Failure",
@@ -324,42 +359,34 @@
       "steps": [
         {
           "step_number": 1,
-          "action": "Fly in a nose-high attitude to maintain altitude",
-          "expected_result": "Avoid loss of altitude",
-          "source_excerpt": "the airplane should be flown in a relatively nose-high attitude to maintain altitude."
+          "step_type": "immediate_action",
+          "action": "Execute a no-flap approach and landing",
+          "expected_result": "Aircraft lands safely without flaps",
+          "source_excerpt": "A no-flap approach and landing is not particularly difficult or dangerous."
         },
         {
           "step_number": 2,
-          "action": "Plan for a longer landing distance",
-          "expected_result": "Successful landing without exceeding runway limits",
-          "source_excerpt": "A no-flap landing requires substantially more runway than normal."
+          "step_type": "immediate_action",
+          "action": "Fly in a nose-high attitude to maintain altitude",
+          "expected_result": "Altitude is maintained without losing height",
+          "source_excerpt": "The airplane should be flown in a relatively nose-high attitude to maintain altitude."
         },
         {
           "step_number": 3,
-          "action": "Avoid diving to lose altitude",
-          "expected_result": "Maintain controlled descent speed",
-          "source_excerpt": "A wider, longer traffic pattern may be required in order to avoid the necessity of diving to lose altitude."
-        },
-        {
-          "step_number": 4,
-          "action": "Anticipate difficulty seeing the runway on final approach",
-          "expected_result": "Maintain proper judgment of height and distance",
-          "source_excerpt": "this situation, if not anticipated, can result in serious errors in judgment of height and distance."
-        },
-        {
-          "step_number": 5,
-          "action": "Avoid forcing the airplane onto the runway at high speed",
-          "expected_result": "Prevent excessive impact during landing",
-          "source_excerpt": "the pilot should avoid the temptation to force the airplane onto the runway at an excessively high speed."
-        },
-        {
-          "step_number": 6,
-          "action": "Do not flare excessively to avoid tail strike",
-          "expected_result": "Safe touchdown without damage to the aircraft",
-          "source_excerpt": "this might cause the tail to strike the runway."
+          "step_type": "immediate_action",
+          "action": "Avoid excessive speed during landing",
+          "expected_result": "Prevent tail strike and ensure safe landing",
+          "source_excerpt": "The pilot should avoid the temptation to force the airplane onto the runway at an excessively high speed."
         }
       ],
-      "warnings": []
+      "warnings": [
+        {
+          "description": "Approaching the runway in a relatively nose-high attitude can cause serious errors in judgment of height and distance."
+        },
+        {
+          "description": "Without flaps, the airplane tends to float considerably during roundout."
+        }
+      ]
     },
     {
       "name": "Asymmetric Split Flap",
@@ -371,121 +398,119 @@
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Counter roll with opposite aileron",
           "expected_result": "Maintain wings-level attitude",
           "source_excerpt": "The roll encountered in a split flap situation is countered with opposite aileron."
         },
         {
           "step_number": 2,
+          "step_type": "immediate_action",
           "action": "Apply substantial opposite rudder",
-          "expected_result": "Mitigate yaw caused by additional drag",
+          "expected_result": "Compensate for yaw caused by additional drag",
           "source_excerpt": "The yaw caused by the additional drag created by the extended flap requires substantial opposite rudder."
         },
         {
           "step_number": 3,
+          "step_type": "immediate_action",
           "action": "Fly approach at higher than normal airspeed",
           "expected_result": "Avoid asymmetric stall and maintain control",
           "source_excerpt": "The approach to landing with a split flap condition should be flown at a higher than normal airspeed."
         },
         {
           "step_number": 4,
-          "action": "Avoid excessive flaring",
-          "expected_result": "Prevent stall and loss of control",
+          "step_type": "immediate_action",
+          "action": "Avoid excessive flaring during landing",
+          "expected_result": "Prevent loss of control",
           "source_excerpt": "The pilot should not risk an asymmetric stall and subsequent loss of control by flaring excessively."
         },
         {
           "step_number": 5,
-          "action": "Land with touchdown at safe airspeed above flaps-up stall speed",
-          "expected_result": "Safely touch down",
-          "source_excerpt": "Rather, the airplane should be flown onto the runway so that the touchdown occurs at an airspeed consistent with a safe margin above flaps-up stall speed."
+          "step_type": "immediate_action",
+          "action": "Touchdown at a safe margin above flaps-up stall speed",
+          "expected_result": "Ensure safe landing",
+          "source_excerpt": "The airplane should be flown onto the runway so that the touchdown occurs at an airspeed consistent with a safe margin above flaps-up stall speed."
         }
       ],
       "warnings": [
         {
           "description": "Do not attempt to land with a crosswind from the side of the deployed flap."
-        },
-        {
-          "description": "Additional roll control required to counteract the crosswind may not be available."
         }
       ]
     },
     {
-      "name": "Loss of Elevator Control - Up Cable Failure",
-      "trigger_condition": "Failure of the 'up' elevator cable",
-      "aircraft_phase": "flight",
+      "name": "Loss of Elevator Control (Up Cable Failure)",
+      "trigger_condition": "Failure of the up elevator cable",
+      "aircraft_phase": "cruise, landing",
       "source_file": "19_loss_of_elevator_control.txt",
       "source_section": "Loss of Elevator Control",
       "source_excerpt": "When experiencing a loss of up-elevator control, the pilot can retain pitch control by:",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Apply considerable nose-up trim",
-          "expected_result": "Maintain desired pitch attitude",
+          "expected_result": "Retain pitch control",
           "source_excerpt": "Applying considerable nose-up trim"
         },
         {
           "step_number": 2,
-          "action": "Push the control yoke forward",
-          "expected_result": "Attain and maintain desired attitude",
+          "step_type": "immediate_action",
+          "action": "Push the control yoke forward to attain and maintain desired attitude",
+          "expected_result": "Maintain desired pitch attitude",
           "source_excerpt": "Pushing the control yoke forward to attain and maintain desired attitude"
         },
         {
           "step_number": 3,
-          "action": "Increase forward pressure",
-          "expected_result": "Lower the nose",
-          "source_excerpt": "Increasing forward pressure to lower the nose"
+          "step_type": "immediate_action",
+          "action": "Increase forward pressure to lower the nose and relax forward pressure to raise the nose",
+          "expected_result": "Control the pitch attitude effectively",
+          "source_excerpt": "Increasing forward pressure to lower the nose and relaxing forward pressure to raise the nose"
         },
         {
           "step_number": 4,
-          "action": "Relax forward pressure",
-          "expected_result": "Raise the nose",
-          "source_excerpt": "Relaxing forward pressure to raise the nose"
-        },
-        {
-          "step_number": 5,
+          "step_type": "immediate_action",
           "action": "Release forward pressure to flare for landing",
-          "expected_result": "Successfully flare for landing",
+          "expected_result": "Prepare for landing",
           "source_excerpt": "Releasing forward pressure to flare for landing"
         }
       ],
       "warnings": []
     },
     {
-      "name": "Loss of Elevator Control - Down Cable Failure",
-      "trigger_condition": "Failure of the 'down' elevator cable",
-      "aircraft_phase": "flight",
+      "name": "Loss of Elevator Control (Down Cable Failure)",
+      "trigger_condition": "Failure of the down elevator cable",
+      "aircraft_phase": "cruise, landing",
       "source_file": "19_loss_of_elevator_control.txt",
       "source_section": "Loss of Elevator Control",
       "source_excerpt": "When experiencing a loss of down-elevator control, the pilot can retain pitch control by:",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Apply considerable nose-down trim",
-          "expected_result": "Maintain desired pitch attitude",
+          "expected_result": "Retain pitch control",
           "source_excerpt": "Applying considerable nose-down trim"
         },
         {
           "step_number": 2,
-          "action": "Pull the control yoke aft",
-          "expected_result": "Attain and maintain desired attitude",
+          "step_type": "immediate_action",
+          "action": "Pull the control yoke aft to attain and maintain attitude",
+          "expected_result": "Maintain desired pitch attitude",
           "source_excerpt": "Pulling the control yoke aft to attain and maintain attitude"
         },
         {
           "step_number": 3,
-          "action": "Release back pressure",
-          "expected_result": "Lower the nose",
-          "source_excerpt": "Releasing back pressure to lower the nose"
+          "step_type": "immediate_action",
+          "action": "Release back pressure to lower the nose and increase back pressure to raise the nose",
+          "expected_result": "Control the pitch attitude effectively",
+          "source_excerpt": "Releasing back pressure to lower the nose and increasing back pressure to raise the nose"
         },
         {
           "step_number": 4,
-          "action": "Increase back pressure",
-          "expected_result": "Raise the nose",
-          "source_excerpt": "Increasing back pressure to raise the nose"
-        },
-        {
-          "step_number": 5,
+          "step_type": "immediate_action",
           "action": "Increase back pressure to flare for landing",
-          "expected_result": "Successfully flare for landing",
+          "expected_result": "Prepare for landing",
           "source_excerpt": "Increasing back pressure to flare for landing"
         }
       ],
@@ -493,266 +518,195 @@
     },
     {
       "name": "Landing Gear Malfunction",
-      "trigger_condition": "Landing gear refuses to respond to extension methods",
-      "aircraft_phase": "Landing",
+      "trigger_condition": "Landing gear has malfunctioned and refuses to respond to extension methods",
+      "aircraft_phase": "landing",
       "source_file": "20_landing_gear_malfunction.txt",
       "source_section": "Landing Gear Malfunction",
-      "source_excerpt": "Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond...",
+      "source_excerpt": "Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond to the conventional or alternate methods of gear extension contained in the AFM/POH, a gear-up landing is considered inevitable.",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Select an airport with crash and rescue facilities",
-          "expected_result": "Emergency equipment is standing by for landing",
+          "expected_result": "Emergency equipment is standing by",
           "source_excerpt": "The pilot should select an airport with crash and rescue facilities, if possible."
         },
         {
           "step_number": 2,
-          "action": "Request that the runway surface be foamed if available",
-          "expected_result": "Reduction of fire potential upon landing",
-          "source_excerpt": "If the airport is so equipped, the pilot can request that the runway surface be foamed."
+          "step_type": "immediate_action",
+          "action": "Consider burning off excess fuel",
+          "expected_result": "Reduces landing speed and fire potential",
+          "source_excerpt": "The pilot should consider burning off excess fuel. This reduces landing speed and fire potential."
         },
         {
           "step_number": 3,
-          "action": "Burn off excess fuel if applicable",
-          "expected_result": "Reduced landing speed and fire potential",
-          "source_excerpt": "The pilot should consider burning off excess fuel."
-        },
-        {
-          "step_number": 4,
+          "step_type": "immediate_action",
           "action": "Land with one main gear retracted if necessary",
-          "expected_result": "Controlled landing despite malfunction",
-          "source_excerpt": "If the pilot elects to land with one main gear retracted..."
-        },
-        {
-          "step_number": 5,
-          "action": "Maintain a nose-high attitude with wings level during landing",
-          "expected_result": "Keep unsupported wing airborne as long as possible",
-          "source_excerpt": "the landing should be made in a nose-high attitude with the wings level."
-        },
-        {
-          "step_number": 6,
-          "action": "Use full opposite rudder and aggressive braking if yaw occurs",
-          "expected_result": "Maintain directional control after touchdown",
-          "source_excerpt": "The pilot should be prepared to use full opposite rudder and aggressive braking to maintain some degree of directional control."
-        }
-      ],
-      "warnings": []
-    },
-    {
-      "name": "Electrical System Failure",
-      "trigger_condition": "Loss of electrical power in flight",
-      "aircraft_phase": "Cruise",
-      "source_file": "20_landing_gear_malfunction.txt",
-      "source_section": "Electrical System",
-      "source_excerpt": "The loss of electrical power can deprive the pilot of numerous critical systems...",
-      "steps": [
-        {
-          "step_number": 1,
-          "action": "Shed all but the most necessary electrically-driven equipment",
-          "expected_result": "Maximize remaining battery life",
-          "source_excerpt": "the pilot immediately shed non-essential loads when the generating source fails."
-        },
-        {
-          "step_number": 2,
-          "action": "Notify ATC of the situation immediately",
-          "expected_result": "ATC is aware of the emergency for assistance",
-          "source_excerpt": "Notify ATC of the situation immediately."
-        },
-        {
-          "step_number": 3,
-          "action": "Plan to land at the nearest suitable airport",
-          "expected_result": "Prepare for emergency landing",
-          "source_excerpt": "plan to land at the nearest suitable airport."
+          "expected_result": "Minimizes damage during landing",
+          "source_excerpt": "If the pilot elects to land with one main gear retracted (and the other main gear and nose gear down and locked), the landing should be made in a nose-high attitude with the wings level."
         },
         {
           "step_number": 4,
-          "action": "Expect to make a no-flap landing if applicable",
-          "expected_result": "Prepare for manual landing techniques",
-          "source_excerpt": "Expect to make a no-flap landing..."
+          "step_type": "immediate_action",
+          "action": "Use full opposite rudder and aggressive braking after touchdown",
+          "expected_result": "Maintain directional control",
+          "source_excerpt": "The pilot should be prepared to use full opposite rudder and aggressive braking to maintain some degree of directional control."
         }
       ],
       "warnings": [
         {
-          "description": "Any loss of electrical power is critical in a small airplane."
+          "description": "A hard surface runway creates sparks that can ignite fuel."
         },
         {
-          "description": "Landing gear and flap motors use power at rates much greater than most other types of electrical equipment."
+          "description": "Applying and holding full up-elevator results in the nose abruptly dropping to the surface as airspeed decays, possibly resulting in burrowing and/or additional damage."
+        }
+      ]
+    },
+    {
+      "name": "Electrical System Failure",
+      "trigger_condition": "Loss of electrical power",
+      "aircraft_phase": "in-flight",
+      "source_file": "20_landing_gear_malfunction.txt",
+      "source_section": "System Malfunctions",
+      "source_excerpt": "If the pilot expects an imminent and complete in-flight loss of electrical power, the following steps should be taken:",
+      "steps": [
+        {
+          "step_number": 1,
+          "step_type": "immediate_action",
+          "action": "Shed all but the most necessary electrically-driven equipment",
+          "expected_result": "Preserve battery power for critical systems",
+          "source_excerpt": "The pilot should immediately shed non-essential loads when the generating source fails."
+        },
+        {
+          "step_number": 2,
+          "step_type": "immediate_action",
+          "action": "Notify ATC of the situation immediately",
+          "expected_result": "Request radar vectors for a landing at the nearest suitable airport",
+          "source_excerpt": "Understand that any loss of electrical power is critical in a small airplane—notify ATC of the situation immediately."
+        },
+        {
+          "step_number": 3,
+          "step_type": "immediate_action",
+          "action": "Plan for a no-flap landing and anticipate manual landing gear extension",
+          "expected_result": "Prepare for landing without electrical assistance",
+          "source_excerpt": "If landing gear or flaps are electrically controlled or operated, plan the arrival well ahead of time."
+        }
+      ],
+      "warnings": [
+        {
+          "description": "The electrically-powered landing gear and flaps do not function properly on the power left in a partially-depleted battery."
         }
       ]
     },
     {
       "name": "Inadvertent Door Opening In-Flight",
       "trigger_condition": "Inadvertent door opening during flight or takeoff",
-      "aircraft_phase": "flight",
+      "aircraft_phase": "flight, takeoff",
       "source_file": "23_door_opening_in_flight.txt",
       "source_section": "Door Opening In-Flight",
       "source_excerpt": "In the event of an inadvertent door opening in flight or on takeoff, the pilot should adhere to the following:",
       "steps": [
         {
           "step_number": 1,
+          "step_type": "immediate_action",
           "action": "Concentrate on flying the airplane",
-          "expected_result": "Maintain control of the airplane",
+          "expected_result": "Maintain control of the airplane despite the open door",
           "source_excerpt": "Concentrate on flying the airplane."
         },
         {
           "step_number": 2,
+          "step_type": "immediate_action",
           "action": "Climb to normal traffic pattern altitude",
-          "expected_result": "Establish a safe altitude for landing",
+          "expected_result": "Establish a safe altitude before landing",
           "source_excerpt": "If the door opens after lift-off, do not rush to land. Climb to normal traffic pattern altitude."
         },
         {
           "step_number": 3,
+          "step_type": "immediate_action",
           "action": "Fly a normal traffic pattern and make a normal landing",
-          "expected_result": "Complete landing procedures safely",
+          "expected_result": "Land safely without rushing",
           "source_excerpt": "Fly a normal traffic pattern, and make a normal landing."
         },
         {
           "step_number": 4,
-          "action": "Leave the door alone",
-          "expected_result": "Avoid distractions and maintain control",
-          "source_excerpt": "Do not release the seat belt and shoulder harness in an attempt to reach the door. Leave the door alone."
+          "step_type": "immediate_action",
+          "action": "Leave the door alone and do not release the seat belt",
+          "expected_result": "Avoid distraction and maintain control",
+          "source_excerpt": "Do not release the seat belt and shoulder harness in an attempt to reach the door."
         },
         {
           "step_number": 5,
+          "step_type": "immediate_action",
           "action": "Land as soon as practicable and close the door once safely on the ground",
-          "expected_result": "Complete landing and secure the door",
+          "expected_result": "Ensure the door is closed after landing",
           "source_excerpt": "Land as soon as practicable, and close the door once safely on the ground."
         },
         {
           "step_number": 6,
-          "action": "Ignore the unfamiliar noise and vibration",
-          "expected_result": "Maintain focus on flying the airplane",
-          "source_excerpt": "Do not panic. Try to ignore the unfamiliar noise and vibration."
-        },
-        {
-          "step_number": 7,
+          "step_type": "immediate_action",
           "action": "Complete all items on the landing checklist",
-          "expected_result": "Ensure all safety checks are performed",
+          "expected_result": "Ensure all safety protocols are followed during landing",
           "source_excerpt": "Complete all items on the landing checklist."
         }
       ],
       "warnings": [
         {
-          "description": "Do not rush. Attempting to get the airplane on the ground as quickly as possible may result in steep turns at low altitude."
+          "description": "Do not panic. Trying to get the airplane on the ground as quickly as possible may result in steep turns at low altitude."
         },
         {
-          "description": "Accidents are almost never caused by an open door; an open door accident is caused by the pilot’s distraction or failure to maintain control of the airplane."
+          "description": "Remember that accidents are almost never caused by an open door. Rather, an open door accident is caused by the pilot’s distraction or failure to maintain control of the airplane."
         }
       ]
     },
     {
       "name": "Emergency Autoland",
       "trigger_condition": "EAL senses erratic flying or pilot incapacitation",
-      "aircraft_phase": "landing",
+      "aircraft_phase": "descent and landing",
       "source_file": "34_autoland.txt",
       "source_section": "Autoland",
       "source_excerpt": "If the EAL senses erratic flying, it stabilizes the aircraft, and checks for pilot responsiveness.",
       "steps": [
         {
           "step_number": 1,
-          "action": "Initiate emergency descent if no pilot responsiveness is detected",
-          "expected_result": "Aircraft begins emergency descent",
-          "source_excerpt": "Without pilot responsiveness after an emergency descent, EAL initiates the process for an automated landing."
+          "step_type": "immediate_action",
+          "action": "Initiate emergency descent",
+          "expected_result": "Aircraft stabilizes and descends safely",
+          "source_excerpt": "Without further input, the EAL initiates an emergency descent."
         },
         {
           "step_number": 2,
-          "action": "Activate the EAL system manually if necessary",
-          "expected_result": "EAL system begins automated landing procedures",
+          "step_type": "immediate_action",
+          "action": "Activate EAL system manually if needed",
+          "expected_result": "EAL system begins automated landing process",
           "source_excerpt": "The system also allows for manual activation by a pilot or a passenger."
         },
         {
           "step_number": 3,
-          "action": "Transmits automated radio broadcasts on last selected frequency and Guard (121.5 MHz)",
-          "expected_result": "Controllers and pilots in the area are alerted",
-          "source_excerpt": "Once activated, the EAL system transmits automated radio broadcasts on the aircraft’s last selected frequency and on Guard (121.5 MHz)..."
+          "step_type": "immediate_action",
+          "action": "Transmit automated radio broadcasts",
+          "expected_result": "Controllers are alerted of the aircraft's imminent arrival",
+          "source_excerpt": "Once activated, the EAL system transmits automated radio broadcasts on the aircraft’s last selected frequency and on Guard (121.5 MHz)."
         },
         {
           "step_number": 4,
+          "step_type": "immediate_action",
           "action": "Set transponder to squawk 7700",
-          "expected_result": "Transponder indicates an emergency situation",
+          "expected_result": "Indicates an emergency situation to ATC",
           "source_excerpt": "EAL sets the transponder to squawk 7700 to indicate an emergency."
         },
         {
           "step_number": 5,
-          "action": "Broadcast position and intention once within 12 miles of chosen runway",
-          "expected_result": "Continuous broadcasting of position and intentions occurs",
-          "source_excerpt": "Once the EAL aircraft is within 12 miles of the selected runway and at or below 12,000 feet MSL, it broadcasts on the tower frequency..."
+          "step_type": "immediate_action",
+          "action": "Broadcast position and intention to land",
+          "expected_result": "Provides information to ATC and other aircraft",
+          "source_excerpt": "It announces its call sign, 'pilot incapacitation,' its position relative to the destination airport."
         }
       ],
       "warnings": []
     },
     {
-      "name": "Inadvertent VFR Flight Into IMC",
-      "trigger_condition": "Encountering instrument meteorological conditions (IMC) unintentionally",
-      "aircraft_phase": "All phases of flight",
-      "source_file": "24_inadvertent_vfr_flight_into_imc.txt | 25_maintaining_airplane_control.txt | 26_attitude_control.txt | 27_turns.txt | 28_climbs.txt | 29_descents.txt | 30_combined_maneuvers.txt | 31_transition_to_visual_flight.txt",
-      "source_section": "Inadvertent VFR Flight Into IMC",
-      "source_excerpt": "Accident statistics show that the pilot who has not been trained in attitude instrument flying... the pilot is, in effect, in IMC if unable to navigate or establish geographical position by visual reference to landmarks on the surface.",
-      "steps": [
-        {
-          "step_number": 1,
-          "action": "Recognize and accept the seriousness of the situation and the need for immediate remedial action.",
-          "expected_result": "A clear acknowledgment of the emergency and urgent need for control.",
-          "source_excerpt": "The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows: Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action."
-        },
-        {
-          "step_number": 2,
-          "action": "Maintain control of the airplane using flight instruments.",
-          "expected_result": "Stability and control of the airplane without reliance on visual references.",
-          "source_excerpt": "The only way to control the airplane safely is by using and trusting the flight instruments."
-        },
-        {
-          "step_number": 3,
-          "action": "Trim the airplane with the elevator trim to maintain hands-off level flight at cruise airspeed.",
-          "expected_result": "The airplane maintains level flight without continuous control input.",
-          "source_excerpt": "Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed."
-        },
-        {
-          "step_number": 4,
-          "action": "Keep the wings level with fingertip pressure on the control wheel.",
-          "expected_result": "The airplane remains in a stable flight attitude.",
-          "source_excerpt": "Straight flight is maintained by keeping the wings level using 'fingertip pressure' on the control wheel."
-        },
-        {
-          "step_number": 5,
-          "action": "Make all attitude changes smooth and small, with positive pressure.",
-          "expected_result": "The airplane maintains its equilibrium and desired flight attitude.",
-          "source_excerpt": "Make all attitude changes smooth and small, yet with positive pressure."
-        },
-        {
-          "step_number": 6,
-          "action": "Execute a climb by raising the miniature airplane on the attitude indicator no more than one bar width and applying power.",
-          "expected_result": "Achieving a gentle climb without rapid attitude changes.",
-          "source_excerpt": "If a climb is necessary, the pilot should raise the miniature airplane on the attitude indicator no more than one bar width and apply power."
-        },
-        {
-          "step_number": 7,
-          "action": "Avoid over-controlling the airplane during maneuvers.",
-          "expected_result": "Preventing potential spatial disorientation.",
-          "source_excerpt": "The most important point to be stressed is that the pilot should not panic... However, the pilot should make a conscious effort to relax."
-        },
-        {
-          "step_number": 8,
-          "action": "Request ATC assistance if necessary to get the airplane safely on the ground.",
-          "expected_result": "Guidance and support from air traffic control for a safe landing.",
-          "source_excerpt": "When being assisted by ATC, the pilot may detect a sense of urgency while being directed to change heading and/or altitude."
-        }
-      ],
-      "warnings": [
-        {
-          "description": "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation of the information provided by those instruments results in inadequate airplane control."
-        },
-        {
-          "description": "A tight grip on the controls can lead to a lack of control pressures, making it difficult to manage the airplane effectively."
-        },
-        {
-          "description": "Combined maneuvers should be avoided, as they compound the problems encountered and increase the risk of control loss."
-        }
-      ]
-    },
-    {
       "name": "Water Ditching",
-      "trigger_condition": "Performing a water landing",
+      "trigger_condition": "Water landing",
       "aircraft_phase": "landing",
       "source_file": "11_water_ditching_and_snow.txt",
       "source_section": "Water (Ditching) and Snow",
@@ -760,32 +714,37 @@
       "steps": [
         {
           "step_number": 1,
-          "action": "Execute the landing at minimum speed and in a normal landing attitude.",
+          "step_type": "immediate_action",
+          "action": "Execute a water landing at minimum speed and in a normal landing attitude.",
           "expected_result": "The airplane does not immediately sink upon touchdown.",
           "source_excerpt": "Also, an airplane that is ditched at minimum speed and in a normal landing attitude does not immediately sink upon touchdown."
         },
         {
           "step_number": 2,
-          "action": "Keep intact wings and empty fuel tanks for buoyancy.",
-          "expected_result": "The airplane provides floatation for at least several minutes after landing.",
+          "step_type": "immediate_action",
+          "action": "Keep wings and fuel tanks intact to provide floatation.",
+          "expected_result": "The airplane remains afloat for several minutes.",
           "source_excerpt": "Intact wings and fuel tanks (especially when empty) provide floatation for at least several minutes."
         },
         {
           "step_number": 3,
-          "action": "Drag the airplane in when landing on smooth water.",
-          "expected_result": "Minimize the risk of flying into the water or stalling.",
-          "source_excerpt": "To avoid this hazard, the airplane should be “dragged in” when possible."
+          "step_type": "immediate_action",
+          "action": "Drag the airplane in when possible to avoid loss of depth perception.",
+          "expected_result": "Reduced risk of flying into the water or stalling.",
+          "source_excerpt": "To avoid this hazard, the airplane should be 'dragged in' when possible."
         },
         {
           "step_number": 4,
+          "step_type": "immediate_action",
           "action": "Use no more than intermediate flaps on low-wing airplanes.",
-          "expected_result": "Prevent asymmetrical flap failure and slowing of the airplane.",
-          "source_excerpt": "The water resistance of fully extended flaps may result in asymmetrical flap failure and slowing of the airplane."
+          "expected_result": "Prevention of asymmetrical flap failure and slowing of the airplane.",
+          "source_excerpt": "Use no more than intermediate flaps on low-wing airplanes."
         },
         {
           "step_number": 5,
-          "action": "Keep retractable gear up unless advised otherwise by AFM/POH.",
-          "expected_result": "Ensure proper aircraft configuration and safety during landing.",
+          "step_type": "immediate_action",
+          "action": "Keep retractable gear up unless advised otherwise by the AFM/POH.",
+          "expected_result": "Proper landing configuration is maintained.",
           "source_excerpt": "Keep a retractable gear up unless the AFM/POH advises otherwise."
         }
       ],
@@ -793,69 +752,153 @@
     },
     {
       "name": "Snow Landing",
-      "trigger_condition": "Performing a snow landing",
+      "trigger_condition": "Snow landing",
       "aircraft_phase": "landing",
       "source_file": "11_water_ditching_and_snow.txt",
       "source_section": "Water (Ditching) and Snow",
-      "source_excerpt": "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception (white out) in reduced visibility and on wide-open terrain.",
+      "source_excerpt": "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception.",
       "steps": [
         {
           "step_number": 1,
-          "action": "Execute the snow landing like a water ditching.",
-          "expected_result": "Maintain control during landing.",
+          "step_type": "immediate_action",
+          "action": "Execute a snow landing like a ditching.",
+          "expected_result": "The landing is performed safely and effectively.",
           "source_excerpt": "A landing in snow should be executed like a ditching."
         },
         {
           "step_number": 2,
-          "action": "Use the same aircraft configuration as for water landing.",
-          "expected_result": "Ensure proper settings for a safe landing.",
-          "source_excerpt": "in the same configuration"
+          "step_type": "immediate_action",
+          "action": "Maintain the same configuration as for water landing.",
+          "expected_result": "Consistency in landing technique is achieved.",
+          "source_excerpt": "in the same configuration."
         },
         {
           "step_number": 3,
-          "action": "Consider loss of depth perception (white out) in reduced visibility.",
-          "expected_result": "Avoid potential hazards during landing.",
-          "source_excerpt": "with the same regard for loss of depth perception (white out) in reduced visibility"
+          "step_type": "immediate_action",
+          "action": "Be aware of loss of depth perception (white out) in reduced visibility.",
+          "expected_result": "Increased situational awareness during landing.",
+          "source_excerpt": "with the same regard for loss of depth perception (white out) in reduced visibility."
         }
       ],
       "warnings": []
     },
     {
-      "name": "Ballistic Parachute Deployment",
-      "trigger_condition": "Catastrophic loss of controllability, actual loss of control, or pilot incapacitation",
-      "aircraft_phase": "emergency",
-      "source_file": "33_ballistic_parachutes.txt",
-      "source_section": "Ballistic Parachutes",
-      "source_excerpt": "conduct…deploy the system only if the pilot were incapacitated",
+      "name": "Inadvertent VFR Flight Into IMC",
+      "trigger_condition": "Encountering instrument meteorological conditions (IMC) unexpectedly",
+      "aircraft_phase": "any",
+      "source_file": "24_inadvertent_vfr_flight_into_imc.txt | 25_maintaining_airplane_control.txt | 26_attitude_control.txt | 27_turns.txt | 28_climbs.txt | 29_descents.txt | 30_combined_maneuvers.txt | 31_transition_to_visual_flight.txt",
+      "source_section": "Inadvertent VFR Flight Into IMC",
+      "source_excerpt": "The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows: Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action; Maintaining control of the airplane; Obtaining the appropriate assistance to get the airplane safely on the ground.",
       "steps": [
         {
           "step_number": 1,
-          "action": "Brief passengers regarding conditions for safe deployment",
-          "expected_result": "Passengers understand when to deploy the system",
+          "step_type": "immediate_action",
+          "action": "Recognize and accept the seriousness of the situation and the need for immediate remedial action",
+          "expected_result": "Pilot acknowledges the emergency and prepares to take control measures.",
+          "source_excerpt": "Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action."
+        },
+        {
+          "step_number": 2,
+          "step_type": "immediate_action",
+          "action": "Maintain control of the airplane using flight instruments",
+          "expected_result": "Pilot keeps the airplane under control without relying on visual references.",
+          "source_excerpt": "The only way to control the airplane safely is by using and trusting the flight instruments."
+        },
+        {
+          "step_number": 3,
+          "step_type": "immediate_action",
+          "action": "Keep the wings level",
+          "expected_result": "Prevents uncontrolled turns and maintains stability.",
+          "source_excerpt": "The most important concern—in fact the only concern at this point—is to keep the wings level."
+        },
+        {
+          "step_number": 4,
+          "step_type": "immediate_action",
+          "action": "Trim the airplane to maintain hands-off level flight",
+          "expected_result": "Reduces pilot workload and helps maintain control.",
+          "source_excerpt": "Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed."
+        },
+        {
+          "step_number": 5,
+          "step_type": "immediate_action",
+          "action": "Make all attitude changes smooth and small",
+          "expected_result": "Minimizes the risk of over-controlling the airplane.",
+          "source_excerpt": "Make all attitude changes smooth and small, yet with positive pressure."
+        },
+        {
+          "step_number": 6,
+          "step_type": "immediate_action",
+          "action": "Avoid combined maneuvers such as climbing or descending turns",
+          "expected_result": "Reduces the risk of control loss.",
+          "source_excerpt": "Combined maneuvers, such as climbing or descending turns, should be avoided if at all possible by an untrained instrument pilot."
+        },
+        {
+          "step_number": 7,
+          "step_type": "immediate_action",
+          "action": "Request ATC assistance if necessary",
+          "expected_result": "Ensures safe landing and guidance.",
+          "source_excerpt": "It's reasonable to ask the controller to slow down, if this becomes an issue."
+        },
+        {
+          "step_number": 8,
+          "step_type": "immediate_action",
+          "action": "Transition to visual flight when conditions allow",
+          "expected_result": "Pilot safely lands the aircraft.",
+          "source_excerpt": "The pilot should take this into account and, if possible, allow time to become acclimatized and geographically oriented before attempting an approach and landing."
+        }
+      ],
+      "warnings": [
+        {
+          "description": "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation can result in inadequate airplane control."
+        },
+        {
+          "description": "The pilot should not panic; the task at hand may seem overwhelming, and the situation may be compounded by extreme apprehension."
+        },
+        {
+          "description": "False sensations can lead to spatial disorientation, making it difficult to control the airplane."
+        }
+      ]
+    },
+    {
+      "name": "Ballistic Parachute Deployment",
+      "trigger_condition": "Catastrophic loss of controllability, actual loss of control, or pilot incapacitation",
+      "aircraft_phase": "in-flight",
+      "source_file": "33_ballistic_parachutes.txt",
+      "source_section": "Ballistic Parachutes",
+      "source_excerpt": "Pilots should brief passengers with access to any deployment mechanism regarding the conditions for a safe deployment.",
+      "steps": [
+        {
+          "step_number": 1,
+          "step_type": "immediate_action",
+          "action": "Brief passengers on the conditions for safe deployment of the parachute system.",
+          "expected_result": "Passengers understand when and how to deploy the parachute system.",
           "source_excerpt": "Pilots should brief passengers with access to any deployment mechanism regarding the conditions for a safe deployment."
         },
         {
           "step_number": 2,
-          "action": "Instruct passengers on the sequence of steps for deployment",
-          "expected_result": "Passengers are prepared to follow the proper deployment steps",
+          "step_type": "immediate_action",
+          "action": "Ensure passengers know the basic sequence of steps for deployment.",
+          "expected_result": "Passengers are prepared to deploy the parachute if necessary.",
           "source_excerpt": "At a minimum, the pilot should also brief the passengers regarding the basic sequence of steps for deployment."
         },
         {
           "step_number": 3,
-          "action": "Follow manufacturer and supplier guidance for deployment",
-          "expected_result": "Deployment adheres to best practices established by manufacturers",
+          "step_type": "immediate_action",
+          "action": "Follow the guidance provided by manufacturers and suppliers for parachute deployment.",
+          "expected_result": "Deployment is conducted according to established safety protocols.",
           "source_excerpt": "Pilots should study the information provided by manufacturers and suppliers of these systems and follow the guidance provided."
         },
         {
           "step_number": 4,
-          "action": "Know the evacuation procedures once on the ground",
-          "expected_result": "Occupants are aware of how to safely evacuate the aircraft",
+          "step_type": "immediate_action",
+          "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute.",
+          "expected_result": "Occupants safely exit the aircraft without injury.",
           "source_excerpt": "Once on the ground, there are hazards associated with a deployed parachute and the effect of surface winds, and the occupants should know the procedures for evacuation."
         }
       ],
       "warnings": [
         {
-          "description": "Deployment of an airplane ballistic parachute system results in the loss of the airframe but prevents injuries and saves lives."
+          "description": "Deploying the parachute results in the loss of the airframe."
         }
       ]
     }
