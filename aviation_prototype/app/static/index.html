@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aviation Advisor Demo</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="query-panel" aria-label="Aviation advisor query">
+        <div>
+          <p class="eyebrow">Hybrid KG + Vector RAG</p>
+          <h1>Aviation Emergency Advisor</h1>
+        </div>
+
+        <form id="query-form" class="query-form">
+          <label for="question">Pilot question</label>
+          <div class="input-row">
+            <input
+              id="question"
+              name="question"
+              type="text"
+              autocomplete="off"
+              value="accidentally flew into clouds"
+              placeholder="Describe the situation"
+            />
+            <button type="submit">Ask</button>
+          </div>
+          <div class="examples" aria-label="Example questions">
+            <button type="button" data-question="accidentally flew into clouds">IMC</button>
+            <button type="button" data-question="smoke in cabin">Cabin smoke</button>
+            <button type="button" data-question="engine failure after takeoff">EFATO</button>
+            <button type="button" data-question="pilot incapacitated parachute">Parachute</button>
+            <button type="button" data-question="landing on snow whiteout">Snow landing</button>
+          </div>
+        </form>
+      </section>
+
+      <section id="status" class="status" hidden></section>
+
+      <section class="results-grid">
+        <article class="panel primary">
+          <div class="panel-header">
+            <p class="eyebrow">Top procedure</p>
+            <span id="score-pill" class="score-pill">No query</span>
+          </div>
+          <h2 id="procedure-name">Ask a question to retrieve a procedure</h2>
+          <p id="procedure-trigger" class="muted"></p>
+          <dl class="meta">
+            <div>
+              <dt>Phase</dt>
+              <dd id="procedure-phase">-</dd>
+            </div>
+            <div>
+              <dt>Source</dt>
+              <dd id="procedure-source">-</dd>
+            </div>
+          </dl>
+          <p id="procedure-evidence" class="evidence"></p>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Grounded advisor response</p>
+          <div id="advisor-response" class="advisor-text">
+            The generated response will appear here.
+          </div>
+        </article>
+      </section>
+
+      <section class="detail-grid">
+        <article class="panel">
+          <p class="eyebrow">Immediate actions</p>
+          <ol id="actions-list" class="steps-list"></ol>
+        </article>
+
+        <article class="panel">
+          <p class="eyebrow">Cautions, notes, warnings</p>
+          <div id="warnings-list" class="warning-list"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <p class="eyebrow">Retrieved candidates</p>
+        <div id="candidate-list" class="candidate-list"></div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

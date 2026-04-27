@@ -1,128 +1,225 @@
-# Aviation Agentic AI — Prototype
+# Aviation Agentic AI Prototype
 
-私人飞行员 AI 决策辅助系统 · 小型验证原型
+Private-pilot decision-support prototype for grounded aviation emergency guidance.
 
-## 系统架构
+This project does not let an LLM freely invent flight advice. It extracts structured emergency procedures from FAA handbook text, validates them as a knowledge graph, retrieves relevant procedures with Hybrid RAG, and generates grounded advisory responses from validated evidence.
 
+## Current Status
+
+The current prototype supports an end-to-end pipeline:
+
+```text
+FAA chapter text chunks
+  -> LLM extraction
+  -> structured procedure instances
+  -> RDF knowledge graph
+  -> SHACL validation
+  -> ChromaDB vector index
+  -> Hybrid KG + vector retrieval
+  -> grounded LLM synthesis
+  -> regression evaluation
 ```
-FAA 手册文本 (data/)
-    ↓  [01_extract.py]  OpenAI / Gemini 按 LinkML schema 提取
-output/extracted.json
-    ↓  [02_validate.py] JSON → RDF 图谱 + SHACL 验证
-output/kg.ttl  (已验证的知识图谱)
-    ↓  [03_query.py]   SPARQL 查询 → 飞行员建议输出
-"发动机失效怎么办？" → 步骤 1、2、3...
 
-Hybrid RAG v1:
-output/extracted.json
-    ↓  [05_build_vector_index.py]  ChromaDB 向量索引
-output/vector_index/
-    ↓  [06_hybrid_query.py]        KG + vector 双通道召回
-"accidentally flew into clouds" → Inadvertent VFR Flight Into IMC
+Latest verified run:
+
+```text
+Source text chunks: 35
+Procedures in KG: 18
+Procedure steps: 89
+Warnings: 23
+SHACL validation: PASS
+Retrieval evaluation: 14/14 PASS
+Synthesis evaluation: 9/10 PASS
 ```
 
-## 快速开始
+The remaining synthesis issue is specific: the EFATO case retrieves the correct procedure, but one evaluation run did not preserve the `practice turns` training note in the generated response.
 
-### 1. 安装依赖
+## Important: Two Extraction Modes
+
+There are two ways to run `01_extract.py`.
+
+### Formal FAA Procedure Pipeline
+
+Use this for the full project and demos:
 
 ```bash
-pip install -r requirements.txt
-```
-
-### 2. 配置 API Key
-
-```bash
-cp .env.example .env
-# 编辑 .env，填入你的 OpenAI 或 Gemini API Key
-```
-
-### 3. 运行完整流水线
-
-```bash
-# Step 1: 从文本提取知识（需要 OpenAI API 或 Gemini API）
-python scripts/01_extract.py
-
-# Step 2: 构建 RDF 图谱 + SHACL 验证
+python scripts/01_extract.py --input-dir data/procedures
+python scripts/04_targeted_reextract.py
 python scripts/02_validate.py
-
-# Step 3: 查询知识图谱
-python scripts/03_query.py
-python scripts/03_query.py --question "takeoff"
-python scripts/03_query.py --list
-python scripts/03_query.py --interactive
-```
-
-### 4. 运行 Hybrid RAG v1
-
-```bash
-# Step 5: 从 extracted.json 构建本地 ChromaDB 向量索引
 python scripts/05_build_vector_index.py
-
-# Step 6: KG + vector 双通道查询
-python scripts/06_hybrid_query.py --question "accidentally flew into clouds"
-python scripts/06_hybrid_query.py --question "pilot incapacitated parachute"
-
-# 可选：在 KG 检索结果上生成 grounded advisor 回复
-python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesize --top-k 1
-python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesis-only --top-k 1 --no-debug
-
-# Step 7: 运行 Hybrid RAG 回归评估
-python scripts/07_eval_hybrid_rag.py
 python scripts/07_eval_hybrid_rag.py --include-synthesis
 ```
 
-`ProcedureStep.step_type` 用于把步骤分成 `immediate_action`、`training_note`、`caution`、`background`，让 synthesis 能把立即动作、训练/准备说明和风险提示分开展示。
+This reads the 35 FAA chapter text chunks in `data/procedures/`, applies targeted re-extraction for known difficult sections, and produces the current 18-procedure KG.
 
-## 文件结构
+### Small Sample Pipeline
 
+Use this only for a quick smoke test:
+
+```bash
+python scripts/01_extract.py
+python scripts/02_validate.py
 ```
+
+This reads only `data/efato_sample.txt` and overwrites `output/extracted.json` with a two-procedure toy sample. It is useful for fast testing, but it is not the full project dataset.
+
+## Demo Commands
+
+Start the local UI demo:
+
+```bash
+python -m uvicorn app.main:app --host 127.0.0.1 --port 8000
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8000
+```
+
+Run a semantic retrieval example:
+
+```bash
+python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --top-k 3 --no-debug
+```
+
+Expected top result:
+
+```text
+Inadvertent VFR Flight Into IMC
+```
+
+Run a grounded synthesis example:
+
+```bash
+python scripts/06_hybrid_query.py --question "accidentally flew into clouds" --synthesis-only --top-k 1 --no-debug
+```
+
+Run the regression evaluation:
+
+```bash
+python scripts/07_eval_hybrid_rag.py --include-synthesis
+```
+
+## Why Hybrid RAG
+
+The system uses two retrieval channels:
+
+- KG retrieval finds exact matches from structured fields such as procedure name, trigger condition, phase, step action, warning, and source evidence.
+- Vector retrieval finds semantic matches when the user does not use the official FAA term.
+
+Example:
+
+```text
+Question: accidentally flew into clouds
+Official procedure: Inadvertent VFR Flight Into IMC
+```
+
+The user does not say `IMC`, but vector retrieval can still find the correct procedure. The final response is then built from validated KG content rather than free-form model memory.
+
+## Step Types
+
+`ProcedureStep.step_type` separates different kinds of procedural content:
+
+```text
+immediate_action
+caution
+training_note
+background
+```
+
+This matters because a pilot-facing response should not mix training notes with immediate emergency actions. For example, practicing turnbacks at a safe altitude is a training note, not an in-flight EFATO action.
+
+## About Golden Instances
+
+A golden instance is a manually reviewed, high-quality procedure instance used as a reference standard.
+
+The next recommended golden instance is:
+
+```text
+Engine Failure After Takeoff (Single-Engine)
+```
+
+It should preserve:
+
+- immediate actions
+- cautions
+- training notes
+- warnings
+- FAA source evidence
+
+Golden instances are not required before building a UI demo. They are mainly useful for improving data quality, checking schema coverage, and making synthesis evaluation stricter.
+
+## Recommended Next Step
+
+For a near-term presentation, build a small UI/demo first.
+
+The UI should demonstrate:
+
+```text
+User question
+  -> top retrieved procedure
+  -> immediate actions
+  -> warnings
+  -> source evidence
+  -> grounded advisor response
+```
+
+Good demo questions:
+
+```text
+accidentally flew into clouds
+smoke in cabin
+engine failure after takeoff
+pilot incapacitated parachute
+landing on snow whiteout
+```
+
+After the demo UI is in place, use EFATO as the first golden instance to fix the remaining synthesis-quality issue and make the system more reliable.
+
+## File Structure
+
+```text
 aviation_prototype/
-├── data/
-│   └── efato_sample.txt        # 样本 FAA 文本 (EFATO + 巡航失效)
-├── schema/
-│   └── emergency_schema.yaml   # LinkML schema — 定义知识结构
-├── shacl/
-│   └── procedure_shapes.ttl    # SHACL shapes — 验证约束
-├── scripts/
-│   ├── 01_extract.py           # 知识提取
-│   ├── 02_validate.py          # 图谱构建 + SHACL 验证
-│   ├── 03_query.py             # 知识图谱查询
-│   ├── 05_build_vector_index.py # 构建 ChromaDB 向量索引
-│   ├── 06_hybrid_query.py      # Hybrid RAG 查询
-│   └── 07_eval_hybrid_rag.py   # Hybrid RAG 回归评估
-├── output/                     # 运行后自动生成
-│   ├── extracted.json          # 提取结果
-│   ├── kg.ttl                  # RDF 知识图谱
-│   ├── validation_report.txt   # SHACL 验证报告
-│   ├── hybrid_eval_report.md   # Hybrid RAG 评估报告
-│   └── vector_index/           # 本地向量索引（不提交）
-└── requirements.txt
+  data/
+    efato_sample.txt
+    procedures/
+      index.txt
+      *.txt
+  schema/
+    emergency_schema.yaml
+  shacl/
+    procedure_shapes.ttl
+  scripts/
+    00_pdf_parse.py
+    01_extract.py
+    02_validate.py
+    03_query.py
+    04_targeted_reextract.py
+    05_build_vector_index.py
+    06_hybrid_query.py
+    07_eval_hybrid_rag.py
+  output/
+    extracted.json
+    kg.ttl
+    validation_report.txt
+    hybrid_eval_report.md
+    vector_index/
+  requirements.txt
 ```
 
 ## LLM Provider
 
-`01_extract.py` 支持两种 provider：
+`01_extract.py` supports OpenAI-compatible providers.
 
-- `OPENAI_API_KEY`：默认使用 OpenAI，默认模型是 `gpt-4o-mini`
-- `GEMINI_API_KEY`：使用 Gemini 的 OpenAI 兼容接口，默认模型是 `gemini-2.5-flash`
-- `OPENAI_BASE_URL`：可选，用于兼容 OpenAI 协议的第三方转发服务
-
-可选环境变量：
+Common environment variables:
 
 ```bash
-LLM_PROVIDER=openai   # 或 gemini
+LLM_PROVIDER=openai
 OPENAI_BASE_URL=https://api.chatanywhere.tech/v1
 MODEL_NAME=gpt-4o-mini
-MODEL_NAME=gemini-2.5-flash
 EMBEDDING_MODEL=text-embedding-3-small
 SYNTHESIS_MODEL=gpt-4o-mini
 ```
 
-## 扩展方向
-
-| 扩展目标 | 做法 |
-|----------|------|
-| 接入真实 FAA PDF | 用 `pdfplumber` 提取文本，替换 `data/` 中的文件 |
-| 加入向量检索 | 加 ChromaDB，实现 Hybrid RAG |
-| Agentic 编排 | 用 LangGraph 包装查询层，支持多轮对话 |
-| 持久化图谱 | 替换 rdflib 为 Neo4j 或 Oxigraph |
+Create `.env` from `.env.example` and add the required API key before running extraction, embedding, or synthesis.
