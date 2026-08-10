@@ -1,0 +1,430 @@
+{
+  "model": "gpt-4o",
+  "provider": "openai",
+  "judge_total_tokens": {
+    "input": 34426,
+    "output": 4939
+  },
+  "scores": [
+    {
+      "cq_id": "CQ001",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 results provide information about emergency landing techniques in various scenarios, such as tree landings, water ditching, and snow landings. However, they do not explicitly address the concepts of using the airplane structure for self-protection and passenger protection, which are central to the expected answer.",
+      "v2_reasoning": "The V2 results are identical to V1 and similarly provide emergency landing techniques for adverse terrain conditions. However, they still lack explicit mention of using the airplane structure for self-protection and passenger protection, which are key concepts required by the CQ.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1364,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "cq_id": "CQ002",
+      "v1_score": 1.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 result clearly identifies a procedure ('Engine Failure After Takeoff (Single-Engine)') and its associated trigger condition ('Engine failure occurs during the initial climb'), which aligns with the expected answer and required concepts of forced landing and engine failure.",
+      "v2_reasoning": "The V2 result is identical to V1, providing the same procedure and trigger condition that directly address the expected answer and required concepts. It is fully relevant and correct.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 722,
+        "completion_tokens": 129
+      }
+    },
+    {
+      "cq_id": "CQ003",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "V1 is unsupported and does not provide any results or relevant query for the CQ.",
+      "v2_reasoning": "V2 query attempts to filter for psychological hazards and decision-making but returns no results. Without any data, it cannot address the CQ.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 590,
+        "completion_tokens": 89
+      }
+    },
+    {
+      "cq_id": "CQ004",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "V1 is marked as UNSUPPORTED, indicating it cannot address the CQ or provide relevant results.",
+      "v2_reasoning": "V2 query execution returned no results, meaning it failed to retrieve any hazards or descriptions related to the required concepts such as nose-low pitch attitude, high sink rate, or structural damage.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 647,
+        "completion_tokens": 102
+      }
+    },
+    {
+      "cq_id": "CQ005",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 results provide information about emergency landing procedures, including conditions like tree landing, water ditching, and snow landing. However, they do not explicitly address the specific factors mentioned in the expected answer, such as route, height, or excess airspeed. The results are partially relevant but lack direct alignment with the CQ's required concepts.",
+      "v2_reasoning": "The V2 results are identical to V1, providing descriptions of emergency landing procedures but failing to directly address the specific factors of route, height, and excess airspeed. While the results are partially relevant, they do not fully satisfy the CQ's requirements.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1278,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "cq_id": "CQ006",
+      "v1_score": 0.5,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 results contain actions related to flap usage, but they lack explicit connection to final approach or detailed precautions regarding maneuverability, stalling speed, or drag. The information is partially relevant but does not fully address the CQ's expected answer or required concepts.",
+      "v2_reasoning": "The V2 results include actions related to flap usage and warnings that provide additional context about precautions, such as stalling speed and operational risks. This aligns well with the expected answer and required concepts, making the results comprehensive and relevant.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 1361,
+        "completion_tokens": 145
+      }
+    },
+    {
+      "cq_id": "CQ007",
+      "v1_score": 0.0,
+      "v2_score": 0.5,
+      "v1_reasoning": "V1 is unsupported and does not provide any results or relevant information for the competency question.",
+      "v2_reasoning": "V2 provides partial relevance by mentioning factors like wind and field selection, but it does not comprehensively address all required concepts such as wind velocity, field dimensions, field slope, or obstacles. The results are tied to specific emergency procedures rather than general approach planning.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 684,
+        "completion_tokens": 117
+      }
+    },
+    {
+      "cq_id": "CQ008",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "V1 is marked as unsupported because it lacks the concepts of terrain or suitability for emergency landings, and no query or results are provided.",
+      "v2_reasoning": "V2 query attempts to filter for actions related to landing or terrain but returns no results. It does not provide any information about suitable terrain types for emergency landings, which is the expected answer.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 559,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "cq_id": "CQ009",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 results include actions related to landing configurations, gear usage, and some emergency procedures, but they do not directly address confined spaces or considerations like avoiding obstacles, ground-looping, or manmade obstacles. The relevance is partial but lacks focus on the CQ's specific context.",
+      "v2_reasoning": "The V2 results provide considerations related to landing gear and flap usage, which partially align with the CQ's required concepts. However, they do not explicitly address confined spaces, avoiding obstacles, or ground-looping, making the relevance partial but not comprehensive.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1228,
+        "completion_tokens": 155
+      }
+    },
+    {
+      "cq_id": "CQ010",
+      "v1_score": 1.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 result provides a comprehensive list of actions and procedures related to executing a tree landing, including all the expected elements such as keeping groundspeed low, avoiding heavy tree trunk contact, ensuring symmetrical initial tree contact, and using the normal landing configuration. This aligns well with the expected answer and required concepts.",
+      "v2_reasoning": "The V2 result is identical to the V1 result, providing the same detailed list of actions and procedures for a tree landing. It fully covers the expected answer and required concepts, including procedures, actions, and conditions.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1139,
+        "completion_tokens": 150
+      }
+    },
+    {
+      "cq_id": "CQ011",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The results for V1 do not address the required concepts of water landing, snow landing, minimum speed, normal landing attitude, or depth perception. Instead, they focus on unrelated procedures such as tree landings and landing gear malfunctions, which are irrelevant to the CQ.",
+      "v2_reasoning": "The results for V2 are identical to V1 and similarly fail to address the required concepts of water landing, snow landing, minimum speed, normal landing attitude, or depth perception. The results focus on unrelated procedures like tree landings and landing gear malfunctions, which do not answer the CQ.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1346,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "cq_id": "CQ012",
+      "v1_score": 0.5,
+      "v2_score": 0.0,
+      "v1_reasoning": "The V1 result includes relevant actions such as 'Lower the nose of the airplane,' which aligns with the expected answer. However, it also includes unrelated actions like 'Practice turns in both directions' and 'Consider turning back,' which introduce noise and do not fully address the required concepts of 'glide attitude' and 'engine failure.'",
+      "v2_reasoning": "The V2 result is empty, providing no information or actions related to the competency question. It fails to address the required concepts or expected answer.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 879,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "cq_id": "CQ013",
+      "v1_score": 1.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 result includes all the required actions for an emergency descent due to an engine fire, such as reducing power to idle, extending landing gear and flaps, and maintaining airspeed within limits. Additional relevant steps are also provided, making the result comprehensive and aligned with the expected answer.",
+      "v2_reasoning": "The V2 result is identical to V1, providing all the necessary actions for an emergency descent due to an engine fire. It includes reducing power to idle, extending landing gear and flaps, and ensuring airspeed remains within limits, along with other relevant steps. The result fully matches the expected answer.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1108,
+        "completion_tokens": 164
+      }
+    },
+    {
+      "cq_id": "CQ014",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 result provides information about an in-flight fire procedure, including the name ('Engine Fire'), a trigger condition, and a source excerpt. However, it does not explicitly reference the AFM/POH, which is a required concept in the expected answer.",
+      "v2_reasoning": "The V2 result similarly provides information about an in-flight fire procedure, including the name ('Engine Fire'), a trigger condition, and a source excerpt. Like V1, it does not explicitly reference the AFM/POH, which is a required concept in the expected answer.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 803,
+        "completion_tokens": 158
+      }
+    },
+    {
+      "cq_id": "CQ015",
+      "v1_score": 0.5,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 query retrieves actions related to 'Engine Fire,' including 'Shut off the fuel supply to the engine' and 'Leave the ignition switch ON,' which partially align with the expected answer. However, it also includes unrelated actions for 'Engine Failure' and 'Electrical Fire,' introducing noise and missing specificity about the engine compartment fire scenario.",
+      "v2_reasoning": "The V2 query specifically filters for actions triggered by an 'engine compartment fire,' yielding relevant steps such as 'Leave the ignition switch ON' and 'Shut off the fuel supply to the engine.' This directly matches the expected answer and avoids irrelevant noise, making it fully correct.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 1117,
+        "completion_tokens": 172
+      }
+    },
+    {
+      "cq_id": "CQ016",
+      "v1_score": 0.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 results focus on procedures for tree landings and landing gear malfunctions, which are unrelated to the CQ about electrical fire procedures. None of the required concepts, such as 'faulty circuit,' 'battery master switch,' or 'alternator/generator switches,' are addressed.",
+      "v2_reasoning": "The V2 results directly address the CQ by listing actions specific to an electrical fire, including turning off the battery master switch and alternator/generator switches, checking circuit breakers, and other relevant steps. These align well with the expected answer and required concepts.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 1179,
+        "completion_tokens": 153
+      }
+    },
+    {
+      "cq_id": "CQ017",
+      "v1_score": 1.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The V1 result includes actions directly related to responding to a cabin fire, such as using oxygen masks, shutting down the faulty system, using a fire extinguisher, and managing smoke through cabin air vents. These align well with the expected answer and required concepts.",
+      "v2_reasoning": "The V2 result is empty, providing no information relevant to the competency question or required concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 935,
+        "completion_tokens": 117
+      }
+    },
+    {
+      "cq_id": "CQ018",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The V1 results do not address the specific scenario of an asymmetric split flap situation during landing. The actions listed pertain to unrelated procedures such as tree landings and landing gear malfunctions, and do not mention the required concepts like asymmetric split flap, higher airspeed, or stall speed.",
+      "v2_reasoning": "The V2 results also fail to address the specific scenario of an asymmetric split flap situation during landing. While the query includes additional filters for terms like 'airspeed' and 'stall,' the results remain focused on unrelated procedures such as tree landings and landing gear malfunctions, without providing the expected actions or concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1333,
+        "completion_tokens": 166
+      }
+    },
+    {
+      "cq_id": "CQ019",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The V1 query returned no results, so it does not provide any information about the actions a pilot can take to maintain pitch control during a loss of elevator control. It fails to address the expected answer or required concepts.",
+      "v2_reasoning": "The V2 query also returned no results, meaning it similarly fails to provide any relevant information about the actions a pilot can take to maintain pitch control during a loss of elevator control. It does not address the expected answer or required concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 691,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "cq_id": "CQ020",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 result includes actions related to landing gear malfunction, such as 'Land with one main gear retracted if necessary' and 'Select an airport with crash and rescue facilities.' However, it does not fully address the specific pilot actions required during landing, such as maintaining a nose-high attitude, wings level, or using full opposite rudder and aggressive braking.",
+      "v2_reasoning": "The V2 result includes actions related to landing gear malfunction, such as 'Use full opposite rudder and aggressive braking after touchdown' and 'Select an airport with crash and rescue facilities.' While it partially aligns with the expected answer, it still lacks details about maintaining a nose-high attitude and wings level during landing.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1299,
+        "completion_tokens": 183
+      }
+    },
+    {
+      "cq_id": "CQ021",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "V1 is marked as UNSUPPORTED, indicating that it lacks the necessary classes or predicates to address the concepts in the competency question.",
+      "v2_reasoning": "V2 query attempts to retrieve descriptions of airspeed indicators, VSI, and altimeters, but the result is empty. It does not provide the expected answer or address the required concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 109
+      }
+    },
+    {
+      "cq_id": "CQ022",
+      "v1_score": 0.0,
+      "v2_score": 0.5,
+      "v1_reasoning": "V1 is marked as unsupported and does not provide any results or structure for abnormal engine instrument indications or corrective actions.",
+      "v2_reasoning": "V2 provides a list of emergency procedures and actions related to engine issues, which partially aligns with the required concepts of corrective actions for abnormal engine instrument indications. However, it does not specifically address abnormal engine instrument indications as described in the CQ, and the results may confuse an end user due to their generality.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 883,
+        "completion_tokens": 132
+      }
+    },
+    {
+      "cq_id": "CQ023",
+      "v1_score": 1.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 result includes actions specifically related to 'Inadvertent Door Opening In-Flight,' such as concentrating on flying the airplane, completing the landing checklist, and making a normal landing. These align well with the expected answer and required concepts.",
+      "v2_reasoning": "The V2 result is identical to V1, providing the same relevant actions for 'Inadvertent Door Opening In-Flight,' including concentrating on flying the airplane, completing the landing checklist, and making a normal landing. This fully addresses the CQ.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1343,
+        "completion_tokens": 144
+      }
+    },
+    {
+      "cq_id": "CQ024",
+      "v1_score": 1.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 result includes actions directly relevant to the CQ, such as recognizing the seriousness of the situation, maintaining control of the airplane, and requesting ATC assistance. These align well with the expected answer and required concepts.",
+      "v2_reasoning": "The V2 result also includes actions that are directly relevant to the CQ, such as maintaining control of the airplane, requesting ATC assistance, and recognizing the seriousness of the situation. It fully addresses the expected answer and required concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1347,
+        "completion_tokens": 135
+      }
+    },
+    {
+      "cq_id": "CQ025",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The result partially aligns with the expected answer. The first row mentions 'Maintain control of the airplane using flight instruments,' which is relevant to the CQ. However, the other rows are unrelated to spatial disorientation and introduce noise, making the result only partially relevant.",
+      "v2_reasoning": "The result is identical to V1, with the same partial relevance. The first row is relevant to the CQ, but the other rows are unrelated and introduce noise, preventing a full score.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 880,
+        "completion_tokens": 139
+      }
+    },
+    {
+      "cq_id": "CQ026",
+      "v1_score": 0.5,
+      "v2_score": 1.0,
+      "v1_reasoning": "The V1 results include emergency procedures and actions, but they lack specific focus on attitude control and the key steps outlined in the expected answer. While some actions like 'Maintain control of the airplane using flight instruments' are partially relevant, the majority of the results are unrelated to the CQ's focus.",
+      "v2_reasoning": "The V2 results are more aligned with the CQ, as they include actions like 'Make all attitude changes smooth and small' and 'Execute a water landing at minimum speed and in a normal landing attitude,' which directly address emergency attitude control. The results also cover broader emergency procedures, making them comprehensive and relevant.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 1285,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "cq_id": "CQ027",
+      "v1_score": 0.0,
+      "v2_score": 0.5,
+      "v1_reasoning": "V1 is unsupported and does not provide any results or relevant information about bank angle limits or safety during turns.",
+      "v2_reasoning": "V2 provides some relevant information about safety concerns during turns, such as risks of spatial disorientation, stalls, and cartwheeling. However, it does not explicitly address the recommended bank angle limits (e.g., 'no more than 10\u00b0') as specified in the expected answer. The results are partially relevant but incomplete.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 1092,
+        "completion_tokens": 136
+      }
+    },
+    {
+      "cq_id": "CQ028",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The result rows do not address the specific actions a pilot must take to achieve a proper climb as described in the expected answer. The rows are related to emergency procedures and contain generic or unrelated actions, such as 'Climb to normal traffic pattern altitude' or 'Reduce power to idle,' which do not align with the required concepts like 'attitude indicator' or 'incremental power adjustment.'",
+      "v2_reasoning": "The V2 results are identical to V1 and suffer from the same issues. The rows do not provide the specific procedural steps for achieving a proper climb, nor do they mention key concepts like 'attitude indicator' or 'incremental power adjustment.' The results are focused on emergency procedures and are not relevant to the CQ.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 875,
+        "completion_tokens": 189
+      }
+    },
+    {
+      "cq_id": "CQ029",
+      "v1_score": 0.0,
+      "v2_score": 0.5,
+      "v1_reasoning": "V1 is marked as UNSUPPORTED, meaning it does not provide any query or results relevant to the competency question.",
+      "v2_reasoning": "V2 retrieves actions related to descent and power reduction in emergency procedures, which partially aligns with the required concepts. However, it does not explicitly address the maximum allowable rate of descent, which is the core of the expected answer.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 672,
+        "completion_tokens": 116
+      }
+    },
+    {
+      "cq_id": "CQ030",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 results partially address the CQ by mentioning concepts like 'untrained pilots' and 'control of the airplane,' but they do not explicitly discuss avoiding combined maneuvers such as climbing or descending turns. The results contain relevant warnings but lack the specific guidance required by the CQ.",
+      "v2_reasoning": "The V2 results are identical to V1 and similarly mention relevant concepts like 'untrained pilots' and 'control of the airplane.' However, they do not explicitly address the avoidance of combined maneuvers, which is central to the CQ. Thus, the results are partially relevant but incomplete.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1229,
+        "completion_tokens": 165
+      }
+    },
+    {
+      "cq_id": "CQ031",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "V1 is marked as UNSUPPORTED, indicating it cannot address the competency question or provide relevant results.",
+      "v2_reasoning": "V2 query execution returned no results, meaning it failed to retrieve any factors related to transitioning from instrument to visual flight as required by the competency question.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 650,
+        "completion_tokens": 96
+      }
+    },
+    {
+      "cq_id": "CQ032",
+      "v1_score": 0.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "V1 is marked as UNSUPPORTED, meaning it cannot handle the query or provide any relevant results for the competency question.",
+      "v2_reasoning": "V2 successfully retrieves the two emergency systems mentioned in the expected answer: 'Ballistic Parachute System' and 'Emergency Autoland System.' The results are directly relevant to the competency question and include the required concepts.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 772,
+        "completion_tokens": 114
+      }
+    },
+    {
+      "cq_id": "CQ033",
+      "v1_score": 0.0,
+      "v2_score": 1.0,
+      "v1_reasoning": "V1 is unsupported because it lacks the necessary classes or predicates to address the conditions for deploying a ballistic parachute system.",
+      "v2_reasoning": "V2 successfully retrieves relevant descriptions that align with the expected answer, including conditions such as catastrophic loss of controllability, actual loss of control, and pilot incapacitation. The results are clear and directly address the CQ.",
+      "structural_win": true,
+      "usage": {
+        "prompt_tokens": 677,
+        "completion_tokens": 112
+      }
+    },
+    {
+      "cq_id": "CQ034",
+      "v1_score": 0.5,
+      "v2_score": 0.5,
+      "v1_reasoning": "The V1 results partially address the CQ by including actions like 'Initiate emergency descent,' which is relevant to the expected answer. However, it misses key actions such as stabilizing the aircraft and initiating an automated landing. Additionally, some actions, like 'Initiate recovery from the emergency descent,' are not directly relevant to pilot incapacitation, introducing noise.",
+      "v2_reasoning": "The V2 results also partially address the CQ by including relevant actions like 'Initiate emergency descent' and 'Broadcast position and intention to land.' However, it includes unrelated actions such as those related to 'Ballistic Parachute Deployment,' which are not relevant to the EAL system or pilot incapacitation. Key actions like stabilizing the aircraft and initiating an automated landing are still missing.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 1082,
+        "completion_tokens": 198
+      }
+    },
+    {
+      "cq_id": "CQ035",
+      "v1_score": 0.0,
+      "v2_score": 0.0,
+      "v1_reasoning": "The V1 query returned no results, meaning it failed to provide any information related to the expected answer or required concepts such as pitot-static system failure, emergency procedures, or IFR flight.",
+      "v2_reasoning": "The V2 query also returned no results, indicating it did not retrieve any relevant data to address the competency question or cover the required concepts.",
+      "structural_win": false,
+      "usage": {
+        "prompt_tokens": 736,
+        "completion_tokens": 111
+      }
+    }
+  ]
+}

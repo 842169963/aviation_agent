@@ -1,0 +1,395 @@
+{
+  "model": "gpt-4o-mini",
+  "provider": "openai",
+  "generator_total_tokens": {
+    "input": 76184,
+    "output": 8522
+  },
+  "queries": [
+    {
+      "cq_id": "CQ001",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\") || CONTAINS(LCASE(STR(?action)), \"protection\"))\n} LIMIT 20",
+      "notes": "Both queries focus on emergency procedures and actions, with V2 potentially capturing more relevant techniques.",
+      "usage": {
+        "prompt_tokens": 2183,
+        "completion_tokens": 254
+      }
+    },
+    {
+      "cq_id": "CQ002",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"forced landing\") || CONTAINS(LCASE(STR(?triggerCondition)), \"engine failure\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerCondition .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"forced landing\") || CONTAINS(LCASE(STR(?triggerCondition)), \"engine failure\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve trigger conditions related to forced landings and engine failures.",
+      "usage": {
+        "prompt_tokens": 2144,
+        "completion_tokens": 242
+      }
+    },
+    {
+      "cq_id": "CQ003",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a class for psychological hazards or factors affecting decision-making.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?hazardName ?description WHERE {\n  ?h a av:Hazard ; av:name ?hazardName ; av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"psychological\") || CONTAINS(LCASE(STR(?description)), \"decision-making\"))\n} LIMIT 20",
+      "notes": "V1 lacks the necessary structure to address psychological factors; V2 can filter hazards based on descriptions.",
+      "usage": {
+        "prompt_tokens": 2177,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "cq_id": "CQ004",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a structure to express risks or causes related to specific pitch attitudes or sink rates.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?hazardName ?description WHERE {\n  ?h a av:Hazard ; av:name ?hazardName ; av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"nose-low pitch attitude\") || CONTAINS(LCASE(STR(?description)), \"high sink rate\") || CONTAINS(LCASE(STR(?description)), \"emergency landing\") || CONTAINS(LCASE(STR(?description)), \"structural damage\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve hazards with descriptions that mention the required concepts, while V1 lacks the necessary structure.",
+      "usage": {
+        "prompt_tokens": 2193,
+        "completion_tokens": 198
+      }
+    },
+    {
+      "cq_id": "CQ005",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"landing\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"route\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"height\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"airspeed\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerCondition ; av:hasEvidence ?e .\n  ?e av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"landing\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"route\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"height\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"airspeed\"))\n} LIMIT 20",
+      "notes": "Both queries aim to retrieve relevant procedures and conditions, but V2 provides a more structured approach with trigger conditions and evidence.",
+      "usage": {
+        "prompt_tokens": 2170,
+        "completion_tokens": 339
+      }
+    },
+    {
+      "cq_id": "CQ006",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"flap\") || CONTAINS(LCASE(STR(?procName)), \"final approach\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action ?warning WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  OPTIONAL { ?p av:hasWarning ?w . ?w av:description ?warning . }\n  FILTER(CONTAINS(LCASE(STR(?action)), \"flap\") || CONTAINS(LCASE(STR(?procName)), \"final approach\"))\n} LIMIT 20",
+      "notes": "Both queries focus on procedures and actions related to flap usage; V2 includes warnings for additional context.",
+      "usage": {
+        "prompt_tokens": 2189,
+        "completion_tokens": 271
+      }
+    },
+    {
+      "cq_id": "CQ007",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have specific predicates or classes to express factors related to landing approaches.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?factor WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?factor .\n  FILTER(CONTAINS(LCASE(STR(?factor)), \"wind\") || CONTAINS(LCASE(STR(?factor)), \"field\") || CONTAINS(LCASE(STR(?factor)), \"obstacle\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve factors related to landing procedures, while V1 lacks the necessary structure.",
+      "usage": {
+        "prompt_tokens": 2182,
+        "completion_tokens": 179
+      }
+    },
+    {
+      "cq_id": "CQ008",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a concept of terrain or suitability for emergency landings.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?terrainType WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve emergency procedures related to landing actions, but does not explicitly define suitable terrain types.",
+      "usage": {
+        "prompt_tokens": 2142,
+        "completion_tokens": 157
+      }
+    },
+    {
+      "cq_id": "CQ009",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"obstacle\") || CONTAINS(LCASE(STR(?action)), \"ground-looping\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?consideration WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?consideration .\n  FILTER(CONTAINS(LCASE(STR(?consideration)), \"landing area\") || CONTAINS(LCASE(STR(?consideration)), \"obstacle\") || CONTAINS(LCASE(STR(?consideration)), \"ground-looping\") || CONTAINS(LCASE(STR(?consideration)), \"landing gear\") || CONTAINS(LCASE(STR(?consideration)), \"manmade obstacles\"))\n} LIMIT 20",
+      "notes": "Both queries aim to retrieve considerations related to landing areas, with V2 potentially providing more structured information.",
+      "usage": {
+        "prompt_tokens": 2209,
+        "completion_tokens": 328
+      }
+    },
+    {
+      "cq_id": "CQ010",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"tree landing\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"tree landing\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve procedures related to tree landing; V2 may provide more context but the query structure is similar.",
+      "usage": {
+        "prompt_tokens": 2170,
+        "completion_tokens": 224
+      }
+    },
+    {
+      "cq_id": "CQ011",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"water\") || CONTAINS(LCASE(STR(?action)), \"snow\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; (av:hasStep|av:hasHazard|av:hasWarning|av:hasTriggerCondition) ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"water\") || CONTAINS(LCASE(STR(?action)), \"snow\"))\n} LIMIT 20",
+      "notes": "Both queries focus on procedures related to landings, with V2 potentially providing more context through additional relationships.",
+      "usage": {
+        "prompt_tokens": 2191,
+        "completion_tokens": 291
+      }
+    },
+    {
+      "cq_id": "CQ012",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"engine failure\") || CONTAINS(LCASE(STR(?action)), \"glide attitude\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"engine failure\") && CONTAINS(LCASE(STR(?action)), \"glide attitude\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to engine failure and glide attitude; V2 uses trigger conditions for more specific context.",
+      "usage": {
+        "prompt_tokens": 2163,
+        "completion_tokens": 274
+      }
+    },
+    {
+      "cq_id": "CQ013",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?tc ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"emergency descent\") || CONTAINS(LCASE(STR(?tc)), \"engine fire\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step ; av:hasTriggerCondition ?tc .\n  ?step av:action ?action .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"emergency descent\") || CONTAINS(LCASE(STR(?desc)), \"engine fire\"))\n} LIMIT 20",
+      "notes": "Both queries retrieve procedures related to emergency descent and engine fire; V2 uses a more structured approach with trigger conditions.",
+      "usage": {
+        "prompt_tokens": 2175,
+        "completion_tokens": 278
+      }
+    },
+    {
+      "cq_id": "CQ014",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"fire\") && CONTAINS(LCASE(STR(?triggerCondition)), \"in-flight\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerConditionText ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerConditionText ; av:hasAircraftState ?as .\n  ?as av:description ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerConditionText)), \"fire\") && CONTAINS(LCASE(STR(?triggerConditionText)), \"in-flight\"))\n} LIMIT 20",
+      "notes": "Both queries retrieve procedures related to in-flight fires, but V2 provides a more structured approach with aircraft states.",
+      "usage": {
+        "prompt_tokens": 2158,
+        "completion_tokens": 281
+      }
+    },
+    {
+      "cq_id": "CQ015",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"engine\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step ; av:hasTriggerCondition ?tc .\n  ?step av:action ?action .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"engine compartment fire\"))\n} LIMIT 20",
+      "notes": "Both queries aim to retrieve actions related to engine fires; V2 uses trigger conditions for more specific context.",
+      "usage": {
+        "prompt_tokens": 2181,
+        "completion_tokens": 250
+      }
+    },
+    {
+      "cq_id": "CQ016",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"landing\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"electrical fire\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to fire and landing, while V2 specifically targets procedures for electrical fire detection.",
+      "usage": {
+        "prompt_tokens": 2200,
+        "completion_tokens": 255
+      }
+    },
+    {
+      "cq_id": "CQ017",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"cabin\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action ?sysName WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasHazard ?h .\n  ?h av:name ?hazardName .\n  ?h av:affectedSystem ?s .\n  ?s av:name ?sysName .\n  FILTER(CONTAINS(LCASE(STR(?hazardName)), \"cabin fire\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to cabin fire procedures; V2 connects actions to hazards and affected systems.",
+      "usage": {
+        "prompt_tokens": 2194,
+        "completion_tokens": 284
+      }
+    },
+    {
+      "cq_id": "CQ018",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"asymmetric split flap\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"asymmetric split flap\") || CONTAINS(LCASE(STR(?action)), \"airspeed\") || CONTAINS(LCASE(STR(?action)), \"stall\"))\n} LIMIT 20",
+      "notes": "Both queries focus on retrieving actions related to landing and asymmetric split flap situations; V2 has more flexibility in filtering actions.",
+      "usage": {
+        "prompt_tokens": 2183,
+        "completion_tokens": 282
+      }
+    },
+    {
+      "cq_id": "CQ019",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"pitch\") || CONTAINS(LCASE(STR(?action)), \"elevator\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:hasAircraftState ?as .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"pitch\") || CONTAINS(LCASE(STR(?action)), \"elevator\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to emergency procedures, while V2 connects actions to specific aircraft states.",
+      "usage": {
+        "prompt_tokens": 2165,
+        "completion_tokens": 268
+      }
+    },
+    {
+      "cq_id": "CQ020",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve actions related to landing procedures, but V2 may provide more context.",
+      "usage": {
+        "prompt_tokens": 2184,
+        "completion_tokens": 245
+      }
+    },
+    {
+      "cq_id": "CQ021",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have classes or predicates related to airspeed indicators, VSI, altimeter, or pitot-static systems.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?indicator ?description WHERE {\n  { ?indicator a av:AircraftSystem ; av:name ?name . FILTER(CONTAINS(LCASE(STR(?name)), \"airspeed\") || CONTAINS(LCASE(STR(?name)), \"vsi\") || CONTAINS(LCASE(STR(?name)), \"altimeter\")) }\n  ?indicator av:description ?description .\n} LIMIT 20",
+      "notes": "V2 can retrieve descriptions of the relevant aircraft systems, while V1 lacks the necessary structure.",
+      "usage": {
+        "prompt_tokens": 2204,
+        "completion_tokens": 179
+      }
+    },
+    {
+      "cq_id": "CQ022",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a structure for abnormal engine instrument indications or corrective actions; it only contains emergency procedures and steps.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"engine\") || CONTAINS(LCASE(STR(?action)), \"corrective\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve actions related to engine procedures, while V1 lacks the necessary structure.",
+      "usage": {
+        "prompt_tokens": 2162,
+        "completion_tokens": 173
+      }
+    },
+    {
+      "cq_id": "CQ023",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"door\") || CONTAINS(LCASE(STR(?action)), \"landing\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"door\") || CONTAINS(LCASE(STR(?action)), \"landing\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve actions related to procedures involving doors and landing, but V2 may provide more structured context.",
+      "usage": {
+        "prompt_tokens": 2180,
+        "completion_tokens": 249
+      }
+    },
+    {
+      "cq_id": "CQ024",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?procName)), \"vfr\") || CONTAINS(LCASE(STR(?action)), \"assistance\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "...",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"imc\") || CONTAINS(LCASE(STR(?procName)), \"vfr\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to VFR and control, while V2 directly links procedures to IMC trigger conditions.",
+      "usage": {
+        "prompt_tokens": 2173,
+        "completion_tokens": 289
+      }
+    },
+    {
+      "cq_id": "CQ025",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?action)), \"disorientation\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "...",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?action)), \"disorientation\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve actions related to maintaining control during disorientation, but V2 may provide more context.",
+      "usage": {
+        "prompt_tokens": 2160,
+        "completion_tokens": 249
+      }
+    },
+    {
+      "cq_id": "CQ026",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?procName)), \"emergency\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"attitude\") || CONTAINS(LCASE(STR(?procName)), \"emergency\"))\n} LIMIT 20",
+      "notes": "Both queries focus on emergency procedures and their steps, but V2 may provide more specific context regarding attitude control.",
+      "usage": {
+        "prompt_tokens": 2182,
+        "completion_tokens": 248
+      }
+    },
+    {
+      "cq_id": "CQ027",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a concept for bank angle limits or related safety recommendations.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?limit WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"turn\") || CONTAINS(LCASE(STR(?action)), \"bank angle\"))\n  OPTIONAL { ?p av:hasWarning ?w . ?w av:description ?limit . }\n} LIMIT 20",
+      "notes": "V2 can potentially retrieve procedures related to turns and bank angles, while V1 lacks relevant concepts.",
+      "usage": {
+        "prompt_tokens": 2164,
+        "completion_tokens": 188
+      }
+    },
+    {
+      "cq_id": "CQ028",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"climb\") || CONTAINS(LCASE(STR(?action)), \"power\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"climb\") || CONTAINS(LCASE(STR(?action)), \"power\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve actions related to climbing and power application, but V2 may have more contextual information.",
+      "usage": {
+        "prompt_tokens": 2188,
+        "completion_tokens": 248
+      }
+    },
+    {
+      "cq_id": "CQ029",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not contain information about descent rates or power reduction; it lacks relevant predicates.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"descent\") || CONTAINS(LCASE(STR(?action)), \"power reduction\"))\n} LIMIT 20",
+      "notes": "V2 queries for procedures related to descent and power reduction, while V1 lacks relevant data.",
+      "usage": {
+        "prompt_tokens": 2154,
+        "completion_tokens": 168
+      }
+    },
+    {
+      "cq_id": "CQ030",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?warningDesc WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasWarning ?w .\n  ?w av:description ?warningDesc .\n  FILTER(CONTAINS(LCASE(STR(?warningDesc)), \"untrained\") || CONTAINS(LCASE(STR(?warningDesc)), \"combined maneuvers\") || CONTAINS(LCASE(STR(?warningDesc)), \"control\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?warningDesc WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasWarning ?w .\n  ?w av:description ?warningDesc .\n  FILTER(CONTAINS(LCASE(STR(?warningDesc)), \"untrained\") || CONTAINS(LCASE(STR(?warningDesc)), \"combined maneuvers\") || CONTAINS(LCASE(STR(?warningDesc)), \"control\"))\n} LIMIT 20",
+      "notes": "Both V1 and V2 can retrieve warnings related to the question, focusing on descriptions that mention the relevant keywords.",
+      "usage": {
+        "prompt_tokens": 2170,
+        "completion_tokens": 290
+      }
+    },
+    {
+      "cq_id": "CQ031",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a structure to express factors related to transitioning from instrument to visual flight.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?factor WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"transition\") || CONTAINS(LCASE(STR(?action)), \"visual flight\") || CONTAINS(LCASE(STR(?action)), \"acclimatization\") || CONTAINS(LCASE(STR(?action)), \"geographical orientation\") || CONTAINS(LCASE(STR(?action)), \"altitude\") || CONTAINS(LCASE(STR(?action)), \"visibility\"))\n} LIMIT 20",
+      "notes": "V2 can filter actions related to the transition, while V1 lacks relevant factors.",
+      "usage": {
+        "prompt_tokens": 2171,
+        "completion_tokens": 219
+      }
+    },
+    {
+      "cq_id": "CQ032",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a class for emergency systems or a way to express deployment relationships.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?sysName WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:relatesToSystem ?s .\n  ?s av:name ?sysName .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"engine failure\") || CONTAINS(LCASE(STR(?sysName)), \"ballistic parachute\") || CONTAINS(LCASE(STR(?sysName)), \"emergency autoland\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve emergency systems related to engine failure through procedures, while V1 lacks the necessary structure.",
+      "usage": {
+        "prompt_tokens": 2164,
+        "completion_tokens": 208
+      }
+    },
+    {
+      "cq_id": "CQ033",
+      "v1_query": "UNSUPPORTED",
+      "v1_unsupported_reason": "V1 does not have a class or predicate related to conditions necessitating the deployment of a ballistic parachute system.",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?triggerCondition ?description WHERE {\n  ?p a av:EmergencyProcedure ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"ballistic parachute\") || CONTAINS(LCASE(STR(?description)), \"loss of controllability\") || CONTAINS(LCASE(STR(?description)), \"pilot incapacitation\"))\n} LIMIT 20",
+      "notes": "V2 can retrieve trigger conditions related to emergency procedures, while V1 lacks relevant structure.",
+      "usage": {
+        "prompt_tokens": 2168,
+        "completion_tokens": 187
+      }
+    },
+    {
+      "cq_id": "CQ034",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"eal\") || CONTAINS(LCASE(STR(?action)), \"emergency descent\") || CONTAINS(LCASE(STR(?action)), \"automated landing\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  ?p av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"pilot incapacitation\"))\n} LIMIT 20",
+      "notes": "V1 retrieves actions related to EAL procedures, while V2 directly links actions to the trigger condition of pilot incapacitation.",
+      "usage": {
+        "prompt_tokens": 2192,
+        "completion_tokens": 278
+      }
+    },
+    {
+      "cq_id": "CQ035",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"pitot-static\") || CONTAINS(LCASE(STR(?procName)), \"IFR\"))\n} LIMIT 20",
+      "v1_unsupported_reason": "",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc ; av:hasStep ?step .\n  ?tc av:description ?triggerCondition .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"pitot-static\") || CONTAINS(LCASE(STR(?procName)), \"IFR\"))\n} LIMIT 20",
+      "notes": "Both queries aim to retrieve emergency procedures related to pitot-static system failures during IFR flight, with V2 utilizing a more structured approach.",
+      "usage": {
+        "prompt_tokens": 2199,
+        "completion_tokens": 292
+      }
+    }
+  ]
+}

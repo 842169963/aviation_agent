@@ -1,0 +1,2359 @@
+{
+  "results": [
+    {
+      "cq_id": "CQ001",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\") || CONTAINS(LCASE(STR(?action)), \"protection\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 15,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Fly a normal traffic pattern and make a normal landing"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Complete all items on the landing checklist"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Avoid excessive speed during landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Avoid excessive flaring during landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Release forward pressure to flare for landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Increase back pressure to flare for landing"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 15,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Complete all items on the landing checklist"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Fly a normal traffic pattern and make a normal landing"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Avoid excessive speed during landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Avoid excessive flaring during landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Release forward pressure to flare for landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Increase back pressure to flare for landing"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ002",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"forced landing\") || CONTAINS(LCASE(STR(?triggerCondition)), \"engine failure\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerCondition .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"forced landing\") || CONTAINS(LCASE(STR(?triggerCondition)), \"engine failure\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 1,
+        "rows": [
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "triggerCondition": "Engine failure occurs during the initial climb"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 1,
+        "rows": [
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "triggerCondition": "Engine failure occurs during the initial climb"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ003",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?hazardName ?description WHERE {\n  ?h a av:Hazard ; av:name ?hazardName ; av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"psychological\") || CONTAINS(LCASE(STR(?description)), \"decision-making\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a class for psychological hazards or factors affecting decision-making."
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ004",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?hazardName ?description WHERE {\n  ?h a av:Hazard ; av:name ?hazardName ; av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"nose-low pitch attitude\") || CONTAINS(LCASE(STR(?description)), \"high sink rate\") || CONTAINS(LCASE(STR(?description)), \"emergency landing\") || CONTAINS(LCASE(STR(?description)), \"structural damage\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a structure to express risks or causes related to specific pitch attitudes or sink rates."
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ005",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"landing\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"route\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"height\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"airspeed\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerCondition ; av:hasEvidence ?e .\n  ?e av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"landing\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"route\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"height\") || CONTAINS(LCASE(STR(?sourceExcerpt)), \"airspeed\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 4,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "triggerCondition": "Emergency landing in a forested area",
+            "sourceExcerpt": "Although a tree landing is not an attractive prospect, the following general guidelines help to make the experience survivable."
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "triggerCondition": "Landing gear has malfunctioned and refuses to respond to extension methods",
+            "sourceExcerpt": "Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond to the conventional or alternate methods of gear extension contained in the AFM/POH, a gear-up landing is considered inevitable."
+          },
+          {
+            "procName": "Water Ditching",
+            "triggerCondition": "Water landing",
+            "sourceExcerpt": "A well-executed water landing normally involves less deceleration violence than a poor tree landing or a touchdown on extremely rough terrain."
+          },
+          {
+            "procName": "Snow Landing",
+            "triggerCondition": "Snow landing",
+            "sourceExcerpt": "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception."
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 4,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "triggerCondition": "Emergency landing in a forested area",
+            "sourceExcerpt": "Although a tree landing is not an attractive prospect, the following general guidelines help to make the experience survivable."
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "triggerCondition": "Landing gear has malfunctioned and refuses to respond to extension methods",
+            "sourceExcerpt": "Once the pilot has confirmed that the landing gear has in fact malfunctioned and that one or more gear legs refuses to respond to the conventional or alternate methods of gear extension contained in the AFM/POH, a gear-up landing is considered inevitable."
+          },
+          {
+            "procName": "Water Ditching",
+            "triggerCondition": "Water landing",
+            "sourceExcerpt": "A well-executed water landing normally involves less deceleration violence than a poor tree landing or a touchdown on extremely rough terrain."
+          },
+          {
+            "procName": "Snow Landing",
+            "triggerCondition": "Snow landing",
+            "sourceExcerpt": "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ006",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"flap\") || CONTAINS(LCASE(STR(?procName)), \"final approach\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action ?warning WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  OPTIONAL { ?p av:hasWarning ?w . ?w av:description ?warning . }\n  FILTER(CONTAINS(LCASE(STR(?action)), \"flap\") || CONTAINS(LCASE(STR(?procName)), \"final approach\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 7,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Use no more than intermediate flaps on low-wing airplanes."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Touchdown at a safe margin above flaps-up stall speed"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 8,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)",
+            "warning": null
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension",
+            "warning": "The electrically-powered landing gear and flaps do not function properly on the power left in a partially-depleted battery."
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Use no more than intermediate flaps on low-wing airplanes.",
+            "warning": null
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed",
+            "warning": "Prolonged practice of emergency descents should be avoided to prevent excessive cooling of the engine cylinders."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer",
+            "warning": "Prolonged practice of emergency descents should be avoided to prevent excessive cooling of the engine cylinders."
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing",
+            "warning": "Approaching the runway in a relatively nose-high attitude can cause serious errors in judgment of height and distance."
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing",
+            "warning": "Without flaps, the airplane tends to float considerably during roundout."
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Touchdown at a safe margin above flaps-up stall speed",
+            "warning": "Do not attempt to land with a crosswind from the side of the deployed flap."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ007",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?factor WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?factor .\n  FILTER(CONTAINS(LCASE(STR(?factor)), \"wind\") || CONTAINS(LCASE(STR(?factor)), \"field\") || CONTAINS(LCASE(STR(?factor)), \"obstacle\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have specific predicates or classes to express factors related to landing approaches."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 2,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "factor": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "factor": "Select a field directly ahead or slightly to the side of the takeoff path"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ008",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?terrainType WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"terrain\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a concept of terrain or suitability for emergency landings."
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ009",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"obstacle\") || CONTAINS(LCASE(STR(?action)), \"ground-looping\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?consideration WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?consideration .\n  FILTER(CONTAINS(LCASE(STR(?consideration)), \"landing area\") || CONTAINS(LCASE(STR(?consideration)), \"obstacle\") || CONTAINS(LCASE(STR(?consideration)), \"ground-looping\") || CONTAINS(LCASE(STR(?consideration)), \"landing gear\") || CONTAINS(LCASE(STR(?consideration)), \"manmade obstacles\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 17,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Fly a normal traffic pattern and make a normal landing"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Complete all items on the landing checklist"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Keep retractable gear up unless advised otherwise by the AFM/POH."
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Avoid excessive speed during landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Avoid excessive flaring during landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Release forward pressure to flare for landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Increase back pressure to flare for landing"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Electrical System Failure",
+            "consideration": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Emergency Descent",
+            "consideration": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "consideration": "Extend landing gear and flaps as recommended by the manufacturer"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ010",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"tree landing\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"tree landing\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 8,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 8,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ011",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"water\") || CONTAINS(LCASE(STR(?action)), \"snow\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; (av:hasStep|av:hasHazard|av:hasWarning|av:hasTriggerCondition) ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"water\") || CONTAINS(LCASE(STR(?action)), \"snow\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 16,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 16,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ012",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"engine failure\") || CONTAINS(LCASE(STR(?action)), \"glide attitude\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"engine failure\") && CONTAINS(LCASE(STR(?action)), \"glide attitude\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 5,
+        "rows": [
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Lower the nose of the airplane"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Select a field directly ahead or slightly to the side of the takeoff path"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Practice turns in both directions at a safe altitude"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Consider turning back toward the point of departure if conditions allow"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Do not attempt a turn back unless a successful turn back will result"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ013",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?tc ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"emergency descent\") || CONTAINS(LCASE(STR(?tc)), \"engine fire\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step ; av:hasTriggerCondition ?tc .\n  ?step av:action ?action .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"emergency descent\") || CONTAINS(LCASE(STR(?desc)), \"engine fire\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 6,
+        "rows": [
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Establish a bank of approximately 30 to 45\u00b0"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Comply with design maneuvering speed (V A) limitations if in turbulent conditions"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 6,
+        "rows": [
+          {
+            "procName": "Emergency Descent",
+            "action": "Comply with design maneuvering speed (V A) limitations if in turbulent conditions"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Establish a bank of approximately 30 to 45\u00b0"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ014",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:source_excerpt ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"fire\") && CONTAINS(LCASE(STR(?triggerCondition)), \"in-flight\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerConditionText ?sourceExcerpt WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?triggerConditionText ; av:hasAircraftState ?as .\n  ?as av:description ?sourceExcerpt .\n  FILTER(CONTAINS(LCASE(STR(?triggerConditionText)), \"fire\") && CONTAINS(LCASE(STR(?triggerConditionText)), \"in-flight\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 1,
+        "rows": [
+          {
+            "procName": "Engine Fire",
+            "triggerCondition": "In-flight engine compartment fire indicated by smoke or flames",
+            "sourceExcerpt": "By the time a pilot becomes aware of an in-flight engine compartment fire, it usually is well developed."
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 1,
+        "rows": [
+          {
+            "procName": "Engine Fire",
+            "triggerConditionText": "In-flight engine compartment fire indicated by smoke or flames",
+            "sourceExcerpt": "In-flight engine compartment fire indicated by smoke or flames"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ015",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"engine\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step ; av:hasTriggerCondition ?tc .\n  ?step av:action ?action .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"engine compartment fire\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 11,
+        "rows": [
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Lower the nose of the airplane"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Select a field directly ahead or slightly to the side of the takeoff path"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Practice turns in both directions at a safe altitude"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Consider turning back toward the point of departure if conditions allow"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Do not attempt a turn back unless a successful turn back will result"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Shut off the fuel supply to the engine"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Do not shut off the electrical master switch unless necessary"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Consider stopping the propeller rotation"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Leave the ignition switch ON"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Select electrical switches that were ON before the fire indication one at a time"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Use the fire extinguisher if available"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 4,
+        "rows": [
+          {
+            "procName": "Engine Fire",
+            "action": "Leave the ignition switch ON"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Shut off the fuel supply to the engine"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Do not shut off the electrical master switch unless necessary"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Consider stopping the propeller rotation"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ016",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"landing\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"electrical fire\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 17,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Select electrical switches that were ON before the fire indication one at a time"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Use the fire extinguisher if available"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 6,
+        "rows": [
+          {
+            "procName": "Electrical Fire",
+            "action": "Turn all individual electrical switches OFF"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Select electrical switches that were ON before the fire indication one at a time"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Turn off the battery master switch and alternator/generator switches"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Turn the electrical master switch OFF"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Turn the master switch back ON"
+          },
+          {
+            "procName": "Electrical Fire",
+            "action": "Check circuit breakers, instruments, avionics, and lights"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ017",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"fire\") || CONTAINS(LCASE(STR(?procName)), \"cabin\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action ?sysName WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasHazard ?h .\n  ?h av:name ?hazardName .\n  ?h av:affectedSystem ?s .\n  ?s av:name ?sysName .\n  FILTER(CONTAINS(LCASE(STR(?hazardName)), \"cabin fire\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 7,
+        "rows": [
+          {
+            "procName": "Electrical Fire",
+            "action": "Select electrical switches that were ON before the fire indication one at a time"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Use oxygen masks if smoke is severe"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Close cabin air vents if smoke increases"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Identify and shut down the faulty system"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Use the fire extinguisher if available"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Initiate an emergency descent if smoke is intense"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Open cabin air vents to purge smoke and fumes"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ018",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"asymmetric split flap\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"asymmetric split flap\") || CONTAINS(LCASE(STR(?action)), \"airspeed\") || CONTAINS(LCASE(STR(?action)), \"stall\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 15,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 18,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Fly approach at higher than normal airspeed"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Touchdown at a safe margin above flaps-up stall speed"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ019",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"pitch\") || CONTAINS(LCASE(STR(?action)), \"elevator\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:hasAircraftState ?as .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"pitch\") || CONTAINS(LCASE(STR(?action)), \"elevator\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ020",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"landing\") || CONTAINS(LCASE(STR(?action)), \"gear\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 19,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Keep retractable gear up unless advised otherwise by the AFM/POH."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 19,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Avoid direct contact of the fuselage with heavy tree trunks"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Head into the wind to keep groundspeed low"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Aim for low, closely spaced trees with wide, dense crowns"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Ensure initial tree contact is symmetrical"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Make contact at minimum indicated airspeed, but not below stall speed"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Direct the airplane between two properly spaced trees if heavy trunk contact is unavoidable"
+          },
+          {
+            "procName": "Tree Landing",
+            "action": "Involve the underside of the fuselage and both wings in the initial tree contact"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Select an airport with crash and rescue facilities"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Use full opposite rudder and aggressive braking after touchdown"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Land with one main gear retracted if necessary"
+          },
+          {
+            "procName": "Landing Gear Malfunction",
+            "action": "Consider burning off excess fuel"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Keep retractable gear up unless advised otherwise by the AFM/POH."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Be aware of loss of depth perception (white out) in reduced visibility."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ021",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?indicator ?description WHERE {\n  { ?indicator a av:AircraftSystem ; av:name ?name . FILTER(CONTAINS(LCASE(STR(?name)), \"airspeed\") || CONTAINS(LCASE(STR(?name)), \"vsi\") || CONTAINS(LCASE(STR(?name)), \"altimeter\")) }\n  ?indicator av:description ?description .\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have classes or predicates related to airspeed indicators, VSI, altimeter, or pitot-static systems."
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ022",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"engine\") || CONTAINS(LCASE(STR(?action)), \"corrective\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a structure for abnormal engine instrument indications or corrective actions; it only contains emergency procedures and steps."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 9,
+        "rows": [
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Select a field directly ahead or slightly to the side of the takeoff path"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Consider turning back toward the point of departure if conditions allow"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Lower the nose of the airplane"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Practice turns in both directions at a safe altitude"
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "action": "Do not attempt a turn back unless a successful turn back will result"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Leave the ignition switch ON"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Shut off the fuel supply to the engine"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Do not shut off the electrical master switch unless necessary"
+          },
+          {
+            "procName": "Engine Fire",
+            "action": "Consider stopping the propeller rotation"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ023",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"door\") || CONTAINS(LCASE(STR(?action)), \"landing\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"door\") || CONTAINS(LCASE(STR(?action)), \"landing\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 19,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Concentrate on flying the airplane"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Fly a normal traffic pattern and make a normal landing"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Land as soon as practicable and close the door once safely on the ground"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Complete all items on the landing checklist"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Climb to normal traffic pattern altitude"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Leave the door alone and do not release the seat belt"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Avoid excessive speed during landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Avoid excessive flaring during landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Release forward pressure to flare for landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Increase back pressure to flare for landing"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 19,
+        "rows": [
+          {
+            "procName": "Tree Landing",
+            "action": "Use the normal landing configuration (full flaps, gear down)"
+          },
+          {
+            "procName": "Electrical System Failure",
+            "action": "Plan for a no-flap landing and anticipate manual landing gear extension"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Complete all items on the landing checklist"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Concentrate on flying the airplane"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Climb to normal traffic pattern altitude"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Land as soon as practicable and close the door once safely on the ground"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Fly a normal traffic pattern and make a normal landing"
+          },
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Leave the door alone and do not release the seat belt"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Execute a snow landing like a ditching."
+          },
+          {
+            "procName": "Snow Landing",
+            "action": "Maintain the same configuration as for water landing."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Execute a no-flap approach and landing"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Avoid excessive speed during landing"
+          },
+          {
+            "procName": "Asymmetric Split Flap",
+            "action": "Avoid excessive flaring during landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Release forward pressure to flare for landing"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Increase back pressure to flare for landing"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ024",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?procName)), \"vfr\") || CONTAINS(LCASE(STR(?action)), \"assistance\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"imc\") || CONTAINS(LCASE(STR(?procName)), \"vfr\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 10,
+        "rows": [
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Recognize and accept the seriousness of the situation and the need for immediate remedial action"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Keep the wings level"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Avoid combined maneuvers such as climbing or descending turns"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Transition to visual flight when conditions allow"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Request ATC assistance if necessary"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Make all attitude changes smooth and small"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Maintain control of the airplane using flight instruments"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Trim the airplane to maintain hands-off level flight"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Push the control yoke forward to attain and maintain desired attitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Pull the control yoke aft to attain and maintain attitude"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 8,
+        "rows": [
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Maintain control of the airplane using flight instruments"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Request ATC assistance if necessary"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Transition to visual flight when conditions allow"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Trim the airplane to maintain hands-off level flight"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Recognize and accept the seriousness of the situation and the need for immediate remedial action"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Keep the wings level"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Make all attitude changes smooth and small"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Avoid combined maneuvers such as climbing or descending turns"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ025",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?action)), \"disorientation\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?action)), \"disorientation\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Maintain control of the airplane using flight instruments"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Push the control yoke forward to attain and maintain desired attitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Pull the control yoke aft to attain and maintain attitude"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Maintain control of the airplane using flight instruments"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Push the control yoke forward to attain and maintain desired attitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Pull the control yoke aft to attain and maintain attitude"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ026",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"control\") || CONTAINS(LCASE(STR(?procName)), \"emergency\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"attitude\") || CONTAINS(LCASE(STR(?procName)), \"emergency\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 14,
+        "rows": [
+          {
+            "procName": "Emergency Autoland",
+            "action": "Set transponder to squawk 7700"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Broadcast position and intention to land"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Initiate emergency descent"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Activate EAL system manually if needed"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Transmit automated radio broadcasts"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Maintain control of the airplane using flight instruments"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Establish a bank of approximately 30 to 45\u00b0"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Comply with design maneuvering speed (V A) limitations if in turbulent conditions"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Push the control yoke forward to attain and maintain desired attitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Pull the control yoke aft to attain and maintain attitude"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 16,
+        "rows": [
+          {
+            "procName": "Emergency Autoland",
+            "action": "Initiate emergency descent"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Broadcast position and intention to land"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Transmit automated radio broadcasts"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Set transponder to squawk 7700"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Activate EAL system manually if needed"
+          },
+          {
+            "procName": "Water Ditching",
+            "action": "Execute a water landing at minimum speed and in a normal landing attitude."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Make all attitude changes smooth and small"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Comply with design maneuvering speed (V A) limitations if in turbulent conditions"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Ensure airspeed does not exceed never-exceed speed, maximum landing gear extended speed, or maximum flap extended speed"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Extend landing gear and flaps as recommended by the manufacturer"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Establish a bank of approximately 30 to 45\u00b0"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          },
+          {
+            "procName": "Total Flap Failure",
+            "action": "Fly in a nose-high attitude to maintain altitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Up Cable Failure)",
+            "action": "Push the control yoke forward to attain and maintain desired attitude"
+          },
+          {
+            "procName": "Loss of Elevator Control (Down Cable Failure)",
+            "action": "Pull the control yoke aft to attain and maintain attitude"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ027",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?limit WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"turn\") || CONTAINS(LCASE(STR(?action)), \"bank angle\"))\n  OPTIONAL { ?p av:hasWarning ?w . ?w av:description ?limit . }\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a concept for bank angle limits or related safety recommendations."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 20,
+        "rows": [
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "limit": "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation can result in inadequate airplane control."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "limit": "The pilot should not panic; the task at hand may seem overwhelming, and the situation may be compounded by extreme apprehension."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "limit": "False sensations can lead to spatial disorientation, making it difficult to control the airplane."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the airplane strikes the ground during the turn, cartwheeling could occur."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the pilot does not lower the nose sufficiently during the turn, an accelerated stall and fatal crash may occur."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the airplane strikes the ground during the turn, cartwheeling could occur."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the pilot does not lower the nose sufficiently during the turn, an accelerated stall and fatal crash may occur."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the airplane strikes the ground during the turn, cartwheeling could occur."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "limit": "If the pilot does not lower the nose sufficiently during the turn, an accelerated stall and fatal crash may occur."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "This procedure recreates the original problem; the most prudent course of action is to land as soon as possible."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "Any materials that have been ignited may continue to burn."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "This procedure recreates the original problem; the most prudent course of action is to land as soon as possible."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "Any materials that have been ignited may continue to burn."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "This procedure recreates the original problem; the most prudent course of action is to land as soon as possible."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "Any materials that have been ignited may continue to burn."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "This procedure recreates the original problem; the most prudent course of action is to land as soon as possible."
+          },
+          {
+            "procName": "Electrical Fire",
+            "limit": "Any materials that have been ignited may continue to burn."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ028",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"climb\") || CONTAINS(LCASE(STR(?action)), \"power\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"climb\") || CONTAINS(LCASE(STR(?action)), \"power\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Climb to normal traffic pattern altitude"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Avoid combined maneuvers such as climbing or descending turns"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "action": "Climb to normal traffic pattern altitude"
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "action": "Avoid combined maneuvers such as climbing or descending turns"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Reduce power to idle"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ029",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"descent\") || CONTAINS(LCASE(STR(?action)), \"power reduction\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not contain information about descent rates or power reduction; it lacks relevant predicates."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Emergency Autoland",
+            "action": "Initiate emergency descent"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Initiate an emergency descent if smoke is intense"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ030",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?warningDesc WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasWarning ?w .\n  ?w av:description ?warningDesc .\n  FILTER(CONTAINS(LCASE(STR(?warningDesc)), \"untrained\") || CONTAINS(LCASE(STR(?warningDesc)), \"combined maneuvers\") || CONTAINS(LCASE(STR(?warningDesc)), \"control\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?warningDesc WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasWarning ?w .\n  ?w av:description ?warningDesc .\n  FILTER(CONTAINS(LCASE(STR(?warningDesc)), \"untrained\") || CONTAINS(LCASE(STR(?warningDesc)), \"combined maneuvers\") || CONTAINS(LCASE(STR(?warningDesc)), \"control\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 5,
+        "rows": [
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "warningDesc": "Remember that accidents are almost never caused by an open door. Rather, an open door accident is caused by the pilot\u2019s distraction or failure to maintain control of the airplane."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "warningDesc": "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation can result in inadequate airplane control."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "warningDesc": "False sensations can lead to spatial disorientation, making it difficult to control the airplane."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "warningDesc": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
+          },
+          {
+            "procName": "Engine Fire",
+            "warningDesc": "The airplane may be severely structurally damaged to the point that its ability to remain under control could be lost at any moment."
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 5,
+        "rows": [
+          {
+            "procName": "Inadvertent Door Opening In-Flight",
+            "warningDesc": "Remember that accidents are almost never caused by an open door. Rather, an open door accident is caused by the pilot\u2019s distraction or failure to maintain control of the airplane."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "warningDesc": "Attempts to control the airplane partially by reference to flight instruments while searching outside of the airplane for visual confirmation can result in inadequate airplane control."
+          },
+          {
+            "procName": "Inadvertent VFR Flight Into IMC",
+            "warningDesc": "False sensations can lead to spatial disorientation, making it difficult to control the airplane."
+          },
+          {
+            "procName": "Engine Failure After Takeoff (Single-Engine)",
+            "warningDesc": "Turning back at low altitudes presents an unacceptable risk for student pilots, low-time pilots, untrained pilots, and pilots without adequate proficiency."
+          },
+          {
+            "procName": "Engine Fire",
+            "warningDesc": "The airplane may be severely structurally damaged to the point that its ability to remain under control could be lost at any moment."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ031",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?factor WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"transition\") || CONTAINS(LCASE(STR(?action)), \"visual flight\") || CONTAINS(LCASE(STR(?action)), \"acclimatization\") || CONTAINS(LCASE(STR(?action)), \"geographical orientation\") || CONTAINS(LCASE(STR(?action)), \"altitude\") || CONTAINS(LCASE(STR(?action)), \"visibility\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a structure to express factors related to transitioning from instrument to visual flight."
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ032",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?sysName WHERE {\n  ?p a av:EmergencyProcedure ; av:hasStep ?step .\n  ?step av:action ?action .\n  ?p av:relatesToSystem ?s .\n  ?s av:name ?sysName .\n  FILTER(CONTAINS(LCASE(STR(?action)), \"engine failure\") || CONTAINS(LCASE(STR(?sysName)), \"ballistic parachute\") || CONTAINS(LCASE(STR(?sysName)), \"emergency autoland\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a class for emergency systems or a way to express deployment relationships."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 9,
+        "rows": [
+          {
+            "sysName": "Emergency Autoland System"
+          },
+          {
+            "sysName": "Emergency Autoland System"
+          },
+          {
+            "sysName": "Emergency Autoland System"
+          },
+          {
+            "sysName": "Emergency Autoland System"
+          },
+          {
+            "sysName": "Emergency Autoland System"
+          },
+          {
+            "sysName": "Ballistic Parachute System"
+          },
+          {
+            "sysName": "Ballistic Parachute System"
+          },
+          {
+            "sysName": "Ballistic Parachute System"
+          },
+          {
+            "sysName": "Ballistic Parachute System"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ033",
+      "v1_query": "UNSUPPORTED",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?triggerCondition ?description WHERE {\n  ?p a av:EmergencyProcedure ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?description .\n  FILTER(CONTAINS(LCASE(STR(?description)), \"ballistic parachute\") || CONTAINS(LCASE(STR(?description)), \"loss of controllability\") || CONTAINS(LCASE(STR(?description)), \"pilot incapacitation\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "unsupported",
+        "row_count": 0,
+        "rows": [],
+        "error": null,
+        "unsupported_reason": "V1 does not have a class or predicate related to conditions necessitating the deployment of a ballistic parachute system."
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 2,
+        "rows": [
+          {
+            "triggerCondition": null,
+            "description": "EAL senses erratic flying or pilot incapacitation"
+          },
+          {
+            "triggerCondition": null,
+            "description": "Catastrophic loss of controllability, actual loss of control, or pilot incapacitation"
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ034",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?procName)), \"eal\") || CONTAINS(LCASE(STR(?action)), \"emergency descent\") || CONTAINS(LCASE(STR(?action)), \"automated landing\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc .\n  ?tc av:description ?desc .\n  ?p av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?desc)), \"pilot incapacitation\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "ok",
+        "row_count": 3,
+        "rows": [
+          {
+            "procName": "Emergency Autoland",
+            "action": "Initiate emergency descent"
+          },
+          {
+            "procName": "Emergency Descent",
+            "action": "Initiate recovery from the emergency descent at a high enough altitude"
+          },
+          {
+            "procName": "Cabin Fire",
+            "action": "Initiate an emergency descent if smoke is intense"
+          }
+        ],
+        "error": null
+      },
+      "v2_run": {
+        "status": "ok",
+        "row_count": 9,
+        "rows": [
+          {
+            "procName": "Emergency Autoland",
+            "action": "Initiate emergency descent"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Broadcast position and intention to land"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Transmit automated radio broadcasts"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Set transponder to squawk 7700"
+          },
+          {
+            "procName": "Emergency Autoland",
+            "action": "Activate EAL system manually if needed"
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Brief passengers on the conditions for safe deployment of the parachute system."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Ensure passengers know the basic sequence of steps for deployment."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Follow the guidance provided by manufacturers and suppliers for parachute deployment."
+          },
+          {
+            "procName": "Ballistic Parachute Deployment",
+            "action": "Evacuate the aircraft after landing, being aware of hazards associated with a deployed parachute."
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "cq_id": "CQ035",
+      "v1_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:trigger_condition ?triggerCondition ; av:hasStep ?step .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"pitot-static\") || CONTAINS(LCASE(STR(?procName)), \"IFR\"))\n} LIMIT 20",
+      "v2_query": "PREFIX av: <https://example.org/aviation/>\nSELECT ?procName ?triggerCondition ?action WHERE {\n  ?p a av:EmergencyProcedure ; av:name ?procName ; av:hasTriggerCondition ?tc ; av:hasStep ?step .\n  ?tc av:description ?triggerCondition .\n  ?step av:action ?action .\n  FILTER(CONTAINS(LCASE(STR(?triggerCondition)), \"pitot-static\") || CONTAINS(LCASE(STR(?procName)), \"IFR\"))\n} LIMIT 20",
+      "v1_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      },
+      "v2_run": {
+        "status": "empty",
+        "row_count": 0,
+        "rows": [],
+        "error": null
+      }
+    }
+  ]
+}
