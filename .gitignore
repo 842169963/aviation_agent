@@ -14,7 +14,15 @@ __pycache__/
 
 # Local tool state
 .claude/
+.vscode/
 aviation_prototype/output/vector_index/
+
+# Separate repository, cloned side by side (gitlab.tu-clausthal.de/students/ontoloom)
+ontoloom/
+
+# Third-party reference paper: kept locally, not redistributed from this repo
+Ontology.pdf
+aviation_prototype/output/ontology_paper_text.txt
 
 # OS/editor noise
 Thumbs.db
