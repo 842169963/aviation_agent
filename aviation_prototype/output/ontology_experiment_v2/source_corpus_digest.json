@@ -1,0 +1,177 @@
+[
+  {
+    "source_file": "01_emergency_landings.txt",
+    "title_or_first_line": "Emergency Landings",
+    "characters": 505
+  },
+  {
+    "source_file": "02_types_of_emergency_landings.txt",
+    "title_or_first_line": "Types of Emergency Landings",
+    "characters": 1378
+  },
+  {
+    "source_file": "03_psychological_hazards.txt",
+    "title_or_first_line": "Psychological Hazards",
+    "characters": 6147
+  },
+  {
+    "source_file": "04_attitude_and_sink_rate_control.txt",
+    "title_or_first_line": "Attitude and Sink Rate Control",
+    "characters": 1269
+  },
+  {
+    "source_file": "05_terrain_selection.txt",
+    "title_or_first_line": "Terrain Selection",
+    "characters": 1274
+  },
+  {
+    "source_file": "06_airplane_configuration.txt",
+    "title_or_first_line": "Airplane Configuration",
+    "characters": 1872
+  },
+  {
+    "source_file": "07_approach.txt",
+    "title_or_first_line": "Approach",
+    "characters": 938
+  },
+  {
+    "source_file": "08_terrain_types.txt",
+    "title_or_first_line": "Terrain Types",
+    "characters": 201
+  },
+  {
+    "source_file": "09_confined_areas.txt",
+    "title_or_first_line": "Confined Areas",
+    "characters": 1249
+  },
+  {
+    "source_file": "10_trees_forest.txt",
+    "title_or_first_line": "Trees (Forest)",
+    "characters": 1559
+  },
+  {
+    "source_file": "11_water_ditching_and_snow.txt",
+    "title_or_first_line": "Water (Ditching) and Snow",
+    "characters": 1164
+  },
+  {
+    "source_file": "12_engine_failure_after_takeoff_single_engine.txt",
+    "title_or_first_line": "Engine Failure After Takeoff (Single-Engine)",
+    "characters": 5592
+  },
+  {
+    "source_file": "13_emergency_descents.txt",
+    "title_or_first_line": "Emergency Descents",
+    "characters": 2699
+  },
+  {
+    "source_file": "14_in_flight_fire.txt",
+    "title_or_first_line": "In-Flight Fire",
+    "characters": 349
+  },
+  {
+    "source_file": "15_engine_fire.txt",
+    "title_or_first_line": "Engine Fire",
+    "characters": 3516
+  },
+  {
+    "source_file": "16_electrical_fires.txt",
+    "title_or_first_line": "Electrical Fires",
+    "characters": 1175
+  },
+  {
+    "source_file": "17_cabin_fire.txt",
+    "title_or_first_line": "Cabin Fire",
+    "characters": 3479
+  },
+  {
+    "source_file": "18_asymmetric_split_flap.txt",
+    "title_or_first_line": "Asymmetric (Split) Flap",
+    "characters": 1212
+  },
+  {
+    "source_file": "19_loss_of_elevator_control.txt",
+    "title_or_first_line": "Loss of Elevator Control",
+    "characters": 2164
+  },
+  {
+    "source_file": "20_landing_gear_malfunction.txt",
+    "title_or_first_line": "Landing Gear Malfunction",
+    "characters": 6324
+  },
+  {
+    "source_file": "21_pitot_static_system.txt",
+    "title_or_first_line": "Pitot-Static System",
+    "characters": 4699
+  },
+  {
+    "source_file": "22_abnormal_engine_instrument_indication.txt",
+    "title_or_first_line": "Abnormal Engine Instrument Indication",
+    "characters": 548
+  },
+  {
+    "source_file": "23_door_opening_in_flight.txt",
+    "title_or_first_line": "Door Opening In-Flight",
+    "characters": 1983
+  },
+  {
+    "source_file": "24_inadvertent_vfr_flight_into_imc.txt",
+    "title_or_first_line": "Inadvertent VFR Flight Into IMC",
+    "characters": 3369
+  },
+  {
+    "source_file": "25_maintaining_airplane_control.txt",
+    "title_or_first_line": "Maintaining Airplane Control",
+    "characters": 1997
+  },
+  {
+    "source_file": "26_attitude_control.txt",
+    "title_or_first_line": "Attitude Control",
+    "characters": 1771
+  },
+  {
+    "source_file": "27_turns.txt",
+    "title_or_first_line": "Turns",
+    "characters": 946
+  },
+  {
+    "source_file": "28_climbs.txt",
+    "title_or_first_line": "Climbs",
+    "characters": 1256
+  },
+  {
+    "source_file": "29_descents.txt",
+    "title_or_first_line": "Descents",
+    "characters": 1153
+  },
+  {
+    "source_file": "30_combined_maneuvers.txt",
+    "title_or_first_line": "Combined Maneuvers",
+    "characters": 929
+  },
+  {
+    "source_file": "31_transition_to_visual_flight.txt",
+    "title_or_first_line": "Transition to Visual Flight",
+    "characters": 1624
+  },
+  {
+    "source_file": "32_emergency_response_systems.txt",
+    "title_or_first_line": "Emergency Response Systems",
+    "characters": 525
+  },
+  {
+    "source_file": "33_ballistic_parachutes.txt",
+    "title_or_first_line": "Ballistic Parachutes",
+    "characters": 1433
+  },
+  {
+    "source_file": "34_autoland.txt",
+    "title_or_first_line": "Autoland",
+    "characters": 2405
+  },
+  {
+    "source_file": "35_chapter_summary.txt",
+    "title_or_first_line": "Chapter Summary",
+    "characters": 1285
+  }
+]

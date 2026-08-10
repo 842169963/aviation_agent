@@ -1,0 +1,141 @@
+@prefix av: <https://example.org/aviation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+av:CandidateAviationOntology a owl:Ontology .
+
+av:EmergencyProcedure a owl:Class ;
+    rdfs:comment "A structured set of actions to be taken during an aviation emergency." .
+
+av:ProcedureStep a owl:Class ;
+    rdfs:subClassOf av:EmergencyProcedure ;
+    rdfs:comment "An individual step within an emergency procedure, detailing specific actions to be taken." .
+
+av:Warning a owl:Class ;
+    rdfs:comment "A notification regarding potential hazards or risks during flight operations." .
+
+av:SourceEvidence a owl:Class ;
+    rdfs:comment "Documentation or data that supports the procedures and actions taken during emergencies." .
+
+av:TriggerCondition a owl:Class ;
+    rdfs:comment "Conditions that necessitate the execution of an emergency procedure." .
+
+av:FlightPhase a owl:Class ;
+    rdfs:comment "Different stages of flight that may influence emergency procedures." .
+
+av:Hazard a owl:Class ;
+    rdfs:comment "Potential risks that may affect flight safety during emergencies." .
+
+av:AircraftState a owl:Class ;
+    rdfs:comment "The operational status of the aircraft during an emergency." .
+
+av:AircraftSystem a owl:Class ;
+    rdfs:comment "Components of the aircraft that may be affected during emergencies." .
+
+av:EmergencyEvent a owl:Class ;
+    rdfs:comment "An occurrence that triggers the need for emergency procedures." .
+
+av:PilotAction a owl:Class ;
+    rdfs:comment "Actions taken by the pilot in response to emergency situations." .
+
+av:has_step a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyProcedure ;
+    rdfs:range av:ProcedureStep ;
+    rdfs:comment "Links an emergency procedure to its individual steps." .
+
+av:triggers a owl:ObjectProperty ;
+    rdfs:domain av:TriggerCondition ;
+    rdfs:range av:EmergencyProcedure ;
+    rdfs:comment "Indicates which emergency procedure is triggered by a specific condition." .
+
+av:associated_with a owl:ObjectProperty ;
+    rdfs:domain av:Hazard ;
+    rdfs:range av:EmergencyProcedure ;
+    rdfs:comment "Links hazards to relevant emergency procedures." .
+
+av:evidenced_by a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyProcedure ;
+    rdfs:range av:SourceEvidence ;
+    rdfs:comment "Links an emergency procedure to its supporting evidence." .
+
+av:occurs_during a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyEvent ;
+    rdfs:range av:FlightPhase ;
+    rdfs:comment "Indicates the flight phase during which an emergency event occurs." .
+
+av:performed_by a owl:ObjectProperty ;
+    rdfs:domain av:PilotAction ;
+    rdfs:range av:EmergencyEvent ;
+    rdfs:comment "Links pilot actions to specific emergency events." .
+
+av:affects a owl:ObjectProperty ;
+    rdfs:domain av:AircraftState ;
+    rdfs:range av:EmergencyProcedure ;
+    rdfs:comment "Indicates how the aircraft state influences the execution of emergency procedures." .
+
+av:requires a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyProcedure ;
+    rdfs:range av:TriggerCondition ;
+    rdfs:comment "Indicates the conditions that must be met to execute a procedure." .
+
+av:describes a owl:ObjectProperty ;
+    rdfs:domain av:Warning ;
+    rdfs:range av:Hazard ;
+    rdfs:comment "Links warnings to specific hazards." .
+
+av:procedure_name a owl:DatatypeProperty ;
+    rdfs:domain av:EmergencyProcedure ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the emergency procedure." .
+
+av:step_order a owl:DatatypeProperty ;
+    rdfs:domain av:ProcedureStep ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "The order in which the step should be executed within a procedure." .
+
+av:action_text a owl:DatatypeProperty ;
+    rdfs:domain av:ProcedureStep ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Text describing the action to be taken in this step." .
+
+av:step_type a owl:DatatypeProperty ;
+    rdfs:domain av:ProcedureStep ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The type of step (e.g., action, caution, note)." .
+
+av:evidence_source a owl:DatatypeProperty ;
+    rdfs:domain av:SourceEvidence ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The source from which the evidence is derived." .
+
+av:flight_phase_name a owl:DatatypeProperty ;
+    rdfs:domain av:FlightPhase ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the flight phase." .
+
+av:hazard_description a owl:DatatypeProperty ;
+    rdfs:domain av:Hazard ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A description of the hazard associated with the procedure." .
+
+av:aircraft_condition a owl:DatatypeProperty ;
+    rdfs:domain av:AircraftState ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The condition of the aircraft during the emergency." .
+
+av:system_name a owl:DatatypeProperty ;
+    rdfs:domain av:AircraftSystem ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The name of the aircraft system being referenced." .
+
+av:event_description a owl:DatatypeProperty ;
+    rdfs:domain av:EmergencyEvent ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A description of the emergency event." .
+
+av:pilot_decision a owl:DatatypeProperty ;
+    rdfs:domain av:PilotAction ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The decision made by the pilot in response to the emergency." .

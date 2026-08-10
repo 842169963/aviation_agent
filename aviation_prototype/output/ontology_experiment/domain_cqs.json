@@ -1,0 +1,1727 @@
+{
+  "competency_questions": [
+    {
+      "id": "CQ001",
+      "source_file": "01_emergency_landings.txt",
+      "question": "What techniques should a pilot use for emergency landings in adverse terrain conditions?",
+      "expected_answer": "Pilots should use the airplane structure for self-protection and the protection of passengers.",
+      "required_concepts": [
+        "emergency landing techniques",
+        "adverse terrain conditions",
+        "airplane structure",
+        "self-protection",
+        "passenger protection"
+      ],
+      "required_relations": [
+        "applies_to",
+        "instills_knowledge"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "The objective is to instill in the pilot the knowledge that almost any terrain can be considered 'suitable' for a survivable crash landing if the pilot knows how to use the airplane structure for self-protection and the protection of passengers."
+    },
+    {
+      "id": "CQ002",
+      "source_file": "02_types_of_emergency_landings.txt",
+      "question": "What are the conditions that necessitate a forced landing?",
+      "expected_answer": "Engine failure is a typical condition necessitating a forced landing.",
+      "required_concepts": [
+        "forced landing",
+        "engine failure"
+      ],
+      "required_relations": [
+        "necessitates"
+      ],
+      "odps": [
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "A typical example of which is an airplane forced down by engine failure."
+    },
+    {
+      "id": "CQ003",
+      "source_file": "03_psychological_hazards.txt",
+      "question": "What psychological factors can impair a pilot's decision-making during an emergency landing?",
+      "expected_answer": "Factors include reluctance to accept the emergency, undue concern about getting hurt, and desire to save the airplane.",
+      "required_concepts": [
+        "psychological_hazards",
+        "emergency_landing",
+        "pilot_decision_making"
+      ],
+      "required_relations": [
+        "impairs",
+        "influences"
+      ],
+      "odps": [
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "There are several factors that may interfere with a pilot’s ability to act promptly and properly when faced with an emergency."
+    },
+    {
+      "id": "CQ004",
+      "source_file": "04_attitude_and_sink_rate_control.txt",
+      "question": "What are the risks associated with excessive nose-low pitch attitude and high sink rate during an emergency landing?",
+      "expected_answer": "Excessive nose-low pitch attitude can lead to 'sticking' the nose in the ground, while a high sink rate can cause structural damage or collapse.",
+      "required_concepts": [
+        "nose-low pitch attitude",
+        "high sink rate",
+        "emergency landing",
+        "structural damage"
+      ],
+      "required_relations": [
+        "risks",
+        "causes"
+      ],
+      "odps": [
+        "Risk/Hazard",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "An excessive nose-low pitch attitude brings the risk of 'sticking' the nose in the ground. A flat touchdown at a high sink rate... can be injurious."
+    },
+    {
+      "id": "CQ005",
+      "source_file": "05_terrain_selection.txt",
+      "question": "What factors should a pilot consider when selecting an emergency landing site?",
+      "expected_answer": "The route selected during preflight planning, height above the ground, and excess airspeed.",
+      "required_concepts": [
+        "emergency landing site",
+        "route",
+        "height",
+        "excess airspeed"
+      ],
+      "required_relations": [
+        "governed by",
+        "consider"
+      ],
+      "odps": [
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "A pilot’s choice of emergency landing sites is governed by: The route selected during preflight planning, The height above the ground when the emergency occurs, Excess airspeed."
+    },
+    {
+      "id": "CQ006",
+      "source_file": "06_airplane_configuration.txt",
+      "question": "What precautions should be taken regarding flap usage during final approach?",
+      "expected_answer": "Flaps should be used to improve maneuverability at slow speed, but caution is needed due to increased drag and decreased gliding distance.",
+      "required_concepts": [
+        "flap usage",
+        "final approach",
+        "maneuverability",
+        "stalling speed"
+      ],
+      "required_relations": [
+        "improves",
+        "increases",
+        "decreases",
+        "requires caution"
+      ],
+      "odps": [
+        "Risk/Hazard",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "their use during final approach is recommended when time and circumstances permit. However, the associated increase in drag and decrease in gliding distance call for caution in the timing and the extent of their application."
+    },
+    {
+      "id": "CQ007",
+      "source_file": "07_approach.txt",
+      "question": "What factors should a pilot consider when planning an approach to land?",
+      "expected_answer": "Wind direction and velocity, dimensions and slope of the chosen field, and obstacles in the final approach path.",
+      "required_concepts": [
+        "wind direction",
+        "wind velocity",
+        "field dimensions",
+        "field slope",
+        "obstacles"
+      ],
+      "required_relations": [
+        "governed by",
+        "compatible with",
+        "aim for"
+      ],
+      "odps": [
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "the planning of the approach should be governed by the following three factors: Wind direction and velocity, Dimensions and slope of the chosen field, Obstacles in the final approach path"
+    },
+    {
+      "id": "CQ008",
+      "source_file": "08_terrain_types.txt",
+      "question": "What types of terrain are considered suitable for emergency landings?",
+      "expected_answer": "Only more unusual situations are discussed.",
+      "required_concepts": [
+        "terrain",
+        "emergency landing"
+      ],
+      "required_relations": [
+        "is_suitable_for"
+      ],
+      "odps": [
+        "Situation/State"
+      ],
+      "evidence_excerpt": "only the more unusual situations are discussed."
+    },
+    {
+      "id": "CQ009",
+      "source_file": "09_confined_areas.txt",
+      "question": "What considerations should a pilot take into account when selecting a landing area in confined spaces?",
+      "expected_answer": "Pilots should avoid landing in open spots between trees or obstacles, consider the desirability of ground-looping or retracting landing gear, and ensure that landing areas like rivers or roads are free of manmade obstacles.",
+      "required_concepts": [
+        "landing area",
+        "obstacles",
+        "ground-looping",
+        "landing gear",
+        "manmade obstacles"
+      ],
+      "required_relations": [
+        "consideration",
+        "avoidance",
+        "ensuring safety"
+      ],
+      "odps": [
+        "Risk/Hazard",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "The natural preference to set the airplane down on the ground should not lead to the selection of an open spot between trees or obstacles..."
+    },
+    {
+      "id": "CQ010",
+      "source_file": "10_trees_forest.txt",
+      "question": "What are the recommended procedures for executing a tree landing?",
+      "expected_answer": "Use normal landing configuration, keep groundspeed low, make contact at minimum indicated airspeed, avoid heavy tree trunk contact, and ensure symmetrical initial tree contact.",
+      "required_concepts": [
+        "procedure",
+        "action",
+        "condition"
+      ],
+      "required_relations": [
+        "requires",
+        "leads_to"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "the following general guidelines help to make the experience survivable."
+    },
+    {
+      "id": "CQ011",
+      "source_file": "11_water_ditching_and_snow.txt",
+      "question": "What are the recommended procedures for executing a water landing and a snow landing?",
+      "expected_answer": "Both water and snow landings should be executed with minimum speed, in a normal landing attitude, and with consideration for loss of depth perception.",
+      "required_concepts": [
+        "water landing",
+        "snow landing",
+        "minimum speed",
+        "normal landing attitude",
+        "depth perception"
+      ],
+      "required_relations": [
+        "is_executed_as",
+        "has_consideration_for"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "A landing in snow should be executed like a ditching, in the same configuration and with the same regard for loss of depth perception."
+    },
+    {
+      "id": "CQ012",
+      "source_file": "12_engine_failure_after_takeoff_single_engine.txt",
+      "question": "What actions should a pilot take immediately after an engine failure during initial climb?",
+      "expected_answer": "The pilot should lower the nose of the airplane and establish the proper glide attitude.",
+      "required_concepts": [
+        "pilot action",
+        "engine failure",
+        "glide attitude"
+      ],
+      "required_relations": [
+        "causes",
+        "results_in"
+      ],
+      "odps": [
+        "Event Reification",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "When an engine failure occurs during the initial climb, the pilot should lower the nose of the airplane and establish the proper glide attitude."
+    },
+    {
+      "id": "CQ013",
+      "source_file": "13_emergency_descents.txt",
+      "question": "What are the procedures to follow during an emergency descent due to an engine fire?",
+      "expected_answer": "Reduce power to idle, extend landing gear and flaps, maintain airspeed within limits.",
+      "required_concepts": [
+        "emergency descent",
+        "engine fire",
+        "aircraft_state",
+        "procedure"
+      ],
+      "required_relations": [
+        "causes",
+        "requires",
+        "hasProcedure"
+      ],
+      "odps": [
+        "Event Reification",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "In the case of an engine fire, a high airspeed descent could blow out the fire."
+    },
+    {
+      "id": "CQ014",
+      "source_file": "14_in_flight_fire.txt",
+      "question": "What are the procedures for handling an in-flight fire?",
+      "expected_answer": "The procedures are outlined in the AFM/POH for the particular airplane.",
+      "required_concepts": [
+        "in-flight fire",
+        "AFM/POH"
+      ],
+      "required_relations": [
+        "is classified as",
+        "outlined in"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "the procedures outlined to meet this emergency contained in the AFM/POH"
+    },
+    {
+      "id": "CQ015",
+      "source_file": "15_engine_fire.txt",
+      "question": "What steps should a pilot take upon discovering an in-flight engine compartment fire?",
+      "expected_answer": "The pilot should shut off the fuel supply by placing the mixture control in idle cut off and the fuel selector to OFF, while leaving the ignition switch ON.",
+      "required_concepts": [
+        "engine fire",
+        "fuel supply",
+        "pilot actions"
+      ],
+      "required_relations": [
+        "causes",
+        "indicates",
+        "requires"
+      ],
+      "odps": [
+        "Event Reification",
+        "Action",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "the first step on discovering a fire should be to shut off the fuel supply to the engine by placing the mixture control in the idle cut off position and the fuel selector shutoff valve to the OFF position."
+    },
+    {
+      "id": "CQ016",
+      "source_file": "16_electrical_fires.txt",
+      "question": "What steps should a pilot take when an electrical fire is detected?",
+      "expected_answer": "The pilot should attempt to identify the faulty circuit, turn off the battery master switch and alternator/generator switches if conditions permit, and land as soon as possible.",
+      "required_concepts": [
+        "pilot",
+        "faulty circuit",
+        "battery master switch",
+        "alternator/generator switches",
+        "landing"
+      ],
+      "required_relations": [
+        "detects",
+        "attempts",
+        "turns off",
+        "lands"
+      ],
+      "odps": [
+        "Event Reification",
+        "Sequence"
+      ],
+      "evidence_excerpt": "Once an electrical fire is detected, the pilot should attempt to identify the faulty circuit... The most prudent course of action is to land as soon as possible."
+    },
+    {
+      "id": "CQ017",
+      "source_file": "17_cabin_fire.txt",
+      "question": "What actions should a pilot take in response to a cabin fire?",
+      "expected_answer": "The pilot should attack the fire, get the airplane safely on the ground quickly, identify and shut down the faulty system, and manage smoke by using the fire extinguisher and cabin air controls.",
+      "required_concepts": [
+        "cabin fire",
+        "pilot actions",
+        "faulty system",
+        "smoke management"
+      ],
+      "required_relations": [
+        "causes",
+        "requires",
+        "controls"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "A fire in the cabin presents the pilot with two immediate demands: attacking the fire and getting the airplane safely on the ground as quickly as possible."
+    },
+    {
+      "id": "CQ018",
+      "source_file": "18_asymmetric_split_flap.txt",
+      "question": "What actions should a pilot take when encountering an asymmetric split flap situation during landing?",
+      "expected_answer": "The pilot should fly at a higher than normal airspeed, avoid excessive flaring, and ensure touchdown occurs at a safe margin above flaps-up stall speed.",
+      "required_concepts": [
+        "asymmetric split flap",
+        "landing",
+        "airspeed",
+        "stall"
+      ],
+      "required_relations": [
+        "requires",
+        "indicates"
+      ],
+      "odps": [
+        "Situation/State",
+        "Action"
+      ],
+      "evidence_excerpt": "The approach to landing with a split flap condition should be flown at a higher than normal airspeed."
+    },
+    {
+      "id": "CQ019",
+      "source_file": "19_loss_of_elevator_control.txt",
+      "question": "What actions can a pilot take to maintain pitch control during a loss of elevator control?",
+      "expected_answer": "The pilot can apply trim, adjust control yoke pressure, and manage flap extension.",
+      "required_concepts": [
+        "pilot",
+        "action",
+        "aircraft_state"
+      ],
+      "required_relations": [
+        "can_perform",
+        "affects"
+      ],
+      "odps": [
+        "Action/Reaction",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "When experiencing a loss of up-elevator control, the pilot can retain pitch control by: Applying considerable nose-up trim..."
+    },
+    {
+      "id": "CQ020",
+      "source_file": "20_landing_gear_malfunction.txt",
+      "question": "What actions should a pilot take when landing with one main gear retracted?",
+      "expected_answer": "The pilot should land in a nose-high attitude with wings level, apply aileron control to keep the unsupported wing airborne, and be prepared to use full opposite rudder and aggressive braking after touchdown.",
+      "required_concepts": [
+        "landing",
+        "gear malfunction",
+        "pilot actions"
+      ],
+      "required_relations": [
+        "requires",
+        "results_in"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "If the pilot elects to land with one main gear retracted... the pilot should hold the nose off the ground until almost full up-elevator has been applied."
+    },
+    {
+      "id": "CQ021",
+      "source_file": "21_pitot_static_system.txt",
+      "question": "What indications should a pilot expect from the airspeed indicator, VSI, and altimeter during a descent if the pitot-static system is partially blocked?",
+      "expected_answer": "The altimeter may indicate a higher altitude than actual, the VSI may show a lower rate of descent, and the airspeed indicator may indicate a higher airspeed than actual.",
+      "required_concepts": [
+        "airspeed indicator",
+        "VSI",
+        "altimeter",
+        "pitot-static system"
+      ],
+      "required_relations": [
+        "indicates",
+        "affects"
+      ],
+      "odps": [
+        "Situation/State",
+        "Event Reification"
+      ],
+      "evidence_excerpt": "the altimeter may indicate that the airplane is higher than actual because the obstruction slows the airflow from the static port to the altimeter."
+    },
+    {
+      "id": "CQ022",
+      "source_file": "22_abnormal_engine_instrument_indication.txt",
+      "question": "What are the corrective actions for specific abnormal engine instrument indications?",
+      "expected_answer": "The corrective actions are detailed in the AFM/POH for the specific airplane.",
+      "required_concepts": [
+        "abnormal engine instrument indications",
+        "corrective actions"
+      ],
+      "required_relations": [
+        "has_cause",
+        "has_corrective_action"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "The AFM/POH for the specific airplane contains information that should be followed in the event of any abnormal engine instrument indications."
+    },
+    {
+      "id": "CQ023",
+      "source_file": "23_door_opening_in_flight.txt",
+      "question": "What actions should a pilot take in response to an inadvertent door opening during flight?",
+      "expected_answer": "The pilot should concentrate on flying the airplane, do not rush to land, and complete the landing checklist.",
+      "required_concepts": [
+        "pilot",
+        "door opening",
+        "airplane control",
+        "landing checklist"
+      ],
+      "required_relations": [
+        "adheres to",
+        "causes",
+        "results in"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "In the event of an inadvertent door opening in flight or on takeoff, the pilot should adhere to the following: Concentrate on flying the airplane."
+    },
+    {
+      "id": "CQ024",
+      "source_file": "24_inadvertent_vfr_flight_into_imc.txt",
+      "question": "What immediate actions should a VFR pilot take when encountering IMC?",
+      "expected_answer": "The pilot should recognize the seriousness of the situation, maintain control of the airplane, and obtain appropriate assistance.",
+      "required_concepts": [
+        "VFR pilot",
+        "IMC",
+        "airplane control",
+        "assistance"
+      ],
+      "required_relations": [
+        "requires",
+        "leads_to"
+      ],
+      "odps": [
+        "Situation/State",
+        "Event Reification"
+      ],
+      "evidence_excerpt": "The first steps necessary for surviving an encounter with IMC by a VFR pilot are as follows: Recognition and acceptance of the seriousness of the situation and the need for immediate remedial action, Maintaining control of the airplane, Obtaining the appropriate assistance to get the airplane safely on the ground."
+    },
+    {
+      "id": "CQ025",
+      "source_file": "25_maintaining_airplane_control.txt",
+      "question": "What should a pilot do to maintain control of the airplane during spatial disorientation?",
+      "expected_answer": "The pilot should rely on flight instruments and keep the wings level.",
+      "required_concepts": [
+        "pilot",
+        "flight instruments",
+        "spatial disorientation"
+      ],
+      "required_relations": [
+        "uses",
+        "experiences"
+      ],
+      "odps": [
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "the only way to control the airplane safely is by using and trusting the flight instruments"
+    },
+    {
+      "id": "CQ026",
+      "source_file": "26_attitude_control.txt",
+      "question": "What are the key steps a pilot must follow for effective emergency attitude control?",
+      "expected_answer": "Trim the airplane for hands-off level flight, resist over-control, make smooth and small attitude changes, and utilize available aids.",
+      "required_concepts": [
+        "attitude control",
+        "pilot",
+        "airplane",
+        "emergency procedure"
+      ],
+      "required_relations": [
+        "requires",
+        "involves",
+        "affects"
+      ],
+      "odps": [
+        "Procedure",
+        "Event Reification"
+      ],
+      "evidence_excerpt": "The key to emergency airplane attitude control, therefore, is to: Trim the airplane with the elevator trim so that it maintains hands-off level flight at cruise airspeed."
+    },
+    {
+      "id": "CQ027",
+      "source_file": "27_turns.txt",
+      "question": "What are the recommended bank angle limits for turns to ensure safety during flight?",
+      "expected_answer": "The smallest practical bank angle should be used, no more than 10°.",
+      "required_concepts": [
+        "turn",
+        "bank angle",
+        "safety"
+      ],
+      "required_relations": [
+        "has_limit",
+        "ensures"
+      ],
+      "odps": [
+        "Quantity/Quality"
+      ],
+      "evidence_excerpt": "the smallest practical bank angle should be used—in any case no more than 10° bank angle."
+    },
+    {
+      "id": "CQ028",
+      "source_file": "28_climbs.txt",
+      "question": "What are the necessary actions a pilot must take to achieve a proper climb?",
+      "expected_answer": "The pilot should raise the miniature airplane on the attitude indicator no more than one bar width, apply power, and adjust power in increments if the climb rate is inadequate.",
+      "required_concepts": [
+        "pilot",
+        "climb",
+        "power application",
+        "attitude indicator"
+      ],
+      "required_relations": [
+        "performs",
+        "requires",
+        "results_in"
+      ],
+      "odps": [
+        "Action",
+        "Event Reification"
+      ],
+      "evidence_excerpt": "the pilot should raise the miniature airplane on the attitude indicator no more than one bar width and apply power."
+    },
+    {
+      "id": "CQ029",
+      "source_file": "29_descents.txt",
+      "question": "What is the maximum allowable rate of descent during a power reduction?",
+      "expected_answer": "The maximum allowable rate of descent should never exceed 500 fpm.",
+      "required_concepts": [
+        "descent",
+        "power reduction",
+        "rate of descent"
+      ],
+      "required_relations": [
+        "exceeds"
+      ],
+      "odps": [
+        "Quantity/Quality"
+      ],
+      "evidence_excerpt": "the resulting rate of descent should never exceed 500 fpm."
+    },
+    {
+      "id": "CQ030",
+      "source_file": "30_combined_maneuvers.txt",
+      "question": "What should an untrained instrument pilot avoid during maneuvers to maintain control of the aircraft?",
+      "expected_answer": "Combined maneuvers such as climbing or descending turns should be avoided.",
+      "required_concepts": [
+        "untrained instrument pilot",
+        "combined maneuvers",
+        "control loss"
+      ],
+      "required_relations": [
+        "avoids",
+        "increases risk of"
+      ],
+      "odps": [
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "Combined maneuvers, such as climbing or descending turns, should be avoided if at all possible by an untrained instrument pilot."
+    },
+    {
+      "id": "CQ031",
+      "source_file": "31_transition_to_visual_flight.txt",
+      "question": "What factors should a pilot consider when transitioning from instrument to visual flight?",
+      "expected_answer": "Pilots should consider acclimatization, geographical orientation, altitude above terrain, and visibility conditions.",
+      "required_concepts": [
+        "acclimatization",
+        "geographical orientation",
+        "altitude",
+        "visibility"
+      ],
+      "required_relations": [
+        "consideration",
+        "affects"
+      ],
+      "odps": [
+        "Situation/State",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "The pilot should take this into account and, if possible, allow time to become acclimatized and geographically oriented before attempting an approach and landing."
+    },
+    {
+      "id": "CQ032",
+      "source_file": "32_emergency_response_systems.txt",
+      "question": "What emergency systems can be deployed in case of an engine failure?",
+      "expected_answer": "Ballistic parachute systems and Emergency Autoland systems can be deployed.",
+      "required_concepts": [
+        "ballistic parachute system",
+        "Emergency Autoland system",
+        "engine failure"
+      ],
+      "required_relations": [
+        "provides",
+        "deployed_in"
+      ],
+      "odps": [
+        "Event Reification",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "Airplanes may have installed systems that provide alternatives in certain emergency situations."
+    },
+    {
+      "id": "CQ033",
+      "source_file": "33_ballistic_parachutes.txt",
+      "question": "What conditions necessitate the deployment of a ballistic parachute system?",
+      "expected_answer": "Conditions include catastrophic loss of controllability, actual loss of control, or pilot incapacitation.",
+      "required_concepts": [
+        "ballistic_parachute",
+        "condition",
+        "pilot",
+        "passenger"
+      ],
+      "required_relations": [
+        "necessitates",
+        "qualifies"
+      ],
+      "odps": [
+        "Risk/Hazard",
+        "Situation/State"
+      ],
+      "evidence_excerpt": "a catastrophic loss of controllability due to a collision or mechanical failure, actual loss of control, or pilot incapacitation would qualify."
+    },
+    {
+      "id": "CQ034",
+      "source_file": "34_autoland.txt",
+      "question": "What actions does the EAL system take when it detects pilot incapacitation?",
+      "expected_answer": "The EAL system stabilizes the aircraft, initiates an emergency descent, and then initiates the process for an automated landing if there is no pilot responsiveness.",
+      "required_concepts": [
+        "EAL system",
+        "emergency descent",
+        "automated landing",
+        "pilot incapacitation"
+      ],
+      "required_relations": [
+        "detects",
+        "initiates",
+        "transmits"
+      ],
+      "odps": [
+        "Event Reification",
+        "Situation/State",
+        "Sequence"
+      ],
+      "evidence_excerpt": "If the EAL senses erratic flying, it stabilizes the aircraft, and checks for pilot responsiveness. Without further input, the EAL initiates an emergency descent."
+    },
+    {
+      "id": "CQ035",
+      "source_file": "35_chapter_summary.txt",
+      "question": "What procedures should a pilot follow in the event of a pitot-static system failure during IFR flight?",
+      "expected_answer": "Pilots should refer to the manufacturer's recommended emergency procedures and be aware of the differences in failure indications between EFIS and conventional instruments.",
+      "required_concepts": [
+        "pitot-static system failure",
+        "emergency procedures",
+        "IFR flight",
+        "EFIS",
+        "conventional instruments"
+      ],
+      "required_relations": [
+        "precedes",
+        "is_a",
+        "has_procedure"
+      ],
+      "odps": [
+        "Event Reification",
+        "Risk/Hazard"
+      ],
+      "evidence_excerpt": "Information was provided concerning failure of the pitot-static system in aircraft with EFIS."
+    }
+  ],
+  "domain_concepts": [
+    {
+      "name": "emergency landing techniques",
+      "category": "procedure",
+      "definition": "Methods and guidelines for safely landing an aircraft in emergency situations, particularly in adverse terrain.",
+      "source_files": [
+        "01_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "adverse terrain conditions",
+      "category": "condition",
+      "definition": "Challenging ground conditions that may complicate landing, where no practical training is possible.",
+      "source_files": [
+        "01_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "airplane structure",
+      "category": "resource",
+      "definition": "The physical components of an aircraft that can be utilized for protection during a crash landing.",
+      "source_files": [
+        "01_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "self-protection",
+      "category": "action",
+      "definition": "Actions taken by the pilot to ensure their own safety during an emergency landing.",
+      "source_files": [
+        "01_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "passenger protection",
+      "category": "action",
+      "definition": "Actions taken by the pilot to ensure the safety of passengers during an emergency landing.",
+      "source_files": [
+        "01_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "forced landing",
+      "category": "procedure",
+      "definition": "An immediate landing, on or off an airport, necessitated by the inability to continue further flight.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "precautionary landing",
+      "category": "procedure",
+      "definition": "A premeditated landing, on or off an airport, when further flight is possible but inadvisable.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "ditching",
+      "category": "procedure",
+      "definition": "A forced or precautionary landing on water.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "engine failure",
+      "category": "hazard",
+      "definition": "A condition where the aircraft's engine is unable to function, necessitating an emergency landing.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "deteriorating weather",
+      "category": "condition",
+      "definition": "A situation where weather conditions worsen, potentially leading to a precautionary landing.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "fuel shortage",
+      "category": "condition",
+      "definition": "A situation where the aircraft is running low on fuel, which may necessitate a precautionary landing.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "gradually developing engine trouble",
+      "category": "condition",
+      "definition": "A situation where the engine shows signs of malfunction that may lead to a precautionary landing.",
+      "source_files": [
+        "02_types_of_emergency_landings.txt"
+      ]
+    },
+    {
+      "name": "psychological_hazards",
+      "category": "condition",
+      "definition": "Factors that may interfere with a pilot's ability to act promptly and properly during an emergency.",
+      "source_files": [
+        "03_psychological_hazards.txt"
+      ]
+    },
+    {
+      "name": "emergency_landing",
+      "category": "event",
+      "definition": "A landing performed under emergency conditions, often involving risks to the aircraft and occupants.",
+      "source_files": [
+        "03_psychological_hazards.txt"
+      ]
+    },
+    {
+      "name": "pilot_decision_making",
+      "category": "action",
+      "definition": "The process by which a pilot assesses a situation and makes choices regarding flight operations, especially in emergencies.",
+      "source_files": [
+        "03_psychological_hazards.txt"
+      ]
+    },
+    {
+      "name": "nose-low pitch attitude",
+      "category": "condition",
+      "definition": "A flight condition where the aircraft's nose is pitched down excessively, increasing the risk of impact during landing.",
+      "source_files": [
+        "04_attitude_and_sink_rate_control.txt"
+      ]
+    },
+    {
+      "name": "high sink rate",
+      "category": "condition",
+      "definition": "A vertical descent rate that exceeds safe limits, particularly during landing, which can lead to structural damage.",
+      "source_files": [
+        "04_attitude_and_sink_rate_control.txt"
+      ]
+    },
+    {
+      "name": "structural damage",
+      "category": "hazard",
+      "definition": "Damage to the aircraft's structure that can occur due to excessive forces during landing.",
+      "source_files": [
+        "04_attitude_and_sink_rate_control.txt"
+      ]
+    },
+    {
+      "name": "emergency landing site",
+      "category": "procedure",
+      "definition": "A location chosen by the pilot for landing the aircraft in an emergency situation.",
+      "source_files": [
+        "05_terrain_selection.txt"
+      ]
+    },
+    {
+      "name": "route",
+      "category": "resource",
+      "definition": "The planned path of flight determined during preflight planning.",
+      "source_files": [
+        "05_terrain_selection.txt"
+      ]
+    },
+    {
+      "name": "height",
+      "category": "condition",
+      "definition": "The altitude of the aircraft above the ground at the time of the emergency.",
+      "source_files": [
+        "05_terrain_selection.txt"
+      ]
+    },
+    {
+      "name": "excess airspeed",
+      "category": "condition",
+      "definition": "The speed of the aircraft above the required speed for safe flight, which can be converted into distance and/or altitude.",
+      "source_files": [
+        "05_terrain_selection.txt"
+      ]
+    },
+    {
+      "name": "flap usage",
+      "category": "action",
+      "definition": "The application of flaps to improve maneuverability and reduce stalling speed during flight.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "final approach",
+      "category": "flight_phase",
+      "definition": "The phase of flight where the aircraft is aligned with the runway for landing.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "maneuverability",
+      "category": "aircraft_state",
+      "definition": "The ability of an aircraft to change its flight path or attitude.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "stalling speed",
+      "category": "aircraft_state",
+      "definition": "The minimum speed at which an aircraft can maintain level flight.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "drag",
+      "category": "hazard",
+      "definition": "The aerodynamic resistance experienced by an aircraft in flight, which can affect performance.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "gliding distance",
+      "category": "quantity",
+      "definition": "The distance an aircraft can travel while gliding without engine power.",
+      "source_files": [
+        "06_airplane_configuration.txt"
+      ]
+    },
+    {
+      "name": "wind direction",
+      "category": "condition",
+      "definition": "The direction from which the wind is blowing, which affects the approach planning.",
+      "source_files": [
+        "07_approach.txt"
+      ]
+    },
+    {
+      "name": "wind velocity",
+      "category": "condition",
+      "definition": "The speed of the wind, which influences the approach and landing strategy.",
+      "source_files": [
+        "07_approach.txt"
+      ]
+    },
+    {
+      "name": "field dimensions",
+      "category": "condition",
+      "definition": "The size of the landing field, which is a critical factor in approach planning.",
+      "source_files": [
+        "07_approach.txt"
+      ]
+    },
+    {
+      "name": "field slope",
+      "category": "condition",
+      "definition": "The angle of the landing field, which can affect the landing approach.",
+      "source_files": [
+        "07_approach.txt"
+      ]
+    },
+    {
+      "name": "obstacles",
+      "category": "hazard",
+      "definition": "Any physical barriers in the final approach path that may pose a risk during landing.",
+      "source_files": [
+        "07_approach.txt"
+      ]
+    },
+    {
+      "name": "terrain",
+      "category": "resource",
+      "definition": "The physical landscape or ground surface that can affect the safety and feasibility of an emergency landing.",
+      "source_files": [
+        "08_terrain_types.txt"
+      ]
+    },
+    {
+      "name": "landing area",
+      "category": "condition",
+      "definition": "A designated space where an aircraft can safely touch down.",
+      "source_files": [
+        "09_confined_areas.txt"
+      ]
+    },
+    {
+      "name": "ground-looping",
+      "category": "action",
+      "definition": "A maneuver where an aircraft turns sharply on the ground, often used to avoid obstacles.",
+      "source_files": [
+        "09_confined_areas.txt"
+      ]
+    },
+    {
+      "name": "landing gear",
+      "category": "aircraft_system",
+      "definition": "The wheels and associated mechanisms that allow an aircraft to land safely.",
+      "source_files": [
+        "09_confined_areas.txt"
+      ]
+    },
+    {
+      "name": "manmade obstacles",
+      "category": "hazard",
+      "definition": "Structures created by humans that may pose risks during landing, such as power lines or buildings.",
+      "source_files": [
+        "09_confined_areas.txt"
+      ]
+    },
+    {
+      "name": "tree landing",
+      "category": "procedure",
+      "definition": "A landing maneuver where an aircraft intentionally lands in a tree environment to minimize impact forces.",
+      "source_files": [
+        "10_trees_forest.txt"
+      ]
+    },
+    {
+      "name": "normal landing configuration",
+      "category": "action",
+      "definition": "The standard setup of an aircraft for landing, including full flaps and gear down.",
+      "source_files": [
+        "10_trees_forest.txt"
+      ]
+    },
+    {
+      "name": "minimum indicated airspeed",
+      "category": "condition",
+      "definition": "The lowest airspeed indicated on the aircraft's instruments that should be maintained during landing.",
+      "source_files": [
+        "10_trees_forest.txt"
+      ]
+    },
+    {
+      "name": "symmetrical initial tree contact",
+      "category": "condition",
+      "definition": "The condition where both wings of the aircraft make contact with tree branches simultaneously to maintain proper attitude.",
+      "source_files": [
+        "10_trees_forest.txt"
+      ]
+    },
+    {
+      "name": "heavy tree trunk contact",
+      "category": "hazard",
+      "definition": "The risk of the aircraft colliding with large tree trunks during landing, which can lead to loss of control.",
+      "source_files": [
+        "10_trees_forest.txt"
+      ]
+    },
+    {
+      "name": "water landing",
+      "category": "procedure",
+      "definition": "A landing technique used when an aircraft must land on water, requiring specific configurations and considerations.",
+      "source_files": [
+        "11_water_ditching_and_snow.txt"
+      ]
+    },
+    {
+      "name": "snow landing",
+      "category": "procedure",
+      "definition": "A landing technique used when an aircraft must land on snow, executed similarly to a water landing with specific considerations.",
+      "source_files": [
+        "11_water_ditching_and_snow.txt"
+      ]
+    },
+    {
+      "name": "depth perception",
+      "category": "hazard",
+      "definition": "The ability to perceive the distance of objects, which may be impaired during landings on smooth water or snow.",
+      "source_files": [
+        "11_water_ditching_and_snow.txt"
+      ]
+    },
+    {
+      "name": "glide attitude",
+      "category": "condition",
+      "definition": "The position of the aircraft that allows it to maintain controlled descent without engine power.",
+      "source_files": [
+        "12_engine_failure_after_takeoff_single_engine.txt"
+      ]
+    },
+    {
+      "name": "pilot action",
+      "category": "action",
+      "definition": "The decisions and maneuvers executed by the pilot in response to flight conditions.",
+      "source_files": [
+        "12_engine_failure_after_takeoff_single_engine.txt"
+      ]
+    },
+    {
+      "name": "emergency descent",
+      "category": "procedure",
+      "definition": "A maneuver for descending as rapidly as possible to a lower altitude or to the ground for an emergency landing.",
+      "source_files": [
+        "13_emergency_descents.txt"
+      ]
+    },
+    {
+      "name": "engine fire",
+      "category": "hazard",
+      "definition": "A situation where the aircraft's engine is on fire, requiring immediate action to ensure safety.",
+      "source_files": [
+        "13_emergency_descents.txt"
+      ]
+    },
+    {
+      "name": "aircraft state",
+      "category": "condition",
+      "definition": "The operational status of the aircraft, including speed, altitude, and configuration during maneuvers.",
+      "source_files": [
+        "13_emergency_descents.txt"
+      ]
+    },
+    {
+      "name": "procedure",
+      "category": "action",
+      "definition": "A set of steps to be followed in a specific situation, such as an emergency descent.",
+      "source_files": [
+        "13_emergency_descents.txt"
+      ]
+    },
+    {
+      "name": "in-flight fire",
+      "category": "hazard",
+      "definition": "A fire that occurs during flight, requiring immediate action from the pilot.",
+      "source_files": [
+        "14_in_flight_fire.txt"
+      ]
+    },
+    {
+      "name": "AFM/POH",
+      "category": "resource",
+      "definition": "Aircraft Flight Manual/ Pilot Operating Handbook that contains emergency procedures.",
+      "source_files": [
+        "14_in_flight_fire.txt"
+      ]
+    },
+    {
+      "name": "fuel supply",
+      "category": "resource",
+      "definition": "The system that provides fuel to the engine, which must be managed during an engine fire situation.",
+      "source_files": [
+        "15_engine_fire.txt"
+      ]
+    },
+    {
+      "name": "pilot actions",
+      "category": "action",
+      "definition": "The specific steps a pilot must take in response to an emergency situation, such as an engine fire.",
+      "source_files": [
+        "15_engine_fire.txt"
+      ]
+    },
+    {
+      "name": "Electrical Fire",
+      "category": "hazard",
+      "definition": "A situation where electrical components or wiring are burning, indicated by the odor of burning insulation.",
+      "source_files": [
+        "16_electrical_fires.txt"
+      ]
+    },
+    {
+      "name": "Faulty Circuit",
+      "category": "condition",
+      "definition": "An electrical circuit that is malfunctioning and may be the source of an electrical fire.",
+      "source_files": [
+        "16_electrical_fires.txt"
+      ]
+    },
+    {
+      "name": "Battery Master Switch",
+      "category": "control",
+      "definition": "A switch that controls the electrical power supply to the aircraft's systems.",
+      "source_files": [
+        "16_electrical_fires.txt"
+      ]
+    },
+    {
+      "name": "Alternator/Generator Switches",
+      "category": "control",
+      "definition": "Switches that control the alternator or generator, which provide electrical power to the aircraft.",
+      "source_files": [
+        "16_electrical_fires.txt"
+      ]
+    },
+    {
+      "name": "Landing",
+      "category": "action",
+      "definition": "The act of bringing the aircraft down to the ground safely.",
+      "source_files": [
+        "16_electrical_fires.txt"
+      ]
+    },
+    {
+      "name": "cabin fire",
+      "category": "hazard",
+      "definition": "A fire occurring within the cabin of an aircraft, which poses immediate danger to passengers and crew.",
+      "source_files": [
+        "17_cabin_fire.txt"
+      ]
+    },
+    {
+      "name": "faulty system",
+      "category": "condition",
+      "definition": "A malfunctioning component of the aircraft's systems that may contribute to a cabin fire.",
+      "source_files": [
+        "17_cabin_fire.txt"
+      ]
+    },
+    {
+      "name": "smoke management",
+      "category": "action",
+      "definition": "The procedures followed to control and remove smoke from the cabin during a fire incident.",
+      "source_files": [
+        "17_cabin_fire.txt"
+      ]
+    },
+    {
+      "name": "asymmetric split flap",
+      "category": "condition",
+      "definition": "A situation where one flap deploys or retracts while the other remains in position, causing a pronounced roll toward the wing with the least flap deflection.",
+      "source_files": [
+        "18_asymmetric_split_flap.txt"
+      ]
+    },
+    {
+      "name": "airspeed",
+      "category": "quantity",
+      "definition": "The speed of the aircraft relative to the air, which is critical during landing to avoid stalling.",
+      "source_files": [
+        "18_asymmetric_split_flap.txt"
+      ]
+    },
+    {
+      "name": "stall",
+      "category": "hazard",
+      "definition": "A condition in which the aircraft loses lift due to insufficient airspeed, which can occur if the pilot flares excessively during landing.",
+      "source_files": [
+        "18_asymmetric_split_flap.txt"
+      ]
+    },
+    {
+      "name": "elevator control failure",
+      "category": "condition",
+      "definition": "A situation where the elevator control system is compromised, leading to partial or total loss of pitch control.",
+      "source_files": [
+        "19_loss_of_elevator_control.txt"
+      ]
+    },
+    {
+      "name": "trim mechanism",
+      "category": "aircraft_system",
+      "definition": "A system used to adjust the aerodynamic balance of the aircraft, particularly useful in control failures.",
+      "source_files": [
+        "19_loss_of_elevator_control.txt"
+      ]
+    },
+    {
+      "name": "pitch control",
+      "category": "aircraft_state",
+      "definition": "The ability to control the aircraft's nose-up or nose-down attitude.",
+      "source_files": [
+        "19_loss_of_elevator_control.txt"
+      ]
+    },
+    {
+      "name": "landing gear malfunction",
+      "category": "condition",
+      "definition": "A situation where one or more landing gear legs fail to respond to extension methods, necessitating emergency landing procedures.",
+      "source_files": [
+        "20_landing_gear_malfunction.txt"
+      ]
+    },
+    {
+      "name": "pitot-static system",
+      "category": "aircraft_system",
+      "definition": "A system that provides pressure for operating the airspeed indicator, vertical speed indicator, and altimeter, subject to blockage by foreign matter.",
+      "source_files": [
+        "21_pitot_static_system.txt"
+      ]
+    },
+    {
+      "name": "airspeed indicator",
+      "category": "instrument",
+      "definition": "An instrument that indicates the speed of the aircraft relative to the surrounding air.",
+      "source_files": [
+        "21_pitot_static_system.txt"
+      ]
+    },
+    {
+      "name": "VSI",
+      "category": "instrument",
+      "definition": "Vertical Speed Indicator, an instrument that shows the rate of climb or descent of the aircraft.",
+      "source_files": [
+        "21_pitot_static_system.txt"
+      ]
+    },
+    {
+      "name": "altimeter",
+      "category": "instrument",
+      "definition": "An instrument that measures the altitude of the aircraft by comparing the pressure of the atmosphere outside the aircraft to a standard atmospheric pressure.",
+      "source_files": [
+        "21_pitot_static_system.txt"
+      ]
+    },
+    {
+      "name": "blockage",
+      "category": "condition",
+      "definition": "A situation where the pitot-static system is obstructed by ice, dirt, or other foreign matter, affecting instrument operation.",
+      "source_files": [
+        "21_pitot_static_system.txt"
+      ]
+    },
+    {
+      "name": "abnormal engine instrument indications",
+      "category": "condition",
+      "definition": "Indicators that show abnormal performance or status of the aircraft's engine during flight.",
+      "source_files": [
+        "22_abnormal_engine_instrument_indication.txt"
+      ]
+    },
+    {
+      "name": "corrective actions",
+      "category": "action",
+      "definition": "Steps or measures taken to rectify abnormal engine instrument indications.",
+      "source_files": [
+        "22_abnormal_engine_instrument_indication.txt"
+      ]
+    },
+    {
+      "name": "inadvertent door opening",
+      "category": "event",
+      "definition": "An unexpected opening of an aircraft door during flight that may cause distraction but typically does not compromise flight safety.",
+      "source_files": [
+        "23_door_opening_in_flight.txt"
+      ]
+    },
+    {
+      "name": "pilot distraction",
+      "category": "condition",
+      "definition": "A state where the pilot's attention is diverted from flying the aircraft, potentially leading to loss of control.",
+      "source_files": [
+        "23_door_opening_in_flight.txt"
+      ]
+    },
+    {
+      "name": "airplane control",
+      "category": "action",
+      "definition": "The act of maintaining the aircraft's flight path and stability, particularly in response to unexpected events.",
+      "source_files": [
+        "23_door_opening_in_flight.txt"
+      ]
+    },
+    {
+      "name": "landing checklist",
+      "category": "procedure",
+      "definition": "A series of tasks and checks that a pilot must complete before landing the aircraft safely.",
+      "source_files": [
+        "23_door_opening_in_flight.txt"
+      ]
+    },
+    {
+      "name": "Inadvertent VFR Flight Into IMC",
+      "category": "event",
+      "definition": "An event where a VFR pilot unintentionally enters instrument meteorological conditions, leading to a potential loss of control.",
+      "source_files": [
+        "24_inadvertent_vfr_flight_into_imc.txt"
+      ]
+    },
+    {
+      "name": "IMC",
+      "category": "condition",
+      "definition": "Instrument Meteorological Conditions, a situation where pilots cannot maintain visual reference to the horizon.",
+      "source_files": [
+        "24_inadvertent_vfr_flight_into_imc.txt"
+      ]
+    },
+    {
+      "name": "assistance",
+      "category": "resource",
+      "definition": "Support or help obtained by the pilot to safely land the aircraft during an emergency.",
+      "source_files": [
+        "24_inadvertent_vfr_flight_into_imc.txt"
+      ]
+    },
+    {
+      "name": "pilot",
+      "category": "agent",
+      "definition": "The individual responsible for operating the aircraft.",
+      "source_files": [
+        "25_maintaining_airplane_control.txt"
+      ]
+    },
+    {
+      "name": "flight instruments",
+      "category": "resource",
+      "definition": "Devices that provide critical information about the aircraft's attitude and performance.",
+      "source_files": [
+        "25_maintaining_airplane_control.txt"
+      ]
+    },
+    {
+      "name": "spatial disorientation",
+      "category": "condition",
+      "definition": "A state where a pilot's perception of the aircraft's position and motion is distorted.",
+      "source_files": [
+        "25_maintaining_airplane_control.txt"
+      ]
+    },
+    {
+      "name": "attitude control",
+      "category": "procedure",
+      "definition": "The methods and techniques used by a pilot to maintain or regain the desired orientation of the airplane in flight.",
+      "source_files": [
+        "26_attitude_control.txt"
+      ]
+    },
+    {
+      "name": "airplane",
+      "category": "resource",
+      "definition": "The vehicle designed for air travel that is capable of flight.",
+      "source_files": [
+        "26_attitude_control.txt"
+      ]
+    },
+    {
+      "name": "emergency procedure",
+      "category": "constraint",
+      "definition": "Specific actions that must be taken by the pilot in response to an emergency situation to ensure safety.",
+      "source_files": [
+        "26_attitude_control.txt"
+      ]
+    },
+    {
+      "name": "turn",
+      "category": "action",
+      "definition": "A maneuver involving a change in the aircraft's heading by rotating around its vertical axis.",
+      "source_files": [
+        "27_turns.txt"
+      ]
+    },
+    {
+      "name": "bank angle",
+      "category": "condition",
+      "definition": "The angle between the vertical axis of the aircraft and the line of the wings during a turn.",
+      "source_files": [
+        "27_turns.txt"
+      ]
+    },
+    {
+      "name": "safety",
+      "category": "constraint",
+      "definition": "The condition of being protected from or unlikely to cause danger, risk, or injury during flight maneuvers.",
+      "source_files": [
+        "27_turns.txt"
+      ]
+    },
+    {
+      "name": "climb",
+      "category": "action",
+      "definition": "The action of ascending in flight, requiring specific adjustments to power and attitude.",
+      "source_files": [
+        "28_climbs.txt"
+      ]
+    },
+    {
+      "name": "attitude indicator",
+      "category": "resource",
+      "definition": "An instrument that displays the aircraft's orientation relative to the horizon.",
+      "source_files": [
+        "28_climbs.txt"
+      ]
+    },
+    {
+      "name": "power application",
+      "category": "action",
+      "definition": "The process of adjusting engine power to achieve desired flight characteristics.",
+      "source_files": [
+        "28_climbs.txt"
+      ]
+    },
+    {
+      "name": "descent",
+      "category": "event",
+      "definition": "A phase of flight where the aircraft reduces altitude.",
+      "source_files": [
+        "29_descents.txt"
+      ]
+    },
+    {
+      "name": "power reduction",
+      "category": "action",
+      "definition": "The act of decreasing engine power to control altitude and airspeed.",
+      "source_files": [
+        "29_descents.txt"
+      ]
+    },
+    {
+      "name": "rate of descent",
+      "category": "condition",
+      "definition": "The speed at which an aircraft descends, measured in feet per minute.",
+      "source_files": [
+        "29_descents.txt"
+      ]
+    },
+    {
+      "name": "untrained instrument pilot",
+      "category": "agent",
+      "definition": "A pilot who lacks the necessary training to perform instrument flying maneuvers safely.",
+      "source_files": [
+        "30_combined_maneuvers.txt"
+      ]
+    },
+    {
+      "name": "combined maneuvers",
+      "category": "action",
+      "definition": "Maneuvers that involve simultaneous changes in heading and altitude, such as climbing or descending turns.",
+      "source_files": [
+        "30_combined_maneuvers.txt"
+      ]
+    },
+    {
+      "name": "control loss",
+      "category": "hazard",
+      "definition": "A situation where the pilot is unable to maintain control of the aircraft, often due to complex maneuvers.",
+      "source_files": [
+        "30_combined_maneuvers.txt"
+      ]
+    },
+    {
+      "name": "acclimatization",
+      "category": "condition",
+      "definition": "The process of becoming accustomed to a new environment or conditions, particularly in relation to visual flight.",
+      "source_files": [
+        "31_transition_to_visual_flight.txt"
+      ]
+    },
+    {
+      "name": "geographical orientation",
+      "category": "condition",
+      "definition": "The awareness of the aircraft's position in relation to the airport and runway during the transition to visual flight.",
+      "source_files": [
+        "31_transition_to_visual_flight.txt"
+      ]
+    },
+    {
+      "name": "altitude",
+      "category": "constraint",
+      "definition": "The height of the aircraft above the terrain, which affects the ability to safely transition to visual flight.",
+      "source_files": [
+        "31_transition_to_visual_flight.txt"
+      ]
+    },
+    {
+      "name": "visibility",
+      "category": "condition",
+      "definition": "The clarity of the environment that affects a pilot's ability to see and navigate during the transition to visual flight.",
+      "source_files": [
+        "31_transition_to_visual_flight.txt"
+      ]
+    },
+    {
+      "name": "ballistic parachute system",
+      "category": "system",
+      "definition": "A safety system that allows an airplane to descend slowly in an emergency, increasing the likelihood of occupant survival.",
+      "source_files": [
+        "32_emergency_response_systems.txt"
+      ]
+    },
+    {
+      "name": "Emergency Autoland system",
+      "category": "system",
+      "definition": "A system that can take over control of the aircraft to ensure a safe landing when necessary.",
+      "source_files": [
+        "32_emergency_response_systems.txt"
+      ]
+    },
+    {
+      "name": "ballistic_parachute",
+      "category": "resource",
+      "definition": "A safety system designed to deploy during critical flight conditions to prevent injuries and save lives.",
+      "source_files": [
+        "33_ballistic_parachutes.txt"
+      ]
+    },
+    {
+      "name": "condition",
+      "category": "condition",
+      "definition": "Circumstances under which the deployment of the ballistic parachute is deemed necessary.",
+      "source_files": [
+        "33_ballistic_parachutes.txt"
+      ]
+    },
+    {
+      "name": "passenger",
+      "category": "agent",
+      "definition": "An individual on board the aircraft who may be involved in the deployment of the ballistic parachute under certain conditions.",
+      "source_files": [
+        "33_ballistic_parachutes.txt"
+      ]
+    },
+    {
+      "name": "hazard",
+      "category": "hazard",
+      "definition": "Potential dangers associated with the deployment of the parachute and the subsequent landing.",
+      "source_files": [
+        "33_ballistic_parachutes.txt"
+      ]
+    },
+    {
+      "name": "EAL system",
+      "category": "action",
+      "definition": "An automated system that assists in landing an aircraft when the pilot is incapacitated.",
+      "source_files": [
+        "34_autoland.txt"
+      ]
+    },
+    {
+      "name": "automated landing",
+      "category": "procedure",
+      "definition": "The process initiated by the EAL system to land the aircraft without pilot input.",
+      "source_files": [
+        "34_autoland.txt"
+      ]
+    },
+    {
+      "name": "pilot incapacitation",
+      "category": "condition",
+      "definition": "A state where the pilot is unable to control the aircraft, prompting the EAL system to take over.",
+      "source_files": [
+        "34_autoland.txt"
+      ]
+    },
+    {
+      "name": "pitot-static system failure",
+      "category": "hazard",
+      "definition": "A malfunction of the pitot-static system that affects the accuracy of flight instruments.",
+      "source_files": [
+        "35_chapter_summary.txt"
+      ]
+    },
+    {
+      "name": "emergency procedures",
+      "category": "procedure",
+      "definition": "Recommended actions for pilots to take in response to specific emergency situations.",
+      "source_files": [
+        "35_chapter_summary.txt"
+      ]
+    },
+    {
+      "name": "IFR flight",
+      "category": "flight_phase",
+      "definition": "Instrument Flight Rules flight, where pilots rely on instruments for navigation and control.",
+      "source_files": [
+        "35_chapter_summary.txt"
+      ]
+    },
+    {
+      "name": "EFIS",
+      "category": "aircraft_system",
+      "definition": "Electronic Flight Instrument System that displays flight data electronically.",
+      "source_files": [
+        "35_chapter_summary.txt"
+      ]
+    },
+    {
+      "name": "conventional instruments",
+      "category": "aircraft_system",
+      "definition": "Traditional mechanical flight instruments used for navigation and control.",
+      "source_files": [
+        "35_chapter_summary.txt"
+      ]
+    }
+  ],
+  "scope_notes": [
+    "Focus on emergency landing techniques applicable to small fixed-wing airplanes in adverse terrain.",
+    "Include concepts related to pilot actions for self and passenger protection.",
+    "The ontology must cover various types of emergency landings including forced landings, precautionary landings, and ditching.",
+    "It should address conditions leading to these landings such as engine failure, deteriorating weather, and fuel shortages.",
+    "The ontology should facilitate queries regarding the hazards associated with different landing types.",
+    "The ontology should cover psychological factors affecting pilot performance during emergencies.",
+    "Focus on decision-making processes in emergency situations, particularly regarding landing.",
+    "Include concepts related to the risks and hazards associated with psychological states.",
+    "Focus on risks associated with landing techniques and conditions.",
+    "Include concepts related to aircraft attitude and descent rates during emergency landings.",
+    "The ontology must address factors influencing emergency landing site selection, including terrain assessment and pilot decision-making.",
+    "Coverage includes the impact of height, route planning, and airspeed on emergency procedures.",
+    "The ontology will cover procedures related to flap usage, final approach, and associated risks.",
+    "Focus on the implications of aircraft configuration on safety during landing.",
+    "Include considerations for engine management and electrical system deactivation to mitigate fire hazards.",
+    "The ontology must address factors influencing approach planning, including environmental conditions and hazards.",
+    "Focus on the relationships between wind, terrain, and obstacles in the context of landing procedures.",
+    "Focus on unusual terrain types for emergency landings as per pilot training.",
+    "The ontology will focus on emergency landing procedures in confined areas, including considerations for obstacles and safety measures.",
+    "Coverage includes various landing scenarios such as water landings and road landings, emphasizing the importance of situational awareness."
+  ]
+}

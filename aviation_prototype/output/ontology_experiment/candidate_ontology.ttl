@@ -1,0 +1,111 @@
+@prefix av: <https://example.org/aviation/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+av:CandidateAviationOntology a owl:Ontology .
+
+av:EmergencyLanding a owl:Class ;
+    rdfs:comment "" .
+
+av:PilotAction a owl:Class ;
+    rdfs:comment "" .
+
+av:EmergencyLandingSite a owl:Class ;
+    rdfs:comment "" .
+
+av:Hazard a owl:Class ;
+    rdfs:comment "" .
+
+av:AircraftState a owl:Class ;
+    rdfs:comment "" .
+
+av:Terrain a owl:Class ;
+    rdfs:comment "" .
+
+av:PsychologicalHazard a owl:Class ;
+    rdfs:comment "" .
+
+av:Procedure a owl:Class ;
+    rdfs:comment "" .
+
+av:requires a owl:ObjectProperty ;
+    rdfs:domain av:PilotAction ;
+    rdfs:range av:EmergencyLanding ;
+    rdfs:comment "" .
+
+av:governed_by a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyLandingSite ;
+    rdfs:range av:Terrain ;
+    rdfs:comment "" .
+
+av:affects a owl:ObjectProperty ;
+    rdfs:domain av:AircraftState ;
+    rdfs:range av:PilotAction ;
+    rdfs:comment "" .
+
+av:is_suitable_for a owl:ObjectProperty ;
+    rdfs:domain av:Terrain ;
+    rdfs:range av:EmergencyLanding ;
+    rdfs:comment "" .
+
+av:has_procedure a owl:ObjectProperty ;
+    rdfs:domain av:EmergencyLanding ;
+    rdfs:range av:Procedure ;
+    rdfs:comment "" .
+
+av:indicates a owl:ObjectProperty ;
+    rdfs:domain av:Hazard ;
+    rdfs:range av:AircraftState ;
+    rdfs:comment "" .
+
+av:impairs a owl:ObjectProperty ;
+    rdfs:domain av:PsychologicalHazard ;
+    rdfs:range av:PilotAction ;
+    rdfs:comment "" .
+
+av:results_in a owl:ObjectProperty ;
+    rdfs:domain av:PilotAction ;
+    rdfs:range av:EmergencyLanding ;
+    rdfs:comment "" .
+
+av:description a owl:DatatypeProperty ;
+    rdfs:domain av:EmergencyLanding ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:risk_level a owl:DatatypeProperty ;
+    rdfs:domain av:Hazard ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:terrain_type a owl:DatatypeProperty ;
+    rdfs:domain av:Terrain ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:psychological_impact a owl:DatatypeProperty ;
+    rdfs:domain av:PsychologicalHazard ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:procedure_steps a owl:DatatypeProperty ;
+    rdfs:domain av:Procedure ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:aircraft_condition a owl:DatatypeProperty ;
+    rdfs:domain av:AircraftState ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:pilot_experience a owl:DatatypeProperty ;
+    rdfs:domain av:PilotAction ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .
+
+av:landing_outcome a owl:DatatypeProperty ;
+    rdfs:domain av:EmergencyLanding ;
+    rdfs:range xsd:string ;
+    rdfs:comment "" .

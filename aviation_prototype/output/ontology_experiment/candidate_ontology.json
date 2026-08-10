@@ -1,0 +1,372 @@
+{
+  "metadata": {
+    "name": "AviationEmergencyLandingOntology",
+    "description": "A structured representation of aviation emergency landing procedures, conditions, and pilot actions to assist in decision-making during emergencies.",
+    "namespace": "aviation_emergency_landing",
+    "generated_from": "Manager and Domain Expert Plans"
+  },
+  "classes": [
+    {
+      "name": "EmergencyLanding",
+      "definition": "A landing performed under emergency conditions, often involving risks to the aircraft and occupants.",
+      "attributes": [
+        {
+          "name": "description",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        },
+        {
+          "name": "landing_outcome",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "PilotAction",
+      "attributes": [
+        {
+          "name": "pilot_experience",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "EmergencyLandingSite",
+      "attributes": [],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "Hazard",
+      "attributes": [
+        {
+          "name": "risk_level",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "AircraftState",
+      "attributes": [
+        {
+          "name": "aircraft_condition",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "Terrain",
+      "attributes": [
+        {
+          "name": "terrain_type",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "PsychologicalHazard",
+      "attributes": [
+        {
+          "name": "psychological_impact",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": false,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    },
+    {
+      "name": "Procedure",
+      "attributes": [
+        {
+          "name": "procedure_steps",
+          "range": "string",
+          "kind": "literal",
+          "required": true,
+          "multivalued": true,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "parent": null
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "requires",
+      "domain": "PilotAction",
+      "range": "EmergencyLanding",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "governed_by",
+      "domain": "EmergencyLandingSite",
+      "range": "Terrain",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "affects",
+      "domain": "AircraftState",
+      "range": "PilotAction",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "is_suitable_for",
+      "domain": "Terrain",
+      "range": "EmergencyLanding",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "has_procedure",
+      "domain": "EmergencyLanding",
+      "range": "Procedure",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "indicates",
+      "domain": "Hazard",
+      "range": "AircraftState",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "impairs",
+      "domain": "PsychologicalHazard",
+      "range": "PilotAction",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "results_in",
+      "domain": "PilotAction",
+      "range": "EmergencyLanding",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "description",
+      "domain": "EmergencyLanding",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "risk_level",
+      "domain": "Hazard",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "terrain_type",
+      "domain": "Terrain",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "psychological_impact",
+      "domain": "PsychologicalHazard",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "procedure_steps",
+      "domain": "Procedure",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "aircraft_condition",
+      "domain": "AircraftState",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "pilot_experience",
+      "domain": "PilotAction",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    },
+    {
+      "name": "landing_outcome",
+      "domain": "EmergencyLanding",
+      "range": "string",
+      "description": "",
+      "required": false,
+      "multivalued": false
+    }
+  ],
+  "enums": [],
+  "validation_rules": [
+    {
+      "id": "VR001",
+      "target_class": "EmergencyLanding",
+      "property": "description",
+      "rule": "An emergency landing must have a description and associated procedures.",
+      "severity": "required"
+    },
+    {
+      "id": "VR002",
+      "target_class": "PilotAction",
+      "property": "requires",
+      "rule": "Pilot actions must be linked to specific emergency scenarios.",
+      "severity": "required"
+    },
+    {
+      "id": "VR003",
+      "target_class": "Hazard",
+      "property": "riskLevel",
+      "rule": "Hazards must have a defined risk level.",
+      "severity": "required"
+    }
+  ],
+  "competency_question_coverage": [
+    {
+      "cq_id": "CQ001",
+      "covered": true,
+      "classes": [
+        "EmergencyLanding",
+        "PilotAction"
+      ],
+      "properties": [
+        "requires"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ002",
+      "covered": true,
+      "classes": [
+        "EmergencyLanding",
+        "Hazard"
+      ],
+      "properties": [
+        "results_in"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ003",
+      "covered": true,
+      "classes": [
+        "PsychologicalHazard",
+        "PilotAction"
+      ],
+      "properties": [
+        "impairs"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ004",
+      "covered": true,
+      "classes": [
+        "EmergencyLanding",
+        "Hazard"
+      ],
+      "properties": [
+        "indicates"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ005",
+      "covered": true,
+      "classes": [
+        "EmergencyLandingSite",
+        "Terrain"
+      ],
+      "properties": [
+        "governed_by"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ006",
+      "covered": true,
+      "classes": [
+        "Procedure",
+        "EmergencyLanding"
+      ],
+      "properties": [
+        "hasProcedure"
+      ],
+      "notes": ""
+    },
+    {
+      "cq_id": "CQ012",
+      "covered": true,
+      "classes": [
+        "PilotAction",
+        "EmergencyLanding"
+      ],
+      "properties": [
+        "results_in"
+      ],
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+id: aviation_emergency_landing
+name: AviationEmergencyLandingOntology
+description: A structured representation of aviation emergency landing procedures, conditions, and pilot
+  actions to assist in decision-making during emergencies.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  av: https://example.org/aviation/
+default_range: string
+default_prefix: av
+imports:
+- linkml:types
+classes:
+  EmergencyLanding:
+    description: ''
+    attributes:
+      description:
+        description: ''
+        range: string
+        required: true
+      landing_outcome:
+        description: ''
+        range: string
+        required: true
+  PilotAction:
+    description: ''
+    attributes:
+      pilot_experience:
+        description: ''
+        range: string
+        required: true
+  EmergencyLandingSite:
+    description: ''
+    attributes: {}
+  Hazard:
+    description: ''
+    attributes:
+      risk_level:
+        description: ''
+        range: string
+        required: true
+  AircraftState:
+    description: ''
+    attributes:
+      aircraft_condition:
+        description: ''
+        range: string
+        required: true
+  Terrain:
+    description: ''
+    attributes:
+      terrain_type:
+        description: ''
+        range: string
+        required: true
+  PsychologicalHazard:
+    description: ''
+    attributes:
+      psychological_impact:
+        description: ''
+        range: string
+        required: true
+  Procedure:
+    description: ''
+    attributes:
+      procedure_steps:
+        description: ''
+        range: string
+        required: true
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+enums: {}

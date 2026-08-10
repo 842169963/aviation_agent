@@ -1,0 +1,150 @@
+id: http://example.org/aviation_emergency_procedures
+name: AviationEmergencyProceduresOntology
+description: A structured representation of aviation emergency procedures, enabling effective querying
+  and retrieval of information related to emergency landings, pilot actions, and associated hazards.
+prefixes:
+  linkml: https://w3id.org/linkml/
+  av: https://example.org/aviation/
+default_range: string
+default_prefix: av
+imports:
+- linkml:types
+classes:
+  EmergencyProcedure:
+    description: A structured set of actions to be taken during an aviation emergency.
+    attributes:
+      procedure_name:
+        description: The name of the emergency procedure.
+        range: string
+        required: true
+      has_step:
+        description: Links an emergency procedure to its individual steps.
+        range: ProcedureStep
+        required: true
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      evidenced_by:
+        description: Links an emergency procedure to its supporting evidence.
+        range: SourceEvidence
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      requires:
+        description: Indicates the conditions that must be met to execute a procedure.
+        range: TriggerCondition
+        required: true
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+  ProcedureStep:
+    description: An individual step within an emergency procedure, detailing specific actions to be taken.
+    attributes:
+      step_order:
+        description: The order in which the step should be executed within a procedure.
+        range: integer
+        required: true
+      action_text:
+        description: Text describing the action to be taken in this step.
+        range: string
+        required: true
+      step_type:
+        description: The type of step (e.g., action, caution, note).
+        range: StepType
+        required: true
+    is_a: EmergencyProcedure
+  Warning:
+    description: A notification regarding potential hazards or risks during flight operations.
+    attributes:
+      describes:
+        description: Links warnings to specific hazards.
+        range: Hazard
+        required: true
+  SourceEvidence:
+    description: Documentation or data that supports the procedures and actions taken during emergencies.
+    attributes:
+      evidence_source:
+        description: The source from which the evidence is derived.
+        range: string
+        required: true
+  TriggerCondition:
+    description: Conditions that necessitate the execution of an emergency procedure.
+    attributes:
+      triggers:
+        description: Indicates which emergency procedure is triggered by a specific condition.
+        range: EmergencyProcedure
+        required: true
+  FlightPhase:
+    description: Different stages of flight that may influence emergency procedures.
+    attributes:
+      flight_phase_name:
+        description: The name of the flight phase.
+        range: string
+        required: true
+  Hazard:
+    description: Potential risks that may affect flight safety during emergencies.
+    attributes:
+      hazard_description:
+        description: A description of the hazard associated with the procedure.
+        range: string
+        required: true
+      associated_with:
+        description: Links hazards to relevant emergency procedures.
+        range: EmergencyProcedure
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+  AircraftState:
+    description: The operational status of the aircraft during an emergency.
+    attributes:
+      aircraft_condition:
+        description: The condition of the aircraft during the emergency.
+        range: string
+        required: true
+      affects:
+        description: Indicates how the aircraft state influences the execution of emergency procedures.
+        range: EmergencyProcedure
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+  AircraftSystem:
+    description: Components of the aircraft that may be affected during emergencies.
+    attributes:
+      system_name:
+        description: The name of the aircraft system being referenced.
+        range: string
+        required: true
+  EmergencyEvent:
+    description: An occurrence that triggers the need for emergency procedures.
+    attributes:
+      event_description:
+        description: A description of the emergency event.
+        range: string
+        required: true
+      occurs_during:
+        description: Indicates the flight phase during which an emergency event occurs.
+        range: FlightPhase
+        required: true
+  PilotAction:
+    description: Actions taken by the pilot in response to emergency situations.
+    attributes:
+      pilot_decision:
+        description: The decision made by the pilot in response to the emergency.
+        range: string
+        required: true
+      performed_by:
+        description: Links pilot actions to specific emergency events.
+        range: EmergencyEvent
+        required: true
+enums:
+  StepType:
+    description: Different types of steps within an emergency procedure.
+    permissible_values:
+      immediate_action:
+        description: An action that must be taken immediately.
+      caution:
+        description: A warning to be cautious during a procedure.
+      training_note:
+        description: A note for training purposes.
+      background:
+        description: Background information relevant to the procedure.

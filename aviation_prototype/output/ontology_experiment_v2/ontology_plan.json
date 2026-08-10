@@ -1,0 +1,494 @@
+{
+  "ontology_goal": "To provide a structured representation of aviation emergency procedures, enabling effective querying and retrieval of information related to emergency landings, pilot actions, and associated hazards.",
+  "modeling_principles": [
+    "Explicitly model procedures, events, actions, warnings, hazards, aircraft state, source evidence, flight phase, and step type.",
+    "Preserve provenance and source evidence as a core requirement.",
+    "Separate immediate actions from training notes, cautions, and background information.",
+    "Ensure the ontology is implementable as LinkML/SHACL/RDF."
+  ],
+  "classes": [
+    {
+      "name": "EmergencyProcedure",
+      "definition": "A structured set of actions to be taken during an aviation emergency.",
+      "responsibilities": [
+        "Define the sequence of actions for emergencies.",
+        "Provide guidelines for pilot decision-making."
+      ],
+      "design_pattern": "Procedure",
+      "source_cqs": [
+        "CQ001",
+        "CQ002",
+        "CQ013"
+      ]
+    },
+    {
+      "name": "ProcedureStep",
+      "definition": "An individual step within an emergency procedure, detailing specific actions to be taken.",
+      "responsibilities": [
+        "Outline specific actions within a procedure.",
+        "Maintain order and context for each step."
+      ],
+      "design_pattern": "Ordered List",
+      "source_cqs": [
+        "CQ010",
+        "CQ011",
+        "CQ012"
+      ]
+    },
+    {
+      "name": "Warning",
+      "definition": "A notification regarding potential hazards or risks during flight operations.",
+      "responsibilities": [
+        "Alert pilots to critical conditions.",
+        "Provide information on necessary precautions."
+      ],
+      "design_pattern": "Alert",
+      "source_cqs": [
+        "CQ003",
+        "CQ004",
+        "CQ017"
+      ]
+    },
+    {
+      "name": "SourceEvidence",
+      "definition": "Documentation or data that supports the procedures and actions taken during emergencies.",
+      "responsibilities": [
+        "Provide provenance for procedures.",
+        "Support decision-making with factual data."
+      ],
+      "design_pattern": "Evidence",
+      "source_cqs": [
+        "CQ014",
+        "CQ015",
+        "CQ022"
+      ]
+    },
+    {
+      "name": "TriggerCondition",
+      "definition": "Conditions that necessitate the execution of an emergency procedure.",
+      "responsibilities": [
+        "Identify situations requiring immediate action.",
+        "Link conditions to specific procedures."
+      ],
+      "design_pattern": "Condition",
+      "source_cqs": [
+        "CQ002",
+        "CQ005",
+        "CQ006"
+      ]
+    },
+    {
+      "name": "FlightPhase",
+      "definition": "Different stages of flight that may influence emergency procedures.",
+      "responsibilities": [
+        "Categorize actions based on flight stages.",
+        "Provide context for procedures."
+      ],
+      "design_pattern": "Phase",
+      "source_cqs": [
+        "CQ007",
+        "CQ008"
+      ]
+    },
+    {
+      "name": "Hazard",
+      "definition": "Potential risks that may affect flight safety during emergencies.",
+      "responsibilities": [
+        "Identify and categorize hazards.",
+        "Link hazards to relevant procedures."
+      ],
+      "design_pattern": "Risk",
+      "source_cqs": [
+        "CQ019",
+        "CQ020"
+      ]
+    },
+    {
+      "name": "AircraftState",
+      "definition": "The operational status of the aircraft during an emergency.",
+      "responsibilities": [
+        "Describe the aircraft's condition.",
+        "Influence decision-making during emergencies."
+      ],
+      "design_pattern": "State",
+      "source_cqs": [
+        "CQ021",
+        "CQ024"
+      ]
+    },
+    {
+      "name": "AircraftSystem",
+      "definition": "Components of the aircraft that may be affected during emergencies.",
+      "responsibilities": [
+        "Detail systems relevant to emergency procedures.",
+        "Link systems to potential hazards."
+      ],
+      "design_pattern": "System",
+      "source_cqs": [
+        "CQ015",
+        "CQ016"
+      ]
+    },
+    {
+      "name": "EmergencyEvent",
+      "definition": "An occurrence that triggers the need for emergency procedures.",
+      "responsibilities": [
+        "Document events leading to emergencies.",
+        "Provide context for pilot actions."
+      ],
+      "design_pattern": "Event",
+      "source_cqs": [
+        "CQ001",
+        "CQ012"
+      ]
+    },
+    {
+      "name": "PilotAction",
+      "definition": "Actions taken by the pilot in response to emergency situations.",
+      "responsibilities": [
+        "Outline specific pilot responses.",
+        "Link actions to procedures and conditions."
+      ],
+      "design_pattern": "Action",
+      "source_cqs": [
+        "CQ018",
+        "CQ023"
+      ]
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "has_step",
+      "domain": "EmergencyProcedure",
+      "range": "ProcedureStep",
+      "definition": "Links an emergency procedure to its individual steps.",
+      "required": true,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ010"
+      ]
+    },
+    {
+      "name": "triggers",
+      "domain": "TriggerCondition",
+      "range": "EmergencyProcedure",
+      "definition": "Indicates which emergency procedure is triggered by a specific condition.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ002"
+      ]
+    },
+    {
+      "name": "associated_with",
+      "domain": "Hazard",
+      "range": "EmergencyProcedure",
+      "definition": "Links hazards to relevant emergency procedures.",
+      "required": false,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ019"
+      ]
+    },
+    {
+      "name": "evidenced_by",
+      "domain": "EmergencyProcedure",
+      "range": "SourceEvidence",
+      "definition": "Links an emergency procedure to its supporting evidence.",
+      "required": false,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ014"
+      ]
+    },
+    {
+      "name": "occurs_during",
+      "domain": "EmergencyEvent",
+      "range": "FlightPhase",
+      "definition": "Indicates the flight phase during which an emergency event occurs.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ007"
+      ]
+    },
+    {
+      "name": "performed_by",
+      "domain": "PilotAction",
+      "range": "EmergencyEvent",
+      "definition": "Links pilot actions to specific emergency events.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ023"
+      ]
+    },
+    {
+      "name": "affects",
+      "domain": "AircraftState",
+      "range": "EmergencyProcedure",
+      "definition": "Indicates how the aircraft state influences the execution of emergency procedures.",
+      "required": false,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ021"
+      ]
+    },
+    {
+      "name": "requires",
+      "domain": "EmergencyProcedure",
+      "range": "TriggerCondition",
+      "definition": "Indicates the conditions that must be met to execute a procedure.",
+      "required": true,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ005"
+      ]
+    },
+    {
+      "name": "describes",
+      "domain": "Warning",
+      "range": "Hazard",
+      "definition": "Links warnings to specific hazards.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ003"
+      ]
+    },
+    {
+      "name": "influences",
+      "domain": "PsychologicalHazard",
+      "range": "PilotAction",
+      "definition": "Indicates how psychological factors affect pilot actions.",
+      "required": false,
+      "multivalued": true,
+      "source_cqs": [
+        "CQ003"
+      ]
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "step_order",
+      "domain": "ProcedureStep",
+      "range": "integer",
+      "definition": "The order in which the step should be executed within a procedure.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ010"
+      ]
+    },
+    {
+      "name": "action_text",
+      "domain": "ProcedureStep",
+      "range": "string",
+      "definition": "Text describing the action to be taken in this step.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ010"
+      ]
+    },
+    {
+      "name": "step_type",
+      "domain": "ProcedureStep",
+      "range": "string",
+      "definition": "The type of step (e.g., action, caution, note).",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ010"
+      ]
+    },
+    {
+      "name": "hazard_description",
+      "domain": "Hazard",
+      "range": "string",
+      "definition": "A description of the hazard associated with the procedure.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ019"
+      ]
+    },
+    {
+      "name": "evidence_source",
+      "domain": "SourceEvidence",
+      "range": "string",
+      "definition": "The source from which the evidence is derived.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ014"
+      ]
+    },
+    {
+      "name": "event_description",
+      "domain": "EmergencyEvent",
+      "range": "string",
+      "definition": "A description of the emergency event.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ001"
+      ]
+    },
+    {
+      "name": "pilot_decision",
+      "domain": "PilotAction",
+      "range": "string",
+      "definition": "The decision made by the pilot in response to the emergency.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ023"
+      ]
+    },
+    {
+      "name": "flight_phase_name",
+      "domain": "FlightPhase",
+      "range": "string",
+      "definition": "The name of the flight phase.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ007"
+      ]
+    },
+    {
+      "name": "aircraft_condition",
+      "domain": "AircraftState",
+      "range": "string",
+      "definition": "The condition of the aircraft during the emergency.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ021"
+      ]
+    },
+    {
+      "name": "system_name",
+      "domain": "AircraftSystem",
+      "range": "string",
+      "definition": "The name of the aircraft system being referenced.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ015"
+      ]
+    }
+  ],
+  "enums": [],
+  "validation_rules": [
+    {
+      "id": "VR001",
+      "target_class": "ProcedureStep",
+      "rule": "Each ProcedureStep must have a unique step_order within its EmergencyProcedure.",
+      "severity": "required"
+    },
+    {
+      "id": "VR002",
+      "target_class": "EmergencyProcedure",
+      "rule": "An EmergencyProcedure must have at least one ProcedureStep.",
+      "severity": "required"
+    },
+    {
+      "id": "VR003",
+      "target_class": "Hazard",
+      "rule": "Each Hazard must be linked to at least one EmergencyProcedure.",
+      "severity": "required"
+    }
+  ],
+  "cq_alignment": [
+    {
+      "cq_id": "CQ001",
+      "required_classes": [
+        "EmergencyProcedure",
+        "EmergencyEvent"
+      ],
+      "required_properties": [
+        "event_description"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ002",
+      "required_classes": [
+        "TriggerCondition",
+        "EmergencyProcedure"
+      ],
+      "required_properties": [
+        "hazard_description"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ003",
+      "required_classes": [
+        "Warning",
+        "PilotAction"
+      ],
+      "required_properties": [
+        "pilot_decision"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ004",
+      "required_classes": [
+        "Hazard",
+        "EmergencyProcedure"
+      ],
+      "required_properties": [
+        "hazard_description"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ005",
+      "required_classes": [
+        "TriggerCondition",
+        "EmergencyProcedure"
+      ],
+      "required_properties": [
+        "event_description"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ006",
+      "required_classes": [
+        "ProcedureStep",
+        "EmergencyProcedure"
+      ],
+      "required_properties": [
+        "action_text"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ007",
+      "required_classes": [
+        "FlightPhase",
+        "EmergencyProcedure"
+      ],
+      "required_properties": [
+        "flight_phase_name"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ008",
+      "required_classes": [
+        "EmergencyEvent"
+      ],
+      "required_properties": [
+        "event_description"
+      ],
+      "query_strategy": "SPARQL"
+    }
+  ],
+  "implementation_notes": "The ontology is designed to be compact and focused on core classes and properties relevant to aviation emergencies. It supports effective querying and retrieval of information while ensuring compliance with provenance requirements."
+}

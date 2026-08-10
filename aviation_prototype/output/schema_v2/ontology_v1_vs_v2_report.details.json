@@ -1,0 +1,713 @@
+{
+  "v1_scores": {
+    "rows": [
+      {
+        "id": "CQ001",
+        "source_file": "01_emergency_landings.txt",
+        "answer_recall": 0.25,
+        "question_recall": 0.3333333333333333,
+        "schema_concept_recall": 0.125,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 0.375
+      },
+      {
+        "id": "CQ002",
+        "source_file": "02_types_of_emergency_landings.txt",
+        "answer_recall": 0.4,
+        "question_recall": 0.0,
+        "schema_concept_recall": 0.6666666666666666,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ003",
+        "source_file": "03_psychological_hazards.txt",
+        "answer_recall": 0.45454545454545453,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.2,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6
+      },
+      {
+        "id": "CQ004",
+        "source_file": "04_attitude_and_sink_rate_control.txt",
+        "answer_recall": 0.7857142857142857,
+        "question_recall": 0.7272727272727273,
+        "schema_concept_recall": 0.1111111111111111,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.8888888888888888
+      },
+      {
+        "id": "CQ005",
+        "source_file": "05_terrain_selection.txt",
+        "answer_recall": 0.625,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.16666666666666666,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ006",
+        "source_file": "06_airplane_configuration.txt",
+        "answer_recall": 0.6923076923076923,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.2,
+        "kg_concept_recall": 0.5714285714285714
+      },
+      {
+        "id": "CQ007",
+        "source_file": "07_approach.txt",
+        "answer_recall": 0.36363636363636365,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.2857142857142857
+      },
+      {
+        "id": "CQ008",
+        "source_file": "08_terrain_types.txt",
+        "answer_recall": 0.25,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ009",
+        "source_file": "09_confined_areas.txt",
+        "answer_recall": 0.47368421052631576,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.25,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ010",
+        "source_file": "10_trees_forest.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.25,
+        "schema_concept_recall": 1.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ011",
+        "source_file": "11_water_ditching_and_snow.txt",
+        "answer_recall": 0.8181818181818182,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ012",
+        "source_file": "12_engine_failure_after_takeoff_single_engine.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.6,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ013",
+        "source_file": "13_emergency_descents.txt",
+        "answer_recall": 0.8,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.4,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.8
+      },
+      {
+        "id": "CQ014",
+        "source_file": "14_in_flight_fire.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ015",
+        "source_file": "15_engine_fire.txt",
+        "answer_recall": 0.9090909090909091,
+        "question_recall": 0.625,
+        "schema_concept_recall": 0.4,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.8
+      },
+      {
+        "id": "CQ016",
+        "source_file": "16_electrical_fires.txt",
+        "answer_recall": 0.9333333333333333,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ017",
+        "source_file": "17_cabin_fire.txt",
+        "answer_recall": 0.7333333333333333,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ018",
+        "source_file": "18_asymmetric_split_flap.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ019",
+        "source_file": "19_loss_of_elevator_control.txt",
+        "answer_recall": 0.5555555555555556,
+        "question_recall": 0.7142857142857143,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ020",
+        "source_file": "20_landing_gear_malfunction.txt",
+        "answer_recall": 0.7,
+        "question_recall": 0.6,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ021",
+        "source_file": "21_pitot_static_system.txt",
+        "answer_recall": 0.6666666666666666,
+        "question_recall": 0.2727272727272727,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.2
+      },
+      {
+        "id": "CQ022",
+        "source_file": "22_abnormal_engine_instrument_indication.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.2857142857142857,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 0.3333333333333333
+      },
+      {
+        "id": "CQ023",
+        "source_file": "23_door_opening_in_flight.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ024",
+        "source_file": "24_inadvertent_vfr_flight_into_imc.txt",
+        "answer_recall": 0.875,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ025",
+        "source_file": "25_maintaining_airplane_control.txt",
+        "answer_recall": 0.8333333333333334,
+        "question_recall": 0.8,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ026",
+        "source_file": "26_attitude_control.txt",
+        "answer_recall": 0.7333333333333333,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ027",
+        "source_file": "27_turns.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.2222222222222222,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.75
+      },
+      {
+        "id": "CQ028",
+        "source_file": "28_climbs.txt",
+        "answer_recall": 0.14285714285714285,
+        "question_recall": 0.16666666666666666,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6
+      },
+      {
+        "id": "CQ029",
+        "source_file": "29_descents.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.0,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ030",
+        "source_file": "30_combined_maneuvers.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.8571428571428571,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ031",
+        "source_file": "31_transition_to_visual_flight.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.4
+      },
+      {
+        "id": "CQ032",
+        "source_file": "32_emergency_response_systems.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.7142857142857143,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ033",
+        "source_file": "33_ballistic_parachutes.txt",
+        "answer_recall": 0.8571428571428571,
+        "question_recall": 0.6,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ034",
+        "source_file": "34_autoland.txt",
+        "answer_recall": 0.875,
+        "question_recall": 0.2,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ035",
+        "source_file": "35_chapter_summary.txt",
+        "answer_recall": 0.6666666666666666,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.375,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.625
+      }
+    ],
+    "avg_answer_recall": 0.6112680844635732,
+    "avg_question_recall": 0.4795124716553288,
+    "avg_schema_concept_recall": 0.236984126984127,
+    "avg_schema_relation_recall": 0.041428571428571426,
+    "avg_kg_concept_recall": 0.754172335600907,
+    "answer_pass_count": 23,
+    "count": 35
+  },
+  "v2_scores": {
+    "rows": [
+      {
+        "id": "CQ001",
+        "source_file": "01_emergency_landings.txt",
+        "answer_recall": 0.25,
+        "question_recall": 0.3333333333333333,
+        "schema_concept_recall": 0.125,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 0.375
+      },
+      {
+        "id": "CQ002",
+        "source_file": "02_types_of_emergency_landings.txt",
+        "answer_recall": 0.4,
+        "question_recall": 0.0,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ003",
+        "source_file": "03_psychological_hazards.txt",
+        "answer_recall": 0.45454545454545453,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.4,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6
+      },
+      {
+        "id": "CQ004",
+        "source_file": "04_attitude_and_sink_rate_control.txt",
+        "answer_recall": 0.7857142857142857,
+        "question_recall": 0.7272727272727273,
+        "schema_concept_recall": 0.1111111111111111,
+        "schema_relation_recall": 0.5,
+        "kg_concept_recall": 0.8888888888888888
+      },
+      {
+        "id": "CQ005",
+        "source_file": "05_terrain_selection.txt",
+        "answer_recall": 0.625,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.16666666666666666,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ006",
+        "source_file": "06_airplane_configuration.txt",
+        "answer_recall": 0.6923076923076923,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.2,
+        "kg_concept_recall": 0.5714285714285714
+      },
+      {
+        "id": "CQ007",
+        "source_file": "07_approach.txt",
+        "answer_recall": 0.36363636363636365,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.2857142857142857
+      },
+      {
+        "id": "CQ008",
+        "source_file": "08_terrain_types.txt",
+        "answer_recall": 0.25,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ009",
+        "source_file": "09_confined_areas.txt",
+        "answer_recall": 0.47368421052631576,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.25,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ010",
+        "source_file": "10_trees_forest.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.25,
+        "schema_concept_recall": 1.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ011",
+        "source_file": "11_water_ditching_and_snow.txt",
+        "answer_recall": 0.8181818181818182,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ012",
+        "source_file": "12_engine_failure_after_takeoff_single_engine.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.2,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ013",
+        "source_file": "13_emergency_descents.txt",
+        "answer_recall": 0.8,
+        "question_recall": 0.6666666666666666,
+        "schema_concept_recall": 0.4,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.8
+      },
+      {
+        "id": "CQ014",
+        "source_file": "14_in_flight_fire.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.5,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ015",
+        "source_file": "15_engine_fire.txt",
+        "answer_recall": 0.9090909090909091,
+        "question_recall": 0.625,
+        "schema_concept_recall": 0.2,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.8
+      },
+      {
+        "id": "CQ016",
+        "source_file": "16_electrical_fires.txt",
+        "answer_recall": 0.9333333333333333,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ017",
+        "source_file": "17_cabin_fire.txt",
+        "answer_recall": 0.8,
+        "question_recall": 0.4,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ018",
+        "source_file": "18_asymmetric_split_flap.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ019",
+        "source_file": "19_loss_of_elevator_control.txt",
+        "answer_recall": 0.5555555555555556,
+        "question_recall": 0.7142857142857143,
+        "schema_concept_recall": 1.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ020",
+        "source_file": "20_landing_gear_malfunction.txt",
+        "answer_recall": 0.75,
+        "question_recall": 0.6,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6666666666666666
+      },
+      {
+        "id": "CQ021",
+        "source_file": "21_pitot_static_system.txt",
+        "answer_recall": 0.6666666666666666,
+        "question_recall": 0.2727272727272727,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.2
+      },
+      {
+        "id": "CQ022",
+        "source_file": "22_abnormal_engine_instrument_indication.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.2857142857142857,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 0.3333333333333333
+      },
+      {
+        "id": "CQ023",
+        "source_file": "23_door_opening_in_flight.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ024",
+        "source_file": "24_inadvertent_vfr_flight_into_imc.txt",
+        "answer_recall": 0.875,
+        "question_recall": 0.5,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ025",
+        "source_file": "25_maintaining_airplane_control.txt",
+        "answer_recall": 0.8333333333333334,
+        "question_recall": 0.8,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ026",
+        "source_file": "26_attitude_control.txt",
+        "answer_recall": 0.7333333333333333,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.3333333333333333,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ027",
+        "source_file": "27_turns.txt",
+        "answer_recall": 0.14285714285714285,
+        "question_recall": 0.2222222222222222,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.75
+      },
+      {
+        "id": "CQ028",
+        "source_file": "28_climbs.txt",
+        "answer_recall": 0.14285714285714285,
+        "question_recall": 0.16666666666666666,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.6
+      },
+      {
+        "id": "CQ029",
+        "source_file": "29_descents.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.0,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.5
+      },
+      {
+        "id": "CQ030",
+        "source_file": "30_combined_maneuvers.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.8571428571428571,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.3333333333333333,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ031",
+        "source_file": "31_transition_to_visual_flight.txt",
+        "answer_recall": 0.0,
+        "question_recall": 0.42857142857142855,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.4
+      },
+      {
+        "id": "CQ032",
+        "source_file": "32_emergency_response_systems.txt",
+        "answer_recall": 1.0,
+        "question_recall": 0.7142857142857143,
+        "schema_concept_recall": 0.16666666666666666,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ033",
+        "source_file": "33_ballistic_parachutes.txt",
+        "answer_recall": 0.8571428571428571,
+        "question_recall": 0.6,
+        "schema_concept_recall": 0.0,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ034",
+        "source_file": "34_autoland.txt",
+        "answer_recall": 0.875,
+        "question_recall": 0.2,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 1.0
+      },
+      {
+        "id": "CQ035",
+        "source_file": "35_chapter_summary.txt",
+        "answer_recall": 0.6666666666666666,
+        "question_recall": 0.5714285714285714,
+        "schema_concept_recall": 0.25,
+        "schema_relation_recall": 0.0,
+        "kg_concept_recall": 0.625
+      }
+    ],
+    "avg_answer_recall": 0.6186830504499677,
+    "avg_question_recall": 0.4795124716553288,
+    "avg_schema_concept_recall": 0.20293650793650794,
+    "avg_schema_relation_recall": 0.055714285714285716,
+    "avg_kg_concept_recall": 0.754172335600907,
+    "answer_pass_count": 23,
+    "count": 35
+  },
+  "v1_kg": {
+    "triple_count": 818,
+    "class_counts": {
+      "EmergencyProcedure": 18,
+      "ProcedureStep": 89,
+      "Warning": 23
+    },
+    "predicate_counts": {
+      "hasWarning": 23,
+      "step_type": 89,
+      "step_number": 89,
+      "source_excerpt": 107,
+      "source_section": 18,
+      "action": 89,
+      "expected_result": 89,
+      "hasStep": 89,
+      "aircraft_phase": 18,
+      "source_file": 18,
+      "description": 23,
+      "trigger_condition": 18,
+      "name": 18
+    }
+  },
+  "v2_kg": {
+    "triple_count": 2611,
+    "class_counts": {
+      "EmergencyProcedure": 18,
+      "SourceEvidence": 218,
+      "FlightPhase": 18,
+      "Hazard": 70,
+      "AircraftSystem": 101,
+      "ProcedureStep": 89,
+      "TriggerCondition": 18,
+      "AircraftState": 18,
+      "Warning": 23
+    },
+    "predicate_counts": {
+      "description": 230,
+      "source_excerpt": 218,
+      "source_file": 218,
+      "action": 89,
+      "hasHazard": 70,
+      "hasWarning": 23,
+      "hasAircraftState": 18,
+      "step_number": 89,
+      "trigger_condition_text": 18,
+      "source_section": 218,
+      "name": 207,
+      "hasTriggerCondition": 18,
+      "hasStep": 89,
+      "relatesToSystem": 33,
+      "hasEvidence": 218,
+      "affectedSystem": 68,
+      "hasFlightPhase": 18,
+      "step_type": 89,
+      "aircraft_phase": 18,
+      "expected_result": 89
+    }
+  }
+}

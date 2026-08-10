@@ -1,0 +1,392 @@
+{
+  "metadata": {
+    "name": "AviationEmergencyProceduresOntology",
+    "description": "A structured representation of aviation emergency procedures, enabling effective querying and retrieval of information related to emergency landings, pilot actions, and associated hazards.",
+    "namespace": "http://example.org/aviation_emergency_procedures",
+    "generated_from": "Manager Plan and Domain Expert Artifact"
+  },
+  "classes": [
+    {
+      "name": "EmergencyProcedure",
+      "description": "A structured set of actions to be taken during an aviation emergency.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "procedure_name",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The name of the emergency procedure."
+        }
+      ]
+    },
+    {
+      "name": "ProcedureStep",
+      "description": "An individual step within an emergency procedure, detailing specific actions to be taken.",
+      "parent": "EmergencyProcedure",
+      "attributes": [
+        {
+          "name": "step_order",
+          "range": "integer",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The order in which the step should be executed within a procedure."
+        },
+        {
+          "name": "action_text",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "Text describing the action to be taken in this step."
+        },
+        {
+          "name": "step_type",
+          "range": "StepType",
+          "kind": "enum",
+          "required": true,
+          "multivalued": false,
+          "description": "The type of step (e.g., action, caution, note)."
+        }
+      ]
+    },
+    {
+      "name": "Warning",
+      "description": "A notification regarding potential hazards or risks during flight operations.",
+      "parent": null,
+      "attributes": []
+    },
+    {
+      "name": "SourceEvidence",
+      "description": "Documentation or data that supports the procedures and actions taken during emergencies.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "evidence_source",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The source from which the evidence is derived."
+        }
+      ]
+    },
+    {
+      "name": "TriggerCondition",
+      "description": "Conditions that necessitate the execution of an emergency procedure.",
+      "parent": null,
+      "attributes": []
+    },
+    {
+      "name": "FlightPhase",
+      "description": "Different stages of flight that may influence emergency procedures.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "flight_phase_name",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The name of the flight phase."
+        }
+      ]
+    },
+    {
+      "name": "Hazard",
+      "description": "Potential risks that may affect flight safety during emergencies.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "hazard_description",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "A description of the hazard associated with the procedure."
+        }
+      ]
+    },
+    {
+      "name": "AircraftState",
+      "description": "The operational status of the aircraft during an emergency.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "aircraft_condition",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The condition of the aircraft during the emergency."
+        }
+      ]
+    },
+    {
+      "name": "AircraftSystem",
+      "description": "Components of the aircraft that may be affected during emergencies.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "system_name",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The name of the aircraft system being referenced."
+        }
+      ]
+    },
+    {
+      "name": "EmergencyEvent",
+      "description": "An occurrence that triggers the need for emergency procedures.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "event_description",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "A description of the emergency event."
+        }
+      ]
+    },
+    {
+      "name": "PilotAction",
+      "description": "Actions taken by the pilot in response to emergency situations.",
+      "parent": null,
+      "attributes": [
+        {
+          "name": "pilot_decision",
+          "range": "string",
+          "kind": "data_property",
+          "required": true,
+          "multivalued": false,
+          "description": "The decision made by the pilot in response to the emergency."
+        }
+      ]
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "has_step",
+      "domain": "EmergencyProcedure",
+      "range": "ProcedureStep",
+      "description": "Links an emergency procedure to its individual steps.",
+      "required": true,
+      "multivalued": true
+    },
+    {
+      "name": "triggers",
+      "domain": "TriggerCondition",
+      "range": "EmergencyProcedure",
+      "description": "Indicates which emergency procedure is triggered by a specific condition.",
+      "required": true,
+      "multivalued": false
+    },
+    {
+      "name": "associated_with",
+      "domain": "Hazard",
+      "range": "EmergencyProcedure",
+      "description": "Links hazards to relevant emergency procedures.",
+      "required": false,
+      "multivalued": true
+    },
+    {
+      "name": "evidenced_by",
+      "domain": "EmergencyProcedure",
+      "range": "SourceEvidence",
+      "description": "Links an emergency procedure to its supporting evidence.",
+      "required": false,
+      "multivalued": true
+    },
+    {
+      "name": "occurs_during",
+      "domain": "EmergencyEvent",
+      "range": "FlightPhase",
+      "description": "Indicates the flight phase during which an emergency event occurs.",
+      "required": true,
+      "multivalued": false
+    },
+    {
+      "name": "performed_by",
+      "domain": "PilotAction",
+      "range": "EmergencyEvent",
+      "description": "Links pilot actions to specific emergency events.",
+      "required": true,
+      "multivalued": false
+    },
+    {
+      "name": "affects",
+      "domain": "AircraftState",
+      "range": "EmergencyProcedure",
+      "description": "Indicates how the aircraft state influences the execution of emergency procedures.",
+      "required": false,
+      "multivalued": true
+    },
+    {
+      "name": "requires",
+      "domain": "EmergencyProcedure",
+      "range": "TriggerCondition",
+      "description": "Indicates the conditions that must be met to execute a procedure.",
+      "required": true,
+      "multivalued": true
+    },
+    {
+      "name": "describes",
+      "domain": "Warning",
+      "range": "Hazard",
+      "description": "Links warnings to specific hazards.",
+      "required": true,
+      "multivalued": false
+    }
+  ],
+  "data_properties": [],
+  "enums": [
+    {
+      "name": "StepType",
+      "description": "Different types of steps within an emergency procedure.",
+      "values": [
+        {
+          "value": "immediate_action",
+          "description": "An action that must be taken immediately."
+        },
+        {
+          "value": "caution",
+          "description": "A warning to be cautious during a procedure."
+        },
+        {
+          "value": "training_note",
+          "description": "A note for training purposes."
+        },
+        {
+          "value": "background",
+          "description": "Background information relevant to the procedure."
+        }
+      ]
+    }
+  ],
+  "validation_rules": [
+    {
+      "id": "VR001",
+      "target_class": "ProcedureStep",
+      "property": "step_order",
+      "rule": "Each ProcedureStep must have a unique step_order within its EmergencyProcedure.",
+      "severity": "required"
+    },
+    {
+      "id": "VR002",
+      "target_class": "EmergencyProcedure",
+      "property": "has_step",
+      "rule": "An EmergencyProcedure must have at least one ProcedureStep.",
+      "severity": "required"
+    },
+    {
+      "id": "VR003",
+      "target_class": "Hazard",
+      "property": "associated_with",
+      "rule": "Each Hazard must be linked to at least one EmergencyProcedure.",
+      "severity": "required"
+    }
+  ],
+  "competency_question_coverage": [
+    {
+      "cq_id": "CQ001",
+      "covered": true,
+      "classes": [
+        "EmergencyProcedure",
+        "EmergencyEvent"
+      ],
+      "properties": [
+        "event_description"
+      ],
+      "notes": "Focus on emergency landing techniques."
+    },
+    {
+      "cq_id": "CQ002",
+      "covered": true,
+      "classes": [
+        "TriggerCondition",
+        "EmergencyProcedure"
+      ],
+      "properties": [
+        "hazard_description"
+      ],
+      "notes": "Conditions necessitating forced landings."
+    },
+    {
+      "cq_id": "CQ003",
+      "covered": true,
+      "classes": [
+        "Warning",
+        "PilotAction"
+      ],
+      "properties": [
+        "pilot_decision"
+      ],
+      "notes": "Psychological factors affecting decision-making."
+    },
+    {
+      "cq_id": "CQ004",
+      "covered": true,
+      "classes": [
+        "Hazard",
+        "EmergencyProcedure"
+      ],
+      "properties": [
+        "hazard_description"
+      ],
+      "notes": "Risks associated with excessive pitch attitude."
+    },
+    {
+      "cq_id": "CQ005",
+      "covered": true,
+      "classes": [
+        "TriggerCondition",
+        "EmergencyProcedure"
+      ],
+      "properties": [
+        "event_description"
+      ],
+      "notes": "Factors for selecting emergency landing sites."
+    },
+    {
+      "cq_id": "CQ006",
+      "covered": true,
+      "classes": [
+        "ProcedureStep",
+        "EmergencyProcedure"
+      ],
+      "properties": [
+        "action_text"
+      ],
+      "notes": "Precautions regarding flap usage."
+    },
+    {
+      "cq_id": "CQ007",
+      "covered": true,
+      "classes": [
+        "FlightPhase",
+        "EmergencyProcedure"
+      ],
+      "properties": [
+        "flight_phase_name"
+      ],
+      "notes": "Factors for planning an approach to land."
+    },
+    {
+      "cq_id": "CQ008",
+      "covered": true,
+      "classes": [
+        "EmergencyEvent"
+      ],
+      "properties": [
+        "event_description"
+      ],
+      "notes": "Types of terrain suitable for emergency landings."
+    }
+  ]
+}

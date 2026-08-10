@@ -1,0 +1,197 @@
+# Controlled v2 schema for aviation emergency procedures.
+# This schema keeps the proven v1 runtime structure and adds the ontology
+# concepts suggested by the paper-inspired multi-agent extraction experiment.
+
+id: https://example.org/aviation/emergency/v2
+name: AviationEmergencySchemaV2
+description: Controlled v2 schema for comparing a richer ontology against the current aviation emergency schema
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  av: https://example.org/aviation/
+
+default_range: string
+default_prefix: av
+
+imports:
+  - linkml:types
+
+classes:
+
+  ExtractionResultV2:
+    tree_root: true
+    description: Top-level container for v2 migrated emergency procedures
+    attributes:
+      procedures:
+        range: EmergencyProcedure
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  EmergencyProcedure:
+    description: A complete emergency or abnormal procedure for pilots
+    attributes:
+      name:
+        description: Short procedure name
+        required: true
+      trigger_condition_text:
+        description: Human-readable trigger condition retained for retrieval compatibility
+      trigger_condition:
+        description: Structured trigger condition for ontology-level querying
+        range: TriggerCondition
+        inlined: true
+      aircraft_phase:
+        description: Human-readable phase of flight retained for compatibility
+      flight_phase:
+        description: Structured flight phase
+        range: FlightPhase
+        inlined: true
+      source_evidence:
+        description: Evidence supporting the procedure as a whole
+        range: SourceEvidence
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      steps:
+        description: Ordered pilot actions and non-action notes
+        range: ProcedureStep
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      warnings:
+        description: Safety warnings associated with this procedure
+        range: Warning
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      hazards:
+        description: Hazards or risks made explicit from warnings, triggers, and source text
+        range: Hazard
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+      aircraft_systems:
+        description: Aircraft systems relevant to the procedure
+        range: AircraftSystem
+        multivalued: true
+        inlined: true
+        inlined_as_list: true
+
+  ProcedureStep:
+    description: A single ordered item within a procedure; it is a component of a procedure, not a subclass of procedure
+    attributes:
+      step_number:
+        range: integer
+        required: true
+        description: Position of this step
+      step_type:
+        range: StepType
+        required: true
+        description: Presentation and operational category
+      action:
+        required: true
+        description: Pilot action, caution, training note, or background item
+      expected_result:
+        description: Expected outcome after the step
+      evidence:
+        range: SourceEvidence
+        required: true
+        inlined: true
+        description: Source evidence for this step
+
+  Warning:
+    description: Safety-critical warning related to a procedure
+    attributes:
+      description:
+        required: true
+        description: Warning text
+      hazard:
+        range: Hazard
+        inlined: true
+        description: Structured hazard represented by the warning
+      evidence:
+        range: SourceEvidence
+        inlined: true
+        description: Source evidence for the warning
+
+  SourceEvidence:
+    description: Source-grounding object used by procedures, steps, warnings, hazards, and trigger conditions
+    attributes:
+      source_file:
+        required: true
+        description: Source text file
+      source_section:
+        description: Source section or heading
+      source_excerpt:
+        required: true
+        description: Short evidence excerpt from the FAA source text
+
+  TriggerCondition:
+    description: Structured condition or event that activates an emergency procedure
+    attributes:
+      description:
+        required: true
+        description: Human-readable trigger condition
+      aircraft_state:
+        range: AircraftState
+        inlined: true
+        description: Aircraft state implied by the trigger
+      evidence:
+        range: SourceEvidence
+        inlined: true
+        description: Evidence supporting this trigger condition
+
+  FlightPhase:
+    description: Structured phase of flight in which a procedure applies
+    attributes:
+      name:
+        required: true
+        description: Flight phase label
+
+  Hazard:
+    description: Explicit risk or unsafe condition associated with a procedure
+    attributes:
+      name:
+        required: true
+        description: Short hazard name
+      description:
+        required: true
+        description: Hazard description
+      affected_system:
+        range: AircraftSystem
+        inlined: true
+        description: Aircraft system affected by the hazard, if any
+      evidence:
+        range: SourceEvidence
+        inlined: true
+        description: Evidence supporting this hazard
+
+  AircraftState:
+    description: Aircraft state or condition relevant to a trigger or hazard
+    attributes:
+      description:
+        required: true
+        description: Aircraft state description
+
+  AircraftSystem:
+    description: Aircraft component or system referenced by a procedure or hazard
+    attributes:
+      name:
+        required: true
+        description: System name
+      description:
+        description: Short system description
+
+enums:
+
+  StepType:
+    description: Presentation and operational category for a procedure step
+    permissible_values:
+      immediate_action:
+        description: Action intended to be performed during the emergency or abnormal situation
+      training_note:
+        description: Training, briefing, practice, or preflight preparation note
+      caution:
+        description: Cautionary or negative instruction tied to risk management
+      background:
+        description: Contextual information that supports the procedure but is not itself an immediate action

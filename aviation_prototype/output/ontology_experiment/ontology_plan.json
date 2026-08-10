@@ -1,0 +1,386 @@
+{
+  "ontology_goal": "To provide a structured representation of aviation emergency landing procedures, conditions, and pilot actions to assist in decision-making during emergencies.",
+  "modeling_principles": [
+    "Explicitly represent procedures, events, actions, warnings, hazards, and aircraft states.",
+    "Preserve provenance of information and decisions.",
+    "Separate immediate actions from training notes, cautions, and background information.",
+    "Ensure compatibility with LinkML/SHACL/RDF standards."
+  ],
+  "classes": [
+    {
+      "name": "EmergencyLanding",
+      "definition": "A landing performed under emergency conditions, often involving risks to the aircraft and occupants.",
+      "responsibilities": [
+        "Document emergency landing procedures",
+        "Identify risks associated with emergency landings"
+      ],
+      "design_pattern": "Event Reification",
+      "source_cqs": [
+        "CQ001",
+        "CQ002",
+        "CQ003",
+        "CQ012"
+      ]
+    },
+    {
+      "name": "PilotAction",
+      "definition": "Actions taken by the pilot during emergency situations to ensure safety.",
+      "responsibilities": [
+        "Outline necessary pilot actions during emergencies",
+        "Link actions to specific emergency scenarios"
+      ],
+      "design_pattern": "Action",
+      "source_cqs": [
+        "CQ015",
+        "CQ017",
+        "CQ019"
+      ]
+    },
+    {
+      "name": "EmergencyLandingSite",
+      "definition": "A location chosen by the pilot for landing the aircraft in an emergency situation.",
+      "responsibilities": [
+        "Evaluate potential emergency landing sites",
+        "Provide criteria for site selection"
+      ],
+      "design_pattern": "Situation/State",
+      "source_cqs": [
+        "CQ005",
+        "CQ009"
+      ]
+    },
+    {
+      "name": "Hazard",
+      "definition": "A condition that poses a risk to the safety of the aircraft and its occupants.",
+      "responsibilities": [
+        "Identify hazards associated with emergency landings",
+        "Assess the impact of hazards on landing procedures"
+      ],
+      "design_pattern": "Risk/Hazard",
+      "source_cqs": [
+        "CQ002",
+        "CQ004",
+        "CQ006"
+      ]
+    },
+    {
+      "name": "AircraftState",
+      "definition": "The condition of the aircraft during flight, particularly in emergencies.",
+      "responsibilities": [
+        "Monitor and document aircraft states",
+        "Link states to pilot actions and emergency procedures"
+      ],
+      "design_pattern": "Situation/State",
+      "source_cqs": [
+        "CQ013",
+        "CQ021"
+      ]
+    },
+    {
+      "name": "Terrain",
+      "definition": "The physical landscape or ground surface that can affect the safety and feasibility of an emergency landing.",
+      "responsibilities": [
+        "Classify types of terrain suitable for emergency landings",
+        "Assess terrain risks"
+      ],
+      "design_pattern": "Resource",
+      "source_cqs": [
+        "CQ008",
+        "CQ010"
+      ]
+    },
+    {
+      "name": "PsychologicalHazard",
+      "definition": "Factors that may interfere with a pilot's ability to act promptly and properly during an emergency.",
+      "responsibilities": [
+        "Identify psychological factors affecting pilot performance",
+        "Link psychological hazards to decision-making processes"
+      ],
+      "design_pattern": "Risk/Hazard",
+      "source_cqs": [
+        "CQ003"
+      ]
+    },
+    {
+      "name": "Procedure",
+      "definition": "A set of actions or steps to be followed in a specific situation, particularly during emergencies.",
+      "responsibilities": [
+        "Document emergency procedures",
+        "Link procedures to specific emergency scenarios"
+      ],
+      "design_pattern": "Event Reification",
+      "source_cqs": [
+        "CQ011",
+        "CQ014"
+      ]
+    }
+  ],
+  "object_properties": [
+    {
+      "name": "requires",
+      "domain": "PilotAction",
+      "range": "EmergencyLanding",
+      "definition": "Indicates that a specific pilot action is necessary for a given emergency landing.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ015",
+        "CQ017"
+      ]
+    },
+    {
+      "name": "governed_by",
+      "domain": "EmergencyLandingSite",
+      "range": "Terrain",
+      "definition": "Indicates that the selection of an emergency landing site is influenced by terrain characteristics.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ005"
+      ]
+    },
+    {
+      "name": "affects",
+      "domain": "AircraftState",
+      "range": "PilotAction",
+      "definition": "Indicates that the current state of the aircraft influences the pilot's actions.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ019"
+      ]
+    },
+    {
+      "name": "is_suitable_for",
+      "domain": "Terrain",
+      "range": "EmergencyLanding",
+      "definition": "Indicates that a specific type of terrain is suitable for a particular emergency landing.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ008"
+      ]
+    },
+    {
+      "name": "hasProcedure",
+      "domain": "EmergencyLanding",
+      "range": "Procedure",
+      "definition": "Links an emergency landing to the specific procedures that should be followed.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ013",
+        "CQ014"
+      ]
+    },
+    {
+      "name": "indicates",
+      "domain": "Hazard",
+      "range": "AircraftState",
+      "definition": "Indicates that a hazard affects the state of the aircraft.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ021"
+      ]
+    },
+    {
+      "name": "impairs",
+      "domain": "PsychologicalHazard",
+      "range": "PilotAction",
+      "definition": "Indicates that a psychological hazard can impair a pilot's actions.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ003"
+      ]
+    },
+    {
+      "name": "results_in",
+      "domain": "PilotAction",
+      "range": "EmergencyLanding",
+      "definition": "Indicates that a specific pilot action leads to an emergency landing.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": [
+        "CQ012",
+        "CQ020"
+      ]
+    }
+  ],
+  "data_properties": [
+    {
+      "name": "description",
+      "domain": "EmergencyLanding",
+      "range": "string",
+      "definition": "A detailed description of the emergency landing scenario.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "riskLevel",
+      "domain": "Hazard",
+      "range": "string",
+      "definition": "The level of risk associated with a specific hazard.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "terrainType",
+      "domain": "Terrain",
+      "range": "string",
+      "definition": "The type of terrain (e.g., forest, water, snow) relevant to emergency landings.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "psychologicalImpact",
+      "domain": "PsychologicalHazard",
+      "range": "string",
+      "definition": "The impact of psychological factors on pilot performance.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "procedureSteps",
+      "domain": "Procedure",
+      "range": "string",
+      "definition": "The steps involved in executing a specific emergency procedure.",
+      "required": true,
+      "multivalued": true,
+      "source_cqs": []
+    },
+    {
+      "name": "aircraftCondition",
+      "domain": "AircraftState",
+      "range": "string",
+      "definition": "The condition of the aircraft at the time of the emergency.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "pilotExperience",
+      "domain": "PilotAction",
+      "range": "string",
+      "definition": "The level of experience of the pilot performing the action.",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    },
+    {
+      "name": "landingOutcome",
+      "domain": "EmergencyLanding",
+      "range": "string",
+      "definition": "The outcome of the emergency landing (e.g., successful, crash).",
+      "required": true,
+      "multivalued": false,
+      "source_cqs": []
+    }
+  ],
+  "enums": [],
+  "validation_rules": [
+    {
+      "id": "VR001",
+      "target_class": "EmergencyLanding",
+      "rule": "An emergency landing must have a description and associated procedures.",
+      "severity": "required"
+    },
+    {
+      "id": "VR002",
+      "target_class": "PilotAction",
+      "rule": "Pilot actions must be linked to specific emergency scenarios.",
+      "severity": "required"
+    },
+    {
+      "id": "VR003",
+      "target_class": "Hazard",
+      "rule": "Hazards must have a defined risk level.",
+      "severity": "required"
+    }
+  ],
+  "cq_alignment": [
+    {
+      "cq_id": "CQ001",
+      "required_classes": [
+        "EmergencyLanding",
+        "PilotAction"
+      ],
+      "required_properties": [
+        "requires"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ002",
+      "required_classes": [
+        "EmergencyLanding",
+        "Hazard"
+      ],
+      "required_properties": [
+        "results_in"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ003",
+      "required_classes": [
+        "PsychologicalHazard",
+        "PilotAction"
+      ],
+      "required_properties": [
+        "impairs"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ004",
+      "required_classes": [
+        "EmergencyLanding",
+        "Hazard"
+      ],
+      "required_properties": [
+        "indicates"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ005",
+      "required_classes": [
+        "EmergencyLandingSite",
+        "Terrain"
+      ],
+      "required_properties": [
+        "governed_by"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ006",
+      "required_classes": [
+        "Procedure",
+        "EmergencyLanding"
+      ],
+      "required_properties": [
+        "hasProcedure"
+      ],
+      "query_strategy": "SPARQL"
+    },
+    {
+      "cq_id": "CQ012",
+      "required_classes": [
+        "PilotAction",
+        "EmergencyLanding"
+      ],
+      "required_properties": [
+        "results_in"
+      ],
+      "query_strategy": "SPARQL"
+    }
+  ],
+  "implementation_notes": "The ontology will be implemented using LinkML and validated with SHACL to ensure compliance with the defined structure and rules."
+}

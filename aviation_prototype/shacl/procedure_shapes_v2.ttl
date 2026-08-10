@@ -1,0 +1,146 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix av:   <https://example.org/aviation/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+av:ProcedureShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:EmergencyProcedure ;
+
+    sh:property [
+        sh:path av:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every v2 emergency procedure must have a name"
+    ] ;
+
+    sh:property [
+        sh:path av:hasStep ;
+        sh:minCount 1 ;
+        sh:message "Every v2 emergency procedure must have at least one ProcedureStep"
+    ] ;
+
+    sh:property [
+        sh:path av:hasEvidence ;
+        sh:minCount 1 ;
+        sh:message "Every v2 emergency procedure must have at least one SourceEvidence object"
+    ] ;
+
+    sh:property [
+        sh:path av:hasTriggerCondition ;
+        sh:minCount 1 ;
+        sh:message "Every v2 emergency procedure must have a structured TriggerCondition"
+    ] .
+
+av:StepShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:ProcedureStep ;
+
+    sh:property [
+        sh:path av:step_number ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:message "Every v2 step must have a positive step_number"
+    ] ;
+
+    sh:property [
+        sh:path av:step_type ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:in (
+            "immediate_action"^^xsd:string
+            "training_note"^^xsd:string
+            "caution"^^xsd:string
+            "background"^^xsd:string
+        ) ;
+        sh:message "Every v2 step must have a valid step_type"
+    ] ;
+
+    sh:property [
+        sh:path av:action ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 5 ;
+        sh:message "Every v2 step must have action text"
+    ] ;
+
+    sh:property [
+        sh:path av:hasEvidence ;
+        sh:minCount 1 ;
+        sh:message "Every v2 step must link to SourceEvidence"
+    ] .
+
+av:WarningShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:Warning ;
+
+    sh:property [
+        sh:path av:description ;
+        sh:minCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 10 ;
+        sh:message "Every v2 warning must have a description"
+    ] .
+
+av:SourceEvidenceShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:SourceEvidence ;
+
+    sh:property [
+        sh:path av:source_file ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every SourceEvidence object must have a source_file"
+    ] ;
+
+    sh:property [
+        sh:path av:source_excerpt ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 10 ;
+        sh:message "Every SourceEvidence object must have a source_excerpt"
+    ] .
+
+av:TriggerConditionShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:TriggerCondition ;
+
+    sh:property [
+        sh:path av:description ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every TriggerCondition must have a description"
+    ] .
+
+av:HazardShapeV2
+    a sh:NodeShape ;
+    sh:targetClass av:Hazard ;
+
+    sh:property [
+        sh:path av:name ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 3 ;
+        sh:message "Every Hazard must have a name"
+    ] ;
+
+    sh:property [
+        sh:path av:description ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:string ;
+        sh:minLength 5 ;
+        sh:message "Every Hazard must have a description"
+    ] .
